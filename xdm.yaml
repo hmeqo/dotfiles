@@ -1,0 +1,34 @@
+link:
+  ./config/bspwm/: ~/.config/bspwm
+
+  ./config/neofetch/: ~/.config/neofetch
+
+  ./config/fish/: ~/.config/fish
+
+  ./config/nvim/: ~/.config/nvim
+
+  ./config2/nvim/user/: ~/.config/nvim/lua/user
+
+  ./config/wezterm/: ~/.config/wezterm
+
+  ./config/kitty/: ~/.config/kitty
+
+  ./config/picom/: ~/.config/picom
+
+  ./config/polybar/: ~/.config/polybar
+
+  ./config/sxhkd/: ~/.config/sxhkd
+
+  ./config/rofi/: ~/.config/rofi
+
+  ./config/feh/: ~/.config/feh
+
+  ./config/starship.toml: ~/.config/starship.toml
+
+  ./local/fonts/: ~/.local/share/fonts
+
+  ./user/.devilspie/: ~/.devilspie
+
+  ./user/.gitconfig: ~/.gitconfig
+
+  ./user/.xinitrc: ~/.xinitrc

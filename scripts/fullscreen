@@ -1,0 +1,18 @@
+#!/bin/bash
+
+exec 9>/tmp/fullscreen.lock
+if ! flock -n 9; then
+    # printf 'another instance is running\n';
+    exit 1
+fi
+
+bspc subscribe node_state | while read -r _ _ _ _ state flag; do
+    if [ "$state" != "fullscreen" ]; then
+        continue
+    fi
+    if [ "$flag" == on ]; then
+        eww close-all
+    else
+        eww open bar
+    fi
+done
