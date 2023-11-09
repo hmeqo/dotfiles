@@ -27,7 +27,9 @@ link:
 
   ./local/fonts/: ~/.local/share/fonts
 
-  ./user/.devilspie/: ~/.devilspie
+  ./user/.bash_profile: ~/.bash_profile
+
+  ./user/.bashrc: ~/.bashrc
 
   ./user/.gitconfig: ~/.gitconfig
 

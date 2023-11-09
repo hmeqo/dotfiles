@@ -39,7 +39,7 @@ return {
 	color_scheme = color_scheme,
 
 	-- default_prog = { "/bin/bash", "-l", "-c", "tmux attach || tmux" },
-	default_prog = { "/bin/bash", "-l", "-c", "fish" },
+	-- default_prog = { "/bin/bash", "-l", "-c", "fish" },
 
 	window_padding = {
 		left = 10,

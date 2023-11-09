@@ -1,24 +1,13 @@
-set fish_greeting ""
+#!/usr/bin/env bash
 
-export XDG_CONFIG_HOME=$HOME/.config
+set fish_greeting ""
 
 # editor
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-# fcitx5
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-export SDL_IM_MODULE=fcitx
-export GLFW_IM_MODULE=ibus
-
-# Clash
-export http_proxy=http://127.0.0.1:7890
-export https_proxy=$http_proxy
-export ftp_proxy=$http_proxy
-export rsync_proxy=$http_proxy
-export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
+# Python
+command -q pyenv && pyenv init - | source
 
 fish_add_path ~/.cargo/bin/
 fish_add_path ~/.local/share/nvim/mason/bin/

@@ -1,6 +1,6 @@
 if vim.g.neovide then
-  vim.o.guifont = "FiraCode Nerd Font:h8"
-  -- vim.g.neovide_transparency = 0.95
+  vim.o.guifont = "FiraCode Nerd Font:h12"
+  vim.g.neovide_transparency = 0.95
   vim.g.neovide_hide_mouse_when_typing = true
   -- vim.g.neovide_no_idle = true
   -- vim.g.neovide_fullscreen = true
