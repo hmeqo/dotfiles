@@ -1,5 +1,5 @@
 # Inserts a blank line between shell prompts
-add_newline = true
+add_newline = false
 
 [character]
 success_symbol = "[❯](bold #678979)"
@@ -26,18 +26,3 @@ format = "[$symbol$branch(:$remote_branch)]($style) "
 
 [cmd_duration]
 format = "[$duration]($style)"
-
-[rust]
-disabled = true
-
-[package]
-disabled = true
-
-[python]
-disabled = true
-
-[lua]
-disabled = true
-
-[nodejs]
-disabled = true

@@ -9,8 +9,6 @@ link:
 
   ./config2/nvim/user/: ~/.config/nvim/lua/user
 
-  ./config/wezterm/: ~/.config/wezterm
-
   ./config/kitty/: ~/.config/kitty
 
   ./config/picom/: ~/.config/picom
@@ -23,9 +21,15 @@ link:
 
   ./config/feh/: ~/.config/feh
 
-  ./config/starship.toml: ~/.config/starship.toml
+  ./config/zsh/.zshrc: ~/.zshrc
 
-  ./local/fonts/: ~/.local/share/fonts
+  ./config/zsh/.zprofile: ~/.zprofile
+
+  ./config/zsh/.zimrc: ~/.zimrc
+
+  ./config/zsh/.p10k.zsh: ~/.p10k.zsh
+
+  ./config/starship.toml: ~/.config/starship.toml
 
   ./user/.bash_profile: ~/.bash_profile
 

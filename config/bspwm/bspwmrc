@@ -26,9 +26,8 @@ bspc rule -a feh state=floating center=true
 bspc rule -a SimpleScreenRecorder state=floating
 bspc rule -a guvcview state=floating rectangle=480x270+1440+810 sticky=on layer=above
 
-
-feh --bg-fill $HOME/Pictures/wallpaper/Dunkirk-pxfuel.jpg
-# feh --randomize --bg-fill ~/Pictures/wallpaper/*
+feh --bg-fill $HOME/.local/share/wallpapers/arcolinux/arco-wallpaper.jpg
+# feh --randomize --bg-fill $HOME/.local/share/wallpapers/*
 xsetroot -cursor_name left_ptr
 # keymapper &
 dunst &

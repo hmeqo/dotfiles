@@ -24,3 +24,5 @@ set fish_cursor_replace underscore
 
 set -x _ZO_ECHO 1
 zoxide init fish | source
+
+starship init fish | source

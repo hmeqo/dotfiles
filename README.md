@@ -6,16 +6,16 @@
 
 Use [xdm](https://github.com/XXiaoA/xdm) to manage dotfiles.
 
-Run `xdm s` to fast create soft link.
+```bash
+./install.sh
+```
 
 ### Fonts
 
 - Fira Code (Text)
-- FiraCode Nerd Font (Text)
+- FiraCode Nerd Font (Nerd Font)
 - Noto Color Emoji (Emoji)
 - Symbols Nerd Font Mono (Icon)
-- Material Design Icons Desktop (Icon)
-- MesloLGS NF (Glyphs)
 - Noto Sans CJK SC (Chinese)
 
 ## Credit

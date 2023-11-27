@@ -5,13 +5,13 @@
 
 # terminal emulator
 super + Return
-    wezterm
+    kitty
 
 super + shift + Return
-    bspc rule -a org.wezfurlong.wezterm -o state=floating follow=on center=true && wezterm
+    bspc rule -a kitty -o state=floating follow=on center=true && kitty
 
 ctrl + alt + t
-    wezterm
+    kitty
 
 # program launcher
 super + @space
@@ -188,12 +188,12 @@ alt + ctrl + shift + { Right,Left }
 
 # open app fast
 super + alt + {b, f, t, s, m, M, a}
-    { bspc rule -a org.wezfurlong.wezterm -o state=floating follow=on center=true && wezterm start -- btop, \
+    { bspc rule -a kitty -o state=floating follow=on center=true && kitty start -- btop, \
       firefox, \
       telegram-desktop, \
       simplescreenrecorder, \
       ~/dotfiles/config/rofi/mpd/mpd, \
-      bspc rule -a org.wezfurlong.wezterm -o state=floating follow=on center=true && wezterm start -- "ncmpcpp", \
+      bspc rule -a kitty -o state=floating follow=on center=true && kitty start -- "ncmpcpp", \
       ~/dotfiles/scripts/screenkey
     }
 
