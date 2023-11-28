@@ -37,8 +37,6 @@ bindkey -e
 # Remove path separator from WORDCHARS.
 WORDCHARS=${WORDCHARS//[\/]}
 
-source ~/.bashrc
-
 # -----------------
 # Zim configuration
 # -----------------
@@ -152,3 +150,7 @@ compinit
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Customize Init
+source ~/.bashrc
+eval "$(zoxide init zsh)"
