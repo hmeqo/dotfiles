@@ -12,23 +12,21 @@ end
 
 if command -q exa
   alias ls='exa --icons'
-  alias ll='exa -lh --icons'
-  alias la='exa -Alh --icons'
-  alias lsa='exa -alh --icons'
+  alias ll='exa -alh --icons'
+  alias l='exa -alh --icons'
   alias lst='exa -lTah --icons'
 
   alias tree="exa -T"
 else
   alias ls='ls --color=auto'
-  alias ll='ls -lh'
-  alias la='ls -Alh'
-  alias lsa='ls -alh'
+  alias ll='ls -alh'
+  alias l='ls -alh'
   alias lst='tree -pCsh'
 end
 
 if command -q tmux
   # tmux
-  alias tt='tmux a || tn'
+  alias tt='tmux attach || tmux'
   alias tn='tmux new'
   alias tl='tmux ls'
   alias ta='tmux attach -t'

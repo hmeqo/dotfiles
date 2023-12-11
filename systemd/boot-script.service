@@ -4,8 +4,8 @@ After=network.target
 
 [Service]
 Type=oneshot
-ExecStartPre=/bin/sh /opt/scripts/boot-script-pre.sh
-ExecStart=/bin/sh /opt/scripts/boot-script.sh
+ExecStartPre=/usr/bin/bash /opt/scripts/boot-script-pre.sh
+ExecStart=/usr/bin/bash /opt/scripts/boot-script.sh
 
 [Install]
 WantedBy=multi-user.target

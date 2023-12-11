@@ -24,10 +24,6 @@ if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
   export GLFW_IM_MODULE=ibus
 fi
 
-# Editor
-export EDITOR="nvim"
-export VISUAL="nvim"
-
 # Default
 export PATH="$PATH:$HOME/.local/bin:$HOME/dotfiles/scripts"
 
@@ -68,26 +64,29 @@ export OPENSSL_ia32cap="～0x200000200000000"
 
 [[ $- != *i* ]] && return
 
+# Python - pyenv
+if command -v pyenv >/dev/null; then
+  eval "$(pyenv init -)"
+fi
+
 # ls
 if command -v exa >/dev/null; then
   alias ls='exa --icons'
-  alias ll='exa -lh --icons'
-  alias la='exa -Alh --icons'
-  alias lsa='exa -alh --icons'
+  alias ll='exa -alh --icons'
+  alias l='exa -alh --icons'
   alias lst='exa -lTah --icons'
 
   alias tree="exa -T"
 else
   alias ls='ls --color=auto'
-  alias ll='ls -lh'
-  alias la='ls -Alh'
-  alias lsa='ls -alh'
+  alias ll='ls -alh'
+  alias l='ls -alh'
   alias lst='tree -pCsh'
 fi
 
 # tmux
 if command -v tmux >/dev/null; then
-  alias tt='tmux a || tn'
+  alias tt='tmux attach || tmux'
   alias tn='tmux new'
   alias tl='tmux ls'
   alias ta='tmux attach -t'
@@ -97,8 +96,3 @@ fi
 alias grep='grep --color=auto'
 
 PS1='[\u@\h \W]\$ '
-
-# Python - pyenv
-if command -v pyenv >/dev/null; then
-  eval "$(pyenv init -)"
-fi

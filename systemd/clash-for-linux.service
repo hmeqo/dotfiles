@@ -4,10 +4,9 @@ After=network.target
 
 [Service]
 Type=forking
-ExecStart=/bin/sh /opt/clash-for-linux/start.sh
-ExecStop=/bin/sh /opt/clash-for-linux/shutdown.sh
+ExecStart=/usr/bin/bash /opt/clash-for-linux/start.sh
+ExecStop=/usr/bin/bash /opt/clash-for-linux/shutdown.sh
 Restart=always
 
 [Install]
-Alias=clash-for-linux.service
 WantedBy=multi-user.target

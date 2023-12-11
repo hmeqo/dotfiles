@@ -17,9 +17,9 @@ link:
 
   ./config/sxhkd/: ~/.config/sxhkd
 
-  ./config/rofi/: ~/.config/rofi
-
   ./config/feh/: ~/.config/feh
+
+  ./config/wezterm/: ~/.config/wezterm
 
   ./config/zsh/.zshrc: ~/.zshrc
 
@@ -31,10 +31,6 @@ link:
 
   ./config/starship.toml: ~/.config/starship.toml
 
-  ./user/.bash_profile: ~/.bash_profile
-
   ./user/.bashrc: ~/.bashrc
 
   ./user/.gitconfig: ~/.gitconfig
-
-  ./user/.xinitrc: ~/.xinitrc
