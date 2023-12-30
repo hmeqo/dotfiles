@@ -33,4 +33,6 @@ link:
 
   ./user/.bashrc: ~/.bashrc
 
+  ./user/.profile: ~/.profile
+
   ./user/.gitconfig: ~/.gitconfig

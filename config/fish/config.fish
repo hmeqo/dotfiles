@@ -7,10 +7,7 @@ set fish_cursor_replace underscore
 set EDITOR "nvim"
 set VISUAL "nvim"
 
-# Python
+# Python - pyenv
 command -q pyenv && pyenv init - | source
 
 starship init fish | source
-
-set -x _ZO_ECHO 1
-zoxide init fish | source

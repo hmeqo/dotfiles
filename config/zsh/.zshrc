@@ -153,4 +153,11 @@ compinit
 
 # Customize Init
 source ~/.bashrc
-eval "$(zoxide init zsh)"
+
+# pnpm
+export PNPM_HOME="/home/hmeqo/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

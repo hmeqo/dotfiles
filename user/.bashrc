@@ -53,9 +53,9 @@ export KOTLIN_HOME="/usr/share/kotlin"
 
 # Clash
 if systemctl is-enabled --quiet "clash-for-linux.service"; then
-  export HTTP_PROXY="http://127.0.0.1:7890"
-  export HTTPS_PROXY="http://127.0.0.1:7890"
-  export NO_PROXY="127.0.0.1,localhost"
+  export HTTP_PROXY='http://127.0.0.1:7890'
+  export HTTPS_PROXY='http://127.0.0.1:7890'
+  export NO_PROXY='127.0.0.1,localhost'
 fi
 
 # Games
@@ -63,6 +63,8 @@ fi
 export OPENSSL_ia32cap="～0x200000200000000"
 
 [[ $- != *i* ]] && return
+
+alias grep='grep --color=auto'
 
 # Python - pyenv
 if command -v pyenv >/dev/null; then
@@ -72,15 +74,15 @@ fi
 # ls
 if command -v exa >/dev/null; then
   alias ls='exa --icons'
-  alias ll='exa -alh --icons'
-  alias l='exa -alh --icons'
+  alias ll='exa -Alh --icons'
+  alias l='exa -Alh --icons'
   alias lst='exa -lTah --icons'
 
   alias tree="exa -T"
 else
   alias ls='ls --color=auto'
-  alias ll='ls -alh'
-  alias l='ls -alh'
+  alias ll='ls -Alh'
+  alias l='ls -Alh'
   alias lst='tree -pCsh'
 fi
 
@@ -93,6 +95,14 @@ if command -v tmux >/dev/null; then
   alias tk='tmux kill-session -t'
 fi
 
-alias grep='grep --color=auto'
+if command -v batcat >/dev/null; then
+    alias bat=batcat
+    alias cat="batcat -pp"
+    alias ccat=/usr/bin/cat
+fi
+if command -v bat >/dev/null; then
+    alias cat="bat -pp"
+    alias ccat=/usr/bin/cat
+fi
 
 PS1='[\u@\h \W]\$ '
