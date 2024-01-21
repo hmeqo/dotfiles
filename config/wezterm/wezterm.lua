@@ -25,4 +25,27 @@ return {
     window_decorations = "RESIZE",
 
     hide_tab_bar_if_only_one_tab = true,
+
+    keys = {
+        {
+            key = "Enter",
+            mods = "CTRL|SHIFT|ALT",
+            action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+        },
+        {
+            key = "Enter",
+            mods = "CTRL|SHIFT",
+            action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+        },
+        {
+            key = "PageUp",
+            mods = "CTRL|SHIFT",
+            action = wezterm.action.ScrollByPage(-1),
+        },
+        {
+            key = "PageDown",
+            mods = "CTRL|SHIFT",
+            action = wezterm.action.ScrollByPage(1),
+        },
+    },
 }
