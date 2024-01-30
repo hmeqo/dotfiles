@@ -52,20 +52,21 @@ link_dotfiles() {
   create_link user/.gitconfig ~/.gitconfig
 }
 
-link_global() {
+link_system_service() {
   sudo mkdir -p /opt/scripts
   sudo cp -rf $HOME/dotfiles/scripts/* /opt/scripts
+  echo "Installed scripts to /opt/scripts"
 
   sudo cp -f $HOME/dotfiles/systemd/boot-script.service /etc/systemd/system/boot-script.service
-  sudo cp -f $HOME/dotfiles/systemd/clash-for-linux.service /etc/systemd/system/clash-for-linux.service
+  echo "Installed service boot-script"
 }
 
 ask_confirm() {
   if [ "$2" = "Y" ]; then
-    echo -n "$1 [Y/n] "
+    echo -n "$1 [Y/n]: "
     DEFAULT="Y"
   else
-    echo -n "$1 [y/N] "
+    echo -n "$1 [y/N]: "
     DEFAULT="N"
   fi
   read -r ANSWER
@@ -78,10 +79,10 @@ ask_confirm() {
   fi
 }
 
-if ask_confirm "Do you want to install dotfiles for root?" "Y"; then
+if ask_confirm "Do you want to link dotfiles?" Y; then
   link_dotfiles
 fi
 
-if ask_confirm "Do you want to install global scripts and service?" "N"; then
-  link_global
+if ask_confirm "Do you want to install boot-script service?" N; then
+  link_system_service
 fi

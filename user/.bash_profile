@@ -20,7 +20,7 @@ fi
 if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
   export QT_QPA_PLATFORM=wayland
   export CLUTTER_BACKEND=wayland
-  # export SDL_VIDEODRIVER=wayland
+  export SDL_VIDEODRIVER=wayland
   export MOZ_ENABLE_WAYLAND=1
 
   # Fcitx5
@@ -32,6 +32,8 @@ if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
 fi
 
 append_path "$HOME/.local/bin"
+
+export EDITOR=nvim
 
 # Rust
 if command -v cargo >/dev/null; then
@@ -69,17 +71,6 @@ fi
 if command -v pnpm >/dev/null; then
   export PNPM_HOME="/home/hmeqo/.local/share/pnpm"
   append_path "$PNPM_HOME"
-fi
-
-# Clash
-if systemctl is-enabled --quiet "clash-for-linux.service"; then
-  export HTTP_PROXY='http://127.0.0.1:7890'
-  export HTTPS_PROXY='http://127.0.0.1:7890'
-  export NO_PROXY='127.0.0.1,localhost'
-else
-  unset HTTP_PROXY
-  unset HTTPS_PROXY
-  unset NO_PROXY
 fi
 
 # Games
