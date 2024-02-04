@@ -77,4 +77,8 @@ fi
 # export OPENSSL_ia32cap="～0x200000200000000"
 export OPENSSL_ia32cap="~0x200000200000000"
 
+if [ -f ~/dotfiles/user/bash_profile.sh ]; then
+  . ~/dotfiles/user/bash_profile.sh
+fi
+
 [[ -f ~/.bashrc ]] && . ~/.bashrc

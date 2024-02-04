@@ -45,20 +45,21 @@ link_dotfiles() {
 
   create_link config/starship.toml ~/.config/starship.toml
 
-  create_link user/.bash_profile ~/.bash_profile
+  create_link config/bash/.bash_profile ~/.bash_profile
 
-  create_link user/.bashrc ~/.bashrc
+  create_link config/bash/.bashrc ~/.bashrc
 
-  create_link user/.gitconfig ~/.gitconfig
+  create_link config/.gitconfig ~/.gitconfig
 }
 
-link_system_service() {
-  sudo mkdir -p /opt/scripts
-  sudo cp -rf $HOME/dotfiles/scripts/* /opt/scripts
-  echo "Installed scripts to /opt/scripts"
+link_boot_script() {
+  sudo mkdir -p /opt/boot-script
+  sudo cp -rf $HOME/dotfiles/systemd/boot-script/* /opt/boot-script
+  echo "Installed boot-script to /opt/boot-script"
 
   sudo cp -f $HOME/dotfiles/systemd/boot-script.service /etc/systemd/system/boot-script.service
-  echo "Installed service boot-script"
+  echo "Installed boot-script service"
+  echo "Run 'sudo systemctl enable boot-script' to enable service"
 }
 
 ask_confirm() {
@@ -84,5 +85,5 @@ if ask_confirm "Do you want to link dotfiles?" Y; then
 fi
 
 if ask_confirm "Do you want to install boot-script service?" N; then
-  link_system_service
+  link_boot_script
 fi

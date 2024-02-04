@@ -41,3 +41,9 @@ if command -v bat >/dev/null; then
 fi
 
 PS1='[\u@\h \W]\$ '
+
+. ~/dotfiles/config/bash/proxy.sh
+
+if [ -f ~/dotfiles/user/bashrc.sh ]; then
+  . ~/dotfiles/user/bashrc.sh
+fi
