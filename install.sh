@@ -21,13 +21,11 @@ create_link() {
 }
 
 link_dotfiles() {
-  create_link config/neofetch/ ~/.config/neofetch
-
   create_link config/fish/ ~/.config/fish
 
   create_link config/nvim/ ~/.config/nvim
 
-  create_link config2/nvim/user/ ~/.config/nvim/lua/user
+  create_link config/nvim.user/lua/ ~/.config/nvim/lua/user
 
   create_link config/kitty/ ~/.config/kitty
 
