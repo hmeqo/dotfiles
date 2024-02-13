@@ -16,8 +16,8 @@ else
 fi
 
 if command -v bat >/dev/null; then
-  alias cat="bat -pp"
-  alias ccat=/usr/bin/cat
+  alias cat='bat -pp'
+  alias ccat='/usr/bin/cat'
 fi
 
 # tmux
@@ -29,4 +29,4 @@ if command -v tmux >/dev/null; then
   alias tk='tmux kill-session -t'
 fi
 
-alias color_test "curl https://gist.githubusercontent.com/lilydjwg/fdeaf79e921c2f413f44b6f613f6ad53/raw/94d8b2be62657e96488038b0e547e3009ed87d40/colors.py | python"
+alias color_test='curl https://gist.githubusercontent.com/lilydjwg/fdeaf79e921c2f413f44b6f613f6ad53/raw/94d8b2be62657e96488038b0e547e3009ed87d40/colors.py | python'
