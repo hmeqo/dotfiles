@@ -27,19 +27,13 @@ link_dotfiles() {
 
   create_link config/nvim.user/lua/ ~/.config/nvim/lua/user
 
-  create_link config/kitty/ ~/.config/kitty
-
   create_link config/feh/ ~/.config/feh
 
   create_link config/wezterm/ ~/.config/wezterm
 
-  create_link config/zsh/.zshrc ~/.zshrc
+  create_link config/zsh/.zshenv ~/.zshenv
 
-  create_link config/zsh/.zprofile ~/.zprofile
-
-  create_link config/zsh/.zimrc ~/.zimrc
-
-  create_link config/zsh/.p10k.zsh ~/.p10k.zsh
+  create_link config/zsh/ ~/.config/zsh
 
   create_link config/starship.toml ~/.config/starship.toml
 

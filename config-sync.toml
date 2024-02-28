@@ -1,0 +1,46 @@
+[options.fish]
+description = "Fish shell config."
+links = [{ source = "config/fish", target = "~/.config/fish" }]
+
+[options.nvim]
+description = "Neovim config."
+links = [{ source = "config/nvim", target = "~/.config/nvim" }]
+
+[options.nvim-user]
+description = "Neovim user custom config."
+links = [
+    { source = "config/nvim.user/lua", target = "~/.config/nvim/lua/user" },
+]
+depends = ["nvim"]
+
+[options.feh]
+description = "Feh config."
+links = [{ source = "config/feh", target = "~/.config/feh" }]
+
+[options.wezterm]
+description = "Wezterm config."
+links = [{ source = "config/wezterm", target = "~/.config/wezterm" }]
+
+[options.zsh]
+description = "Zsh config."
+links = [
+    { source = "config/zsh", target = "~/.config/zsh" },
+    { source = "config/zsh/.zshenv", target = "~/.zshenv" },
+]
+
+[options.starship]
+description = "Starship config."
+links = [
+    { source = "config/starship.toml", target = "~/.config/starship.toml" },
+]
+
+[options.bash]
+description = "Bash config."
+links = [
+    { source = "config/bash/.bash_profile", target = "~/.bash_profile" },
+    { source = "config/bash/.bashrc", target = "~/.bashrc" },
+]
+
+[options.git]
+description = "Git config."
+links = [{ source = "config/.gitconfig", target = "~/.gitconfig" }]

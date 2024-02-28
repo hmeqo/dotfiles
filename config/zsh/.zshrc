@@ -136,7 +136,7 @@ unset key
 # }}} End configuration added by Zim install
 
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
+HISTFILE=$ZDOTDIR/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 bindkey -e
@@ -149,7 +149,7 @@ compinit
 # End of lines added by compinstall
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
 
 # tabtab source for packages
 # uninstall by removing these lines
