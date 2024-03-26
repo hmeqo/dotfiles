@@ -1,5 +1,7 @@
 alias cp="cp -i"
 
+alias grep='grep --color=auto'
+
 # ls
 if command -q exa
   alias ls='exa --icons'

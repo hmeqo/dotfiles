@@ -1,10 +1,12 @@
 [options.fish]
 description = "Fish shell config."
 links = [{ source = "config/fish", target = "~/.config/fish" }]
+synced = false
 
 [options.nvim]
 description = "Neovim config."
 links = [{ source = "config/nvim", target = "~/.config/nvim" }]
+synced = false
 
 [options.nvim-user]
 description = "Neovim user custom config."
@@ -12,14 +14,12 @@ links = [
     { source = "config/nvim.user/lua", target = "~/.config/nvim/lua/user" },
 ]
 depends = ["nvim"]
-
-[options.feh]
-description = "Feh config."
-links = [{ source = "config/feh", target = "~/.config/feh" }]
+synced = false
 
 [options.wezterm]
 description = "Wezterm config."
 links = [{ source = "config/wezterm", target = "~/.config/wezterm" }]
+synced = false
 
 [options.zsh]
 description = "Zsh config."
@@ -27,12 +27,14 @@ links = [
     { source = "config/zsh", target = "~/.config/zsh" },
     { source = "config/zsh/.zshenv", target = "~/.zshenv" },
 ]
+synced = false
 
 [options.starship]
 description = "Starship config."
 links = [
     { source = "config/starship.toml", target = "~/.config/starship.toml" },
 ]
+synced = false
 
 [options.bash]
 description = "Bash config."
@@ -40,7 +42,9 @@ links = [
     { source = "config/bash/.bash_profile", target = "~/.bash_profile" },
     { source = "config/bash/.bashrc", target = "~/.bashrc" },
 ]
+synced = false
 
 [options.git]
 description = "Git config."
 links = [{ source = "config/.gitconfig", target = "~/.gitconfig" }]
+synced = false

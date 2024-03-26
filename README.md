@@ -3,7 +3,9 @@
 ## Install
 
 ```bash
-./install.sh
+# Use pdm or other package manager
+pdm install
+pdm run scstui
 ```
 
 ### Fonts

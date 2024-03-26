@@ -9,21 +9,13 @@ if [ "$XDG_SESSION_TYPE" = "x11" ]; then
   # Fcitx5
   export GTK_IM_MODULE=fcitx
   export QT_IM_MODULE=fcitx
-  export XMODIFIERS=\@im=fcitx
+  export XMODIFIERS=@im=fcitx
   export SDL_IM_MODULE=fcitx
   export GLFW_IM_MODULE=ibus
 fi
 if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
-  export QT_QPA_PLATFORM=wayland
-  export CLUTTER_BACKEND=wayland
-  export SDL_VIDEODRIVER=wayland
-
   # Fcitx5
-  export GTK_IM_MODULE=fcitx
-  export QT_IM_MODULE=fcitx
-  export XMODIFIERS=\@im=fcitx
-  export SDL_IM_MODULE=fcitx
-  export GLFW_IM_MODULE=ibus
+  export XMODIFIERS=@im=fcitx
 fi
 
 append_path "$HOME/.local/bin"
