@@ -15,7 +15,7 @@ if [ "$XDG_SESSION_TYPE" = "x11" ]; then
 fi
 if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
     # Fcitx5
-    # export XMODIFIERS=@im=fcitx
+    export XMODIFIERS=@im=fcitx
 fi
 
 append_path "$HOME/.local/bin"

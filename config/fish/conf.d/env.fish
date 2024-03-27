@@ -16,7 +16,7 @@ if test "$XDG_SESSION_TYPE" = "x11"
 end
 if test "$XDG_SESSION_TYPE" = "wayland"
   # Fcitx5
-  # set -gx XMODIFIERS @im=fcitx
+  set -gx XMODIFIERS @im=fcitx
 end
 
 append_path "$HOME/.local/bin"
