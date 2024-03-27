@@ -2,7 +2,7 @@
 
 ## Install
 
-### With pip
+### Use venv
 
 ```bash
 python -m venv .venv
