@@ -1,42 +1,4 @@
-[options.fish]
-description = "Fish shell config."
-links = [{ source = "config/fish", target = "~/.config/fish" }]
-synced = false
-
-[options.nvim]
-description = "Neovim config."
-links = [{ source = "config/nvim", target = "~/.config/nvim" }]
-synced = false
-
-[options.nvim-user]
-description = "Neovim user custom config."
-links = [
-    { source = "config/nvim.user/lua", target = "~/.config/nvim/lua/user" },
-]
-depends = ["nvim"]
-synced = false
-
-[options.wezterm]
-description = "Wezterm config."
-links = [{ source = "config/wezterm", target = "~/.config/wezterm" }]
-synced = false
-
-[options.zsh]
-description = "Zsh config."
-links = [
-    { source = "config/zsh", target = "~/.config/zsh" },
-    { source = "config/zsh/.zshenv", target = "~/.zshenv" },
-]
-synced = false
-
-[options.starship]
-description = "Starship config."
-links = [
-    { source = "config/starship.toml", target = "~/.config/starship.toml" },
-]
-synced = false
-
-[options.bash]
+[options.shell.bash]
 description = "Bash config."
 links = [
     { source = "config/bash/.bash_profile", target = "~/.bash_profile" },
@@ -44,7 +6,50 @@ links = [
 ]
 synced = false
 
-[options.git]
+[options.shell.fish]
+description = "Fish shell config."
+links = [{ source = "config/fish", target = "~/.config/fish" }]
+synced = false
+
+[options.shell.zsh]
+description = "Zsh config."
+links = [
+    { source = "config/zsh", target = "~/.config/zsh" },
+    { source = "config/zsh/.zshenv", target = "~/.zshenv" },
+]
+synced = false
+
+[options.shell.starship]
+description = "Starship config."
+links = [
+    { source = "config/starship.toml", target = "~/.config/starship.toml" },
+]
+synced = false
+
+[options.neovim.nvim]
+description = "Neovim config."
+links = [{ source = "config/nvim", target = "~/.config/nvim" }]
+synced = false
+
+[options.neovim.nvim-user]
+description = "Neovim user custom config. (neovim)"
+links = [
+    { source = "config/nvim.user/lua", target = "~/.config/nvim/lua/user" },
+]
+dependencies = ["nvim"]
+synced = false
+
+[options.terminal.wezterm]
+description = "Wezterm config."
+links = [{ source = "config/wezterm", target = "~/.config/wezterm" }]
+synced = false
+
+[options.terminal.kitty]
+description = "Kitty config."
+links = [{ source = "config/kitty", target = "~/.config/kitty" }]
+synced = false
+
+[options.default.git]
 description = "Git config."
 links = [{ source = "config/.gitconfig", target = "~/.gitconfig" }]
 synced = false
