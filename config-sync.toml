@@ -1,4 +1,5 @@
-[options.shell.bash]
+[options.bash]
+group = "shell"
 description = "Bash config."
 links = [
     { source = "config/bash/.bash_profile", target = "~/.bash_profile" },
@@ -6,12 +7,14 @@ links = [
 ]
 synced = false
 
-[options.shell.fish]
+[options.fish]
+group = "shell"
 description = "Fish shell config."
 links = [{ source = "config/fish", target = "~/.config/fish" }]
 synced = false
 
-[options.shell.zsh]
+[options.zsh]
+group = "shell"
 description = "Zsh config."
 links = [
     { source = "config/zsh", target = "~/.config/zsh" },
@@ -19,19 +22,22 @@ links = [
 ]
 synced = false
 
-[options.shell.starship]
+[options.starship]
+group = "shell"
 description = "Starship config."
 links = [
     { source = "config/starship.toml", target = "~/.config/starship.toml" },
 ]
 synced = false
 
-[options.neovim.nvim]
+[options.nvim]
+group = "neovim"
 description = "Neovim config."
 links = [{ source = "config/nvim", target = "~/.config/nvim" }]
 synced = false
 
-[options.neovim.nvim-user]
+[options.nvim-user]
+group = "neovim"
 description = "Neovim user custom config. (neovim)"
 links = [
     { source = "config/nvim.user/lua", target = "~/.config/nvim/lua/user" },
@@ -39,17 +45,19 @@ links = [
 dependencies = ["nvim"]
 synced = false
 
-[options.terminal.wezterm]
+[options.wezterm]
+group = "terminal"
 description = "Wezterm config."
 links = [{ source = "config/wezterm", target = "~/.config/wezterm" }]
 synced = false
 
-[options.terminal.kitty]
+[options.kitty]
+group = "terminal"
 description = "Kitty config."
 links = [{ source = "config/kitty", target = "~/.config/kitty" }]
 synced = false
 
-[options.default.git]
+[options.git]
 description = "Git config."
 links = [{ source = "config/.gitconfig", target = "~/.gitconfig" }]
 synced = false

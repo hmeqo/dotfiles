@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:5e3052ca8fa6d418ef74847c58510aedde91717ae7dfd4f1ac67f96a9e259dec"
+content_hash = "sha256:a989d7b739732d2cc47e073a65464f663bc9e1312e2f2900a2b8b205b4b9f0ec"
 
 [[package]]
 name = "linkify-it-py"
@@ -105,7 +105,7 @@ files = [
 
 [[package]]
 name = "simple-config-sync"
-version = "0.1.4.dev1"
+version = "0.1.5"
 requires_python = ">=3.11"
 summary = "Used for synchronizing dotfiles across various Linux devices, capable of automatically creating links, automatically deleting links, and selectively synchronizing files."
 groups = ["default"]
@@ -114,8 +114,8 @@ dependencies = [
     "toml>=0.10.2",
 ]
 files = [
-    {file = "simple_config_sync-0.1.4.dev1-py3-none-any.whl", hash = "sha256:7973f595c578174ef4749ee30c3c07d3b123ca96f0b51a6b27bbf01deefad468"},
-    {file = "simple_config_sync-0.1.4.dev1.tar.gz", hash = "sha256:37a6da97ce248b6770459617373b2c4d057ced34451a0f2dbeb7d565aba7b27a"},
+    {file = "simple_config_sync-0.1.5-py3-none-any.whl", hash = "sha256:cc18c3178da677d0b966517cee269777fdb631318eac2b206446525aee9f7d2e"},
+    {file = "simple_config_sync-0.1.5.tar.gz", hash = "sha256:49b4d0527dd21661de5e4ccb5e65ae0f2b0df7975aaf2530333ed8d3db9c5dd9"},
 ]
 
 [[package]]
