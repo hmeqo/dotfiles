@@ -2,27 +2,18 @@
 
 ## Install
 
-### Use venv
-
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Use pdm or other package manager
-
-```bash
-pdm install
-```
-
 ## Usage
 
 ```bash
+# source .venv/bin/activate
 # venv
 scstui
-# pdm
-pdm run scstui
 ```
 
 ### Fonts recommended
