@@ -8,9 +8,12 @@ end
 
 # Fcitx5
 if test "$XDG_CURRENT_DESKTOP" = "KDE" && test "$XDG_SESSION_TYPE" = "wayland"
+  set -gx GTK_IM_MODULE fcitx
+  set -gx QT_IM_MODULE fcitx
   set -gx XMODIFIERS @im=fcitx
+  set -gx SDL_IM_MODULE fcitx
+  set -gx GLFW_IM_MODULE ibus
 else
-  # Fcitx5
   set -gx GTK_IM_MODULE fcitx
   set -gx QT_IM_MODULE fcitx
   set -gx XMODIFIERS @im=fcitx
