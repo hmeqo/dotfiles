@@ -8,5 +8,6 @@ set fish_cursor_replace underscore
 [ -f ~/.config/tabtab/fish/__tabtab.fish ]; and . ~/.config/tabtab/fish/__tabtab.fish; or true
 
 command -q starship && starship init fish | source
+zoxide init fish | source
 
 [ -f ~/dotfiles/user/fish/config.fish ]; and . ~/dotfiles/user/fish/config.fish; or true

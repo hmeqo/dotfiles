@@ -2,9 +2,9 @@
 # ~/.bash_profile
 #
 
-. ~/dotfiles/config/bash/conf.d/env.bash
+for file in ~/dotfiles/config/bash/conf.d/*; do
+  . $file
+done
+[[ -f ~/dotfiles/user/bash/.bash_profile ]] && . ~/dotfiles/user/bash/.bash_profile
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
-
-[[ -f ~/dotfiles/user/bash/.bash_profile ]] && . ~/dotfiles/user/bash/.bash_profile || true
-[[ -f ~/dotfiles/user/bash/.bashrc ]] && . ~/dotfiles/user/bash/.bashrc || true

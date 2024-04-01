@@ -155,7 +155,9 @@ compinit
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
 
+eval $(zoxide init zsh)
+
 for file in ~/dotfiles/config/bash/conf.d/*; do
     . $file
 done
-[[ -f ~/dotfiles/user/zsh/.zshrc ]] && . ~/otfiles/user/zsh/.zshrc || true
+[[ -f ~/dotfiles/user/zsh/.zshrc ]] && . ~/dotfiles/user/zsh/.zshrc || true

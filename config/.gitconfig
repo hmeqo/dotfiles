@@ -3,5 +3,3 @@
 	email = hmeqocoliniliad@gmail.com
 [init]
 	defaultBranch = main
-[core]
-	autocrlf = input

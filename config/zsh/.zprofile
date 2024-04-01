@@ -1,7 +1,4 @@
-if [ -f ~/.bash_profile ]; then
-    source ~/.bash_profile
-fi
-
-if [ -f ~/.profile ]; then
-    source ~/.profile
-fi
+for file in ~/dotfiles/config/bash/conf.d/*; do
+    . $file
+done
+[[ -f ~/dotfiles/user/zsh/.zprofile ]] && . ~/dotfiles/user/zsh/.zprofile || true

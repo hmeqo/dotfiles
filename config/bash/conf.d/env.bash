@@ -6,7 +6,7 @@ append_path() {
 }
 
 # Fcitx5
-if [ $XDG_CURRENT_DESKTOP = "KDE" ] && [ $XDG_SESSION_TYPE = "wayland" ]; then
+if [ "$XDG_CURRENT_DESKTOP" = "KDE" ] && [ "$XDG_SESSION_TYPE" = "wayland" ]; then
     export GTK_IM_MODULE=fcitx
     export QT_IM_MODULE=fcitx
     export XMODIFIERS=@im=fcitx
