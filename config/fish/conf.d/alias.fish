@@ -1,6 +1,5 @@
 alias cp="cp -i"
 
-# ls
 if command -q exa
     alias ls='exa --icons'
     alias ll='exa -alh --icons'
@@ -18,7 +17,6 @@ if command -q bat
     alias ccat /usr/bin/cat
 end
 
-# tmux
 if command -q tmux
     alias tt='tmux attach || tmux'
     alias tn='tmux new'

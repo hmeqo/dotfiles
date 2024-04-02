@@ -9,9 +9,6 @@ append_path() {
 if [ "$XDG_CURRENT_DESKTOP" = "KDE" ] && [ "$XDG_SESSION_TYPE" = "wayland" ]; then
     export GTK_IM_MODULE=fcitx
     export QT_IM_MODULE=fcitx
-    export XMODIFIERS=@im=fcitx
-    export SDL_IM_MODULE=fcitx
-    export GLFW_IM_MODULE=ibus
 else
     export GTK_IM_MODULE=fcitx
     export QT_IM_MODULE=fcitx
@@ -32,18 +29,15 @@ fi
 # Python - pythonpath
 export PYTHONPATH=""
 if [ -d "$HOME/repos/python/lib" ]; then
-    for i in $(ls -1F $HOME/repos/python/lib | grep -e "/\$"); do
-        if [ -z "$PYTHONPATH" ]; then
-            export PYTHONPATH="$HOME/repos/python/lib/$i"
-        else
-            export PYTHONPATH="$PYTHONPATH:$HOME/repos/python/packages/$i"
-        fi
+    for i in $HOME/repos/python/lib/*; do
+        export PYTHONPATH="${PYTHONPATH:+$PYTHONPATH:}$i"
     done
 fi
 # Python - pyenv
 if command -v pyenv >/dev/null; then
     export PYENV_ROOT="$HOME/.pyenv"
     append_path "$PYENV_ROOT/bin"
+    eval "$(pyenv init -)"
 fi
 
 # Java

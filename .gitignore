@@ -33,11 +33,12 @@ config/fish/fish_plugins
 config/fish/fish_variables
 
 config/zsh/*
-!config/zsh/.zshenv
-!config/zsh/.zshrc
-!config/zsh/.zprofile
-!config/zsh/.zimrc
+!config/zsh/conf.d
 !config/zsh/.p10k
+!config/zsh/.zimrc
+!config/zsh/.zprofile
+!config/zsh/.zshrc
+!config/zsh/.zshenv
 
 user/*
 !user/.gitkeep

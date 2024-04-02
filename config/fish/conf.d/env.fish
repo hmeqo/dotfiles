@@ -2,28 +2,25 @@ function append_path
   switch "$PATH"
     case "*$argv[1]*"
     case "*"
-      set -gx PATH $PATH $argv[1]
+      set -x PATH $PATH $argv[1]
   end
 end
 
 # Fcitx5
 if test "$XDG_CURRENT_DESKTOP" = "KDE" && test "$XDG_SESSION_TYPE" = "wayland"
-  set -gx GTK_IM_MODULE fcitx
-  set -gx QT_IM_MODULE fcitx
-  set -gx XMODIFIERS @im=fcitx
-  set -gx SDL_IM_MODULE fcitx
-  set -gx GLFW_IM_MODULE ibus
+  set -x GTK_IM_MODULE fcitx
+  set -x QT_IM_MODULE fcitx
 else
-  set -gx GTK_IM_MODULE fcitx
-  set -gx QT_IM_MODULE fcitx
-  set -gx XMODIFIERS @im=fcitx
-  set -gx SDL_IM_MODULE fcitx
-  set -gx GLFW_IM_MODULE ibus
+  set -x GTK_IM_MODULE fcitx
+  set -x QT_IM_MODULE fcitx
+  set -x XMODIFIERS @im=fcitx
+  set -x SDL_IM_MODULE fcitx
+  set -x GLFW_IM_MODULE ibus
 end
 
 append_path "$HOME/.local/bin"
 
-set -gx EDITOR nvim
+set -x EDITOR nvim
 
 # Rust
 if type -q cargo
@@ -33,32 +30,30 @@ end
 # Python - pythonpath
 set -x PYTHONPATH ""
 if test -d "$HOME/repos/python/lib"
-  for i in (ls -1F $HOME/repos/python/lib | string match -r '/$')
-    if test -z "$PYTHONPATH"
-      set -gx PYTHONPATH "$HOME/repos/python/lib/$i"
-    else
-      set -gx PYTHONPATH "$PYTHONPATH:$HOME/repos/python/packages/$i"
-    end
+  for i in $HOME/repos/python/lib/*
+    set -x PYTHONPATH "$PYTHONPATH" "$i"
   end
+  set -x PYTHONPATH (string trim -l -c ":" -- "$PYTHONPATH")
 end
 # Python - pyenv
 if type -q pyenv
   set -gx PYENV_ROOT "$HOME/.pyenv"
   append_path "$PYENV_ROOT/bin"
+  pyenv init - | source
 end
 
 # Java
 if type -q java
-  set -gx JAVA_HOME (readlink -f /usr/bin/java | string replace "/bin/java" "")
+  set -x JAVA_HOME (readlink -f /usr/bin/java | string replace "/bin/java" "")
   append_path "$JAVA_HOME/bin"
 end
 # Kotlin
 if type -q kotlin
-  set -gx KOTLIN_HOME "/usr/share/kotlin"
+  set -x KOTLIN_HOME "/usr/share/kotlin"
 end
 
 # pnpm
 if type -q pnpm
-  set -gx PNPM_HOME "/home/hmeqo/.local/share/pnpm"
+  set -x PNPM_HOME "/home/hmeqo/.local/share/pnpm"
   append_path "$PNPM_HOME"
 end

@@ -9,6 +9,8 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
 for file in ~/dotfiles/config/bash/conf.d/*; do
-  . $file
+  if [[ -f file ]]; then
+    . $file
+  fi
 done
 [[ -f ~/dotfiles/user/bash/.bashrc ]] && . ~/dotfiles/user/bash/.bashrc
