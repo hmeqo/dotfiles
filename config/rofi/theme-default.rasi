@@ -28,7 +28,7 @@ entry {
 
 listview {
     lines: 8;
-    scrollbar: false;
+    scrollbar: true;
     border: 0px;
 }
 
@@ -72,12 +72,12 @@ element selected.normal {
 
 element selected.urgent {
     text-color: @foreground;
-    background-color: inherit;
+    background-color: @color1;
 }
 
 element selected.active {
     text-color: @foreground;
-    background-color: inherit;
+    background-color: @color1;
 }
 
 element alternate.normal {

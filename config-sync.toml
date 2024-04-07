@@ -64,12 +64,6 @@ links = [{ source = "config/kitty", target = "~/.config/kitty" }]
 system-depends = ["kitty"]
 synced = false
 
-[options.git]
-description = ""
-links = [{ source = "config/.gitconfig", target = "~/.gitconfig" }]
-system-depends = ["git"]
-synced = false
-
 [options.hyprland]
 group = "desktop environment"
 description = ""
