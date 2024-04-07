@@ -1,0 +1,96 @@
+* {
+    background: #2f2f2f;
+    foreground: #FFFFFF;
+    color1: #666666;
+}
+
+window {
+    width: 800px;
+    background-color: @background;
+    border: 1px;
+    border-color: #8F8F8F;
+    border-radius: 8px;
+    transparency: "real";
+}
+
+inputbar {
+    enabled: true;
+    spacing: 12px;
+    padding: 12px;
+    margin: 4px;
+    border: 0;
+    border-radius: 8px;
+}
+
+entry {
+    placeholder: "Search";
+}
+
+listview {
+    lines: 8;
+    scrollbar: false;
+    border: 0px;
+}
+
+element {
+    padding: 8px;
+    margin: 4px;
+    spacing: 8px;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+element-icon {
+    size: 32px;
+    cursor: inherit;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
+
+element normal.normal {
+    text-color: @foreground;
+    background-color: inherit;
+}
+
+element normal.urgent {
+    text-color: @foreground;
+    background-color: inherit;
+}
+
+element normal.active {
+    text-color: @foreground;
+    background-color: inherit;
+}
+
+element selected.normal {
+    text-color: @foreground;
+    background-color: @color1;
+}
+
+element selected.urgent {
+    text-color: @foreground;
+    background-color: inherit;
+}
+
+element selected.active {
+    text-color: @foreground;
+    background-color: inherit;
+}
+
+element alternate.normal {
+    text-color: @foreground;
+    background-color: inherit;
+}
+
+element alternate.urgent {
+    text-color: @foreground;
+    background-color: inherit;
+}
+
+element alternate.active {
+    text-color: @foreground;
+    background-color: inherit;
+}

@@ -1,0 +1,8 @@
+configuration {
+    modi: [ drun, run, combi ];
+    combi-modi: [ window, drun, ssh ];
+    font: "hack 12";
+    show-icons: true;
+}
+
+@import "theme-default"

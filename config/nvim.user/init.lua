@@ -1,3 +1,5 @@
+local plugins_enabled = require "user.plugins-enabled"
+
 if vim.g.neovide then
   if os.getenv "XDG_SESSION_TYPE" == "wayland" then
     vim.o.guifont = "FiraCode Nerd Font:h12"
@@ -13,8 +15,11 @@ if vim.g.neovide then
   -- vim.g.neovide_cursor_vfx_mode = "railgun"
 end
 
+local colorscheme = "astrotheme"
+if plugins_enabled.theme then colorscheme = require("user.plugins.theme")[1].colorscheme end
+
 return {
-  colorscheme = "tokyonight-night",
+  colorscheme = colorscheme,
   lsp = {
     formatting = {
       format_on_save = false,

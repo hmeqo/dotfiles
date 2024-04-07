@@ -25,5 +25,5 @@ proxy_on() {
             return 1
             ;;
     esac
-    export NO_PROXY='localhost,127.0.0.1'
+    export NO_PROXY='127.0.0.1,localhost'
 }
