@@ -41,15 +41,6 @@ links = [{ source = "config/nvim", target = "~/.config/nvim" }]
 system-depends = ["neovim"]
 synced = false
 
-[options.nvim-user]
-group = "neovim"
-description = "Neovim user custom config. (neovim)"
-links = [
-    { source = "config/nvim.user", target = "~/.config/nvim/lua/user" },
-]
-group-depends = ["nvim"]
-synced = false
-
 [options.wezterm]
 group = "terminal"
 description = ""
