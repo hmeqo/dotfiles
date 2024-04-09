@@ -1,26 +1,26 @@
 function proxy_on
     switch $argv[1]
         case "clash" "clash_verge"
-            set -x HTTP_PROXY 'http://127.0.0.1:7890'
-            set -x HTTPS_PROXY 'http://127.0.0.1:7890'
-            set -x SOCKS_PROXY 'http://127.0.0.1:7891'
+            set -gx HTTP_PROXY 'http://127.0.0.1:7890'
+            set -gx HTTPS_PROXY 'http://127.0.0.1:7890'
+            set -gx SOCKS_PROXY 'http://127.0.0.1:7891'
         case "clash_verge_rev" "clash_rev"
-            set -x HTTP_PROXY 'http://127.0.0.1:7897'
-            set -x HTTPS_PROXY 'http://127.0.0.1:7897'
-            set -x SOCKS_PROXY 'http://127.0.0.1:7898'
+            set -gx HTTP_PROXY 'http://127.0.0.1:7897'
+            set -gx HTTPS_PROXY 'http://127.0.0.1:7897'
+            set -gx SOCKS_PROXY 'http://127.0.0.1:7898'
         case "v2raya"
-            set -x HTTP_PROXY 'http://127.0.0.1:20172'
-            set -x HTTPS_PROXY 'http://127.0.0.1:20172'
-            set -x SOCKS_PROXY 'socks5://127.0.0.1:20170'
+            set -gx HTTP_PROXY 'http://127.0.0.1:20172'
+            set -gx HTTPS_PROXY 'http://127.0.0.1:20172'
+            set -gx SOCKS_PROXY 'socks5://127.0.0.1:20170'
         case "v2raya_global"
-            set -x HTTP_PROXY 'http://127.0.0.1:20171'
-            set -x HTTPS_PROXY 'http://127.0.0.1:20171'
-            set -x SOCKS_PROXY 'socks5://127.0.0.1:20170'
+            set -gx HTTP_PROXY 'http://127.0.0.1:20171'
+            set -gx HTTPS_PROXY 'http://127.0.0.1:20171'
+            set -gx SOCKS_PROXY 'socks5://127.0.0.1:20170'
         case '*'
             echo "Unsupported proxy type: $argv[1]"
             return 1
     end
-    set -x NO_PROXY 'localhost,127.0.0.1'
+    set -gx NO_PROXY 'localhost,127.0.0.1'
     return 0
 end
 

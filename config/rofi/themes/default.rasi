@@ -1,23 +1,42 @@
-* {
-    background: #2f2f2f;
-    foreground: #FFFFFF;
-    color1: #666666;
-}
+/*
+# Rofi theme default
+*/
 
 window {
     width: 800px;
-    background-color: @background;
+    background-color: @background-color;
     border: 1px;
     border-color: #8F8F8F;
     border-radius: 8px;
     transparency: "real";
 }
 
+mainbox {
+    margin: 8px;
+    spacing: 12px;
+    children: [inputbar, message, listview, sidebar];
+}
+
+sidebar {
+    border: 0;
+    spacing: 8px;
+}
+
+button { 
+	padding: 4px 0px;
+	text-color: @gray-600; 
+}	
+
+button selected {
+	text-color: @foreground; 
+	border-radius: 8px;
+	background-color: @gray-600;
+}
+
 inputbar {
     enabled: true;
-    spacing: 12px;
-    padding: 12px;
-    margin: 4px;
+    spacing: 8px;
+    padding: 8px;
     border: 0;
     border-radius: 8px;
 }
@@ -28,13 +47,13 @@ entry {
 
 listview {
     lines: 8;
+    spacing: 8px;
     scrollbar: true;
     border: 0px;
 }
 
 element {
     padding: 8px;
-    margin: 4px;
     spacing: 8px;
     border: 0;
     border-radius: 8px;
@@ -67,17 +86,17 @@ element normal.active {
 
 element selected.normal {
     text-color: @foreground;
-    background-color: @color1;
+    background-color: @gray-600;
 }
 
 element selected.urgent {
     text-color: @foreground;
-    background-color: @color1;
+    background-color: @gray-600;
 }
 
 element selected.active {
     text-color: @foreground;
-    background-color: @color1;
+    background-color: @gray-600;
 }
 
 element alternate.normal {

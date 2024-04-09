@@ -1,9 +1,9 @@
 function prime_priority
     switch $argv[1]
         case "nvidia"
-            set -x __NV_PRIME_RENDER_OFFLOAD 1
-            set -x __GLX_VENDOR_LIBRARY_NAME "nvidia"
-            set -x __VK_LAYER_NV_optimus "NVIDIA_only"
+            set -gx __NV_PRIME_RENDER_OFFLOAD 1
+            set -gx __GLX_VENDOR_LIBRARY_NAME "nvidia"
+            set -gx __VK_LAYER_NV_optimus "NVIDIA_only"
         case "*"
             echo "Only nvidia is supported."
     end
