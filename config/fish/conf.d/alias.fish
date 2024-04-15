@@ -2,13 +2,13 @@ alias cp="cp -i"
 
 if command -q exa
     alias ls='exa --icons'
-    alias ll='exa -alh --icons'
-    alias l='exa -alh --icons'
+    alias ll='exa -Alh --icons'
+    alias l='exa -Alh --icons'
     alias lst='exa -lTah --icons'
 else
     alias ls='ls --color=auto'
-    alias ll='ls -alh'
-    alias l='ls -alh'
+    alias ll='ls -Alh'
+    alias l='ls -Alh'
     alias lst='tree -pCsh'
 end
 

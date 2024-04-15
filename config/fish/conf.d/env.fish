@@ -54,6 +54,6 @@ end
 
 # pnpm
 if type -q pnpm
-  set -x PNPM_HOME "/home/hmeqo/.local/share/pnpm"
+  set -x PNPM_HOME "$HOME/.local/share/pnpm"
   append_path "$PNPM_HOME"
 end

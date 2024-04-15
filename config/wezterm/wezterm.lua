@@ -13,7 +13,7 @@ return {
 
     color_scheme = "Default",
 
-    -- default_prog = { "/bin/bash", "-l", "-c", "tmux attach || tmux" },
+    default_prog = { "/usr/bin/zsh" },
 
     window_padding = {
         left = 2,

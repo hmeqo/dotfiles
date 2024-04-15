@@ -52,6 +52,6 @@ fi
 
 # pnpm
 if command -v pnpm >/dev/null; then
-    export PNPM_HOME="/home/hmeqo/.local/share/pnpm"
+    export PNPM_HOME="$HOME/.local/share/pnpm"
     append_path "$PNPM_HOME"
 fi
