@@ -1,23 +1,20 @@
-[options.bash]
+[[option]]
+name = "bash"
 group = "shell"
-description = ""
 links = [
     { source = "config/bash/.bash_profile", target = "~/.bash_profile" },
     { source = "config/bash/.bashrc", target = "~/.bashrc" },
 ]
-synced = false
 
-[options.fish]
+[[option]]
+name = "fish"
 group = "shell"
-description = ""
 links = [{ source = "config/fish", target = "~/.config/fish" }]
-system-depends = ["fish", "zoxide", "fzf"]
-group-depends = ["starship"]
-synced = false
+depends = { system = ["fish", "zoxide", "fzf"], group = ["starship"] }
 
-[options.zsh]
+[[option]]
+name = "zsh"
 group = "shell"
-description = ""
 links = [
     { source = "config/zsh/.zshenv", target = "~/.zshenv" },
     { source = "config/zsh/.p10k.zsh", target = "~/.config/zsh/.p10k.zsh" },
@@ -25,61 +22,54 @@ links = [
     { source = "config/zsh/.zprofile", target = "~/.config/zsh/.zprofile" },
     { source = "config/zsh/.zshrc", target = "~/.config/zsh/.zshrc" },
 ]
-system-depends = ["zsh", "zoxide", "fzf"]
-synced = false
+depends = { system = ["zsh", "zoxide", "fzf"] }
 
-[options.starship]
+[[option]]
+name = "starship"
 group = "shell"
-description = ""
 links = [
     { source = "config/starship.toml", target = "~/.config/starship.toml" },
 ]
-system-depends = ["starship"]
-synced = false
+depends = { system = ["starship"] }
 
-[options.nvim]
+[[option]]
+name = "neovim"
 group = "neovim"
-description = ""
 links = [{ source = "config/nvim", target = "~/.config/nvim" }]
-system-depends = ["neovim"]
-synced = false
+depends = { system = ["neovim"] }
 
-[options.wezterm]
+[[option]]
+name = "wezterm"
 group = "terminal"
-description = ""
 links = [{ source = "config/wezterm", target = "~/.config/wezterm" }]
-system-depends = ["wezterm"]
-synced = false
+depends = { system = ["wezterm"] }
 
-[options.kitty]
+[[option]]
+name = "kitty"
 group = "terminal"
-description = ""
 links = [{ source = "config/kitty", target = "~/.config/kitty" }]
-system-depends = ["kitty"]
-synced = false
+depends = { system = ["kitty"] }
 
-[options.hyprland]
+[[option]]
+name = "hyprland"
 group = "desktop environment"
-description = ""
 links = [{ source = "config/hypr", target = "~/.config/hypr" }]
-system-depends = ["hyprland"]
-synced = false
+depends = { system = ["hyprland"] }
 
-[options.rofi]
+[[option]]
+name = "rofi"
 group = "application launcher"
-description = ""
 links = [{ source = "config/rofi", target = "~/.config/rofi" }]
-system-depends = ["wofi"]
-synced = false
+depends = { system = ["wofi"] }
 
-[options.wallpapers]
+[[option]]
+name = "wallpapers"
 group = "wallpaper"
-description = ""
-links = [{ source = "config/wallpapers/stephan-raabe", target = "~/.local/share/wallpapers/stephan-raabe" }]
-synced = false
+links = [
+    { source = "config/wallpapers/stephan-raabe", target = "~/.local/share/wallpapers/stephan-raabe" },
+]
 
-[options.waybar]
-description = ""
+[[option]]
+name = "waybar"
 links = [{ source = "config/waybar", target = "~/.config/waybar" }]
-system-depends = ["waybar"]
-synced = false
+depends = { system = ["waybar"] }

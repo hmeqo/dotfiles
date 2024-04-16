@@ -6,7 +6,7 @@ append_path() {
 }
 
 # Fcitx5
-if [ "$XDG_CURRENT_DESKTOP" = "KDE" ] && [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+if [[ "$XDG_CURRENT_DESKTOP" = "KDE" ]] && [[ "$XDG_SESSION_TYPE" = "wayland" ]]; then
     export GTK_IM_MODULE=fcitx
     export QT_IM_MODULE=fcitx
 else
@@ -27,8 +27,8 @@ if command -v cargo >/dev/null; then
 fi
 
 # Python - pythonpath
-export PYTHONPATH=""
 if [ -d "$HOME/repos/python/lib" ]; then
+    export PYTHONPATH=""
     for i in $HOME/repos/python/lib/*; do
         export PYTHONPATH="${PYTHONPATH:+$PYTHONPATH:}$i"
     done
