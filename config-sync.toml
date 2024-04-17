@@ -1,19 +1,16 @@
-[[option]]
-name = "bash"
+[options.bash]
 group = "shell"
 links = [
     { source = "config/bash/.bash_profile", target = "~/.bash_profile" },
     { source = "config/bash/.bashrc", target = "~/.bashrc" },
 ]
 
-[[option]]
-name = "fish"
+[options.fish]
 group = "shell"
 links = [{ source = "config/fish", target = "~/.config/fish" }]
 depends = { system = ["fish", "zoxide", "fzf"], group = ["starship"] }
 
-[[option]]
-name = "zsh"
+[options.zsh]
 group = "shell"
 links = [
     { source = "config/zsh/.zshenv", target = "~/.zshenv" },
@@ -24,52 +21,44 @@ links = [
 ]
 depends = { system = ["zsh", "zoxide", "fzf"] }
 
-[[option]]
-name = "starship"
+[options.starship]
 group = "shell"
 links = [
     { source = "config/starship.toml", target = "~/.config/starship.toml" },
 ]
 depends = { system = ["starship"] }
 
-[[option]]
-name = "neovim"
+[options.neovim]
 group = "neovim"
 links = [{ source = "config/nvim", target = "~/.config/nvim" }]
 depends = { system = ["neovim"] }
 
-[[option]]
-name = "wezterm"
+[options.wezterm]
 group = "terminal"
 links = [{ source = "config/wezterm", target = "~/.config/wezterm" }]
 depends = { system = ["wezterm"] }
 
-[[option]]
-name = "kitty"
+[options.kitty]
 group = "terminal"
 links = [{ source = "config/kitty", target = "~/.config/kitty" }]
 depends = { system = ["kitty"] }
 
-[[option]]
-name = "hyprland"
+[options.hyprland]
 group = "desktop environment"
 links = [{ source = "config/hypr", target = "~/.config/hypr" }]
 depends = { system = ["hyprland"] }
 
-[[option]]
-name = "rofi"
+[options.rofi]
 group = "application launcher"
 links = [{ source = "config/rofi", target = "~/.config/rofi" }]
 depends = { system = ["wofi"] }
 
-[[option]]
-name = "wallpapers"
+[options.wallpapers]
 group = "wallpaper"
 links = [
     { source = "config/wallpapers/stephan-raabe", target = "~/.local/share/wallpapers/stephan-raabe" },
 ]
 
-[[option]]
-name = "waybar"
+[options.waybar]
 links = [{ source = "config/waybar", target = "~/.config/waybar" }]
 depends = { system = ["waybar"] }
