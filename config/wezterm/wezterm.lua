@@ -11,9 +11,7 @@ return {
     }),
     font_size = 12,
 
-    color_scheme = "Default",
-
-    default_prog = { "/usr/bin/zsh" },
+    color_scheme = "default",
 
     window_padding = {
         left = 2,

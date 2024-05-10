@@ -1,14 +1,19 @@
+has_path() {
+    [[ ":$PATH:" == *":$1:"* ]]
+}
+
 append_path() {
-    case ":$PATH:" in
-        *:"$1":*) ;;
-        *) PATH="${PATH:+$PATH:}$1" ;;
-    esac
+    has_path "$1" || PATH="$PATH:$1"
+}
+
+prepend_path() {
+    has_path "$1" || PATH="$1:$PATH"
 }
 
 # Fcitx5
 if [[ "$XDG_CURRENT_DESKTOP" = "KDE" ]] && [[ "$XDG_SESSION_TYPE" = "wayland" ]]; then
-    export GTK_IM_MODULE=fcitx
-    export QT_IM_MODULE=fcitx
+    # export GTK_IM_MODULE=fcitx
+    # export QT_IM_MODULE=fcitx
 else
     export GTK_IM_MODULE=fcitx
     export QT_IM_MODULE=fcitx
@@ -17,33 +22,25 @@ else
     export GLFW_IM_MODULE=ibus
 fi
 
-append_path "$HOME/.local/bin"
+prepend_path "$HOME/.local/bin"
 
 export EDITOR=nvim
 
 # Rust
 if command -v cargo >/dev/null; then
-    append_path "$HOME/.cargo/bin"
+    prepend_path "$HOME/.cargo/bin"
 fi
 
-# Python - pythonpath
-if [ -d "$HOME/repos/python/lib" ]; then
-    export PYTHONPATH=""
-    for i in $HOME/repos/python/lib/*; do
-        export PYTHONPATH="${PYTHONPATH:+$PYTHONPATH:}$i"
-    done
-fi
 # Python - pyenv
 if command -v pyenv >/dev/null; then
     export PYENV_ROOT="$HOME/.pyenv"
-    append_path "$PYENV_ROOT/bin"
+    prepend_path "$PYENV_ROOT/bin"
     eval "$(pyenv init -)"
 fi
 
 # Java
 if command -v java >/dev/null; then
     export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:/bin/java::")
-    append_path "$JAVA_HOME/bin"
 fi
 # Kotlin
 if command -v kotlin >/dev/null; then
@@ -53,5 +50,5 @@ fi
 # pnpm
 if command -v pnpm >/dev/null; then
     export PNPM_HOME="$HOME/.local/share/pnpm"
-    append_path "$PNPM_HOME"
+    prepend_path "$PNPM_HOME"
 fi

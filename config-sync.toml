@@ -51,7 +51,7 @@ depends = { system = ["hyprland"] }
 [options.rofi]
 group = "application launcher"
 links = [{ source = "config/rofi", target = "~/.config/rofi" }]
-depends = { system = ["wofi"] }
+depends = { system = ["rofi"] }
 
 [options.wallpapers]
 group = "wallpaper"
@@ -59,6 +59,6 @@ links = [
     { source = "config/wallpapers/stephan-raabe", target = "~/.local/share/wallpapers/stephan-raabe" },
 ]
 
-[options.waybar]
-links = [{ source = "config/waybar", target = "~/.config/waybar" }]
-depends = { system = ["waybar"] }
+# [options.waybar]
+# links = [{ source = "config/waybar", target = "~/.config/waybar" }]
+# depends = { system = ["waybar"] }

@@ -3,19 +3,19 @@ function proxy_on
         case "clash" "clash_verge"
             set -gx HTTP_PROXY 'http://127.0.0.1:7890'
             set -gx HTTPS_PROXY 'http://127.0.0.1:7890'
-            set -gx SOCKS_PROXY 'http://127.0.0.1:7891'
+            set -gx SOCKS_PROXY 'socks://127.0.0.1:7891'
         case "clash_verge_rev" "clash_rev"
             set -gx HTTP_PROXY 'http://127.0.0.1:7897'
             set -gx HTTPS_PROXY 'http://127.0.0.1:7897'
-            set -gx SOCKS_PROXY 'http://127.0.0.1:7898'
+            set -gx SOCKS_PROXY 'socks://127.0.0.1:7898'
         case "v2raya"
             set -gx HTTP_PROXY 'http://127.0.0.1:20172'
             set -gx HTTPS_PROXY 'http://127.0.0.1:20172'
-            set -gx SOCKS_PROXY 'socks5://127.0.0.1:20170'
+            set -gx SOCKS_PROXY 'socks://127.0.0.1:20170'
         case "v2raya_global"
             set -gx HTTP_PROXY 'http://127.0.0.1:20171'
             set -gx HTTPS_PROXY 'http://127.0.0.1:20171'
-            set -gx SOCKS_PROXY 'socks5://127.0.0.1:20170'
+            set -gx SOCKS_PROXY 'socks://127.0.0.1:20170'
         case '*'
             echo "Unsupported proxy type: $argv[1]"
             return 1

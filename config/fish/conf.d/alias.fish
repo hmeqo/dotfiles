@@ -1,20 +1,20 @@
-alias cp="cp -i"
-
 if command -q exa
     alias ls='exa --icons'
+    alias lsa='exa -A --icons'
     alias ll='exa -Alh --icons'
-    alias l='exa -Alh --icons'
-    alias lst='exa -lTah --icons'
+    alias la='exa -Alh --icons'
+    alias lt='exa -lTah --icons'
 else
     alias ls='ls --color=auto'
+    alias lsa='ls -A'
     alias ll='ls -Alh'
-    alias l='ls -Alh'
-    alias lst='tree -pCsh'
+    alias la='ls -Alh'
+    alias lt='tree -pCsh'
 end
 
 if command -q bat
-    alias cat="bat -pp"
-    alias ccat /usr/bin/cat
+    alias cat='bat -pp'
+    alias ccat='/usr/bin/cat'
 end
 
 if command -q tmux
@@ -25,4 +25,7 @@ if command -q tmux
     alias tk='tmux kill-session -t'
 end
 
-alias color_test "curl https://gist.githubusercontent.com/lilydjwg/fdeaf79e921c2f413f44b6f613f6ad53/raw/94d8b2be62657e96488038b0e547e3009ed87d40/colors.py | python"
+alias va='source .venv/bin/activate.fish'
+alias vd='deactivate'
+
+alias color_test='curl https://gist.githubusercontent.com/lilydjwg/fdeaf79e921c2f413f44b6f613f6ad53/raw/94d8b2be62657e96488038b0e547e3009ed87d40/colors.py | python'
