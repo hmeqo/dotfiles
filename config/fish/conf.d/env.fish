@@ -1,10 +1,5 @@
 function has_path
-  switch ":$PATH:"
-    case ":$argv[1]:"
-      return true
-    case *
-      return false
-  end
+  contains $argv[1] $PATH
 end
 
 function append_path
@@ -16,16 +11,16 @@ function prepend_path
 end
 
 # Fcitx5
-if test "$XDG_CURRENT_DESKTOP" = "KDE" && test "$XDG_SESSION_TYPE" = "wayland"
-  # set -gx GTK_IM_MODULE fcitx
-  # set -gx QT_IM_MODULE fcitx
-else
+if test "$XDG_CURRENT_DESKTOP" != "KDE" || test "$XDG_SESSION_TYPE" != "wayland"
+  # GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx XMODIFIERS=@im=fcitx SDL_IM_MODULE=fcitx GLFW_IM_MODULE=ibus
   set -gx GTK_IM_MODULE fcitx
   set -gx QT_IM_MODULE fcitx
   set -gx XMODIFIERS @im=fcitx
   set -gx SDL_IM_MODULE fcitx
   set -gx GLFW_IM_MODULE ibus
 end
+
+set -gx QT_QPA_PLATFORMTHEME qt6ct
 
 prepend_path "$HOME/.local/bin"
 
