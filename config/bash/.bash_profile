@@ -2,11 +2,9 @@
 # ~/.bash_profile
 #
 
-for file in ~/dotfiles/config/bash/conf.d/*; do
-  if [[ -f file ]]; then
-    . $file
-  fi
-done
+. ~/dotfiles/config/bash/load_config.bash
+. ~/dotfiles/config/bash/env.bash
+# User Config
 [[ -f ~/dotfiles/user/bash/.bash_profile ]] && . ~/dotfiles/user/bash/.bash_profile
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc

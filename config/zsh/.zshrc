@@ -153,9 +153,5 @@ compinit
 
 eval $(zoxide init zsh)
 
-for file in ~/dotfiles/config/zsh/conf.d/*; do
-    if [[ -f $file ]]; then
-        . $file
-    fi
-done
+. ~/dotfiles/config/zsh/load_bashrc.zsh
 [[ -f ~/dotfiles/user/zsh/.zshrc ]] && . ~/dotfiles/user/zsh/.zshrc || true

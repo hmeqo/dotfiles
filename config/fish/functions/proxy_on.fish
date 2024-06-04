@@ -3,18 +3,22 @@ function proxy_on
         case "clash" "clash_verge"
             set -gx http_proxy 'http://127.0.0.1:7890'
             set -gx https_proxy 'http://127.0.0.1:7890'
+            set -gx ftp_proxy 'socks5://127.0.0.1:7891'
             set -gx socks_proxy 'socks5://127.0.0.1:7891'
         case "clash_verge_rev" "clash_rev"
             set -gx http_proxy 'http://127.0.0.1:7897'
             set -gx https_proxy 'http://127.0.0.1:7897'
+            set -gx ftp_proxy 'socks5://127.0.0.1:7898'
             set -gx socks_proxy 'socks5://127.0.0.1:7898'
         case "v2raya"
             set -gx http_proxy 'http://127.0.0.1:20172'
             set -gx https_proxy 'http://127.0.0.1:20172'
+            set -gx ftp_proxy 'socks5://127.0.0.1:20170'
             set -gx socks_proxy 'socks5://127.0.0.1:20170'
         case "v2raya_global"
             set -gx http_proxy 'http://127.0.0.1:20171'
             set -gx https_proxy 'http://127.0.0.1:20171'
+            set -gx ftp_proxy 'socks5://127.0.0.1:20170'
             set -gx socks_proxy 'socks5://127.0.0.1:20170'
         case '*'
             echo "Unsupported proxy type: $argv[1]"
@@ -31,7 +35,6 @@ function __proxy_on_complete
         echo -e "clash_verge\tSet proxy to Clash Verge"
         echo -e "clash_verge_rev\tSet proxy to Clash Verge Rev"
         echo -e "clash_rev\tSet proxy to Clash Verge Rev"
-        echo -e "clash\tSet proxy to Clash"
         echo -e "v2raya\tSet proxy to V2RayA"
         echo -e "v2raya_global\tSet proxy to V2RayA Global"
     end

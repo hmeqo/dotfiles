@@ -1,9 +1,15 @@
-set fish_greeting ""
-set fish_cursor_insert line
-set fish_cursor_replace_one underscore
-set fish_cursor_replace underscore
+if status is-login
+  . ~/dotfiles/config/fish/env.fish
+end
 
-command -q starship && starship init fish | source
-zoxide init fish | source
+if status is-interactive
+  set fish_greeting ""
+  set fish_cursor_insert line
+  set fish_cursor_replace_one underscore
+  set fish_cursor_replace underscore
 
-[ -f ~/dotfiles/user/fish/config.fish ]; and . ~/dotfiles/user/fish/config.fish; or true
+  command -q starship && starship init fish | source
+  zoxide init fish | source
+end
+
+[ -f ~/dotfiles/user/fish/config.fish ] && . ~/dotfiles/user/fish/config.fish || true

@@ -46,7 +46,7 @@ depends = { system = ["kitty"] }
 [options.hyprland]
 group = "desktop environment"
 links = [{ source = "config/hypr", target = "~/.config/hypr" }]
-depends = { system = ["hyprland"] }
+depends = { system = ["hyprland", "xdg-desktop-portal-hyprland", "hyprpaper", "hyprshot", "hyprlock", "cliphist", "rofi-wayland", "rofimoji", "dunst", "qt6ct", "nwg-look", "network-manager-applet", "kwallet", "kwallet-pam", "kdeconnect", "kitty", "dolphin"] }
 
 [options.rofi]
 group = "application launcher"

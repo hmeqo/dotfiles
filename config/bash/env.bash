@@ -12,19 +12,17 @@ prepend_path() {
 
 # Fcitx5
 if [[ "$XDG_CURRENT_DESKTOP" != "KDE" ]] || [[ "$XDG_SESSION_TYPE" != "wayland" ]]; then
-    # GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx XMODIFIERS=@im=fcitx SDL_IM_MODULE=fcitx GLFW_IM_MODULE=ibus
-    export GTK_IM_MODULE=fcitx
-    export QT_IM_MODULE=fcitx
-    export XMODIFIERS=@im=fcitx
-    export SDL_IM_MODULE=fcitx
-    export GLFW_IM_MODULE=ibus
+    load_input_method_env
 fi
-
-export QT_QPA_PLATFORMTHEME=qt6ct
 
 prepend_path "$HOME/.local/bin"
 
-export EDITOR=nvim
+export EDITOR="nvim"
+
+# Pager
+if command -v bat >/dev/null; then
+    export PAGER="bat"
+fi
 
 # Rust
 if command -v cargo >/dev/null; then
@@ -40,7 +38,7 @@ fi
 
 # Java
 if command -v java >/dev/null; then
-    export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:/bin/java::")
+    export JAVA_HOME="/usr/lib/jvm/default-runtime"
 fi
 # Kotlin
 if command -v kotlin >/dev/null; then

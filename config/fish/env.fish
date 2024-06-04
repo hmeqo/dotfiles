@@ -12,19 +12,17 @@ end
 
 # Fcitx5
 if test "$XDG_CURRENT_DESKTOP" != "KDE" || test "$XDG_SESSION_TYPE" != "wayland"
-  # GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx XMODIFIERS=@im=fcitx SDL_IM_MODULE=fcitx GLFW_IM_MODULE=ibus
-  set -gx GTK_IM_MODULE fcitx
-  set -gx QT_IM_MODULE fcitx
-  set -gx XMODIFIERS @im=fcitx
-  set -gx SDL_IM_MODULE fcitx
-  set -gx GLFW_IM_MODULE ibus
+  load_input_method_env
 end
-
-set -gx QT_QPA_PLATFORMTHEME qt6ct
 
 prepend_path "$HOME/.local/bin"
 
-set -gx EDITOR nvim
+set -gx EDITOR "nvim"
+
+# Pager
+if type -q bat
+  set -gx PAGER "bat"
+end
 
 # Rust
 if type -q cargo

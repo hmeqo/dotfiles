@@ -1,9 +1,5 @@
 autoload -Uz compinit
 compinit
 
-for file in ~/dotfiles/config/zsh/conf.d/*; do
-    if [[ -f $file ]]; then
-        . $file
-    fi
-done
+. ~/dotfiles/config/zsh/load_bash_profile.zsh
 [[ -f ~/dotfiles/user/zsh/.zprofile ]] && . ~/dotfiles/user/zsh/.zprofile || true
