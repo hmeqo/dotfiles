@@ -4,7 +4,6 @@ return {
     font = wezterm.font_with_fallback({
         "FiraCode Nerd Font",
         -- Icons
-        "Symbols Nerd Font Mono",
         "Noto Color Emoji",
         -- Chinese
         "Noto Sans CJK SC",
