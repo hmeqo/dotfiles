@@ -1,13 +1,15 @@
 if command -v exa >/dev/null; then
     alias ls='exa --icons'
     alias lsa='exa -A --icons'
-    alias ll='exa -Alh --icons'
+    alias l='exa -Alh --icons'
+    alias ll='exa -lh --icons'
     alias la='exa -Alh --icons'
     alias lt='exa -lTah --icons'
 else
     alias ls='ls --color=auto'
     alias lsa='ls -A'
-    alias ll='ls -Alh'
+    alias l='ls -Alh'
+    alias ll='ls -lh'
     alias la='ls -Alh'
     alias lt='tree -pCsh'
 fi
