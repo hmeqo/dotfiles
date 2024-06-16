@@ -1,4 +1,4 @@
-function proxy_off() {
+proxy_off() {
     unset http_proxy
     unset https_proxy
     unset socks_proxy

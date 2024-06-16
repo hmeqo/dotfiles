@@ -1,30 +1,34 @@
 if command -q exa
-    alias ls='exa --icons'
-    alias lsa='exa -A --icons'
-    alias l='exa -Alh --icons'
-    alias ll='exa -lh --icons'
-    alias la='exa -Alh --icons'
-    alias lt='exa -lTah --icons'
+  alias ls='exa --icons'
+  alias lsa='ls -A'
+  alias l='ls -lh'
+  alias ll='ls -Alh'
+  alias la='ls -alh'
+  alias lt='ls -lTah'
 else
-    alias ls='ls --color=auto'
-    alias lsa='ls -A'
-    alias l='ls -Alh'
-    alias ll='ls -lh'
-    alias la='ls -Alh'
-    alias lt='tree -pCsh'
+  alias ls='ls --color=auto'
+  alias lsa='ls -A'
+  alias l='ls -lh'
+  alias ll='ls -Alh'
+  alias la='ls -alh'
+  alias lt='tree -pCsh'
 end
 
 if command -q bat
-    alias cat='bat -pp'
-    alias ccat='/usr/bin/cat'
+  alias cat='bat -pp'
+  alias ccat='/usr/bin/cat'
 end
 
 if command -q tmux
-    alias tt='tmux attach || tmux'
-    alias tn='tmux new'
-    alias tl='tmux ls'
-    alias ta='tmux attach -t'
-    alias tk='tmux kill-session -t'
+  alias tt='tmux attach || tmux'
+  alias tn='tmux new'
+  alias tl='tmux ls'
+  alias ta='tmux attach -t'
+  alias tk='tmux kill-session -t'
+end
+
+if command -q fzf
+  # alias sshf='ssh $(cat ~/.ssh/config | grep "Host " | awk \'{print $2}\' | fzf)'
 end
 
 alias va='source .venv/bin/activate.fish'

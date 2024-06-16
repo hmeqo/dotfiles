@@ -1,5 +1,8 @@
 if status is-login
   . ~/dotfiles/config/fish/env.fish
+  if test -f /etc/profile.d/greeting.sh
+    bash /etc/profile.d/greeting.sh
+  end
 end
 
 if status is-interactive

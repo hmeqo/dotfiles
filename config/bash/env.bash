@@ -12,7 +12,13 @@ prepend_path() {
 
 # Fcitx5
 if [[ "$XDG_CURRENT_DESKTOP" != "KDE" ]] || [[ "$XDG_SESSION_TYPE" != "wayland" ]]; then
-    load_input_method_env
+    # GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx XMODIFIERS=@im=fcitx SDL_IM_MODULE=fcitx INPUT_METHOD=fcitx GLFW_IM_MODULE=ibus
+    export GTK_IM_MODULE=fcitx
+    export QT_IM_MODULE=fcitx
+    export XMODIFIERS=@im=fcitx
+    export SDL_IM_MODULE=fcitx
+    export INPUT_METHOD=fcitx
+    export GLFW_IM_MODULE=ibus
 fi
 
 prepend_path "$HOME/.local/bin"
