@@ -1,0 +1,12 @@
+unlink ~/.config/dotfiles/xdgfix/bin/fakehome ~/.local/bin/fakehome
+unlink ~/.config/dotfiles/xdgfix/applications/steam.desktop "$XDG_DATA_HOME/applications/steam.desktop"
+unlink ~/.config/dotfiles/xdgfix/bin/steam ~/.local/bin/steam
+unlink ~/.config/dotfiles/xdgfix/bin/steam ~/.local/bin/steam-runtime
+unlink ~/.config/dotfiles/xdgfix/bin/thunderbird ~/.local/bin/thunderbird
+unlink ~/.config/dotfiles/xdgfix/applications/firefox.desktop "$XDG_DATA_HOME/applications/firefox.desktop"
+unlink ~/.config/dotfiles/xdgfix/bin/firefox ~/.local/bin/firefox
+unlink ~/.config/dotfiles/xdgfix/applications/code.desktop "$XDG_DATA_HOME/applications/code.desktop"
+unlink ~/.config/dotfiles/xdgfix/applications/code-url-handler.desktop "$XDG_DATA_HOME/applications/code-url-handler.desktop"
+unlink ~/.config/dotfiles/xdgfix/bin/code ~/.local/bin/code
+unlink ~/.config/dotfiles/xdgfix/bin/jetbrains-fleet ~/.local/bin/jetbrains-fleet
+unlink ~/.config/dotfiles/xdgfix/bin/hmcl-bin ~/.local/bin/hmcl-bin

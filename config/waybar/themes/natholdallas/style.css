@@ -1,0 +1,69 @@
+* {
+  border-radius: 4px;
+  font-family: "FiraCode Nerd Font";
+  font-size: 14px;
+}
+
+#waybar {
+  background: rgba(20, 20, 20, 20);
+	color: #fdf6e3;
+}
+
+/* Module Left */
+
+#cpu {
+  margin: 6px 0 6px 6px;
+  padding: 0 10px;
+}
+
+#memory {
+  margin: 6px 0 6px 6px;
+  padding: 0 10px;
+}
+
+/* Module Center */
+
+#workspaces {
+  margin: 6px 0;
+  color: #eeeeee;
+  background: rgba(50, 50, 50, 80);
+}
+
+#tray {
+  margin: 6px 0 6px 6px;
+  padding: 0 10px;
+  color: #eeeeee;
+  background: rgba(50, 50, 50, 80);
+}
+
+/* Module Right */
+
+#backlight {
+  margin: 6px 6px 6px 0;
+  padding: 0 10px;
+}
+
+#pulseaudio {
+  margin: 6px 6px 6px 0;
+  padding: 0 10px;
+}
+
+#network {
+  margin: 6px 6px 6px 0;
+  padding: 0 10px;
+}
+
+#clock {
+  margin: 6px 6px 6px 0;
+  padding: 0 10px;
+}
+
+#custom-power {
+  margin: 6px 6px 6px 0;
+  padding: 0 10px;
+}
+
+#battery {
+  margin: 6px 6px 6px 0;
+  padding: 0 10px;
+}

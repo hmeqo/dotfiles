@@ -1,0 +1,8 @@
+[Libinput][6392][3993][USB OPTICAL MOUSE ]
+PointerAcceleration=-0.400
+
+[Mouse]
+X11LibInputXAccelProfileFlat=true
+XLbInptAccelProfileFlat=false
+XLbInptPointerAcceleration=-0.4
+cursorTheme=Bibata-Modern-Ice

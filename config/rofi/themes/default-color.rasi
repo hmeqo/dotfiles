@@ -1,0 +1,18 @@
+/*
+# Rofi theme default color
+*/
+
+* {
+    background-color: #2f2f2f;
+    foreground: #FFFFFF;
+    gray-50: #e5e5e5;
+    gray-100: #cccccc;
+    gray-200: #afafaf;
+    gray-300: #999999;
+    gray-500: #7f7f7f;
+    gray-600: #666666;
+    gray-700: #4f4f4f;
+    gray-800: #333333;
+    gray-900: #1f1f1f;
+}
+

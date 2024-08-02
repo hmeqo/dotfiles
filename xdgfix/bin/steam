@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+LANG=zh_CN.UTF-8 fakehome /usr/bin/steam "$@"

@@ -1,0 +1,8 @@
+#!/usr/bin/zsh
+
+autoload -Uz compinit
+compinit
+
+. ~/.config/dotfiles/config/zsh/load_bash_profile.zsh
+
+[[ ! -f ~/.config/dotfiles/user/zsh/config.zsh ]] || . ~/.config/dotfiles/user/zsh/config.zsh

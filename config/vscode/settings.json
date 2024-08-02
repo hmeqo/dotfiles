@@ -1,0 +1,462 @@
+{
+    // ██╗   ██╗██╗███╗   ███╗
+    // ██║   ██║██║████╗ ████║
+    // ██║   ██║██║██╔████╔██║
+    // ╚██╗ ██╔╝██║██║╚██╔╝██║
+    //  ╚████╔╝ ██║██║ ╚═╝ ██║
+    //   ╚═══╝  ╚═╝╚═╝     ╚═╝
+
+    "vim.timeout": 400,
+    "vim.enableNeovim": true,
+    "vim.easymotion": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.leader": "<space>",
+    "vim.hlsearch": true,
+    "vim.foldfix": true,
+    "vim.camelCaseMotion.enable": true,
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.color": "rgba(230, 97, 89, 0.7)",
+    "vim.highlightedyank.textColor": "white",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-c>": false,
+        "<C-v>": false,
+        "<C-x>": false,
+        "<C-z>": false,
+        "<C-h>": false,
+        "<C-l>": false,
+        "<C-i>": false,
+        "<C-[>": false,
+        "<C-]>": false,
+        "<C-k>": false,
+        "<C-f>": false,
+        "<C-j>": false,
+        "<C-b>": false,
+        "<C-t>": false,
+        "<C-o>": false,
+        "<C-p>": false,
+        "<C-q>": false
+    },
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // Motion
+        {
+            "before": ["<C-right>"],
+            "after": ["e"]
+        },
+        {
+            "before": ["[", "b"],
+            "commands": ["workbench.action.previousEditor"]
+        },
+        {
+            "before": ["]", "b"],
+            "commands": ["workbench.action.nextEditor"]
+        },
+        {
+            "before": ["H"],
+            "commands": ["workbench.action.previousEditor"]
+        },
+        {
+            "before": ["L"],
+            "commands": ["workbench.action.nextEditor"]
+        },
+        {
+            "before": ["s"],
+            "after": ["<leader>", "<leader>", "s"]
+        },
+        // Camel case motion
+        {
+            "before": [",", "w"],
+            "after": ["<leader>", "w"]
+        },
+        {
+            "before": [",", "e"],
+            "after": ["<leader>", "e"]
+        },
+        {
+            "before": [",", "b"],
+            "after": ["<leader>", "b"]
+        },
+        // 编辑
+        {
+            "before": ["<leader>", "w"],
+            "commands": [":w"]
+        },
+        {
+            "before": ["<leader>", "W"],
+            "commands": [":w!"]
+        },
+        {
+            "before": ["<leader>", "c"],
+            "commands": [":q"]
+        },
+        {
+            "before": ["<leader>", "C"],
+            "commands": ["workbench.action.closeActiveEditor"]
+        },
+        {
+            "before": ["<leader>", "q"],
+            "commands": ["workbench.action.closeEditorsAndGroup"]
+        },
+        {
+            "before": ["u"],
+            "commands": ["undo"]
+        },
+        {
+            "before": ["U"],
+            "commands": ["redo"]
+        },
+        {
+            "before": ["<C-r>"],
+            "commands": ["redo"]
+        },
+        {
+            "before": ["\\"],
+            "after": ["<C-w>", "s"]
+        },
+        {
+            "before": ["|"],
+            "after": ["<C-w>", "v"]
+        },
+        {
+            "before": ["K"],
+            "commands": ["editor.action.showHover"]
+        },
+        // 取消高亮
+        {
+            "before": ["<C-n>"],
+            "commands": [":nohl"]
+        },
+        // 注释
+        {
+            "before": ["<leader>", "/"],
+            "commands": ["editor.action.commentLine"]
+        },
+        // 打开设置
+        {
+            "before": ["<leader>", ".", "g"],
+            "commands": ["workbench.action.openRawDefaultSettings"]
+        },
+        {
+            "before": ["<leader>", ".", "f"],
+            "commands": ["workbench.action.openFolderSettingsFile"]
+        },
+        {
+            "before": ["<leader>", ".", "r"],
+            "commands": ["workbench.action.openRemoteSettingsFile"]
+        },
+        {
+            "before": ["<leader>", ".", "u"],
+            "commands": ["workbench.action.openSettingsJson"]
+        },
+        {
+            "before": ["<leader>", ".", "w"],
+            "commands": ["workbench.action.openWorkspaceSettingsFile"]
+        }
+    ],
+    "vim.insertModeKeyBindings": [
+        // Motion
+        {
+            "before": ["<left>"],
+            "commands": ["cursorLeft"]
+        },
+        {
+            "before": ["<right>"],
+            "commands": ["cursorRight"]
+        },
+        {
+            "before": ["<Up>"],
+            "commands": ["cursorUp"]
+        },
+        {
+            "before": ["<Down>"],
+            "commands": ["cursorDown"]
+        },
+        // 编辑
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        },
+        // 打开最近文件
+        {
+            "before": ["<c-r>"],
+            "commands": ["workbench.action.openRecent"]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        // Motion
+        {
+            "before": ["<C-right>"],
+            "after": ["e"]
+        },
+        {
+            "before": ["s"],
+            "after": ["<leader>", "<leader>", "s"]
+        },
+        // Camel case motion
+        {
+            "before": [",", "w"],
+            "after": ["<leader>", "w"]
+        },
+        {
+            "before": [",", "e"],
+            "after": ["<leader>", "e"]
+        },
+        {
+            "before": [",", "b"],
+            "after": ["<leader>", "b"]
+        },
+        // 注释
+        {
+            "before": ["<leader>", "/"],
+            "commands": ["editor.action.commentLine"]
+        }
+    ],
+
+    //  ██████╗ ████████╗██╗  ██╗███████╗██████╗
+    // ██╔═══██╗╚══██╔══╝██║  ██║██╔════╝██╔══██╗
+    // ██║   ██║   ██║   ███████║█████╗  ██████╔╝
+    // ██║   ██║   ██║   ██╔══██║██╔══╝  ██╔══██╗
+    // ╚██████╔╝   ██║   ██║  ██║███████╗██║  ██║
+    //  ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+
+    "settingsSync.ignoredExtensions": [
+        "ms-vscode.vscode-speech-language-pack-zh-cn",
+        "ms-vscode.vscode-speech-language-pack-en-gb"
+    ],
+    "settingsSync.ignoredSettings": ["accessibility.voice.speechLanguage"],
+
+    "apc.imports": [
+        // "file://${userHome}/.config/dotfiles/config/vscode/ui.css",
+        "file://${userHome}/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.3/dist/updateHandler.js"
+    ],
+    "apc.activityBar": {
+        "itemSize": 27
+    },
+    "apc.font.family": "Maple Mono NF",
+    "animations.Install-Method": "Apc Customize UI++",
+    "animations.CursorAnimation": true,
+    "animations.Enabled": true,
+    "animations.Smooth-Mode": false,
+    "animations.Tabs": "Slide",
+    "animations.Command-Palette": "Slide",
+    "animations.Scrolling": "Fade",
+    "animations.CursorAnimationOptions": {
+        "Color": "#ffffff",
+        "CursorStyle": "block",
+        "TrailLength": 5
+    },
+    "window.titleBarStyle": "custom",
+    "window.commandCenter": true,
+    "window.customMenuBarAltFocus": false,
+    "window.customTitleBarVisibility": "auto",
+    "workbench.activityBar.location": "top",
+    "workbench.list.smoothScrolling": true,
+    "workbench.iconTheme": "symbols",
+    "workbench.editor.splitInGroupLayout": "vertical",
+    "workbench.editorAssociations": {
+        "*.md": "default",
+        "*.svg": "default",
+        "{git,gitlens}:/**/*.{md,csv,svg}": "default"
+    },
+    "editor.fontFamily": "Maple Mono NF",
+    "editor.fontSize": 14,
+    "editor.fontLigatures": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorBlinking": "solid",
+    "editor.lineNumbers": "relative",
+    "editor.smoothScrolling": true,
+    "editor.rulers": [
+        {
+            "column": 120,
+            "color": "#7F7F7F0f"
+        }
+    ],
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.accessibilitySupport": "off",
+    "editor.minimap.showSlider": "always",
+    "explorer.openEditors.visible": 5,
+    "terminal.integrated.customGlyphs": true,
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell UTF-8": {
+            "path": "powershell.exe",
+            "icon": "terminal-powershell",
+            "args": [
+                "-c",
+                "chcp 65001 > $null;",
+                "$shell = if (Get-Command pwsh -ErrorAction SilentlyContinue) { 'pwsh' } else { 'powershell' }",
+                "& $shell -NoLogo"
+            ]
+        },
+        "Command Prompt UTF-8": {
+            "path": "cmd.exe",
+            "icon": "terminal-cmd",
+            "args": ["/K chcp 65001 > nul && cmd"]
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell UTF-8",
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "terminal.integrated.env.windows": {},
+    "terminal.integrated.env.linux": {},
+    "terminal.integrated.hideOnStartup": "whenEmpty",
+    "diffEditor.experimental.showMoves": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "debug.showBreakpointsInOverviewRuler": true,
+    "update.mode": "manual",
+    "git.autofetch": true,
+    "zenMode.hideLineNumbers": false,
+    "files.autoGuessEncoding": true,
+    "files.associations": {
+        "*.json": "jsonc",
+        "*.cjson": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript",
+        "requirements.lock": "pip-requirements",
+        "requirements-dev.lock": "pip-requirements"
+    },
+    "emmet.includeLanguages": {
+        "jsp": "html",
+        "wxml": "html"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.tabWidth": 4,
+    "prettier.printWidth": 120,
+    "clangd.arguments": [
+        // 代码风格 microsoft, google
+        "--fallback-style=microsoft",
+        // 在后台自动分析文件（基于complie_commands)
+        "--background-index",
+        // 同时开启的任务数量
+        "-j=12",
+        // 更详细的补全内容
+        "--completion-style=detailed",
+        // clang-tidy功能
+        // "--clang-tidy",
+        // "--clang-tidy-checks=performance-*,bugprone-*",
+        // 全局补全（会自动补充头文件）
+        // "--all-scopes-completion",
+        // 补充头文件的形式
+        // "--header-insertion=iwyu",
+        // pch优化的位置
+        "--pch-storage=disk"
+    ],
+    "clangd.fallbackFlags": ["-Wno-deprecated-declarations"],
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.autoImportCompletions": false,
+    "ruff.nativeServer": true,
+    "pyqt-integration.qtdesigner.path": "designer",
+    "java.eclipse.downloadSources": true,
+    "java.configuration.maven.userSettings": "~/.config/maven/settings.xml",
+    "xml.format.grammarAwareFormatting": false,
+    "xml.server.workDir": "~/.cache/lemminx",
+    "projectManager.sortList": "Name",
+    "projectManager.tags": ["Workspace", "Projects", "Repos", "Personal"],
+    "code-runner.runInTerminal": true,
+    "code-runner.showRunIconInEditorTitleMenu": false,
+    "code-runner.showRunCommandInEditorContextMenu": false,
+    "code-runner.showRunCommandInExplorerContextMenu": false,
+    "code-runner.fileDirectoryAsCwd": true,
+    "codesnap.showWindowControls": false,
+    "codesnap.containerPadding": "0rem",
+    "codesnap.roundedCorners": false,
+    "markdownlint.config": {
+        "MD033": false,
+        "MD041": false
+    },
+    "markdown-preview-enhanced.breakOnSingleNewLine": false,
+    "markdown-preview-enhanced.previewTheme": "github-light.css",
+    "markdown-preview-enhanced.enableExtendedTableSyntax": true,
+    "livePreview.autoRefreshPreview": "On Changes to Saved Files",
+    "remote.SSH.remotePlatform": {
+        "124.71.177.174": "linux",
+        "121.36.105.219": "linux"
+    },
+    "errorLens.messageBackgroundMode": "none",
+    "rsp-ui.enableStartServerOnActivation": [
+        {
+            "id": "redhat.vscode-community-server-connector",
+            "name": "Community Server Connector",
+            "startOnActivation": true
+        }
+    ],
+    "codeium.enableConfig": {
+        "*": true,
+        "java-properties": true,
+        "xml": true,
+        "jsp": true,
+        "snippets": true,
+        "po": true,
+        "Textual CSS": true,
+        "markdown": true,
+        "fish": true,
+        "wxml": true
+    },
+    "codeium.enableCodeLens": false,
+    "symbols.hidesExplorerArrows": false,
+    "indentRainbow.ignoreErrorLanguages": ["*"],
+    "indentRainbow.indicatorStyle": "light",
+    "indentRainbow.colors": ["rgba(255,255,64,0.08)", "rgba(255,127,255,0.08)", "rgba(0,127,255,0.08)"],
+    "cSpell.diagnosticLevel": "Hint",
+    "cSpell.allowCompoundWords": true,
+    "cSpell.showStatus": false,
+    "cSpell.showSuggestionsLinkInEditorContextMenu": false,
+    "cSpell.showCommandsInEditorContextMenu": false,
+    "cSpell.userWords": [
+        "alova",
+        "clangd",
+        "csrftoken",
+        "datas",
+        "httpx",
+        "isort",
+        "mybatis",
+        "Nuxt",
+        "pypackages",
+        "rgba",
+        "sneakyorm",
+        "wxpusher",
+        "yapf"
+    ],
+    "sqltools.useNodeRuntime": true,
+    "license.author": "Hmeqo",
+    "accessibility.voice.speechLanguage": "en-GB",
+    "vscode-office.editorTheme": "Auto",
+    "GitCommitPlugin.ShowEmoji": false,
+    "vue.server.hybridMode": false,
+    "minapp-vscode.disableAutoConfig": true,
+    "console-ninja.featureSet": "Community",
+    "workbench.colorCustomizations": {}
+}
