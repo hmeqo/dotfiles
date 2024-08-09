@@ -98,10 +98,13 @@ links = [
     { source = "local/share/aurorae/themes/summaculate-night-opaque", target = "~/.local/share/aurorae/themes/summaculate-night-opaque" },
     { source = "local/share/aurorae/themes/WillowDark", target = "~/.local/share/aurorae/themes/WillowDark" },
     { source = "local/share/aurorae/themes/WillowLight", target = "~/.local/share/aurorae/themes/WillowLight" },
+
+    # wallpaper
+    { source = "local/share/wallpapers/kde", target = "~/.local/share/wallpapers/kde" },
 ]
 [options.kde.depends]
 system = ["kwin-effect-rounded-corners-git", "kwin-effects-forceblur-git", "ttf-maple"]
-item = ["kvantum", "wallpapers"]
+item = ["kvantum", "fcitx5"]
 
 [options.kvantum]
 tags = ["qt", "theme"]

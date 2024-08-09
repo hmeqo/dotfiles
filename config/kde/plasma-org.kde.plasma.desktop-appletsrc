@@ -21,12 +21,37 @@ immutability=1
 plugin=com.github.prayag2.modernclock
 
 [Containments][1][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
+DialogHeight=1056
+DialogWidth=1920
 
 [Containments][1][Wallpaper][org.kde.image][General]
-Image=/home/hmeqo/.config/dotfiles/local/share/wallpapers/stephan-raabe/wallhaven3.jpg
-PreviewImage=/home/hmeqo/.config/dotfiles/local/share/wallpapers/stephan-raabe/wallhaven3.jpg
+Image=/home/hmeqo/.config/dotfiles/local/share/wallpapers/kde/wallhaven3.jpg
+PreviewImage=/home/hmeqo/.config/dotfiles/local/share/wallpapers/kde/wallhaven3.jpg
+SlidePaths=/home/hmeqo/.local/share/wallpapers/,/usr/share/wallpapers/
+
+[Containments][115]
+ItemGeometries-0x0=Applet-53:640,368,656,160,0;
+ItemGeometries-1920x1080=Applet-53:640,368,656,160,0;
+ItemGeometriesHorizontal=Applet-53:640,368,656,160,0;
+activityId=f6743ef6-593b-4d08-a00d-28fb62701320
+formfactor=0
+immutability=1
+lastScreen=0
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
+[Containments][115][Applets][53]
+immutability=1
+plugin=com.github.prayag2.modernclock
+
+[Containments][115][ConfigDialog]
+DialogHeight=1056
+DialogWidth=1920
+
+[Containments][115][Wallpaper][org.kde.image][General]
+Image=/home/hmeqo/.config/dotfiles/local/share/wallpapers/kde/wallhaven3.jpg
+PreviewImage=/home/hmeqo/.config/dotfiles/local/share/wallpapers/kde/wallhaven3.jpg
 SlidePaths=/home/hmeqo/.local/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments][2]
@@ -151,7 +176,7 @@ plugin=org.kde.plasma.digitalclock
 
 [Containments][27][Applets][50][Configuration]
 PreloadWeight=100
-popupHeight=477
+popupHeight=483
 popupWidth=814
 
 [Containments][27][Applets][50][Configuration][Appearance]
@@ -191,7 +216,7 @@ windowTitleSourceMaximized=AppName
 windowTitleUndefined=
 
 [Containments][27][Applets][55][Configuration][ConfigDialog]
-DialogHeight=540
+DialogHeight=511
 DialogWidth=720
 
 [Containments][27][Applets][75]
@@ -226,7 +251,7 @@ immutability=1
 lastScreen=0
 location=3
 plugin=org.kde.plasma.private.systemtray
-popupHeight=505
+popupHeight=515
 popupWidth=436
 wallpaperplugin=org.kde.image
 
@@ -324,7 +349,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][31][Applets][46][Configuration]
-PreloadWeight=64
+PreloadWeight=10
 
 [Containments][31][Applets][47]
 immutability=1

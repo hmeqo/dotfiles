@@ -4,7 +4,7 @@
 KDE
 </div>
 
-![Preview](https://github.com/hmeqo/dotfiles/raw/main/assets/preview.png)
+![Preview](https://github.com/hmeqo/dotfiles/raw/main/assets/kde_preview.png)
 
 ## Install
 

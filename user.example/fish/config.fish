@@ -1,4 +1,4 @@
 if status is-interactive
-  set -gx SSH_ASKPASS /usr/bin/ksshaskpass
-  set -gx SSH_ASKPASS_REQUIRE prefer
+  set SSH_ASKPASS /usr/bin/ksshaskpass
+  set SSH_ASKPASS_REQUIRE prefer
 end

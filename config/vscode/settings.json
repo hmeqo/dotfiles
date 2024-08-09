@@ -457,6 +457,5 @@
     "GitCommitPlugin.ShowEmoji": false,
     "vue.server.hybridMode": false,
     "minapp-vscode.disableAutoConfig": true,
-    "console-ninja.featureSet": "Community",
-    "workbench.colorCustomizations": {}
+    "console-ninja.featureSet": "Community"
 }

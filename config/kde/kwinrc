@@ -4,7 +4,7 @@ Id_2=d343c7eb-5447-4bd6-9479-8fe1b60ee05f
 Id_3=79fb8e02-4cf7-4559-bdd9-ec66608de114
 Id_4=19298d87-3944-45b6-bb49-7a163067b99d
 Number=4
-Rows=2
+Rows=1
 
 [Effect-blur]
 BlurStrength=4
@@ -18,8 +18,8 @@ TopCornerRadius=8
 WindowClasses=konsole\nkitty\norg.wezfurlong.wezterm\nneovide\ndolphin\nCode\ncode-url-handler\ndev.zed.Zed\nidea\njetbrains-fleet\npot
 
 [Effect-glide]
-InRotationAngle=9
-OutRotationAngle=9
+InRotationAngle=6
+OutRotationAngle=6
 OutRotationEdge=0
 
 [Effect-kwin4_effect_geometry_change]
@@ -29,20 +29,27 @@ ExcludedWindowClasses=krunner,yakuake,org.jackhuang.hmcl.Launcher,vlc
 [Effect-zoom]
 MouseTracking=2
 
+[MaximizeTile]
+DisableOutlineTile=false
+DisableRoundTile=false
+
 [ModifierOnlyShortcuts]
 Meta=org.kde.kglobalaccel,/component/kwin,,invokeShortcut,Overview
 
 [Plugins]
 blurEnabled=false
 cubeEnabled=true
-desktopchangeosdEnabled=false
 forceblurEnabled=true
+fullscreenEnabled=false
 glideEnabled=true
 invertEnabled=true
 kinetic_fadingpopupsEnabled=true
+krohnkiteEnabled=false
+kwin4_effect_geometry_changeEnabled=true
 kwin_effect_lightlyshadersEnabled=false
 kzonesEnabled=true
 lightlyshaders_blurEnabled=true
+maximizeEnabled=false
 minimizeallEnabled=true
 poloniumEnabled=false
 scaleEnabled=false
@@ -51,7 +58,12 @@ squash2Enabled=false
 truely-maximizedEnabled=false
 
 [PrimaryOutline]
+ActiveOutlineAlpha=254
+ActiveOutlinePalette=0
+ActiveOutlineUseCustom=false
+ActiveOutlineUsePalette=true
 InactiveOutlineColor=102,102,102
+InactiveOutlinePalette=5
 InactiveOutlineThickness=0.75
 OutlineColor=102,102,102
 OutlineThickness=0.75
@@ -61,6 +73,16 @@ InactiveCornerRadius=12
 InactiveShadowSize=25
 ShadowSize=30
 Size=12
+
+[Script-krohnkite]
+floatingClass=QQ
+ignoreActivity=f6743ef6-593b-4d08-a00d-28fb62701320
+noTileBorder=true
+screenGapBottom=8
+screenGapLeft=8
+screenGapRight=8
+screenGapTop=8
+tileLayoutGap=8
 
 [Script-kzones]
 layoutsJson=[\n    {\n        "name": "Tree Grid",\n        "padding": 0,\n        "zones": [\n            {\n                "x": 0,\n                "y": 0,\n                "height": 100,\n                "width": 50\n            },\n            {\n                "x": 50,\n                "y": 0,\n                "height": 50,\n                "width": 50\n            },\n            {\n                "x": 50,\n                "y": 50,\n                "height": 50,\n                "width": 50\n            }\n        ]\n    },\n    {\n        "name": "Binary Grid",\n        "padding": 0,\n        "zones": [\n            {\n                "x": 0,\n                "y": 0,\n                "height": 100,\n                "width": 50\n            },\n            {\n                "x": 50,\n                "y": 0,\n                "height": 100,\n                "width": 50\n            }\n        ]\n    },\n    {\n        "name": "Quadrant Grid",\n        "zones": [\n            {\n                "x": 0,\n                "y": 0,\n                "height": 50,\n                "width": 50\n            },\n            {\n                "x": 0,\n                "y": 50,\n                "height": 50,\n                "width": 50\n            },\n            {\n                "x": 50,\n                "y": 50,\n                "height": 50,\n                "width": 50\n            },\n            {\n                "x": 50,\n                "y": 0,\n                "height": 50,\n                "width": 50\n            }\n        ]\n    }\n]
@@ -83,16 +105,20 @@ count=0
 LayoutName=sidebar
 
 [Tiling]
-padding=8
+padding=4
 
 [Tiling][903bce40-e206-5087-83b0-cef1b8606ba0]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
+
+[Tiling][ac378286-a537-509f-86ca-fd802405ac93]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Wayland]
 InputMethod[$e]=/usr/share/applications/fcitx5-wayland-launcher.desktop
 
 [Windows]
 BorderlessMaximizedWindows=true
+RollOverDesktops=true
 
 [Xwayland]
 Scale=1
@@ -100,10 +126,10 @@ Scale=1
 [org.kde.kdecoration2]
 BorderSize=None
 BorderSizeAuto=false
-ButtonsOnLeft=
+ButtonsOnLeft=F
 ButtonsOnRight=IAX
-library=org.kde.breeze
-theme=Breeze
+library=org.kde.kwin.aurorae
+theme=__aurorae__svg__WillowDark
 
 [ًRound-Corners]
 InactiveCornerRadius=8
