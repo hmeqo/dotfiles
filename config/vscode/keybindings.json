@@ -365,6 +365,11 @@
         "command": "-codeium.diffActionReject",
         "when": "editorTextFocus && !inlineSuggestionsVisible"
     },
+    {
+        "key": "ctrl+i",
+        "command": "-codeium.openCodeiumCommand",
+        "when": "codeium.commandEnabled && editorTextFocus && !inlineSuggestionsVisible"
+    },
     // Vscode Speech
     {
         "key": "alt+d",
