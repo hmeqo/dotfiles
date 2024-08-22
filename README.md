@@ -22,7 +22,7 @@ cd ~/.config/dotfiles
 Use `confsync` to manage dotfiles.
 
 ```bash
-# run sync.sh that will automatically install all dependencies and start `confsync tui`
+# run sync.sh that will automatically create python virtual environment and start `confsync tui`
 ./sync.sh
 ```
 
