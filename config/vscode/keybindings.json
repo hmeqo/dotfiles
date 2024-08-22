@@ -125,6 +125,16 @@
         "command": "-editor.action.peekDefinition",
         "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
     },
+    {
+        "key": "ctrl+shift+alt+down",
+        "command": "cursorColumnSelectDown",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+shift+alt+up",
+        "command": "cursorColumnSelectUp",
+        "when": "textInputFocus"
+    },
 
     //  ██████╗ ███████╗██████╗ ██╗███╗   ██╗██████╗ ██╗███╗   ██╗ ██████╗
     //  ██╔══██╗██╔════╝██╔══██╗██║████╗  ██║██╔══██╗██║████╗  ██║██╔════╝

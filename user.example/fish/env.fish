@@ -1,4 +1,4 @@
-source ~/.config/dotfiles/xdgfix/xdgfix.fish
+source ~/.config/dotfiles/xdgenv/env.fish
 source ~/.config/dotfiles/config/fish/env.fish
 
 # proxy_on v2raya

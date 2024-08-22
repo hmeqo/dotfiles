@@ -133,8 +133,6 @@ ForegroundPositive=1,162,153
 ForegroundVisited=0,188,212
 
 [DirSelect Dialog]
-DirSelectDialog Size=978,594
-History Items[$e]=file:$HOME/workspace,file:$HOME/projects/SrpwClub/new-client,file:$HOME/workspace,file:$HOME/projects,file:$HOME/.local/opt/VivalArc,file:$HOME/Downloads/QQ,file:$HOME/Downloads,file:$HOME/workspace/exam/e1/dist/dev/mp-weixin,file:$HOME/workspace/exam/e1/dist/dev/mp-weixin,file:$HOME/workspace/exam/e2,file:$HOME/workspace/exam/e1,file:$HOME/workspace,file:$HOME/workspace,file:$HOME/workspace,file:$HOME/.local/share/Steam,file:$HOME/.local/share/Steam,file:$HOME/workspace/uniapp-project/dist/dev/mp-weixin,file:///mnt/shared,file:///mnt/shared/SteamLibrary,file:///mnt/windows,file:///mnt/windows/Program Files (x86)/Steam,file:$HOME/workspace/exam,file:$HOME/workspace/exam,file:$HOME/workspace/a,file:$HOME/workspace/exam,file:$HOME/workspace,file:$HOME/repos/python/face_recognition/client,file:$HOME/repos/python/rust-opencv,file:$HOME/workspace/exam,file:$HOME/workspace,file:$HOME/workspace,file:$HOME/projects/WeChatProjects/miniprogram-1,file:$HOME/projects/WeChatProjects,file:$HOME/workspace/WeChatProjects/miniprogram-1,file:$HOME/workspace/WeChatProjects,file:$HOME/repos/WeChatProjects/miniprogram-1,file:$HOME/repos/WeChatProjects,file:$HOME/repos,file:$HOME/.themes/Fluent-round
 
 [General]
 BrowserApplication=vivaldi-stable.desktop
