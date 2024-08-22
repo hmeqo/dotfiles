@@ -1,6 +1,9 @@
 [Applets][76][Configuration]
 PreloadWeight=42
 
+[General]
+Number of Actions=0
+
 [PlasmaViews][Panel 115]
 floating=1
 

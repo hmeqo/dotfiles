@@ -22,8 +22,8 @@ cd ~/.config/dotfiles
 Use `confsync` to manage dotfiles.
 
 ```bash
-# run install.sh that will automatically install all dependencies and start `confsync tui`
-./install.sh
+# run sync.sh that will automatically install all dependencies and start `confsync tui`
+./sync.sh
 ```
 
 Run `confsync tui` to display each dependency.
