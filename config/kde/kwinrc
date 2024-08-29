@@ -11,11 +11,13 @@ BlurStrength=4
 
 [Effect-blurplus]
 BlurDecorations=true
+BlurMatching=false
+BlurNonMatching=true
 BlurStrength=4
 BottomCornerRadius=8
 NoiseStrength=14
 TopCornerRadius=8
-WindowClasses=konsole\nkitty\norg.wezfurlong.wezterm\nneovide\ndolphin\nCode\ncode-url-handler\ndev.zed.Zed\nidea\njetbrains-fleet\npot
+WindowClasses=yakuake
 
 [Effect-glide]
 InRotationAngle=6
@@ -29,8 +31,12 @@ ExcludedWindowClasses=krunner,yakuake,org.jackhuang.hmcl.Launcher,vlc
 [Effect-zoom]
 MouseTracking=2
 
+[IncludeExclude]
+Exclusions=yakuake
+
 [MaximizeTile]
 DisableOutlineTile=false
+DisableRoundTile=false
 
 [ModifierOnlyShortcuts]
 Meta=org.kde.kglobalaccel,/component/kwin,,invokeShortcut,Overview
@@ -68,10 +74,8 @@ OutlineColor=102,102,102
 OutlineThickness=0.75
 
 [Round-Corners]
-InactiveCornerRadius=12
 InactiveShadowSize=25
 ShadowSize=30
-Size=12
 
 [Script-krohnkite]
 floatingClass=QQ
@@ -100,6 +104,9 @@ SecondOutlineThickness=0
 active=-1
 count=0
 
+[TabBox]
+LayoutName=sidebar
+
 [Tiling]
 padding=8
 
@@ -107,7 +114,7 @@ padding=8
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.6229166666666667},{"width":0.3770833333333332}]}
 
 [Tiling][ac378286-a537-509f-86ca-fd802405ac93]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.759375},{"width":0.24062499999999998}]}
 
 [Wayland]
 InputMethod[$e]=/usr/share/applications/fcitx5-wayland-launcher.desktop

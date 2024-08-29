@@ -42,6 +42,7 @@ set -gx GNUPGHOME "$XDG_DATA_HOME/gnupg"
 set -gx GTK2_RC_FILES "$XDG_CONFIG_HOME/gtkrc-2.0"
 
 # wget
+test -f "$XDG_CONFIG_HOME/wgetrc" || touch "$XDG_CONFIG_HOME/wgetrc"
 set -gx WGETRC "$XDG_CONFIG_HOME/wgetrc"
 
 # CUDA

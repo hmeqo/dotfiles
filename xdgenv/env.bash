@@ -42,6 +42,7 @@ export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtkrc-2.0"
 
 # wget
+[[ -f "$XDG_CONFIG_HOME/wgetrc" ]] || touch "$XDG_CONFIG_HOME/wgetrc"
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 
 # CUDA

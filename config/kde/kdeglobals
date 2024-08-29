@@ -133,6 +133,7 @@ ForegroundPositive=1,162,153
 ForegroundVisited=0,188,212
 
 [DirSelect Dialog]
+DirSelectDialog Size=816,581
 
 [General]
 BrowserApplication=vivaldi-stable.desktop
