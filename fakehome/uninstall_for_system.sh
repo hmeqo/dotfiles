@@ -1,6 +1,11 @@
-USER_HOME="$HOME"
-LOCAL_BIN="$HOME/.local/bin"
-APPLICATIONS="$HOME/.local/share/applications"
+if [ "$EUID" -ne 0 ]; then
+    echo "Please run as root"
+    exit
+fi
+
+USER_HOME="/home/$SUDO_USER"
+LOCAL_BIN="/usr/local/bin"
+APPLICATIONS="/usr/local/share/applications"
 
 if [ "$1" = "--clean" ]; then
     echo "Remove $USER_HOME/.local/share/fakehome"

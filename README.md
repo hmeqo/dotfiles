@@ -34,7 +34,7 @@ In the event of uninstallation, your original configuration file will be restore
 
 ### xdgenv
 
-If you want to use it, add it to your shell configuration file.
+If you want to use xdgenv, add it to your shell configuration file.
 
 ```bash
 # bash
@@ -48,11 +48,11 @@ source ~/.config/dotfiles/xdgenv/alias.fish
 
 ### fakehome
 
-Is also can be fix xdg to some programs.
+It can also fix XDG paths for some programs.
 
 #### Install fakehome
 
-default for code firefox hmcl-bin jetbrains-fleet minecraft-launcher rye steam thunderbird ..., and you can use `fakehome xxx` manually.
+Default for code hmcl-bin jetbrains-fleet minecraft-launcher steam thunderbird ..., and you can use `fakehome xxx` manually.
 
 ```bash
 ~/.config/dotfiles/fakehome/install.sh

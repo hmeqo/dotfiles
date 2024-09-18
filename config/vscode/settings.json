@@ -6,7 +6,7 @@
     //  ╚████╔╝ ██║██║ ╚═╝ ██║
     //   ╚═══╝  ╚═╝╚═╝     ╚═╝
 
-    "vim.timeout": 400,
+    // "vim.timeout": 500,
     "vim.enableNeovim": true,
     "vim.easymotion": true,
     "vim.useSystemClipboard": true,
@@ -173,10 +173,10 @@
             "commands": ["cursorDown"]
         },
         // 编辑
-        {
-            "before": ["j", "j"],
-            "after": ["<Esc>"]
-        },
+        // {
+        //     "before": ["j", "j"],
+        //     "after": ["<Esc>"]
+        // },
         {
             "before": ["j", "k"],
             "after": ["<Esc>"]
@@ -225,6 +225,7 @@
     //  ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
 
     "settingsSync.ignoredExtensions": [
+        "ms-vscode.vscode-speech",
         "ms-vscode.vscode-speech-language-pack-zh-cn",
         "ms-vscode.vscode-speech-language-pack-en-gb"
     ],
@@ -254,9 +255,9 @@
     "window.commandCenter": true,
     "window.customMenuBarAltFocus": false,
     "window.customTitleBarVisibility": "auto",
+    "workbench.iconTheme": "symbols",
     "workbench.activityBar.location": "top",
     "workbench.list.smoothScrolling": true,
-    "workbench.iconTheme": "symbols",
     "workbench.editor.splitInGroupLayout": "vertical",
     "workbench.editorAssociations": {
         "*.md": "default",
@@ -315,9 +316,7 @@
         "*.json": "jsonc",
         "*.cjson": "jsonc",
         "*.wxss": "css",
-        "*.wxs": "javascript",
-        "requirements.lock": "pip-requirements",
-        "requirements-dev.lock": "pip-requirements"
+        "*.wxs": "javascript"
     },
     "emmet.includeLanguages": {
         "jsp": "html",
@@ -352,6 +351,9 @@
     },
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[shellscript]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
     },
     "prettier.tabWidth": 4,
     "prettier.printWidth": 120,
@@ -401,10 +403,6 @@
     "markdown-preview-enhanced.previewTheme": "github-light.css",
     "markdown-preview-enhanced.enableExtendedTableSyntax": true,
     "livePreview.autoRefreshPreview": "On Changes to Saved Files",
-    "remote.SSH.remotePlatform": {
-        "124.71.177.174": "linux",
-        "121.36.105.219": "linux"
-    },
     "errorLens.messageBackgroundMode": "none",
     "rsp-ui.enableStartServerOnActivation": [
         {
@@ -455,7 +453,6 @@
     "accessibility.voice.speechLanguage": "en-GB",
     "vscode-office.editorTheme": "Auto",
     "GitCommitPlugin.ShowEmoji": false,
-    "vue.server.hybridMode": false,
     "minapp-vscode.disableAutoConfig": true,
     "console-ninja.featureSet": "Community"
 }

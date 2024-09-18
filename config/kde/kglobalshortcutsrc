@@ -58,7 +58,20 @@ Increase Opacity=none,,Increase Opacity of Active Window by 5%
 Invert=Meta+Ctrl+I,Meta+Ctrl+I,Toggle Invert Effect
 Invert Screen Colors=none,none,Invert Screen Colours
 InvertWindow=Meta+Ctrl+U,Meta+Ctrl+U,Toggle Invert Effect on Window
+KZones: Activate layout 1=none,none,KZones: Activate layout 1
+KZones: Activate layout 2=none,none,KZones: Activate layout 2
+KZones: Activate layout 3=none,none,KZones: Activate layout 3
+KZones: Activate layout 4=none,none,KZones: Activate layout 4
+KZones: Activate layout 5=none,none,KZones: Activate layout 5
+KZones: Activate layout 6=none,none,KZones: Activate layout 6
+KZones: Activate layout 7=none,none,KZones: Activate layout 7
+KZones: Activate layout 8=none,none,KZones: Activate layout 8
+KZones: Activate layout 9=none,none,KZones: Activate layout 9
 KZones: Cycle layouts=Meta+Ctrl+Z,none,KZones: Cycle layouts
+KZones: Cycle layouts (reversed)=Meta+Ctrl+Shift+Z,none,KZones: Cycle layouts (reversed)
+KZones: Move active window down=none,none,KZones: Move active window down
+KZones: Move active window left=none,none,KZones: Move active window left
+KZones: Move active window right=none,none,KZones: Move active window right
 KZones: Move active window to next zone=none,none,KZones: Move active window to next zone
 KZones: Move active window to previous zone=none,none,KZones: Move active window to previous zone
 KZones: Move active window to zone 1=none,none,KZones: Move active window to zone 1
@@ -70,6 +83,9 @@ KZones: Move active window to zone 6=none,none,KZones: Move active window to zon
 KZones: Move active window to zone 7=none,none,KZones: Move active window to zone 7
 KZones: Move active window to zone 8=none,none,KZones: Move active window to zone 8
 KZones: Move active window to zone 9=none,none,KZones: Move active window to zone 9
+KZones: Move active window up=none,none,KZones: Move active window up
+KZones: Snap active window=none,none,KZones: Snap active window
+KZones: Snap all windows=none,none,KZones: Snap all windows
 KZones: Switch to next window in current zone=none,none,KZones: Switch to next window in current zone
 KZones: Switch to previous window in current zone=none,none,KZones: Switch to previous window in current zone
 KZones: Toggle zone overlay=Meta+Z,none,KZones: Toggle zone overlay
@@ -292,7 +308,7 @@ activate task manager entry 7=none,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=none,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=none,Meta+9,Activate Task Manager Entry 9
 activate widget 112=none,none,Activate Simple Application Launcher Widget
-activate widget 119=none,none,Activate Desktop Indicator Widget
+activate widget 120=none,none,Activate Ginti Widget
 clear-history=none,,Clear Clipboard History
 clipboard_action=Meta+Ctrl+X,Meta+Ctrl+X,Automatic Action Popup Menu
 cycle-panels=Meta+Alt+P,Meta+Alt+P,Move keyboard focus between panels
@@ -310,10 +326,14 @@ switch to next activity=none,,Switch to Next Activity
 switch to previous activity=none,,Switch to Previous Activity
 toggle do not disturb=none,,Toggle do not disturb
 
+[services][curl.desktop]
+_launch=Ctrl+Alt+D
+
 [services][org.kde.konsole.desktop]
 _launch=Ctrl+Alt+T\tMeta+Return
 
 [services][org.kde.krunner.desktop]
+RunClipboard=Meta+Shift+Space
 _launch=Alt+Space\tSearch\tMeta+Space
 
 [services][org.kde.spectacle.desktop]

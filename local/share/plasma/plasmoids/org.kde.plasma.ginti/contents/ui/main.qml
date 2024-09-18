@@ -13,45 +13,30 @@ PlasmoidItem {
     preferredRepresentation: fullRepresentation
     property alias current: pagerModel.currentPage
     property int wheelDelta: 0
+    property int size: plasmoid.configuration.dotSizeCustom
+    property real spacing: plasmoid.configuration.spacingFactor
     property bool isHorizontal: plasmoid.formFactor != PlasmaCore.Types.Vertical
-    property bool isSingleRow: plasmoid.configuration.singleRow
     property bool wrapOn: plasmoid.configuration.desktopWrapOn
-    property int addDesktop: plasmoid.configuration.showAddDesktop && isSingleRow ? 1 : 0
 
-    GridLayout {
+    Item {
         id: grid
-        anchors.centerIn : parent
-        // padding: 3
-        columnSpacing: plasmoid.configuration.spacingHorizontal/2
-        rowSpacing: plasmoid.configuration.spacingVertical/2
-        columns: {
-            var columns = 1;
-            if( isSingleRow ) columns = isHorizontal?pagerModel.count+addDesktop : 1;
-            else columns = isHorizontal?Math.ceil(pagerModel.count/pagerModel.layoutRows):pagerModel.layoutRows;
-            return columns;
-        }
-        rows: {
-            let rows = 1;
-            if( isSingleRow ) rows = isHorizontal ? 1 : pagerModel.count+addDesktop;
-            else rows = isHorizontal ? pagerModel.layoutRows : Math.ceil(pagerModel.count/pagerModel.layoutRows);
-            return rows;
-        }
+        anchors.fill: parent
+        anchors.centerIn: parent
         Repeater {
-            id: repeater
-            model: pagerModel.count + addDesktop
+            id: repeater1
+            model: pagerModel.count
             DesktopRepresentation {
                 pos: index
-                isAddButton: addDesktop === 1 && index === pagerModel.count
+                height: size
+                width: size
+
             }
-            onCountChanged: root.updateRepresentation()
         }
     }
-
-
-    anchors.centerIn: parent
     anchors.fill: parent
-    Layout.minimumWidth: grid.implicitWidth + plasmoid.configuration.spacingHorizontal
-    Layout.minimumHeight: grid.implicitHeight + plasmoid.configuration.spacingVertical
+    Layout.minimumWidth  :  isHorizontal ? (pagerModel.count-1) * (size + spacing) + plasmoid.configuration.activeSizeW + spacing : grid.implicitWidth
+    Layout.minimumHeight : !isHorizontal ? (pagerModel.count-1) * (size + spacing) + plasmoid.configuration.activeSizeH + spacing : grid.implicitHeight
+
 
     PagerModel {
         id: pagerModel
@@ -59,12 +44,11 @@ PlasmoidItem {
         showDesktop: plasmoid.configuration.currentDesktopSelected == 1
         screenGeometry: plasmoid.containment.screenGeometry
         pagerType: PagerModel.VirtualDesktops
-        onCurrentPageChanged: updateRepresentation()
     }
     MouseArea {
         anchors.fill: parent
         acceptedButtons: Qt.MiddleButton
-        onClicked: perform( Plasmoid.configuration.middleButtonCommand )
+        onClicked: perform( plasmoid.configuration.middleButtonCommand )
         onWheel : wheel => {
             wheelDelta += wheel.angleDelta.y || wheel.angleDelta.x;
             let increment = 0;
@@ -111,24 +95,6 @@ PlasmoidItem {
             connectSource(cmd)
         }
     }
-
-    function updateRepresentation() {
-        var pos = current
-        for( var i = 0; i < repeater.count; i ++ ) {
-            var item = repeater.itemAt(i);
-            if (item ) {
-                if( i == pos ){
-                    item.activate(true, i);
-                }
-                else item.activate(false, i);
-            } else {
-                console.error("Item or label is undefined at index " + i);
-            }
-        }
-        grid.anchors.centerIn = root
-    }
-    onIsHorizontalChanged : updateRepresentation()
-    onIsSingleRowChanged: updateRepresentation()
     Plasmoid.contextualActions: [
         PlasmaCore.Action {
             text: i18n("Add Virtual Desktop")
@@ -140,7 +106,7 @@ PlasmoidItem {
             text: i18n("Remove Virtual Desktop")
             icon.name: "list-remove"
             visible: !root.isActivityPager && KConfig.KAuthorized.authorize("kcm_kwin_virtualdesktops")
-            enabled: repeater.count > 1
+            enabled: repeater1.count > 1
             onTriggered: pagerModel.removeDesktop()
         },
         PlasmaCore.Action {

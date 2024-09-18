@@ -19,8 +19,8 @@ if status is-interactive
   set fish_cursor_replace underscore
   set fish_cursor_replace_one underscore
 
-  not command -q starship || starship init fish | source
-  zoxide init fish | source
+  not type -q starship || starship init fish | source
+  not type -q zoxide || zoxide init fish | source
 end
 
 [ ! -f $dotfiles/user/fish/config.fish ] || source $dotfiles/user/fish/config.fish

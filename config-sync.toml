@@ -36,6 +36,7 @@ depends = { system = ["neovim"] }
 [options.vscode]
 tags = ["editor"]
 links = [
+    { source = "config/vscode/snippets", target = "~/.config/Code/User/snippets" },
     { source = "config/vscode/settings.json", target = "~/.config/Code/User/settings.json" },
     { source = "config/vscode/keybindings.json", target = "~/.config/Code/User/keybindings.json" },
 ]
@@ -103,7 +104,11 @@ links = [
     { source = "local/share/wallpapers/kde", target = "~/.local/share/wallpapers/kde" },
 ]
 [options.kde.depends]
-system = ["kwin-effect-rounded-corners-git", "kwin-effects-forceblur-git", "ttf-maple"]
+system = [
+    "kwin-effect-rounded-corners-git",
+    "kwin-effects-forceblur-git",
+    "ttf-maple",
+]
 item = ["kvantum", "fcitx5"]
 
 [options.kvantum]

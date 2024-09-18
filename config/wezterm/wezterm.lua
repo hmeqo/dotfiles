@@ -27,7 +27,7 @@ return {
 	-- window_decorations = "RESIZE",
 	adjust_window_size_when_changing_font_size = false,
 
-	-- enable_wayland = false,
+	enable_wayland = false,
 
 	hide_tab_bar_if_only_one_tab = true,
 

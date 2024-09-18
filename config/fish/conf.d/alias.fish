@@ -1,4 +1,4 @@
-if command -q exa
+if type -q exa
   alias ls='exa --icons'
   alias lsa='ls -A'
   alias l='ls -lh'
@@ -14,12 +14,12 @@ else
   alias lt='tree -pCsh'
 end
 
-if command -q bat
+if type -q bat
   alias cat='bat -pp'
   alias ccat='/usr/bin/cat'
 end
 
-if command -q tmux
+if type -q tmux
   alias tt='tmux attach || tmux'
   alias tn='tmux new'
   alias tl='tmux ls'

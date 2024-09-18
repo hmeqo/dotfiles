@@ -12,8 +12,10 @@ end
 
 # Fcitx5
 # GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx XMODIFIERS=@im=fcitx SDL_IM_MODULE=fcitx INPUT_METHOD=fcitx GLFW_IM_MODULE=ibus
-set -gx GTK_IM_MODULE fcitx
-set -gx QT_IM_MODULE fcitx
+if test $XDG_SESSION_TYPE = "wayland" && test $XDG_CURRENT_DESKTOP != "KDE"
+  set -gx GTK_IM_MODULE fcitx
+  set -gx QT_IM_MODULE fcitx
+end
 set -gx XMODIFIERS @im=fcitx
 set -gx SDL_IM_MODULE fcitx
 set -gx INPUT_METHOD fcitx
@@ -51,10 +53,6 @@ end
 if type -q pyenv
   set -q PYENV_ROOT || set -l PYENV_ROOT "$HOME/.pyenv"; prepend_path "$PYENV_ROOT/bin"
   pyenv init - | source
-end
-# rye
-if type -q rye
-  set -q RYE_HOME || set -l RYE_HOME "$HOME/.rye"; prepend_path "$RYE_HOME/shims"
 end
 
 # Rust

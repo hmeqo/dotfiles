@@ -9,7 +9,7 @@ set -gx HISTFILE "$XDG_STATE_HOME/bash_history"
 # python
 set -gx PYTHON_HISTORY "$XDG_STATE_HOME/python_history"
 set -gx PYENV_ROOT "$XDG_DATA_HOME/pyenv"
-set -gx RYE_HOME "$XDG_DATA_HOME/rye"
+set -gx PYPIRC "$XDG_CONFIG_HOME/pypirc"
 
 # rust
 set -gx CARGO_HOME "$XDG_DATA_HOME/cargo"

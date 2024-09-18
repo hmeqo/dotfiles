@@ -1,3 +1,10 @@
+[1e7f77fe-3d48-4aad-b673-d77379ad6c32]
+Description=Application settings for pot
+noborder=true
+noborderrule=3
+wmclass=pot
+wmclassmatch=1
+
 [2]
 Description=Transparent
 opacityactive=90
@@ -15,8 +22,8 @@ wmclasscomplete=true
 wmclassmatch=3
 
 [General]
-count=1
-rules=2
+count=2
+rules=1e7f77fe-3d48-4aad-b673-d77379ad6c32,2
 
 [bdae4665-afcc-4feb-a9cd-4e4d595575f8]
 Description=Window settings for flameshot

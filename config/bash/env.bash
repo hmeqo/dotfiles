@@ -12,8 +12,10 @@ prepend_path() {
 
 # Fcitx5
 # GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx XMODIFIERS=@im=fcitx SDL_IM_MODULE=fcitx INPUT_METHOD=fcitx GLFW_IM_MODULE=ibus
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
+if [[ $XDG_SESSION_TYPE = "wayland" ]] && [[ $XDG_CURRENT_DESKTOP != "KDE" ]]; then
+    export GTK_IM_MODULE=fcitx
+    export QT_IM_MODULE=fcitx
+fi
 export XMODIFIERS=@im=fcitx
 export SDL_IM_MODULE=fcitx
 export INPUT_METHOD=fcitx
@@ -51,10 +53,6 @@ fi
 if command -v pyenv >/dev/null; then
     prepend_path "${PYENV_ROOT:-$HOME/.pyenv}/bin"
     eval "$(pyenv init -)"
-fi
-# rye
-if command -v rye >/dev/null; then
-    prepend_path "${RYE_HOME:-$HOME/.rye}/shims"
 fi
 
 # Rust

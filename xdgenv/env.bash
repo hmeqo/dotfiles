@@ -9,7 +9,7 @@ export HISTFILE="$XDG_STATE_HOME/bash_history"
 # python
 export PYTHON_HISTORY="$XDG_STATE_HOME/python_history"
 export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
-export RYE_HOME="$XDG_DATA_HOME/rye"
+export PYPIRC="$XDG_CONFIG_HOME/pypirc"
 
 # rust
 export CARGO_HOME="$XDG_DATA_HOME/cargo"

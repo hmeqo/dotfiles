@@ -5,7 +5,7 @@ case $* in
         exec loginctl lock-session
         ;;
     "logout")
-        if pkill -0 hypr; then
+        if [[ $XDG_CURRENT_DESKTOP = "Hyprland" ]]; then
             exec hyprctl dispatch exit
         fi
         ;;
