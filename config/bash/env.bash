@@ -11,7 +11,6 @@ prepend_path() {
 }
 
 # Fcitx5
-# GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx XMODIFIERS=@im=fcitx SDL_IM_MODULE=fcitx INPUT_METHOD=fcitx GLFW_IM_MODULE=ibus
 if [[ $XDG_SESSION_TYPE = "wayland" ]] && [[ $XDG_CURRENT_DESKTOP != "KDE" ]]; then
     export GTK_IM_MODULE=fcitx
     export QT_IM_MODULE=fcitx

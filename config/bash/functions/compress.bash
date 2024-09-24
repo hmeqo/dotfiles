@@ -20,7 +20,7 @@ compress() {
         tar.xz|txz)
             tar -cJf "$output" "$file" "$options"
             ;;
-        lzma)
+        tar.lzma|tlz)
             tar --lzma -cf "$output" "$file" "$options"
             ;;
         7z)

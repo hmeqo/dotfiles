@@ -10,7 +10,11 @@ return {
     -- overrides `require("mason-lspconfig").setup(...)`
     opts = {
       ensure_installed = {
+        -- lua
         "lua_ls",
+        -- frontend
+        "ts_ls",
+        "volar",
         -- add more arguments for adding more language servers
       },
     },
@@ -21,7 +25,12 @@ return {
     -- overrides `require("mason-null-ls").setup(...)`
     opts = {
       ensure_installed = {
+        -- lua
         "stylua",
+        -- toml
+        "taplo",
+        -- frontend
+        "prettier",
         -- add more arguments for adding more null-ls sources
       },
     },
@@ -31,7 +40,9 @@ return {
     -- overrides `require("mason-nvim-dap").setup(...)`
     opts = {
       ensure_installed = {
+        -- python
         "python",
+        "ruff",
         -- add more arguments for adding more debuggers
       },
     },

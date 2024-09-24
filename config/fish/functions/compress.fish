@@ -15,7 +15,7 @@ function compress
       tar -cjf "$output" "$file" "$options"
     case tar.xz txz
       tar -cJf "$output" "$file" "$options"
-    case lzma
+    case tar.lzma tlz
       tar --lzma -cf "$output" "$file" "$options"
     case 7z
       7z a "$output" "$file" "$options"

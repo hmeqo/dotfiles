@@ -377,6 +377,7 @@
         "--pch-storage=disk"
     ],
     "clangd.fallbackFlags": ["-Wno-deprecated-declarations"],
+    "typescript.preferences.useAliasesForRenames": false,
     "python.analysis.typeCheckingMode": "basic",
     "python.analysis.autoImportCompletions": false,
     "ruff.nativeServer": true,
@@ -454,5 +455,6 @@
     "vscode-office.editorTheme": "Auto",
     "GitCommitPlugin.ShowEmoji": false,
     "minapp-vscode.disableAutoConfig": true,
-    "console-ninja.featureSet": "Community"
+    "console-ninja.featureSet": "Community",
+    "vue.server.hybridMode": false
 }

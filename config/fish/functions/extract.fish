@@ -1,18 +1,18 @@
 function extract
   set -l file $argv[1]
-  set -l ext (string split -r '.' $file)[-1]
+  set -l ext (string split -m 1 '.' $file)[1]
   set -l options $argv[2..]
 
   switch $ext
     case tar
       tar -xvf "$file" "$options"
-    case gz tgz
+    case tar.gz tgz
       tar -xvzf "$file" "$options"
-    case bz2 tbz2
+    case tar.bz2 tbz2
       tar -xvjf "$file" "$options"
-    case xz txz
+    case tar.xz txz
       tar -xvJf "$file" "$options"
-    case lzma tlz
+    case tar.lzma tlz
       tar -xv --lzma "$file" "$options"
     case zip
       unzip "$file" "$options"

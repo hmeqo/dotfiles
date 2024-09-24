@@ -21,9 +21,19 @@ wmclass=dolphin|code|code-url-handler|idea
 wmclasscomplete=true
 wmclassmatch=3
 
+[5cb1574c-942a-4046-8975-2a3663869ae9]
+Description=Window settings for clash-verge
+noborder=true
+noborderrule=3
+title=Clash Verge
+titlematch=1
+types=1
+wmclass=clash-verge
+wmclassmatch=1
+
 [General]
-count=2
-rules=1e7f77fe-3d48-4aad-b673-d77379ad6c32,2
+count=3
+rules=5cb1574c-942a-4046-8975-2a3663869ae9,1e7f77fe-3d48-4aad-b673-d77379ad6c32,2
 
 [bdae4665-afcc-4feb-a9cd-4e4d595575f8]
 Description=Window settings for flameshot

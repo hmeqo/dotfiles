@@ -100,6 +100,9 @@ SecondOutlineThickness=0
 active=-1
 count=0
 
+[TabBox]
+LayoutName=sidebar
+
 [Tiling]
 padding=8
 

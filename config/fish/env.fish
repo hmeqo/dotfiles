@@ -11,7 +11,6 @@ function prepend_path
 end
 
 # Fcitx5
-# GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx XMODIFIERS=@im=fcitx SDL_IM_MODULE=fcitx INPUT_METHOD=fcitx GLFW_IM_MODULE=ibus
 if test $XDG_SESSION_TYPE = "wayland" && test $XDG_CURRENT_DESKTOP != "KDE"
   set -gx GTK_IM_MODULE fcitx
   set -gx QT_IM_MODULE fcitx
