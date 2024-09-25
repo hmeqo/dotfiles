@@ -30,7 +30,7 @@ return {
         -- toml
         "taplo",
         -- frontend
-        "prettier",
+        "prettierd",
         -- add more arguments for adding more null-ls sources
       },
     },

@@ -137,6 +137,7 @@ History File=~/.local/state/kdeglobals
 
 [General]
 BrowserApplication=vivaldi-stable.desktop
+ColorScheme=FluentDark
 ColorSchemeHash=2823fd85d4dc3e2f05a21c28d68753f841ff70ed
 XftAntialias=true
 XftHintStyle=hintslight

@@ -122,6 +122,11 @@
             "before": ["K"],
             "commands": ["editor.action.showHover"]
         },
+        // lsp
+        {
+            "before": ["<leader>", "l", "f"],
+            "commands": ["editor.action.formatDocument"]
+        },
         // 取消高亮
         {
             "before": ["<C-n>"],
@@ -311,6 +316,11 @@
     "update.mode": "manual",
     "git.autofetch": true,
     "zenMode.hideLineNumbers": false,
+    "files.exclude": {
+        ".nuxt": true,
+        "dist": true,
+        "node_modules": true
+    },
     "files.autoGuessEncoding": true,
     "files.associations": {
         "*.json": "jsonc",
@@ -377,7 +387,6 @@
         "--pch-storage=disk"
     ],
     "clangd.fallbackFlags": ["-Wno-deprecated-declarations"],
-    "typescript.preferences.useAliasesForRenames": false,
     "python.analysis.typeCheckingMode": "basic",
     "python.analysis.autoImportCompletions": false,
     "ruff.nativeServer": true,
@@ -386,6 +395,8 @@
     "java.configuration.maven.userSettings": "~/.config/maven/settings.xml",
     "xml.format.grammarAwareFormatting": false,
     "xml.server.workDir": "~/.cache/lemminx",
+    "typescript.preferences.useAliasesForRenames": false,
+    "vue.server.hybridMode": false,
     "projectManager.sortList": "Name",
     "projectManager.tags": ["Workspace", "Projects", "Repos", "Personal"],
     "code-runner.runInTerminal": true,
@@ -455,6 +466,5 @@
     "vscode-office.editorTheme": "Auto",
     "GitCommitPlugin.ShowEmoji": false,
     "minapp-vscode.disableAutoConfig": true,
-    "console-ninja.featureSet": "Community",
-    "vue.server.hybridMode": false
+    "console-ninja.featureSet": "Community"
 }
