@@ -31,6 +31,6 @@ backup
 config/fish/fish_plugins
 config/fish/fish_variables
 
-user/*
+user
 
 config/nvim/lua/user/*
