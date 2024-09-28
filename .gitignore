@@ -28,9 +28,7 @@ __pycache__
 config-sync.lock
 backup
 
+/user
+
 config/fish/fish_plugins
 config/fish/fish_variables
-
-user
-
-config/nvim/lua/user/*
