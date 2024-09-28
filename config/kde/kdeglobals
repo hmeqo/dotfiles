@@ -133,7 +133,9 @@ ForegroundPositive=1,162,153
 ForegroundVisited=0,188,212
 
 [DirSelect Dialog]
+DirSelectDialog Size=978,594
 History File=~/.local/state/kdeglobals
+History Items[$e]=file:$HOME/workspace/test,file:$HOME/workspace
 
 [General]
 BrowserApplication=vivaldi-stable.desktop

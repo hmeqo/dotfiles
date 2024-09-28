@@ -238,7 +238,7 @@
 
     "apc.imports": [
         // "file://${userHome}/.config/dotfiles/config/vscode/ui.css",
-        "file://${userHome}/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.3/dist/updateHandler.js"
+        "file://${userHome}/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.4/dist/updateHandler.js"
     ],
     "apc.activityBar": {
         "itemSize": 27
@@ -247,7 +247,7 @@
     "animations.Install-Method": "Apc Customize UI++",
     "animations.CursorAnimation": true,
     "animations.Enabled": true,
-    "animations.Smooth-Mode": false,
+    // "animations.Smooth-Mode": false,
     "animations.Tabs": "Slide",
     "animations.Command-Palette": "Slide",
     "animations.Scrolling": "Fade",
@@ -316,11 +316,6 @@
     "update.mode": "manual",
     "git.autofetch": true,
     "zenMode.hideLineNumbers": false,
-    "files.exclude": {
-        ".nuxt": true,
-        "dist": true,
-        "node_modules": true
-    },
     "files.autoGuessEncoding": true,
     "files.associations": {
         "*.json": "jsonc",
@@ -364,6 +359,9 @@
     },
     "[shellscript]": {
         "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
     },
     "prettier.tabWidth": 4,
     "prettier.printWidth": 120,
@@ -466,5 +464,6 @@
     "vscode-office.editorTheme": "Auto",
     "GitCommitPlugin.ShowEmoji": false,
     "minapp-vscode.disableAutoConfig": true,
-    "console-ninja.featureSet": "Community"
+    "console-ninja.featureSet": "Community",
+    "tailwindMagic.attributifyMode": false
 }

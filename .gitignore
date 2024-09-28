@@ -21,6 +21,8 @@
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
 
+!**/.gitkeep
+
 .venv
 __pycache__
 config-sync.lock
@@ -30,4 +32,5 @@ config/fish/fish_plugins
 config/fish/fish_variables
 
 user/*
-!user/.gitkeep
+
+config/nvim/lua/user/*

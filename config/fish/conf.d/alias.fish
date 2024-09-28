@@ -1,12 +1,16 @@
+function fastfetch
+  bash -c 'echo && pyfiglet -s -f ansi_shadow $(fastfetch -s os --format json | jq -r \'.[0].result.name\') | lolcat && fastfetch -l none --config examples/10'
+end
+
 if type -q exa
-  alias ls='exa --icons'
+  alias ls='exa --icons -s type'
   alias lsa='ls -A'
   alias l='ls -lh'
   alias ll='ls -Alh'
   alias la='ls -alh'
   alias lt='ls -lTah'
 else
-  alias ls='ls --color=auto'
+  alias ls='ls --color=auto -s type'
   alias lsa='ls -A'
   alias l='ls -lh'
   alias ll='ls -Alh'

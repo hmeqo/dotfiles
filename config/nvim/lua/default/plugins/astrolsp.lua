@@ -5,8 +5,6 @@
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
 --       as this provides autocomplete and documentation while editing
 
-local lspcfg = require "user.lspconfig"
-
 ---@type LazySpec
 return {
   "AstroNvim/astrolsp",
@@ -22,7 +20,7 @@ return {
     formatting = {
       -- control auto formatting on save
       format_on_save = {
-        enabled = false, -- enable or disable format on save globally
+        enabled = true, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
           -- "go",
         },
@@ -36,6 +34,7 @@ return {
       },
       timeout_ms = 1000, -- default format timeout
       -- filter = function(client) -- fully override the default formatting function
+      --   if vim.bo.filetype == "jsonc" then return client.name == "jsonls" end
       --   return true
       -- end
     },
@@ -47,55 +46,6 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
-      ts_ls = {
-        filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
-        init_options = {
-          plugins = {
-            {
-              name = "@vue/typescript-plugin",
-              location = lspcfg.get_vue_ts_plugin_path(),
-              languages = { "vue", "typescript" },
-            },
-          },
-        },
-      },
-      volar = {
-        filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
-        capabilities = {
-          workspace = {
-            didChangeWatchedFiles = {
-              dynamicRegistration = true,
-            },
-          },
-        },
-        init_options = {
-          languageFeatures = {
-            references = true,
-            definition = true,
-            typeDefinition = true,
-            callHierarchy = true,
-            hover = true,
-            rename = true,
-            signatureHelp = true,
-            codeAction = true,
-            completion = {
-              defaultTagNameCase = "both",
-              defaultAttrNameCase = "kebabCase",
-              getDocumentNameCasesRequest = true,
-              getDocumentSelectionRequest = true,
-            },
-            documentLink = true,
-            codeLens = true,
-            diagnostics = true,
-          },
-          -- vue = {
-          -- 	hybridMode = true,
-          -- },
-        },
-        on_new_config = function(new_config, new_root_dir)
-          new_config.init_options.typescript.tsdk = lspcfg.get_typescript_server_path(new_root_dir)
-        end,
-      },
     },
     -- customize how language servers are attached
     handlers = {

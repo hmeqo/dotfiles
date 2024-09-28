@@ -153,6 +153,18 @@
         "command": "workbench.action.quickOpenView"
     },
     {
+        "key": "ctrl+q",
+        "command": "workbench.action.closeWindow"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "-workbench.action.quit"
+    },
+    {
+        "key": "ctrl+k q",
+        "command": "workbench.action.quit"
+    },
+    {
         "key": "ctrl+l",
         "command": "-expandLineSelection",
         "when": "textInputFocus"
