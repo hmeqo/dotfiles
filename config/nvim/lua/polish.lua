@@ -1,6 +1,16 @@
-local fnUtil = require "core.utils.func"
+local pack_util = require "utils.pack"
 
-require "default.polish"
+-- vim.filetype.add {
+--   extension = {
+--     foo = "fooscript",
+--   },
+--   filename = {
+--     ["Foofile"] = "fooscript",
+--   },
+--   pattern = {
+--     ["~/%.config/foo/.*"] = "fooscript",
+--   },
+-- }
 
 vim.filetype.add {
   extension = {
@@ -9,4 +19,4 @@ vim.filetype.add {
   },
 }
 
-fnUtil.loadUserPack "polish"
+pack_util.load_user_pack "polish"

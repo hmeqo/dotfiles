@@ -19,15 +19,13 @@ cd ~/.config/dotfiles
 
 ### Manage symlinks with `confsync`
 
-Use `confsync` to manage dotfiles.
+Use `confsync` to manage dotfiles.  
+It will display a tui in the terminal to display each dependency and choose which ones you want to sync
 
 ```bash
 # run sync.sh that will automatically create python virtual environment and start `confsync tui`
 ./sync.sh
 ```
-
-Run `confsync tui` to display each dependency.
-You’ll need to install these manually. Once that’s done, execute `confsync tui` again and choose the option you’d like to synchronize.
 
 If you already have a configuration file, don’t worry - it will be safely backed up to `~/.config/dotfiles/backup` before the synchronization process begins.
 In the event of uninstallation, your original configuration file will be restored from this backup.
@@ -55,10 +53,12 @@ It can also fix XDG paths for some programs.
 Default for code hmcl-bin jetbrains-fleet minecraft-launcher steam thunderbird ..., and you can use `fakehome xxx` manually.
 
 ```bash
-~/.config/dotfiles/fakehome/install.sh
+fakehome/install.sh
+# or install for system, it will be installed to /usr/local/bin
+sudo fakehome/install_for_system.sh
 
 # uninstall
-~/.config/dotfiles/fakehome/uninstall.sh
+fakehome/uninstall.sh
 ```
 
 ### Fonts dependencies

@@ -21,6 +21,13 @@ links = [
 ]
 depends = { system = ["zsh", "zoxide", "fzf"] }
 
+[options.tmux]
+tags = ["shell"]
+links = [
+    { source = "config/tmux/tmux.conf", target = "~/.config/tmux/tmux.conf" },
+]
+depends = { system = ["tmux", "tmux-plugin-manager"] }
+
 [options.starship]
 tags = ["shell"]
 links = [
@@ -129,7 +136,10 @@ depends = { git-submodule = ["wallpapers/stephan-raabe"] }
 
 [options.hyprland]
 tags = ["WM"]
-links = [{ source = "config/hypr", target = "~/.config/hypr" }]
+links = [
+    { source = "config/hypr", target = "~/.config/hypr" },
+    { source = "local/bin/waybarswitchtheme", target = "~/.local/bin/waybarswitchtheme" },
+]
 [options.hyprland.depends]
 system = [
     "hyprland",
@@ -144,6 +154,7 @@ system = [
     "qt6ct",
     "nwg-look",
     "network-manager-applet",
+    "polkit-kde-agent",
     "kwallet",
     "kwallet-pam",
     "kdeconnect",
@@ -169,3 +180,8 @@ depends = { system = ["dunst"] }
 [options.ruff]
 tags = ["python", "linter"]
 links = [{ source = "config/ruff", target = "~/.config/ruff" }]
+
+[options.mpv]
+tags = ["video player"]
+links = [{ source = "config/mpv", target = "~/.config/mpv" }]
+depends = { system = ["mpv"] }

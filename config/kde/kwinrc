@@ -100,17 +100,11 @@ SecondOutlineThickness=0
 active=-1
 count=0
 
-[TabBox]
-LayoutName=sidebar
-
 [Tiling]
 padding=8
 
-[Tiling][903bce40-e206-5087-83b0-cef1b8606ba0]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.6229166666666667},{"width":0.3770833333333332}]}
-
 [Tiling][ac378286-a537-509f-86ca-fd802405ac93]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.7505208333333333},{"width":0.2494791666666667}]}
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
 
 [Wayland]
 EnablePrimarySelection=false

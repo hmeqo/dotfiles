@@ -44,12 +44,13 @@
         "format-muted": "{icon} {volume}%",
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "format-icons": {
-			"headphones": "",
+            "headphones": "",
             "default": [
                 "󰕿",
                 "󰖀",
                 "󰕾",
-				""
+                "󰕾",
+                ""
             ]
         }
     },

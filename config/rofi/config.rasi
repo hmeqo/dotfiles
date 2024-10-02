@@ -1,5 +1,5 @@
 configuration {
-    modi: [ combi, drun, run, "Control:~/.config/dotfiles/config/rofi/script.sh" ];
+    modi: [ combi, drun, run ];
     combi-modi: [ window, drun, run, ssh ];
     display-combi: "All";
     display-drun: "Drun";

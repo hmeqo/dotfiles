@@ -3,18 +3,15 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
     opts = {
-      ensure_installed = {},
+      ensure_installed = {
+        -- "jsonls",
+      },
     },
   },
   {
     "jay-babu/mason-null-ls.nvim",
     opts = {
-      ensure_installed = {
-        -- toml
-        "taplo",
-        -- frontend
-        "prettierd",
-      },
+      ensure_installed = {},
     },
   },
   {

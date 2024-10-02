@@ -247,7 +247,7 @@
     "animations.Install-Method": "Apc Customize UI++",
     "animations.CursorAnimation": true,
     "animations.Enabled": true,
-    // "animations.Smooth-Mode": false,
+    "animations.Smooth-Mode": false,
     "animations.Tabs": "Slide",
     "animations.Command-Palette": "Slide",
     "animations.Scrolling": "Fade",
@@ -403,8 +403,8 @@
     "code-runner.showRunCommandInExplorerContextMenu": false,
     "code-runner.fileDirectoryAsCwd": true,
     "codesnap.showWindowControls": false,
-    "codesnap.containerPadding": "0rem",
-    "codesnap.roundedCorners": false,
+    // "codesnap.containerPadding": "0rem",
+    // "codesnap.roundedCorners": false,
     "markdownlint.config": {
         "MD033": false,
         "MD041": false

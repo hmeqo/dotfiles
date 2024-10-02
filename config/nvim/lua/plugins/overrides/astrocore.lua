@@ -9,9 +9,7 @@ return {
         ["H"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
         ["L"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
 
-        -- -- jump lines
-        -- ["J"] = { "5j" },
-        -- ["K"] = { "5k" },
+        ["<F2>"] = { function() vim.lsp.buf.rename() end, desc = "LSP Rename" },
       },
     },
   },
