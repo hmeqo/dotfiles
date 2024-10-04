@@ -20,7 +20,7 @@ cd ~/.config/dotfiles
 ### Manage symlinks with `confsync`
 
 Use `confsync` to manage dotfiles.  
-It will display a tui in the terminal to display each dependency and choose which ones you want to sync
+It will display a tui in the terminal to choose which ones you want to sync.
 
 ```bash
 # run sync.sh that will automatically create python virtual environment and start `confsync tui`

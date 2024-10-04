@@ -1,6 +1,6 @@
 local plugin_util = require "utils.plugin"
 
-local prefix = "<leader>v"
+local prefix = "<Leader>v"
 
 ---@type LazySpec
 return {
@@ -41,6 +41,11 @@ return {
           },
           markview_callbacks = plugin_util.buf_enter_leave {
             ft = { "markdown", "quarto", "rmd" },
+            on_enter = function()
+              local win = vim.api.nvim_get_current_win()
+              vim.wo[win].concealcursor = "nc"
+            end,
+            leave_event = "BufWinLeave",
             on_leave = function()
               local win = vim.api.nvim_get_current_win()
               vim.wo[win].conceallevel = 0
@@ -53,9 +58,6 @@ return {
     opts = {
       -- modes = { "n", "no", "c" },
       -- hybrid_modes = { "n" },
-      tables = {
-        use_virt_lines = true,
-      },
     },
   },
 }

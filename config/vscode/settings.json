@@ -26,24 +26,55 @@
         "<C-z>": false,
         "<C-h>": false,
         "<C-l>": false,
-        "<C-i>": false,
-        "<C-[>": false,
-        "<C-]>": false,
+        // "<C-i>": false,
+        // "<C-[>": false,
+        // "<C-]>": false,
         "<C-k>": false,
         "<C-f>": false,
         "<C-j>": false,
         "<C-b>": false,
         "<C-t>": false,
-        "<C-o>": false,
+        // "<C-o>": false,
         "<C-p>": false,
         "<C-q>": false
     },
     "vim.normalModeKeyBindingsNonRecursive": [
-        // Motion
+        // Vscode to Vim
         {
             "before": ["<C-right>"],
             "after": ["e"]
         },
+        // Vim basic
+        {
+            "before": ["u"],
+            "commands": ["undo"]
+        },
+        {
+            "before": ["<C-r>"],
+            "commands": ["redo"]
+        },
+        // AstroNvim basic
+        {
+            "before": ["<Leader>", "w"],
+            "commands": [":w"]
+        },
+        {
+            "before": ["<Leader>", "W"],
+            "commands": [":w!"]
+        },
+        {
+            "before": ["<Leader>", "c"],
+            "commands": [":q"]
+        },
+        {
+            "before": ["<Leader>", "C"],
+            "commands": ["workbench.action.closeActiveEditor"]
+        },
+        {
+            "before": ["<Leader>", "q"],
+            "commands": ["workbench.action.closeEditorsAndGroup"]
+        },
+        // Buffer
         {
             "before": ["[", "b"],
             "commands": ["workbench.action.previousEditor"]
@@ -60,56 +91,104 @@
             "before": ["L"],
             "commands": ["workbench.action.nextEditor"]
         },
+        // Find
+        {
+            "before": ["<Leader>", "f", "C"],
+            "commands": ["workbench.action.showCommands"]
+        },
+        {
+            "before": ["<Leader>", "f", "f"],
+            "commands": ["workbench.action.quickOpen"]
+        },
+        {
+            "before": ["<Leader>", "f", "N"],
+            "commands": ["notifications.showList"]
+        },
+        {
+            "before": ["<Leader>", "f", "o"],
+            "commands": ["workbench.action.openRecent"]
+        },
+        {
+            "before": ["<Leader>", "f", "t"],
+            "commands": ["workbench.action.selectTheme"]
+        },
+        {
+            "before": ["<Leader>", "f", "w"],
+            "commands": ["workbench.action.findInFiles"]
+        },
+        // git
+        {
+            "before": ["<Leader>", "g", "g"],
+            "commands": ["workbench.view.scm"]
+        },
+        // lsp
+        {
+            "before": ["K"],
+            "commands": ["editor.action.showHover"]
+        },
+        {
+            "before": ["g", "I"],
+            "commands": ["editor.action.goToImplementation"]
+        },
+        {
+            "before": ["g", "d"],
+            "commands": ["editor.action.revealDefinition"]
+        },
+        {
+            "before": ["g", "D"],
+            "commands": ["editor.action.revealDeclaration"]
+        },
+        {
+            "before": ["g", "r"],
+            "commands": ["editor.action.goToReferences"]
+        },
+        {
+            "before": ["g", "y"],
+            "commands": ["editor.action.goToTypeDefinition"]
+        },
+        {
+            "before": ["<Leader>", "l", "a"],
+            "commands": ["editor.action.codeAction"]
+        },
+        {
+            "before": ["<Leader>", "l", "G"],
+            "commands": ["workbench.action.showAllSymbols"]
+        },
+        {
+            "before": ["<Leader>", "l", "R"],
+            "commands": ["editor.action.goToReferences"]
+        },
+        {
+            "before": ["<Leader>", "l", "r"],
+            "commands": ["editor.action.rename"]
+        },
+        {
+            "before": ["<Leader>", "l", "s"],
+            "commands": ["workbench.action.gotoSymbol"]
+        },
+        {
+            "before": ["<Leader>", "l", "f"],
+            "commands": ["editor.action.formatDocument"]
+        },
+        // Search
         {
             "before": ["s"],
-            "after": ["<leader>", "<leader>", "s"]
+            "after": ["<Leader>", "<Leader>", "s"]
         },
         // Camel case motion
         {
             "before": [",", "w"],
-            "after": ["<leader>", "w"]
+            "after": ["<Leader>", "w"]
         },
         {
             "before": [",", "e"],
-            "after": ["<leader>", "e"]
+            "after": ["<Leader>", "e"]
         },
         {
             "before": [",", "b"],
-            "after": ["<leader>", "b"]
+            "after": ["<Leader>", "b"]
         },
-        // 编辑
-        {
-            "before": ["<leader>", "w"],
-            "commands": [":w"]
-        },
-        {
-            "before": ["<leader>", "W"],
-            "commands": [":w!"]
-        },
-        {
-            "before": ["<leader>", "c"],
-            "commands": [":q"]
-        },
-        {
-            "before": ["<leader>", "C"],
-            "commands": ["workbench.action.closeActiveEditor"]
-        },
-        {
-            "before": ["<leader>", "q"],
-            "commands": ["workbench.action.closeEditorsAndGroup"]
-        },
-        {
-            "before": ["u"],
-            "commands": ["undo"]
-        },
-        {
-            "before": ["U"],
-            "commands": ["redo"]
-        },
-        {
-            "before": ["<C-r>"],
-            "commands": ["redo"]
-        },
+        // Split
         {
             "before": ["\\"],
             "after": ["<C-w>", "s"]
@@ -118,15 +197,6 @@
             "before": ["|"],
             "after": ["<C-w>", "v"]
         },
-        {
-            "before": ["K"],
-            "commands": ["editor.action.showHover"]
-        },
-        // lsp
-        {
-            "before": ["<leader>", "l", "f"],
-            "commands": ["editor.action.formatDocument"]
-        },
         // 取消高亮
         {
             "before": ["<C-n>"],
@@ -134,28 +204,28 @@
         },
         // 注释
         {
-            "before": ["<leader>", "/"],
+            "before": ["<Leader>", "/"],
             "commands": ["editor.action.commentLine"]
         },
-        // 打开设置
+        // Open settings
         {
-            "before": ["<leader>", ".", "g"],
+            "before": ["<Leader>", ".", "g"],
             "commands": ["workbench.action.openRawDefaultSettings"]
         },
         {
-            "before": ["<leader>", ".", "f"],
+            "before": ["<Leader>", ".", "f"],
             "commands": ["workbench.action.openFolderSettingsFile"]
         },
         {
-            "before": ["<leader>", ".", "r"],
+            "before": ["<Leader>", ".", "r"],
             "commands": ["workbench.action.openRemoteSettingsFile"]
         },
         {
-            "before": ["<leader>", ".", "u"],
+            "before": ["<Leader>", ".", "u"],
             "commands": ["workbench.action.openSettingsJson"]
         },
         {
-            "before": ["<leader>", ".", "w"],
+            "before": ["<Leader>", ".", "w"],
             "commands": ["workbench.action.openWorkspaceSettingsFile"]
         }
     ],
@@ -178,18 +248,17 @@
             "commands": ["cursorDown"]
         },
         // 编辑
-        // {
-        //     "before": ["j", "j"],
-        //     "after": ["<Esc>"]
-        // },
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        },
         {
             "before": ["j", "k"],
             "after": ["<Esc>"]
         },
-        // 打开最近文件
         {
-            "before": ["<c-r>"],
-            "commands": ["workbench.action.openRecent"]
+            "before": ["<C-i>"],
+            "commands": ["editor.action.triggerSuggest"]
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
@@ -200,24 +269,24 @@
         },
         {
             "before": ["s"],
-            "after": ["<leader>", "<leader>", "s"]
+            "after": ["<Leader>", "<Leader>", "s"]
         },
         // Camel case motion
         {
             "before": [",", "w"],
-            "after": ["<leader>", "w"]
+            "after": ["<Leader>", "w"]
         },
         {
             "before": [",", "e"],
-            "after": ["<leader>", "e"]
+            "after": ["<Leader>", "e"]
         },
         {
             "before": [",", "b"],
-            "after": ["<leader>", "b"]
+            "after": ["<Leader>", "b"]
         },
         // 注释
         {
-            "before": ["<leader>", "/"],
+            "before": ["<Leader>", "/"],
             "commands": ["editor.action.commentLine"]
         }
     ],
@@ -465,5 +534,23 @@
     "GitCommitPlugin.ShowEmoji": false,
     "minapp-vscode.disableAutoConfig": true,
     "console-ninja.featureSet": "Community",
-    "tailwindMagic.attributifyMode": false
+    "tailwindMagic.attributifyMode": false,
+    "editor.tokenColorCustomizations": {
+        // "[Tokyo Night Ported Nvim]": {
+        //     "textMateRules": [
+        //         {
+        //             "scope": [
+        //                 "comment",
+        //                 "meta.var.expr storage.type",
+        //                 "keyword.control.flow",
+        //                 "keyword.control.return",
+        //                 "storage.modifier"
+        //             ],
+        //             "settings": {
+        //                 "fontStyle": ""
+        //             }
+        //         }
+        //     ]
+        // }
+    }
 }

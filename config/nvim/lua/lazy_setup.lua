@@ -13,6 +13,8 @@ require("lazy").setup({
       update_notifications = true, -- Enable/disable notification about running `:Lazy update` twice to update pinned plugins
     },
   },
+  { import = "community.astrodefault" },
+  { import = "plugins.astrodefault" },
   { import = "community" },
   { import = "plugins" },
   pack_util.import_user_pack "community",

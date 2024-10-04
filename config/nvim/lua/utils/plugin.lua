@@ -4,14 +4,14 @@ local M = {}
 M.buf_enter_leave = function(opts)
   return {
     {
-      event = opts.enter_event or "BufWinEnter",
+      event = opts.enter_event or "BufEnter",
       callback = function(args)
         if opts.ft and not vim.tbl_contains(opts.ft, vim.bo[args.buf].filetype) then return end
         if opts.on_enter then opts.on_enter(args) end
       end,
     },
     {
-      event = opts.leave_event or "BufWinLeave",
+      event = opts.leave_event or "BufLeave",
       callback = function(args)
         if opts.ft and not vim.tbl_contains(opts.ft, vim.bo[args.buf].filetype) then return end
         if opts.on_leave then opts.on_leave(args) end

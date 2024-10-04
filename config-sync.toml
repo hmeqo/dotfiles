@@ -118,6 +118,11 @@ system = [
 ]
 item = ["kvantum", "fcitx5"]
 
+[options.fontconfig]
+links = [
+    { source = "config/fontconfig", target = "~/.config/fontconfig" },
+]
+
 [options.kvantum]
 tags = ["qt", "theme"]
 links = [{ source = "config/Kvantum", target = "~/.config/Kvantum" }]

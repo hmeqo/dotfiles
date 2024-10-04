@@ -134,16 +134,14 @@ ForegroundVisited=0,188,212
 
 [DirSelect Dialog]
 DirSelectDialog Size=978,594
-History File=~/.local/state/kdeglobals
-History Items[$e]=file:$HOME/workspace/test,file:$HOME/workspace
 
 [General]
 BrowserApplication=vivaldi-stable.desktop
+ColorScheme=FluentDark
 ColorSchemeHash=2823fd85d4dc3e2f05a21c28d68753f841ff70ed
-XftAntialias=true
 XftHintStyle=hintslight
-XftSubPixel=none
-fixed=Hack,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+XftSubPixel=rgb
+fixed=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 font=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 menuFont=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 smallestReadableFont=Maple Mono NF,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1

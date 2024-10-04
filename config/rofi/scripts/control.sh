@@ -3,6 +3,8 @@
 case $* in
 "logout")
     if [[ $XDG_CURRENT_DESKTOP = "Hyprland" ]]; then
+        export QT_QPA_PLATFORMTHEME=""
+        dbus-update-activation-environment --systemd QT_QPA_PLATFORMTHEME
         exec hyprctl dispatch exit
     fi
     ;;

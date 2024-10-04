@@ -1,24 +1,22 @@
 ## Directory structure
 
 - lua
-  - core
-    Tool and code
-  - default
-    Astronvim default config
-  - plugins
-    Custom plugins
-  - presets
-    Like Astronvim community, no loaded by default
   - community
     Custom Astronvim community pack
+    - astrodefault
+  - plugins
+    Custom plugins
+    - astrodefault
+    - overrides
+  - presets
+    Like Astronvim community, no loaded by default
   - polish
   - user
-    - plugins
-      User custom plugins
     - community
       User custom Astronvim community pack or presets
+    - plugins
+      User custom plugins
     - polish
 - snippets
   - user
 - user-config
-
