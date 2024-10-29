@@ -1,0 +1,6 @@
+[General]
+FreeFloating=true
+history=
+
+[Plugins][Favorites]
+plugins=krunner_services,windows

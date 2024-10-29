@@ -1,0 +1,18 @@
+{
+    "log4j": {
+        "prefix": "log4j",
+        "body": [
+            "log4j.rootLogger=debug,CONSOLE",
+            "",
+            "######################################################################################",
+            "# Console Appender",
+            "######################################################################################",
+            "log4j.appender.CONSOLE=org.apache.log4j.ConsoleAppender",
+            "log4j.appender.Threshold=debug",
+            "log4j.appender.CONSOLE.Target=System.out",
+            "log4j.appender.CONSOLE.layout=org.apache.log4j.PatternLayout",
+            "log4j.appender.CONSOLE.layout.ConversionPattern= - %d{yyyy-M-d HH:mm:ss}%x[%5p](%F:%L) %m%n"
+        ],
+        "description": "log4j"
+    }
+}

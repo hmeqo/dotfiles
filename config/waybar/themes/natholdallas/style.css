@@ -1,0 +1,50 @@
+* {
+  min-height: 0;
+}
+
+#waybar {
+  color: #eeeeee;
+  background: rgba(0, 0, 0, 0);
+  font-size: 12px;
+  font-family: "FiraCode Nerd Font";
+}
+
+#waybar > :nth-child(2) {
+  margin: 0 8px;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  border-radius: 10px;
+  margin: 4px 0;
+  padding: 2px 8px;
+  color: #eeeeee;
+  background-color: #242424;
+}
+
+.modules-left > * > * {
+  margin-right: 8px;
+  padding: 0 8px;
+}
+
+.modules-left > * > :last-child {
+  margin-right: 0;
+}
+
+.modules-right > * > * {
+  margin-left: 8px;
+  padding: 0 8px;
+}
+
+.modules-right > * > :first-child {
+  margin-left: 0;
+}
+
+#workspaces > * {
+  padding: 0 4px 0 2px;
+}
+
+#tray {
+  padding: 0 2px;
+}

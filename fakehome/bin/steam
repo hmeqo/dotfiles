@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+if locale -a | grep -q "zh_CN"; then
+  export LANG=$(locale -a | grep "zh_CN" | head -n 1)
+fi
+fakehome /usr/bin/steam "$@"

@@ -1,0 +1,16 @@
+#!/usr/bin/zsh
+
+dotfiles=~/.config/dotfiles
+
+autoload -Uz compinit
+compinit
+
+. "$dotfiles/config/bash/load_config.bash"
+
+if [[ -f "$dotfiles/user/zsh/env.zsh" ]]; then
+  . "$dotfiles/user/zsh/env.zsh"
+else
+  . "$dotfiles/config/zsh/env.zsh"
+fi
+
+[[ ! -f "$dotfiles/user/zsh/config.zsh" ]] || . "$dotfiles/user/zsh/config.zsh"

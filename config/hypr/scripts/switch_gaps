@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+
+function enable_square() {
+  hyprctl keyword dwindle:no_gaps_when_only 1
+}
+
+function disable_square() {
+  hyprctl keyword dwindle:no_gaps_when_only 0
+}
+
+if [[ $(hyprctl getoption dwindle:no_gaps_when_only | head -n 1 | awk '{print $2}') == "0" ]]; then
+  enable_square
+else
+  disable_square
+fi

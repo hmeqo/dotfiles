@@ -1,0 +1,3 @@
+[submodule "local/share/wallpapers/stephan-raabe"]
+	path = local/share/wallpapers/stephan-raabe
+	url = https://gitlab.com/stephan-raabe/wallpaper.git

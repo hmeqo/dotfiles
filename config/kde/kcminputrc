@@ -1,0 +1,11 @@
+[Libinput][6392][3993][USB OPTICAL MOUSE ]
+PointerAcceleration=-0.400
+
+[Libinput][7847][100][2.4G Mouse]
+PointerAcceleration=0.000
+PointerAccelerationProfile=2
+
+[Mouse]
+X11LibInputXAccelProfileFlat=true
+XLbInptAccelProfileFlat=false
+XLbInptPointerAcceleration=-0.4
