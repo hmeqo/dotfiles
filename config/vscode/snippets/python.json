@@ -1,0 +1,244 @@
+{
+	"ifmain": {
+		"prefix": "ifmain",
+		"body": [
+			"if __name__ == \"__main__\":",
+			"    ${0:main()}"
+		],
+		"description": "if __name__ == \"__main__\""
+	},
+	"ifmain2": {
+		"prefix": "ifmain2",
+		"body": [
+			"if __name__ == '__main__':",
+			"    ${0:main()}"
+		],
+		"description": "if __name__ == '__main__'"
+	},
+	"import": {
+		"prefix": "import",
+		"body": [
+			"import $0"
+		],
+		"description": "import"
+	},
+	"from": {
+		"prefix": "from",
+		"body": [
+			"from $1 import $0"
+		],
+		"description": "from ... import"
+	},
+	"if": {
+		"prefix": "if",
+		"body": [
+			"if $1:",
+			"    $0"
+		],
+		"description": "if"
+	},
+	"elif": {
+		"prefix": "elif",
+		"body": [
+			"elif $1:",
+			"    $0"
+		],
+		"description": "elif"
+	},
+	"else": {
+		"prefix": "else",
+		"body": [
+			"else:",
+			"    $0"
+		],
+		"description": "else"
+	},
+	"with": {
+		"prefix": "with",
+		"body": [
+			"with $1:",
+			"    $0"
+		],
+		"description": "with"
+	},
+	"match": {
+		"prefix": "match",
+		"body": [
+			"match $1:",
+			"    case $2",
+			"        $0"
+		],
+		"description": "match"
+	},
+	"case": {
+		"prefix": "case",
+		"body": [
+			"case $1:",
+			"    $0"
+		],
+		"description": "case"
+	},
+	"while": {
+		"prefix": "while",
+		"body": [
+			"while $1:",
+			"    $0"
+		],
+		"description": "while"
+	},
+	"for": {
+		"prefix": "for",
+		"body": [
+			"for $1 in $2:",
+			"    $0"
+		],
+		"description": "for"
+	},
+	"try": {
+		"prefix": "try",
+		"body": [
+			"try:",
+			"    $0"
+		],
+		"description": "try"
+	},
+	"tryexcept": {
+		"prefix": "tryexcept",
+		"body": [
+			"try:",
+			"    $1",
+			"except $2:",
+			"    $0"
+		],
+		"description": "try-except"
+	},
+	"except": {
+		"prefix": "except",
+		"body": [
+			"except $1:",
+			"    $0"
+		],
+		"description": "except"
+	},
+	"finally": {
+		"prefix": "finally",
+		"body": [
+			"finally:",
+			"    $0"
+		],
+		"description": "finally"
+	},
+	"as": {
+		"prefix": "as",
+		"body": [
+			"as $0"
+		],
+		"description": "as"
+	},
+	"assert": {
+		"prefix": "assert",
+		"body": [
+			"assert $0"
+		]
+	},
+	"def": {
+		"prefix": "def",
+		"body": [
+			"def $1($2):",
+			"    $0"
+		],
+		"description": "def"
+	},
+	"adef": {
+		"prefix": "adef",
+		"body": [
+			"async def $1($2):",
+			"    $0"
+		],
+		"description": "async def"
+	},
+	"async": {
+		"prefix": "async",
+		"body": [
+			"async def $1($2):",
+			"    $0"
+		],
+		"description": "async def"
+	},
+	"class": {
+		"prefix": "class",
+		"body": [
+			"class $1:",
+			"    $0"
+		],
+		"description": "class"
+	},
+	"definit": {
+		"prefix": "definit",
+		"body": [
+			"def __init__(self, $1):",
+			"    $0"
+		],
+		"description": "def __init__"
+	},
+	"defnew": {
+		"prefix": "defnew",
+		"body": [
+			"def __new__(cls, $1):",
+			"    $0"
+		],
+		"description": "def __new__"
+	},
+	"defm": {
+		"prefix": "defm",
+		"body": [
+			"def $1(self, $2):",
+			"    $0"
+		],
+		"description": "method"
+	},
+	"adefm": {
+		"prefix": "adefm",
+		"body": [
+			"async def $1(self, $2):",
+			"    $0"
+		],
+		"description": "async method"
+	},
+	"defstatic": {
+		"prefix": "defstatic",
+		"body": [
+			"@staticmethod",
+			"def $1($2):",
+			"    $0"
+		],
+		"description": "static method"
+	},
+	"adefstatic": {
+		"prefix": "adefstatic",
+		"body": [
+			"@staticmethod",
+			"async def $1($2):",
+			"    $0"
+		],
+		"description": "async static method"
+	},
+	"defclass": {
+		"prefix": "defclass",
+		"body": [
+			"@classmethod",
+			"def $1(cls, $2):",
+			"    $0"
+		],
+		"description": "class method"
+	},
+	"adefclass": {
+		"prefix": "adefclass",
+		"body": [
+			"@classmethod",
+			"async def $1(cls, $2):",
+			"    $0"
+		],
+		"description": "async class method"
+	}
+}

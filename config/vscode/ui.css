@@ -1,0 +1,29 @@
+.mtk6 {
+  --color: #569cd688;
+}
+
+.mtk16 {
+  --color: #dcdcaa88;
+}
+
+.mtk17 {
+  --color: #4ec9b088;
+}
+
+.mtk18 {
+  --color: #c586c088;
+}
+
+.mtk19 {
+  --color: #4fc1ff88;
+}
+
+.mtk6,
+.mtk16,
+.mtk17,
+.mtk18,
+.mtk19 {
+  text-shadow:
+    0 0 4px var(--color),
+    0 0 8px var(--color);
+}

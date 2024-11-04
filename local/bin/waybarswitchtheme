@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+config_dir="$HOME/.config/dotfiles/config/waybar"
+
+# 第一个参数
+theme=${1:-$(echo "$config_dir"/themes/* | tr ' ' '\n' | xargs -n 1 basename | fzf --layout=reverse --height 12)}
+
+if [[ -n "$theme" ]]; then
+  ln -sf "../themes/$theme/config.jsonc" "$config_dir/current/config.jsonc"
+  ln -sf "../themes/$theme/style.css" "$config_dir/current/style.css"
+fi
