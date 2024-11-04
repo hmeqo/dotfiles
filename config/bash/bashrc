@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+dotfiles=~/.config/dotfiles
+
+. $dotfiles/config/bash/load_config.bash
+
+[[ -f $dotfiles/user/bash/config.bash ]] && . $dotfiles/user/bash/config.bash

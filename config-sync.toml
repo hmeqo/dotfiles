@@ -1,0 +1,198 @@
+[options.bash]
+tags = ["shell"]
+links = [
+    { source = "config/bash/bash_profile", target = "~/.bash_profile" },
+    { source = "config/bash/bashrc", target = "~/.bashrc" },
+]
+
+[options.fish]
+tags = ["shell"]
+links = [{ source = "config/fish", target = "~/.config/fish" }]
+depends = { system = ["fish", "zoxide", "fzf"], item = ["starship"] }
+
+[options.zsh]
+tags = ["shell"]
+links = [
+    { source = "config/zsh/zshenv", target = "~/.zshenv" },
+    { source = "config/zsh/p10k.zsh", target = "~/.config/zsh/.p10k.zsh" },
+    { source = "config/zsh/zimrc", target = "~/.config/zsh/.zimrc" },
+    { source = "config/zsh/zprofile", target = "~/.config/zsh/.zprofile" },
+    { source = "config/zsh/zshrc", target = "~/.config/zsh/.zshrc" },
+]
+depends = { system = ["zsh", "zoxide", "fzf"] }
+
+[options.tmux]
+tags = ["shell"]
+links = [
+    { source = "config/tmux/tmux.conf", target = "~/.config/tmux/tmux.conf" },
+]
+depends = { system = ["tmux", "tmux-plugin-manager"] }
+
+[options.starship]
+tags = ["shell"]
+links = [
+    { source = "config/starship.toml", target = "~/.config/starship.toml" },
+]
+depends = { system = ["starship"] }
+
+[options.neovim]
+tags = ["editor"]
+links = [{ source = "config/nvim", target = "~/.config/nvim" }]
+depends = { system = ["neovim"] }
+
+[options.vscode]
+tags = ["editor"]
+links = [
+    { source = "config/vscode/snippets", target = "~/.config/Code/User/snippets" },
+    { source = "config/vscode/settings.json", target = "~/.config/Code/User/settings.json" },
+    { source = "config/vscode/keybindings.json", target = "~/.config/Code/User/keybindings.json" },
+]
+
+[options.wezterm]
+tags = ["terminal"]
+links = [{ source = "config/wezterm", target = "~/.config/wezterm" }]
+depends = { system = ["wezterm"] }
+
+[options.kitty]
+tags = ["terminal"]
+links = [{ source = "config/kitty", target = "~/.config/kitty" }]
+depends = { system = ["kitty"] }
+
+[options.kde]
+tags = ["DE"]
+links = [
+    { source = "config/kde/kactivitymanagerdrc", target = "~/.config/kactivitymanagerdrc" },
+    { source = "config/kde/kcminputrc", target = "~/.config/kcminputrc" },
+    { source = "config/kde/kdeglobals", target = "~/.config/kdeglobals" },
+    { source = "config/kde/kglobalshortcutsrc", target = "~/.config/kglobalshortcutsrc" },
+    { source = "config/kde/krunnerrc", target = "~/.config/krunnerrc" },
+    { source = "config/kde/kscreenlockerrc", target = "~/.config/kscreenlockerrc" },
+    { source = "config/kde/kwinrc", target = "~/.config/kwinrc" },
+    { source = "config/kde/kwinrulesrc", target = "~/.config/kwinrulesrc" },
+    { source = "config/kde/plasma-org.kde.plasma.desktop-appletsrc", target = "~/.config/plasma-org.kde.plasma.desktop-appletsrc" },
+    { source = "config/kde/plasmarc", target = "~/.config/plasmarc" },
+    { source = "config/kde/plasmashellrc", target = "~/.config/plasmashellrc" },
+
+    # konsole
+    { source = "config/kde/konsolerc", target = "~/.config/konsolerc" },
+    { source = "local/share/konsole/Dolphin.profile", target = "~/.local/share/konsole/Dolphin.profile" },
+    { source = "local/share/konsole/Transparent.colorscheme", target = "~/.local/share/konsole/Transparent.colorscheme" },
+    { source = "local/share/konsole/Transparent.profile", target = "~/.local/share/konsole/Transparent.profile" },
+    { source = "local/share/konsole/Yakuake.profile", target = "~/.local/share/konsole/Yakuake.profile" },
+
+    # yakuake
+    { source = "config/kde/yakuakerc", target = "~/.config/yakuakerc" },
+    { source = "local/share/yakuake/kns_skins/materia-dark", target = "~/.local/share/yakuake/kns_skins/materia-dark" },
+
+    # kwin
+    { source = "local/share/kwin", target = "~/.local/share/kwin" },
+    { source = "local/share/plasma", target = "~/.local/share/plasma" },
+
+    # icons
+    { source = "local/share/icons/Fluent", target = "~/.local/share/icons/Fluent" },
+    { source = "local/share/icons/Fluent-dark", target = "~/.local/share/icons/Fluent-dark" },
+    { source = "local/share/icons/Fluent-light", target = "~/.local/share/icons/Fluent-light" },
+
+    # themes
+    { source = "local/share/themes/Fluent-round-Dark", target = "~/.local/share/themes/Fluent-round-Dark" },
+    { source = "local/share/themes/Fluent-round-Light", target = "~/.local/share/themes/Fluent-round-Light" },
+
+    # color schemes
+    { source = "local/share/color-schemes/FluentDark.colors", target = "~/.local/share/color-schemes/FluentDark.colors" },
+    { source = "local/share/color-schemes/FluentLight.colors", target = "~/.local/share/color-schemes/FluentLight.colors" },
+
+    # window decoration
+    { source = "local/share/aurorae/themes/summaculate-day-opaque", target = "~/.local/share/aurorae/themes/summaculate-day-opaque" },
+    { source = "local/share/aurorae/themes/summaculate-night-opaque", target = "~/.local/share/aurorae/themes/summaculate-night-opaque" },
+    { source = "local/share/aurorae/themes/WillowDark", target = "~/.local/share/aurorae/themes/WillowDark" },
+    { source = "local/share/aurorae/themes/WillowLight", target = "~/.local/share/aurorae/themes/WillowLight" },
+]
+[options.kde.depends]
+system = [
+    "kwin-effect-rounded-corners-git",
+    "kwin-effects-forceblur-git",
+    "ttf-maple",
+]
+other-options = ["kvantum", "fcitx5", "wallpaper-hmeqo"]
+
+[options.fontconfig]
+links = [{ source = "config/fontconfig", target = "~/.config/fontconfig" }]
+
+[options.kvantum]
+tags = ["qt", "theme"]
+links = [{ source = "config/Kvantum", target = "~/.config/Kvantum" }]
+
+[options.fcitx5]
+tags = ["input method"]
+links = [{ source = "config/fcitx5", target = "~/.config/fcitx5" }]
+depends = { system = ["fcitx5-skin-fluentdark-git"] }
+
+[options.wallpaper-hmeqo]
+tags = ["wallpaper"]
+links = [
+    { source = "local/share/wallpapers/hmeqo", target = "~/.local/share/wallpapers/hmeqo" },
+]
+depends = { git-submodule = ["local/share/wallpapers/hmeqo"] }
+
+[options.wallpaper-stephan-raabe]
+tags = ["wallpaper"]
+links = [
+    { source = "local/share/wallpapers/stephan-raabe", target = "~/.local/share/wallpapers/stephan-raabe" },
+]
+depends = { git-submodule = ["local/share/wallpapers/stephan-raabe"] }
+
+[options.hyprland]
+tags = ["WM"]
+links = [
+    { source = "config/hypr", target = "~/.config/hypr" },
+    { source = "local/bin/waybarswitchtheme", target = "~/.local/bin/waybarswitchtheme" },
+]
+[options.hyprland.depends]
+system = [
+    "hyprland",
+    "xdg-desktop-portal-hyprland",
+    "hyprpaper",
+    "hyprshot",
+    "hyprlock",
+    "cliphist",
+    "rofi-wayland",
+    "rofimoji",
+    "dunst",
+    "qt6ct",
+    "nwg-look",
+    "network-manager-applet",
+    "polkit-kde-agent",
+    "kwallet",
+    "kwallet-pam",
+    "kdeconnect",
+    "kitty",
+    "dolphin",
+    "inotify-tools",
+]
+hyprpm-add = [
+    "https://github.com/hyprwm/hyprland-plugins",
+    "https://github.com/KZDKM/Hyprspace",
+]
+
+[options.rofi]
+tags = ["application launcher"]
+links = [{ source = "config/rofi", target = "~/.config/rofi" }]
+depends = { system = ["rofi"] }
+
+[options.waybar]
+links = [{ source = "config/waybar", target = "~/.config/waybar" }]
+depends = { system = ["waybar"] }
+
+[options.dunst]
+tags = ["notification"]
+links = [{ source = "config/dunst", target = "~/.config/dunst" }]
+depends = { system = ["dunst"] }
+
+[options.ruff]
+tags = ["python", "linter"]
+links = [{ source = "config/ruff", target = "~/.config/ruff" }]
+
+[options.mpv]
+tags = ["video player"]
+links = [{ source = "config/mpv", target = "~/.config/mpv" }]
+depends = { system = ["mpv"] }

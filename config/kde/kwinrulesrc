@@ -1,0 +1,48 @@
+[1e7f77fe-3d48-4aad-b673-d77379ad6c32]
+Description=Application settings for pot
+noborder=true
+noborderrule=3
+wmclass=pot
+wmclassmatch=1
+
+[2]
+Description=Transparent
+opacityactive=90
+opacityactiverule=2
+wmclass=dolphin|code|code-url-handler|idea|jetbrains-fleet
+wmclasscomplete=true
+wmclassmatch=3
+
+[273d1614-96b0-4fd0-8bb4-f37e0d0ac64c]
+Description=Transparent
+opacityactive=90
+opacityactiverule=2
+wmclass=dolphin|code|code-url-handler|idea
+wmclasscomplete=true
+wmclassmatch=3
+
+[5cb1574c-942a-4046-8975-2a3663869ae9]
+Description=Window settings for clash-verge
+noborder=true
+noborderrule=3
+title=Clash Verge
+titlematch=1
+types=1
+wmclass=clash-verge
+wmclassmatch=1
+
+[General]
+count=3
+rules=5cb1574c-942a-4046-8975-2a3663869ae9,1e7f77fe-3d48-4aad-b673-d77379ad6c32,2
+
+[bdae4665-afcc-4feb-a9cd-4e4d595575f8]
+Description=Window settings for flameshot
+above=true
+aboverule=3
+noborder=true
+noborderrule=3
+title=flameshot
+titlematch=1
+types=1
+wmclass=flameshot
+wmclassmatch=1

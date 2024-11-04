@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+
+dotfiles=~/.config/dotfiles
+
+. $dotfiles/config/bash/load_config.bash
+
+if [[ -f $dotfiles/user/bash/env.bash ]]; then
+  . $dotfiles/user/bash/env.bash
+else
+  . $dotfiles/config/bash/env.bash
+fi
+
+[[ -f $dotfiles/user/bash/config.bash ]] && . $dotfiles/user/bash/config.bash

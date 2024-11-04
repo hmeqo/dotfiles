@@ -1,0 +1,26 @@
+#!/usr/bin/bash
+
+function enable_gaps() {
+  hyprctl keyword dwindle:no_gaps_when_only 0
+  waybarswitchtheme default
+}
+
+function disable_gaps() {
+  hyprctl keyword dwindle:no_gaps_when_only 1
+  waybarswitchtheme default-nogaps
+}
+
+# If $argv[1] is not empty and
+if [[ -n "$1" ]]; then
+  if [[ "$1" == "enable" ]]; then
+    enable_gaps
+  else
+    disable_gaps
+  fi
+else
+  if [[ $(hyprctl getoption dwindle:no_gaps_when_only | head -n 1 | awk '{print $2}') == "0" ]]; then
+    disable_gaps
+  else
+    enable_gaps
+  fi
+fi
