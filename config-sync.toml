@@ -9,7 +9,14 @@ depends = { system = ["bat"] }
 [options.fish]
 tags = ["shell"]
 links = [{ source = "config/fish", target = "~/.config/fish" }]
-depends = { system = ["fish", "zoxide", "fzf", "bat"], item = ["starship"] }
+depends = { system = [
+    "fish",
+    "zoxide",
+    "fzf",
+    "bat",
+], other-items = [
+    "starship",
+] }
 
 [options.zsh]
 tags = ["shell"]
@@ -114,7 +121,7 @@ system = [
     "kwin-effects-forceblur-git",
     "ttf-maple",
 ]
-other-options = ["kvantum", "fcitx5", "wallpaper-hmeqo"]
+other-items = ["kvantum", "fcitx5", "wallpaper-hmeqo"]
 
 [options.fontconfig]
 links = [{ source = "config/fontconfig", target = "~/.config/fontconfig" }]
@@ -126,7 +133,12 @@ links = [{ source = "config/Kvantum", target = "~/.config/Kvantum" }]
 [options.fcitx5]
 tags = ["input method"]
 links = [{ source = "config/fcitx5", target = "~/.config/fcitx5" }]
-depends = { system = ["fcitx5-skin-fluentdark-git"] }
+depends = { system = [
+    "fcitx5-im",
+    "fcitx5-skin-fluentdark-git",
+], chinese = [
+    "fcitx5-pinyin-zhwiki",
+] }
 
 [options.wallpaper-hmeqo]
 tags = ["wallpaper"]
