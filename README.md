@@ -4,7 +4,7 @@
 KDE
 </div>
 
-![kde_preview](https://github.com/user-attachments/assets/87454790-7eb9-4e19-a305-4f8f5a66b21a)
+![kde_preview](https://github.com/user-attachments/assets/be751951-189c-4a9b-9d18-2910f97a7b1b)
 
 ## Install
 
