@@ -13,7 +13,7 @@ KDE
 Clone this repository to `~/.config/dotfiles`.
 
 ```bash
-git clone https://github.com/andrewferrier/dotfiles ~/.config/dotfiles
+git clone https://github.com/hmeqo/dotfiles ~/.config/dotfiles
 cd ~/.config/dotfiles
 ```
 
