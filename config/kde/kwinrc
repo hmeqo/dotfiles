@@ -13,17 +13,21 @@ NoiseStrength=14
 [Effect-blurplus]
 BlurDecorations=true
 BlurStrength=4
-BottomCornerRadius=10
-DockCornerRadius=10
-MenuCornerRadius=10
+BottomCornerRadius=8
+DockCornerRadius=8
+MenuCornerRadius=8
 NoiseStrength=14
-TopCornerRadius=10
-WindowClasses=konsole\nkitty\norg.wezfurlong.wezterm\nneovide\ndolphin\ncode\ncode-url-handler\ndev.zed.Zed\nidea\njetbrains-fleet\npot\nlutris\nhiddify
+TopCornerRadius=8
+WindowClasses=konsole\nkitty\norg.wezfurlong.wezterm\nneovide\ndolphin\ncode\nvscodeium\ndev.zed.Zed\nidea\njetbrains-fleet\npot\nlutris
 
 [Effect-glide]
 InRotationAngle=6
 OutRotationAngle=6
 OutRotationEdge=0
+
+[Effect-hidecursor]
+HideOnTyping=false
+InactivityDuration=5
 
 [Effect-kwin4_effect_geometry_change]
 Duration=300
@@ -35,6 +39,10 @@ MouseTracking=2
 [IncludeExclude]
 Exclusions=yakuake
 
+[MaximizeTile]
+DisableOutlineTile=false
+DisableRoundTile=false
+
 [ModifierOnlyShortcuts]
 Meta=org.kde.kglobalaccel,/component/kwin,,invokeShortcut,Overview
 
@@ -45,15 +53,12 @@ CommandAll2=Activate, raise and move
 blurEnabled=false
 cubeEnabled=true
 forceblurEnabled=true
-fullscreenEnabled=false
 invertEnabled=true
 kinetic_fadingpopupsEnabled=true
 krohnkiteEnabled=false
-kwin4_effect_geometry_changeEnabled=true
 kwin_effect_lightlyshadersEnabled=false
 kzonesEnabled=true
 lightlyshaders_blurEnabled=true
-maximizeEnabled=false
 minimizeallEnabled=true
 movewindowEnabled=true
 poloniumEnabled=true
@@ -64,12 +69,14 @@ truely-maximizedEnabled=false
 [PrimaryOutline]
 ActiveOutlineAlpha=129
 InactiveOutlineAlpha=0
-InactiveOutlineColor=85,85,85
-OutlineColor=85,85,85
+InactiveOutlineColor=102,102,102
+InactiveOutlineThickness=0
+OutlineColor=102,102,102
 
 [Round-Corners]
-InactiveShadowSize=21
-ShadowSize=21
+InactiveCornerRadius=8
+ShadowSize=20
+Size=8
 
 [Script-krohnkite]
 floatingClass=QQ
@@ -101,7 +108,7 @@ count=0
 LayoutName=sidebar
 
 [Tiling]
-padding=4
+padding=8
 
 [Tiling][903bce40-e206-5087-83b0-cef1b8606ba0]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}

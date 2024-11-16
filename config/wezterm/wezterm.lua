@@ -73,9 +73,19 @@ return {
       action = wezterm.action.ScrollByPage(-1),
     },
     {
+      key = "PageUp",
+      mods = "SHIFT",
+      action = wezterm.action.ScrollByPage(-0.5),
+    },
+    {
       key = "PageDown",
       mods = "CTRL|SHIFT",
       action = wezterm.action.ScrollByPage(1),
+    },
+    {
+      key = "PageDown",
+      mods = "SHIFT",
+      action = wezterm.action.ScrollByPage(0.5),
     },
     { key = "0", mods = "CTRL", action = wezterm.action.ResetFontSize },
     { key = "=", mods = "CTRL", action = wezterm.action.IncreaseFontSize },

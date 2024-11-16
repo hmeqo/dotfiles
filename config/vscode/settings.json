@@ -26,15 +26,11 @@
         "<C-z>": false,
         "<C-h>": false,
         "<C-l>": false,
-        // "<C-i>": false,
-        // "<C-[>": false,
-        // "<C-]>": false,
         "<C-k>": false,
         "<C-f>": false,
         "<C-j>": false,
         "<C-b>": false,
         "<C-t>": false,
-        // "<C-o>": false,
         "<C-p>": false,
         "<C-q>": false
     },
@@ -56,6 +52,7 @@
         // AstroNvim basic
         {
             "before": ["<Leader>", "w"],
+            "names": ["Go to Change...", "Next Change"],
             "commands": [":w"]
         },
         {
@@ -433,7 +430,7 @@
         "editor.defaultFormatter": "redhat.vscode-xml"
     },
     "[markdown]": {
-        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
     },
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -468,7 +465,6 @@
     "clangd.fallbackFlags": ["-Wno-deprecated-declarations"],
     "python.analysis.typeCheckingMode": "basic",
     "python.analysis.autoImportCompletions": false,
-    "ruff.nativeServer": true,
     "pyqt-integration.qtdesigner.path": "designer",
     "java.eclipse.downloadSources": true,
     "java.configuration.maven.userSettings": "~/.config/maven/settings.xml",

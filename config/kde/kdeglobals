@@ -136,7 +136,7 @@ ForegroundVisited=0,188,212
 DirSelectDialog Size=839,579
 
 [General]
-BrowserApplication=zen-alpha.desktop
+BrowserApplication=google-chrome.desktop
 ColorSchemeHash=2823fd85d4dc3e2f05a21c28d68753f841ff70ed
 XftHintStyle=hintslight
 XftSubPixel=rgb
@@ -146,12 +146,8 @@ menuFont=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 smallestReadableFont=Maple Mono NF,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 toolBarFont=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
-[Icons]
-Theme=Fluent-dark
-
 [KDE]
 LookAndFeelPackage=FluentDark
-widgetStyle=kvantum-dark
 
 [KFileDialog Settings]
 Allow Expansion=false
@@ -172,6 +168,9 @@ Sort hidden files last=false
 Sort reversed=false
 Speedbar Width=140
 View Style=DetailTree
+
+[KShortcutsDialog Settings]
+Dialog Size=600,480
 
 [WM]
 activeBackground=40,40,40

@@ -35,6 +35,12 @@ if [[ ! -f $NPM_CONFIG_USERCONFIG ]] || ! grep -q $npm_config $NPM_CONFIG_USERCO
     echo -e "\n$npm_config\n" >>$NPM_CONFIG_USERCONFIG
 fi
 
+# Mariadb
+export MYSQL_HISTFILE="$XDG_STATE_HOME/mariadb_history"
+
+# Redis
+export REDISCLI_HISTFILE="$XDG_DATA_HOME/redis/rediscli_history"
+
 # GnuPg
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 

@@ -10,14 +10,14 @@ prepend_path() {
     has_path "$1" || PATH="$1:$PATH"
 }
 
+# Game
+export RADV_PERFTEST=gpl
 export SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0
 
 # Fcitx5
-# if [[ $XDG_SESSION_TYPE = "wayland" ]] && [[ $XDG_CURRENT_DESKTOP != "KDE" ]]; then
-#     export GTK_IM_MODULE=fcitx
-#     export QT_IM_MODULE=fcitx
-# fi
-export GTK_IM_MODULE=fcitx
+if [[ $XDG_SESSION_TYPE != "wayland" ]]; then
+    export GTK_IM_MODULE=fcitx
+fi
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export SDL_IM_MODULE=fcitx
