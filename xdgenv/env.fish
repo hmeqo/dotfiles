@@ -35,6 +35,12 @@ if not test -f $NPM_CONFIG_USERCONFIG || not grep -q $npm_config $NPM_CONFIG_USE
     echo -e "\n$npm_config\n" >>$NPM_CONFIG_USERCONFIG
 end
 
+# Mariadb
+set -gx MYSQL_HISTFILE "$XDG_STATE_HOME/mariadb_history"
+
+# Redis
+set -gx REDISCLI_HISTFILE "$XDG_STATE_HOME/rediscli_history"
+
 # GnuPg
 set -gx GNUPGHOME "$XDG_DATA_HOME/gnupg"
 

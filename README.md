@@ -69,3 +69,22 @@ Your need install these fonts manually.
 - Noto Sans
 - Noto Sans CJK SC (Chinese)
 - Maple Mono NF
+
+### Install for KDE
+
+Install dependencies.
+
+```bash
+# Basic
+paru -S kwin-effect-rounded-corners-git kwin-effects-forceblur-git ttf-maple
+```
+
+Clone wallpapers repository.
+
+```bash
+git submodule update --init local/share/wallpapers/hmeqo
+```
+
+And sync `kde` option and it's dependencies options `kvantum`、`fcitx5`、`wallpaper-hmeqo`.
+
+Now, enjoy!

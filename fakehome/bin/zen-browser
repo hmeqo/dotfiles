@@ -1,8 +1,3 @@
 #!/usr/bin/bash
 
-export GTK_IM_MODULE=ibus
-if [ -f /opt/zen-browser-avx2-bin/zen-bin ]; then
-  fakehome /opt/zen-browser-avx2-bin/zen-bin "$@"
-else
-  fakehome /usr/bin/zen-browser "$@"
-fi
+fakehome /usr/bin/zen-browser "$@"

@@ -10,14 +10,14 @@ function prepend_path
     has_path $argv[1] || set PATH $argv[1] $PATH
 end
 
+# Game
+set -gx RADV_PERFTEST gpl
 set -gx SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS 0
 
 # Fcitx5
-# if test $XDG_SESSION_TYPE = wayland && test $XDG_CURRENT_DESKTOP != KDE
-#     set -gx GTK_IM_MODULE fcitx
-#     set -gx QT_IM_MODULE fcitx
-# end
-set -gx GTK_IM_MODULE fcitx
+if test $XDG_SESSION_TYPE != wayland
+    set -gx GTK_IM_MODULE fcitx
+end
 set -gx QT_IM_MODULE fcitx
 set -gx XMODIFIERS @im=fcitx
 set -gx SDL_IM_MODULE fcitx

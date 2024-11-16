@@ -4,11 +4,12 @@ links = [
     { source = "config/bash/bash_profile", target = "~/.bash_profile" },
     { source = "config/bash/bashrc", target = "~/.bashrc" },
 ]
+depends = { system = ["bat"] }
 
 [options.fish]
 tags = ["shell"]
 links = [{ source = "config/fish", target = "~/.config/fish" }]
-depends = { system = ["fish", "zoxide", "fzf"], item = ["starship"] }
+depends = { system = ["fish", "zoxide", "fzf", "bat"], item = ["starship"] }
 
 [options.zsh]
 tags = ["shell"]
@@ -19,7 +20,7 @@ links = [
     { source = "config/zsh/zprofile", target = "~/.config/zsh/.zprofile" },
     { source = "config/zsh/zshrc", target = "~/.config/zsh/.zshrc" },
 ]
-depends = { system = ["zsh", "zoxide", "fzf"] }
+depends = { system = ["zsh", "zoxide", "fzf", "bat"] }
 
 [options.tmux]
 tags = ["shell"]
