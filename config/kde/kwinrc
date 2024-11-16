@@ -13,11 +13,11 @@ NoiseStrength=14
 [Effect-blurplus]
 BlurDecorations=true
 BlurStrength=4
-BottomCornerRadius=8
-DockCornerRadius=8
-MenuCornerRadius=8
+BottomCornerRadius=10
+DockCornerRadius=10
+MenuCornerRadius=10
 NoiseStrength=14
-TopCornerRadius=8
+TopCornerRadius=10
 WindowClasses=konsole\nkitty\norg.wezfurlong.wezterm\nneovide\ndolphin\ncode\nvscodeium\ndev.zed.Zed\nidea\njetbrains-fleet\npot\nlutris
 
 [Effect-glide]
