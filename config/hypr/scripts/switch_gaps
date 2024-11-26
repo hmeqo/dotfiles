@@ -1,12 +1,16 @@
 #!/usr/bin/bash
 
 function enable_gaps() {
-  hyprctl keyword dwindle:no_gaps_when_only 0
+  hyprctl keyword general:gaps_in 4 4 4 4
+  hyprctl keyword general:gaps_out 8 8 8 8
+  hyprctl keyword decoration:rounding 8
   waybarswitchtheme default
 }
 
 function disable_gaps() {
-  hyprctl keyword dwindle:no_gaps_when_only 1
+  hyprctl keyword general:gaps_in 0 0 0 0
+  hyprctl keyword general:gaps_out 0 0 0 0
+  hyprctl keyword decoration:rounding 0
   waybarswitchtheme default-nogaps
 }
 
@@ -18,9 +22,9 @@ if [[ -n "$1" ]]; then
     disable_gaps
   fi
 else
-  if [[ $(hyprctl getoption dwindle:no_gaps_when_only | head -n 1 | awk '{print $2}') == "0" ]]; then
-    disable_gaps
-  else
+  if [[ $(hyprctl getoption general:gaps_in | head -n 1 | awk '{print $3}') == "0" ]]; then
     enable_gaps
+  else
+    disable_gaps
   fi
 fi

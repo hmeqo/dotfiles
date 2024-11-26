@@ -35,6 +35,6 @@ noborder=true
 noborderrule=3
 title=Tiny RDM
 types=1
-wmclass=clash-verge|pot|tiny-rdm Tiny RDM
+wmclass=pot|tiny-rdm Tiny RDM
 wmclasscomplete=true
 wmclassmatch=3

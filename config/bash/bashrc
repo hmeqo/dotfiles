@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
-dotfiles=~/.config/dotfiles
+[[ $- != *i* ]] && return
 
-. $dotfiles/config/bash/load_config.bash
-
-[[ -f $dotfiles/user/bash/config.bash ]] && . $dotfiles/user/bash/config.bash
+export DOTFILES="${DOTFILES:-~/.config/dotfiles}"
+. "$DOTFILES/config/bash/loader/config.bash"
+. "$DOTFILES/config/bash/loader/interactive.bash"

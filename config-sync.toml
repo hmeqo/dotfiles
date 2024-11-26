@@ -1,3 +1,15 @@
+[options.dotfiles-env]
+tags = ["Essential"]
+links = [
+    { source = "config/environment.d/50-dotfiles.conf", target = "~/.config/environment.d/50-dotfiles.conf" },
+]
+depends = { system = ["systemd"] }
+
+[options.fastfetch]
+tags = ["Cyber ID card"]
+links = [{ source = "config/fastfetch", target = "~/.config/fastfetch" }]
+depends = { system = ["fastfetch"] }
+
 [options.bash]
 tags = ["shell"]
 links = [
@@ -117,9 +129,10 @@ links = [
 ]
 [options.kde.depends]
 system = [
+    "ttf-maple",
+    "bibata-cursor-theme",
     "kwin-effect-rounded-corners-git",
     "kwin-effects-forceblur-git",
-    "ttf-maple",
 ]
 other-items = ["kvantum", "fcitx5", "wallpaper-hmeqo"]
 
@@ -160,8 +173,7 @@ links = [
     { source = "config/hypr", target = "~/.config/hypr" },
     { source = "local/bin/waybarswitchtheme", target = "~/.local/bin/waybarswitchtheme" },
 ]
-[options.hyprland.depends]
-system = [
+depends = { system = [
     "hyprland",
     "xdg-desktop-portal-hyprland",
     "hyprpaper",
@@ -181,16 +193,25 @@ system = [
     "kitty",
     "dolphin",
     "inotify-tools",
-]
-hyprpm-add = [
+    "cmake",
+    "meson",
+    "cpio",
+], hyprpm-add = [
     "https://github.com/hyprwm/hyprland-plugins",
     "https://github.com/KZDKM/Hyprspace",
-]
+], other-items = [
+    "rofi",
+    "waybar",
+    "dunst",
+    "wallpaper-hmeqo",
+    "fcitx5",
+    "kvantum",
+] }
 
 [options.rofi]
 tags = ["application launcher"]
 links = [{ source = "config/rofi", target = "~/.config/rofi" }]
-depends = { system = ["rofi"] }
+depends = { system = ["rofi-wayland"] }
 
 [options.waybar]
 links = [{ source = "config/waybar", target = "~/.config/waybar" }]

@@ -30,44 +30,19 @@ It will display a tui in the terminal to choose which ones you want to sync.
 If you already have a configuration file, don’t worry - it will be safely backed up to `~/.config/dotfiles/backup` before the synchronization process begins.
 In the event of uninstallation, your original configuration file will be restored from this backup.
 
-### xdgenv
+### Dotfiles base environment variable
 
-If you want to use xdgenv, add it to your shell configuration file.
-
-```bash
-# bash
-. ~/.config/dotfiles/xdgenv/env.bash
-. ~/.config/dotfiles/xdgenv/alias.bash
-
-# fish
-source ~/.config/dotfiles/xdgenv/env.fish
-source ~/.config/dotfiles/xdgenv/alias.fish
-```
-
-### fakehome
-
-It can also fix XDG paths for some programs.
-
-#### Install fakehome
-
-Default for code hmcl-bin jetbrains-fleet minecraft-launcher steam thunderbird ..., and you can use `fakehome xxx` manually.
+Choose `essential` option or add `DOTFILES` environment variable to you shell configuration file.
 
 ```bash
-fakehome/install.sh
-# or install for system, it will be installed to /usr/local/bin
-sudo fakehome/install_for_system.sh
-
-# uninstall
-fakehome/uninstall.sh
+export DOTFILES=~/.config/dotfiles
 ```
 
 ### Fonts dependencies
 
-Your need install these fonts manually.
+Your need install these fonts manually, if you want to use KDE or hyprland.
 
 - FiraCode Nerd Font (Nerd Font)
-- Noto Sans
-- Noto Sans CJK SC (Chinese)
 - Maple Mono NF
 
 ### Install for KDE
@@ -88,3 +63,34 @@ git submodule update --init local/share/wallpapers/hmeqo
 And sync `kde` option and it's dependencies options `kvantum`、`fcitx5`、`wallpaper-hmeqo`.
 
 Now, enjoy!
+
+## xdgenv
+
+If you want to use xdgenv, add it to your shell configuration file.
+
+```bash
+# bash
+. $DOTFILES/xdgenv/env.bash
+
+# fish
+source $DOTFILES/xdgenv/env.fish
+```
+
+## fakehome
+
+It can also fix XDG paths for some programs.
+
+### Install fakehome
+
+Default for code hmcl-bin jetbrains-fleet minecraft-launcher steam thunderbird ..., and you can use `fakehome xxx` manually.
+
+```bash
+$DOTFILES/fakehome/install.sh
+# or install for system, it will be installed to /usr/local/bin
+sudo $DOTFILES/fakehome/install_for_system.sh
+
+# uninstall
+$DOTFILES/fakehome/uninstall.sh
+# for system
+sudo $DOTFILES/fakehome/uninstall_for_system.sh
+```

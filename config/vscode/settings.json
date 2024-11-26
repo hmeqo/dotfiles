@@ -347,7 +347,7 @@
         "*.svg": "default",
         "{git,gitlens}:/**/*.{md,csv,svg}": "default"
     },
-    "editor.fontFamily": "Maple Mono NF",
+    "editor.fontFamily": "Maple Mono SC NF",
     "editor.fontSize": 14,
     "editor.fontLigatures": true,
     "editor.cursorSmoothCaretAnimation": "on",
@@ -430,7 +430,8 @@
         "editor.defaultFormatter": "redhat.vscode-xml"
     },
     "[markdown]": {
-        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+        "editor.wordWrap": "off"
     },
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -515,11 +516,13 @@
     "indentRainbow.ignoreErrorLanguages": ["*"],
     "indentRainbow.indicatorStyle": "light",
     "indentRainbow.colors": ["rgba(255,255,64,0.08)", "rgba(255,127,255,0.08)", "rgba(0,127,255,0.08)"],
-    "cSpell.diagnosticLevel": "Hint",
+    "sortJSON.contextMenu": false,
     "cSpell.allowCompoundWords": true,
     "cSpell.showStatus": false,
     "cSpell.showSuggestionsLinkInEditorContextMenu": false,
     "cSpell.showCommandsInEditorContextMenu": false,
+    "cSpell.textDecorationColor": "#888",
+    "cSpell.textDecorationStyle": "dashed",
     "cSpell.userWords": [
         "alova",
         "clangd",

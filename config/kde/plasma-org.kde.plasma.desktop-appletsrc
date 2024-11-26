@@ -21,12 +21,16 @@ wallpaperplugin=org.kde.image
 immutability=1
 plugin=com.github.prayag2.modernclock
 
+[Containments][1][Applets][53][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
 [Containments][1][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
 
 [Containments][1][General]
-positions={"1920x1080":[]\\,"3840x2160":[""]}
+positions={"1920x1080":["1"\\,"17"\\,"desktop:/analyze.html"\\,"0"\\,"0"]\\,"3840x2160":[""]}
 sortMode=-1
 
 [Containments][1][Wallpaper][com.github.catsout.wallpaperEngineKde][General]
@@ -211,7 +215,7 @@ plugin=org.kde.plasma.digitalclock
 
 [Containments][27][Applets][50][Configuration]
 PreloadWeight=100
-popupHeight=480
+popupHeight=484
 popupWidth=814
 
 [Containments][27][Applets][50][Configuration][Appearance]
@@ -272,7 +276,7 @@ immutability=1
 lastScreen=0
 location=3
 plugin=org.kde.plasma.private.systemtray
-popupHeight=445
+popupHeight=460
 popupWidth=452
 wallpaperplugin=org.kde.image
 
@@ -380,14 +384,14 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][31][Applets][46][Configuration]
-PreloadWeight=100
+PreloadWeight=89
 
 [Containments][31][Applets][47]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][31][Applets][47][Configuration]
-PreloadWeight=77
+PreloadWeight=100
 
 [Containments][31][Applets][47][Configuration][General]
 currentDetailsTab=details
@@ -408,7 +412,7 @@ DialogWidth=720
 
 [Containments][31][General]
 extraItems=org.kde.plasma.brightness,org.kde.plasma.keyboardlayout,org.kde.plasma.vault,org.kde.plasma.notifications,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.volume,org.kde.kdeconnect,org.kde.plasma.printmanager,org.kde.kscreen,org.kde.plasma.networkmanagement,org.kde.plasma.manage-inputmethod,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.mediacontroller
-hiddenItems=flameshot,org.kde.plasma.clipboard,org.kde.plasma.brightness,nekoray,tao application,5TQg6_la5v
+hiddenItems=flameshot,org.kde.plasma.clipboard,org.kde.plasma.brightness,nekoray,tao application,5TQg6_la5v,org.kde.plasma.battery
 knownItems=org.kde.plasma.brightness,org.kde.plasma.keyboardlayout,org.kde.plasma.vault,org.kde.plasma.notifications,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.volume,org.kde.kdeconnect,org.kde.plasma.printmanager,org.kde.kscreen,org.kde.plasma.networkmanagement,org.kde.plasma.manage-inputmethod,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.mediacontroller
 
 [Containments][8]
@@ -562,4 +566,4 @@ showSeconds=Always
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=
+screenMapping=desktop:/analyze.svg,0,bb398e82-3eda-4606-a864-1a5f49cc17b7
