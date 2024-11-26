@@ -6,6 +6,12 @@ KDE
 
 ![kde_preview](https://github.com/user-attachments/assets/4047bdae-dc57-426d-93d6-8774c10fc743)
 
+<div style="text-align:center">
+Hyprland
+</div>
+
+![hyprland_preview](https://github.com/user-attachments/assets/c5ed14a4-237c-486a-888a-a48f8de4eee2)
+
 ## Install
 
 ### Clone repository
