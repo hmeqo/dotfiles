@@ -140,7 +140,7 @@ BrowserApplication=google-chrome.desktop
 ColorSchemeHash=2823fd85d4dc3e2f05a21c28d68753f841ff70ed
 XftHintStyle=hintslight
 XftSubPixel=rgb
-fixed=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+fixed=Hack,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 font=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 menuFont=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 smallestReadableFont=Maple Mono NF,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
@@ -152,7 +152,7 @@ LookAndFeelPackage=FluentDark
 [KFileDialog Settings]
 Allow Expansion=false
 Automatically select filename extension=true
-Breadcrumb Navigation=false
+Breadcrumb Navigation=true
 Decoration position=2
 LocationCombo Completionmode=5
 PathCombo Completionmode=5

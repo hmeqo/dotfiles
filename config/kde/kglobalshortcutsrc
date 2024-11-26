@@ -28,7 +28,7 @@ decrease_volume_small=Shift+Volume Down,Shift+Volume Down,Decrease Volume by 1%
 increase_microphone_volume=Microphone Volume Up,Microphone Volume Up,Increase Microphone Volume
 increase_volume=Volume Up,Volume Up,Increase Volume
 increase_volume_small=Shift+Volume Up,Shift+Volume Up,Increase Volume by 1%
-mic_mute=Meta+Alt+D\tMeta+Volume Mute\tMicrophone Mute,Microphone Mute\tMeta+Volume Mute,Mute Microphone
+mic_mute=Meta+Ctrl+C\tMeta+Volume Mute\tMicrophone Mute,Microphone Mute\tMeta+Volume Mute,Mute Microphone
 mute=Volume Mute,Volume Mute,Mute
 
 [ksmserver]
@@ -94,7 +94,7 @@ KrohnkiteBTreeLayout=none,none,Krohnkite: BTree Layout
 KrohnkiteColumnsLayout=none,none,Krohnkite: Columns Layout
 KrohnkiteDecrease=Meta+Shift+I,none,Krohnkite: Decrease
 KrohnkiteFloatAll=Meta+Shift+F,none,Krohnkite: Toggle Float All
-KrohnkiteFloatingLayout=Meta+Ctrl+F,none,Krohnkite: Floating Layout
+KrohnkiteFloatingLayout=Meta+Ctrl+|,none,Krohnkite: Floating Layout
 KrohnkiteFocusDown=none,none,Krohnkite: Focus Down
 KrohnkiteFocusLeft=none,none,Krohnkite: Focus Left
 KrohnkiteFocusNext=none,none,Krohnkite: Focus Next
@@ -211,7 +211,7 @@ Window Maximize Vertical=none,,Maximise Window Vertically
 Window Minimize=Meta+PgDown,Meta+PgDown,Minimise Window
 Window Move=none,,Move Window
 Window Move Center=Meta+Shift+Num+Clear,,Move Window to the Centre
-Window No Border=Meta+Alt+F,,Toggle Window Titlebar and Frame
+Window No Border=Meta+F3,,Toggle Window Titlebar and Frame
 Window On All Desktops=none,,Keep Window on All Desktops
 Window One Desktop Down=Meta+Ctrl+Shift+Down,Meta+Ctrl+Shift+Down,Window One Desktop Down
 Window One Desktop Up=Meta+Ctrl+Shift+Up,Meta+Ctrl+Shift+Up,Window One Desktop Up

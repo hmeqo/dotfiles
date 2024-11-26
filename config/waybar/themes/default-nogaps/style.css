@@ -14,12 +14,14 @@
 }
 
 .modules-left,
+.modules-center,
 .modules-right {
-  padding: 4px 16px;
+  padding: 2px 16px;
 }
 
 .modules-center {
-  padding: 4px 12px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .modules-left > * > * {

@@ -151,11 +151,10 @@ compinit
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
 
-# 判断 zoxide 命令是否存在
-[[ ! -x "$(command -v zoxide)" ]] || eval $(zoxide init zsh)
+# -----------------
+# Customize configuration
+# -----------------
 
-dotfiles=~/.config/dotfiles
-
-. "$dotfiles/config/bash/load_config.bash"
-
-[[ ! -f "$dotfiles/user/zsh/config.zsh" ]] || . "$dotfiles/user/zsh/config.zsh"
+export DOTFILES="${DOTFILES:-~/.config/dotfiles}"
+. "$DOTFILES/config/zsh/loader/config.zsh"
+. "$DOTFILES/config/zsh/loader/interactive.zsh"

@@ -31,8 +31,8 @@ set -l npm_config 'prefix=${XDG_DATA_HOME}/npm
 cache=${XDG_CACHE_HOME}/npm
 init-module=${XDG_CONFIG_HOME}/npm/config/npm-init.js
 logs-dir=${XDG_STATE_HOME}/npm/logs'
-if not test -f $NPM_CONFIG_USERCONFIG || not grep -q $npm_config $NPM_CONFIG_USERCONFIG
-    echo -e "\n$npm_config\n" >>$NPM_CONFIG_USERCONFIG
+if not test -f "$NPM_CONFIG_USERCONFIG" || not grep -q "$npm_config" "$NPM_CONFIG_USERCONFIG"
+    echo -e "\n$npm_config\n" >>"$NPM_CONFIG_USERCONFIG"
 end
 
 # Mariadb
