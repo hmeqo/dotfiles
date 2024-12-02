@@ -15,6 +15,7 @@ else
 end
 
 if type -q bat
+    alias batp='bat --paging=always'
     alias cat='bat -pp'
     alias ccat='/usr/bin/cat'
 end

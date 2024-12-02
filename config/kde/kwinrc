@@ -108,13 +108,19 @@ count=0
 LayoutName=sidebar
 
 [Tiling]
-padding=8
+padding=4
 
 [Tiling][903bce40-e206-5087-83b0-cef1b8606ba0]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][9c45c7ae-01d7-542d-adf0-6552eb05840a]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][ac378286-a537-509f-86ca-fd802405ac93]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
+
+[Tiling][c73684f0-83c4-5586-b5c5-86ac66d58d6c]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Wayland]
 EnablePrimarySelection=false

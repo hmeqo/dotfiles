@@ -396,6 +396,7 @@
     "zenMode.hideLineNumbers": false,
     "files.autoGuessEncoding": true,
     "files.associations": {
+        "*.bzl": "python",
         "*.json": "jsonc",
         "*.cjson": "jsonc",
         "*.wxss": "css",
@@ -509,7 +510,8 @@
         "Textual CSS": true,
         "markdown": true,
         "fish": true,
-        "wxml": true
+        "wxml": true,
+        "nginx": true
     },
     "codeium.enableCodeLens": false,
     "symbols.hidesExplorerArrows": false,

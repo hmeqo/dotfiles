@@ -17,6 +17,7 @@ else
 fi
 
 if command -v bat >/dev/null; then
+    alias batp='bat --paging=always'
     alias cat='bat -pp'
     alias ccat='/usr/bin/cat'
 fi

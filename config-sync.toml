@@ -1,10 +1,3 @@
-[options.dotfiles-env]
-tags = ["Essential"]
-links = [
-    { source = "config/environment.d/50-dotfiles.conf", target = "~/.config/environment.d/50-dotfiles.conf" },
-]
-depends = { system = ["systemd"] }
-
 [options.fastfetch]
 tags = ["Cyber ID card"]
 links = [{ source = "config/fastfetch", target = "~/.config/fastfetch" }]
@@ -16,7 +9,6 @@ links = [
     { source = "config/bash/bash_profile", target = "~/.bash_profile" },
     { source = "config/bash/bashrc", target = "~/.bashrc" },
 ]
-depends = { system = ["bat"] }
 
 [options.fish]
 tags = ["shell"]
@@ -25,7 +17,6 @@ depends = { system = [
     "fish",
     "zoxide",
     "fzf",
-    "bat",
 ], other-items = [
     "starship",
 ] }
@@ -34,12 +25,11 @@ depends = { system = [
 tags = ["shell"]
 links = [
     { source = "config/zsh/zshenv", target = "~/.zshenv" },
-    { source = "config/zsh/p10k.zsh", target = "~/.config/zsh/.p10k.zsh" },
     { source = "config/zsh/zimrc", target = "~/.config/zsh/.zimrc" },
     { source = "config/zsh/zprofile", target = "~/.config/zsh/.zprofile" },
     { source = "config/zsh/zshrc", target = "~/.config/zsh/.zshrc" },
 ]
-depends = { system = ["zsh", "zoxide", "fzf", "bat"] }
+depends = { system = ["zsh", "zoxide", "fzf"] }
 
 [options.tmux]
 tags = ["shell"]
@@ -230,3 +220,9 @@ links = [{ source = "config/ruff", target = "~/.config/ruff" }]
 tags = ["video player"]
 links = [{ source = "config/mpv", target = "~/.config/mpv" }]
 depends = { system = ["mpv"] }
+
+[options.scripts]
+tags = ["scripts"]
+links = [
+    { source = "local/bin/toggle-boost", target = "~/.local/bin/toggle-boost" },
+]
