@@ -6,7 +6,7 @@ return {
     require "astronvim.plugins.configs.luasnip"(plugin, opts)
     -- load snippets paths
     require("luasnip.loaders.from_vscode").lazy_load {
-      paths = { vim.fn.stdpath "config" .. "/snippets", vim.fn.stdpath "config" .. "/snippets/user" },
+      paths = { vim.fn.stdpath "config" .. "/snippets", vim.fn.stdpath "config" .. "/user-config/snippets" },
     }
   end,
 }

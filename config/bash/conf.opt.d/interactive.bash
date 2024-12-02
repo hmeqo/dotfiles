@@ -1,2 +1,4 @@
-# PS1='[\u@\h \W]\$ '
-PS1='\[\e[0;34m\][\u@\h \W]\$\[\e[m\] '
+prompter="${prompter:-starship}"
+[[ ! -x "$(command -v "$prompter")" ]] || eval "$($prompter init bash)"
+
+[[ ! -f /usr/share/blesh/ble.sh ]] || . /usr/share/blesh/ble.sh

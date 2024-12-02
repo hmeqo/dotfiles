@@ -19,9 +19,10 @@ init_venv() {
 }
 
 replace_userhome_string() {
-  # files=$(rg -l '/home/hmeqo' {config,local})
-  files=$(find {config,local} -type f -print0 | xargs -0 grep -l '/home/hmeqo')
-  echo "$files" | sed 's/.*/"&"/' | xargs sed -i "s#/home/hmeqo#$HOME#g"
+  files=$(grep -l '/home/hmeqo' -r {config,local})
+  if [[ -n "$files" ]]; then
+    echo "$files" | sed 's/.*/"&"/' | xargs sed -i "s#/home/hmeqo#$HOME#g"
+  fi
 }
 
 init_venv

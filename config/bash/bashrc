@@ -5,3 +5,5 @@
 export DOTFILES="${DOTFILES:-~/.config/dotfiles}"
 . "$DOTFILES/config/bash/loader/config.bash"
 . "$DOTFILES/config/bash/loader/interactive.bash"
+
+PATH=~/.console-ninja/.bin:$PATH

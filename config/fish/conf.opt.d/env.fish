@@ -30,7 +30,7 @@ set -gx EDITOR nvim
 
 # Pager
 if type -q bat
-    set -gx PAGER bat
+    set -gx PAGER "bat --paging=always"
 end
 
 # npm

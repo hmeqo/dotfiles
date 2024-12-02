@@ -38,7 +38,13 @@ In the event of uninstallation, your original configuration file will be restore
 
 ### Dotfiles base environment variable
 
-Choose `essential` option or add `DOTFILES` environment variable to you shell configuration file.
+Some ways to set `DOTFILES` environment variable:
+
+- Choose one option of `fish`、`bash`、`zsh` and set it as default shell.
+
+- Add `export DOTFILES=~/.config/dotfiles` to you shell configuration file.
+
+- Add `DOTFILES=/<your_user_home>/.config/dotfiles` to `~/.config/environment.d/00-dotfiles.conf` (need systemd)
 
 ```bash
 export DOTFILES=~/.config/dotfiles
@@ -92,11 +98,92 @@ Default for code hmcl-bin jetbrains-fleet minecraft-launcher steam thunderbird .
 
 ```bash
 $DOTFILES/fakehome/install.sh
-# or install for system, it will be installed to /usr/local/bin
-sudo $DOTFILES/fakehome/install_for_system.sh
 
 # uninstall
 $DOTFILES/fakehome/uninstall.sh
-# for system
-sudo $DOTFILES/fakehome/uninstall_for_system.sh
+```
+
+## Structure
+
+### fish / zsh / bash directory structure
+
+#### Default structure
+
+- conf.opt.d
+
+  Configuration files, not auto loaded.
+
+- functions
+
+  Functions, auto loaded.
+
+- loader
+
+  Load conf.opt.d by `loadlist` environment variable.
+
+  - login.bash
+
+    Called by `bash_profile`/`zprofile`/`config.fish` when you login.
+
+  - interactive.bash
+
+    Called by `bashrc`/`zshrc`/`config.fish` when you login.
+
+- `bash_profile`/`zprofile`/`config.fish`
+
+- `bashrc`/`zshrc`/`config.fish`
+
+Bash default order: bash_profile -> loader/login.bash (and defined loadlist) -> bashrc -> loader/interactive.bash (and defined loadlist)
+
+#### User structure
+
+##### bash
+
+- loader
+
+  - login.bash
+
+  - interactive.bash
+
+- bash_profile
+
+- bashrc
+
+Default order: loader/login.bash -> bash_profile -> loader/interactive.bash -> bashrc
+
+##### Other
+
+Be like `bash`.
+
+#### Customize loader loadlist
+
+Create user config directory `$DOTFILES/user`.
+
+Add config file `$DOTFILES/user/bash/loader/login.bash` on login or `$DOTFILES/user/bash/loader/interactive.bash` on interactive,  
+and set `loadlist` environment variable.
+
+The example below that will prepend xdgenv to loadlist by .
+
+```bash
+# $DOTFILES/user/bash/loader/login.bash
+loadlist=("$DOTFILES/xdgenv/env.bash" $loadlist)
+```
+
+```zsh
+# $DOTFILES/user/zsh/loader/login.bash
+loadlist=("$DOTFILES/xdgenv/env.bash" $loadlist)
+```
+
+```fish
+# $DOTFILES/user/fish/loader/login.bash
+set loadlist "$DOTFILES/xdgenv/env.fish" $loadlist
+```
+
+#### Customize propmt program.
+
+Default prompter is starship, example to use oh-my-posh, set `prompter` to `$DOTFILES/user/bash/loader/interactive.bash`
+
+```bash
+# $DOTFILES/user/bash/loader/interactive.bash
+prompter=oh-my-posh
 ```
