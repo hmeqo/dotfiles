@@ -28,7 +28,7 @@ decrease_volume_small=Shift+Volume Down,Shift+Volume Down,Decrease Volume by 1%
 increase_microphone_volume=Microphone Volume Up,Microphone Volume Up,Increase Microphone Volume
 increase_volume=Volume Up,Volume Up,Increase Volume
 increase_volume_small=Shift+Volume Up,Shift+Volume Up,Increase Volume by 1%
-mic_mute=Meta+Volume Mute\tMicrophone Mute\tCtrl+Alt+D,Microphone Mute\tMeta+Volume Mute,Mute Microphone
+mic_mute=Meta+Volume Mute\tMicrophone Mute\tMeta+Alt+D,Microphone Mute\tMeta+Volume Mute,Mute Microphone
 mute=Volume Mute,Volume Mute,Mute
 
 [ksmserver]
@@ -144,6 +144,7 @@ MoveZoomUp=none,none,Move Zoomed Area Upwards
 Overview=Meta+W,Meta+W,Toggle Overview
 Setup Window Shortcut=none,,Setup Window Shortcut
 Show Desktop=Meta+D,Meta+D,Peek at Desktop
+Suspend Compositing=Alt+Shift+F12,Alt+Shift+F12,Suspend Compositing
 Switch One Desktop Down=Meta+Ctrl+Down,Meta+Ctrl+Down,Switch One Desktop Down
 Switch One Desktop Up=Meta+Ctrl+Up,Meta+Ctrl+Up,Switch One Desktop Up
 Switch One Desktop to the Left=Meta+Ctrl+Left,Meta+Ctrl+Left,Switch One Desktop to the Left
@@ -318,6 +319,7 @@ activate task manager entry 8=none,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=none,Meta+9,Activate Task Manager Entry 9
 activate widget 120=none,none,Activate Ginti Widget
 activate widget 126=none,none,Activate Simple Application Launcher Widget
+activate widget 28=none,none,Activate Global Menu Widget
 clear-history=none,,Clear Clipboard History
 clipboard_action=Meta+Ctrl+X,Meta+Ctrl+X,Automatic Action Popup Menu
 cycle-panels=Meta+Alt+P,Meta+Alt+P,Move keyboard focus between panels
@@ -339,7 +341,7 @@ toggle do not disturb=none,,Toggle do not disturb
 _launch=Ctrl+Alt+D
 
 [services][net.local.curl.desktop]
-_launch=Ctrl+Alt+Shift+D
+_launch=Ctrl+Alt+D
 
 [services][org.kde.konsole.desktop]
 _launch=Ctrl+Alt+T\tMeta+Return

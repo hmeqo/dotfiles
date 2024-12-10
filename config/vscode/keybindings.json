@@ -373,6 +373,11 @@
         "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
     },
     {
+        "key": "ctrl+e",
+        "command": "hideSuggestWidget",
+        "when": "suggestWidgetVisible && textInputFocus"
+    },
+    {
         "key": "ctrl+n",
         "command": "selectNextCodeAction",
         "when": "codeActionMenuVisible"

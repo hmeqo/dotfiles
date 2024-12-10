@@ -19,7 +19,7 @@ Hyprland
 Clone this repository to `~/.config/dotfiles`.
 
 ```bash
-git clone https://github.com/hmeqo/dotfiles ~/.config/dotfiles
+git clone --depth=1 https://github.com/hmeqo/dotfiles ~/.config/dotfiles
 cd ~/.config/dotfiles
 ```
 

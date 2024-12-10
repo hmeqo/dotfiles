@@ -4,8 +4,7 @@ case $* in
 "logout")
     if [[ $XDG_CURRENT_DESKTOP = "Hyprland" ]]; then
         pkill xdg-desktop-portal-hyprland
-        export QT_QPA_PLATFORMTHEME=""
-        dbus-update-activation-environment --systemd QT_QPA_PLATFORMTHEME
+        systemctl --user set-environment QT_QPA_PLATFORMTHEME=
         exec hyprctl dispatch exit
     fi
     ;;

@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+qdbus6 org.kde.kded6 /kded org.kde.kded6.unloadModule "appmenu"
+"$@" &
+sleep 1
+qdbus6 org.kde.kded6 /kded org.kde.kded6.loadModule "appmenu"

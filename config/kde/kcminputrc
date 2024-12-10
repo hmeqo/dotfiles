@@ -1,5 +1,6 @@
 [Libinput][1267][12642][ELAN0412:01 04F3:3162 Touchpad]
 Enabled=true
+ScrollFactor=1
 
 [Libinput][6392][3993][USB OPTICAL MOUSE ]
 PointerAcceleration=-0.400

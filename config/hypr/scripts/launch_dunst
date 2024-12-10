@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-CONFIG_DIR="$HOME/.config/dotfiles/config/dunst"
+CONFIG_DIR="$DOTFILES/config/dunst"
 
 CONFIG_FILES=("$CONFIG_DIR/dunstrc")
 

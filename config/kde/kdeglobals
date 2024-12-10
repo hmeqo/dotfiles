@@ -149,6 +149,7 @@ toolBarFont=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [KDE]
 LookAndFeelPackage=FluentDark
+widgetStyle=kvantum-dark
 
 [KFileDialog Settings]
 Allow Expansion=false

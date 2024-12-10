@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-CONFIG_FILES=("$HOME/.config/dotfiles/config/hypr/hyprpaper.conf")
+CONFIG_FILES=("$DOTFILES/config/hypr/hyprpaper.conf")
 
 trap "killall hyprpaper" EXIT
 

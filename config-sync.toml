@@ -9,17 +9,17 @@ links = [
     { source = "config/bash/bash_profile", target = "~/.bash_profile" },
     { source = "config/bash/bashrc", target = "~/.bashrc" },
 ]
+depends = { system = ["bash"] }
 
 [options.fish]
 tags = ["shell"]
-links = [{ source = "config/fish", target = "~/.config/fish" }]
-depends = { system = [
-    "fish",
-    "zoxide",
-    "fzf",
-], other-items = [
-    "starship",
-] }
+links = [
+    { source = "config/fish/config.fish", target = "~/.config/fish/config.fish" },
+    { source = "config/fish/functions/fish_mode_prompt.fish", target = "~/.config/fish/functions/fish_mode_prompt.fish" },
+    { source = "config/fish/functions/clear_univirsal_env.fish", target = "~/.config/fish/functions/clear_univirsal_env.fish" },
+    { source = "config/fish/functions/fish_user_key_bindings.fish", target = "~/.config/fish/functions/fish_user_key_bindings.fish" },
+]
+depends = { system = ["fish"], other-items = ["starship"] }
 
 [options.zsh]
 tags = ["shell"]
@@ -29,7 +29,7 @@ links = [
     { source = "config/zsh/zprofile", target = "~/.config/zsh/.zprofile" },
     { source = "config/zsh/zshrc", target = "~/.config/zsh/.zshrc" },
 ]
-depends = { system = ["zsh", "zoxide", "fzf"] }
+depends = { system = ["zsh"] }
 
 [options.tmux]
 tags = ["shell"]
@@ -119,6 +119,7 @@ links = [
 ]
 [options.kde.depends]
 system = [
+    "kwallet-pam",
     "ttf-maple",
     "bibata-cursor-theme",
     "kwin-effect-rounded-corners-git",
@@ -173,7 +174,9 @@ depends = { system = [
     "rofi-wayland",
     "rofimoji",
     "dunst",
-    "qt6ct",
+    "kservice",
+    "[plasma-workspace/archlinux-xdg-menu]",
+    "systemsettings",
     "nwg-look",
     "network-manager-applet",
     "polkit-kde-agent",
@@ -224,5 +227,11 @@ depends = { system = ["mpv"] }
 [options.scripts]
 tags = ["scripts"]
 links = [
+    { source = "local/bin/kde-no-global-menu", target = "~/.local/bin/kde-no-global-menu" },
+    { source = "local/bin/proxy_off", target = "~/.local/bin/proxy_off" },
+    { source = "local/bin/proxy_on", target = "~/.local/bin/proxy_on" },
+    { source = "local/bin/sshs", target = "~/.local/bin/sshs" },
+    { source = "local/bin/pyfiglet-picker.fish", target = "~/.local/bin/pyfiglet-picker.fish" },
     { source = "local/bin/toggle-boost", target = "~/.local/bin/toggle-boost" },
+    { source = "local/bin/togif", target = "~/.local/bin/togif" },
 ]

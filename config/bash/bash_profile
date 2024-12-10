@@ -1,6 +1,5 @@
 #!/usr/bin/bash
 
 export DOTFILES="${DOTFILES:-~/.config/dotfiles}"
-. "$DOTFILES/config/bash/loader/config.bash"
 . "$DOTFILES/config/bash/loader/login.bash"
 . "$DOTFILES/config/bash/bashrc"
