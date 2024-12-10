@@ -108,7 +108,7 @@ count=0
 LayoutName=sidebar
 
 [Tiling]
-padding=4
+padding=8
 
 [Tiling][903bce40-e206-5087-83b0-cef1b8606ba0]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
@@ -139,6 +139,8 @@ BorderSize=None
 BorderSizeAuto=false
 ButtonsOnLeft=F
 ButtonsOnRight=IAX
+library=org.kde.kwin.aurorae
+theme=__aurorae__svg__WillowDark
 
 [ًRound-Corners]
 InactiveCornerRadius=8

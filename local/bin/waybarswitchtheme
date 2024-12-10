@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-config_dir="$HOME/.config/dotfiles/config/waybar"
+config_dir="$DOTFILES/config/waybar"
 
 theme=${1:-$(echo "$config_dir"/themes/* | tr ' ' '\n' | xargs -n 1 basename | fzf --layout=reverse --height 12)}
 

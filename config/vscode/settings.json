@@ -8,7 +8,7 @@
 
     // "vim.timeout": 500,
     "vim.enableNeovim": true,
-    "vim.easymotion": true,
+    // "vim.easymotion": true,
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
     "vim.leader": "<space>",
@@ -48,6 +48,14 @@
         {
             "before": ["<C-r>"],
             "commands": ["redo"]
+        },
+        {
+            "before": ["z", "h"],
+            "commands": ["scrollLeft"]
+        },
+        {
+            "before": ["z", "l"],
+            "commands": ["scrollRight"]
         },
         // AstroNvim basic
         {
@@ -184,7 +192,7 @@
             "before": ["<Leader>", "l", "f"],
             "commands": ["editor.action.formatDocument"]
         },
-        // Search
+        // flash.nvim
         {
             "before": ["s"],
             "after": ["<Leader>", "<Leader>", "s"]
@@ -343,9 +351,10 @@
     "workbench.list.smoothScrolling": true,
     "workbench.editor.splitInGroupLayout": "vertical",
     "workbench.editorAssociations": {
+        "{hexdiff}:/**/*.*": "hexEditor.hexedit",
         "*.md": "default",
         "*.svg": "default",
-        "{git,gitlens}:/**/*.{md,csv,svg}": "default"
+        "{git,gitlens,git-graph}:/**/*.{md,csv,svg}": "default"
     },
     "editor.fontFamily": "Maple Mono SC NF",
     "editor.fontSize": 14,

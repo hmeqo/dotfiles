@@ -146,5 +146,4 @@ compinit
 # -----------------
 
 export DOTFILES="${DOTFILES:-~/.config/dotfiles}"
-. "$DOTFILES/config/zsh/loader/config.zsh"
 . "$DOTFILES/config/zsh/loader/interactive.zsh"
