@@ -28,7 +28,7 @@ decrease_volume_small=Shift+Volume Down,Shift+Volume Down,Decrease Volume by 1%
 increase_microphone_volume=Microphone Volume Up,Microphone Volume Up,Increase Microphone Volume
 increase_volume=Volume Up,Volume Up,Increase Volume
 increase_volume_small=Shift+Volume Up,Shift+Volume Up,Increase Volume by 1%
-mic_mute=Meta+Volume Mute\tMicrophone Mute\tMeta+Alt+D,Microphone Mute\tMeta+Volume Mute,Mute Microphone
+mic_mute=Ctrl+Alt+D\tMeta+Volume Mute\tMicrophone Mute,Microphone Mute\tMeta+Volume Mute,Mute Microphone
 mute=Volume Mute,Volume Mute,Mute
 
 [ksmserver]
@@ -43,7 +43,7 @@ Shut Down=none,,Shut Down
 _k_friendly_name=Session Management
 
 [kwin]
-Activate Window Demanding Attention=Meta+Alt+A,Meta+Ctrl+A,Activate Window Demanding Attention
+Activate Window Demanding Attention=Meta+A,Meta+Ctrl+A,Activate Window Demanding Attention
 Cube=Meta+C,Meta+C,Toggle Cube
 Cycle Overview=none,none,Cycle through Overview and Grid View
 Cycle Overview Opposite=none,none,Cycle through Grid View and Overview
@@ -191,6 +191,7 @@ Switch to Screen to the Left=none,,Switch to Screen to the Left
 Switch to Screen to the Right=none,,Switch to Screen to the Right
 Toggle Night Color=none,none,Suspend/Resume Night Light
 Toggle Window Raise/Lower=none,,Toggle Window Raise/Lower
+ToggleCurrentThumbnail=Meta+Alt+T,Meta+Ctrl+T,Toggle Thumbnail for Current Window
 Walk Through Windows=Alt+Tab,Alt+Tab,Walk Through Windows
 Walk Through Windows (Reverse)=Alt+Shift+Tab,Alt+Shift+Tab,Walk Through Windows (Reverse)
 Walk Through Windows Alternative=none,,Walk Through Windows Alternative
@@ -326,7 +327,7 @@ cycle-panels=Meta+Alt+P,Meta+Alt+P,Move keyboard focus between panels
 cycleNextAction=none,,Next History Item
 cyclePrevAction=none,,Previous History Item
 manage activities=Meta+Ctrl+A,Meta+Q,Show Activity Switcher
-next activity=Meta+A,none,Walk through activities
+next activity=none,none,Walk through activities
 previous activity=Meta+Shift+A,none,Walk through activities (Reverse)
 repeat_action=none,Meta+Ctrl+R,Manually Invoke Action on Current Clipboard
 show dashboard=none,Ctrl+F12,Show Desktop
@@ -340,18 +341,19 @@ toggle do not disturb=none,,Toggle do not disturb
 [services][curl.desktop]
 _launch=Ctrl+Alt+D
 
-[services][net.local.curl.desktop]
-_launch=Ctrl+Alt+D
+[services][net.local.spectacle.desktop]
+_launch=Meta+Ctrl+Shift+S
 
 [services][org.kde.konsole.desktop]
-_launch=Ctrl+Alt+T\tMeta+Return
+_launch=Meta+Return\tCtrl+Alt+T
 
 [services][org.kde.krunner.desktop]
 RunClipboard=none
 _launch=Search\tMeta+Space
 
-[services][org.wezfurlong.wezterm.desktop]
-_launch=Meta+Shift+Return
+[services][org.kde.spectacle.desktop]
+RectangularRegionScreenShot=Meta+Shift+Print\tMeta+Shift+S
+_launch=Print
 
 [wacomtablet]
 Map to fullscreen=Meta+Ctrl+F11,Meta+Ctrl+F,Map to fullscreen

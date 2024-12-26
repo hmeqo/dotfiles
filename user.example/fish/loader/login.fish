@@ -1,1 +1,1 @@
-set loadlist "$DOTFILES/xdgenv/env.fish" $loadlist
+set loadlist "$DOTFILES/user/fish/xdgenv.fish" $loadlist

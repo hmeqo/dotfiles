@@ -29,7 +29,7 @@ if type -q tmux
 end
 
 if type -q duf
-    alias duf='duf --only=local,fuse'
+    alias df='duf --only=local,fuse'
 end
 
 # alias color_test='curl https://gist.githubusercontent.com/lilydjwg/fdeaf79e921c2f413f44b6f613f6ad53/raw/94d8b2be62657e96488038b0e547e3009ed87d40/colors.py | python'

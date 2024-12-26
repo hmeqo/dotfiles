@@ -40,7 +40,7 @@ In the event of uninstallation, your original configuration file will be restore
 
 Some ways to set `DOTFILES` environment variable:
 
-- Choose one option of `fish`、`bash`、`zsh` and set it as default shell.
+- Choose one option of `fish`, `bash`, `zsh` and set it as default shell.
 
 - Add `export DOTFILES=~/.config/dotfiles` to you shell configuration file.
 
@@ -72,25 +72,11 @@ Clone wallpapers repository.
 git submodule update --init local/share/wallpapers/hmeqo
 ```
 
-And sync `kde` option and it's dependencies options `kvantum`、`fcitx5`、`wallpaper-hmeqo`.
+And sync `kde` option and it's dependencies options `kvantum`, `fcitx5`, `wallpaper-hmeqo`.
 
 Now, enjoy!
 
-## xdgenv
-
-If you want to use xdgenv, add it to your shell configuration file.
-
-```bash
-# bash
-. $DOTFILES/xdgenv/env.bash
-
-# fish
-source $DOTFILES/xdgenv/env.fish
-```
-
 ## fakehome
-
-It can also fix XDG paths for some programs.
 
 ### Install fakehome
 
@@ -113,7 +99,7 @@ $DOTFILES/fakehome/uninstall.sh
 
   Configuration files, not auto loaded.
 
-- functions
+- functions (fish only)
 
   Functions, auto loaded.
 
@@ -162,21 +148,21 @@ Create user config directory `$DOTFILES/user`.
 Add config file `$DOTFILES/user/bash/loader/login.bash` on login or `$DOTFILES/user/bash/loader/interactive.bash` on interactive,  
 and set `loadlist` environment variable.
 
-The example below that will prepend xdgenv to loadlist by .
+The example below that will prepend xdgenv.bash to loadlist.
 
 ```bash
-# $DOTFILES/user/bash/loader/login.bash
-loadlist=("$DOTFILES/xdgenv/env.bash" $loadlist)
+# $DOTFILES/user/bash/loader/login.bash or $DOTFILES/user/bash/loader/interactive.bash
+loadlist=("$DOTFILES/user/bash/xdgenv.bash" $loadlist)
 ```
 
 ```zsh
-# $DOTFILES/user/zsh/loader/login.bash
-loadlist=("$DOTFILES/xdgenv/env.bash" $loadlist)
+# $DOTFILES/user/zsh/loader/login.bash or $DOTFILES/user/zsh/loader/interactive.bash
+loadlist=("$DOTFILES/user/zsh/xdgenv.bash" $loadlist)
 ```
 
 ```fish
-# $DOTFILES/user/fish/loader/login.bash
-set loadlist "$DOTFILES/xdgenv/env.fish" $loadlist
+# $DOTFILES/user/fish/loader/login.bash or $DOTFILES/user/fish/loader/interactive.bash
+set loadlist "$DOTFILES/user/fish/xdgenv.fish" $loadlist
 ```
 
 #### Customize propmt program.

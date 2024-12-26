@@ -26,11 +26,11 @@ export GLFW_IM_MODULE=ibus
 
 prepend_path "$HOME/.local/bin"
 
-export EDITOR="nvim"
+export EDITOR=nvim
 
 # Pager
 if command -v bat >/dev/null; then
-    export PAGER="bat --paging=always"
+    export PAGER=bat
 fi
 
 # npm

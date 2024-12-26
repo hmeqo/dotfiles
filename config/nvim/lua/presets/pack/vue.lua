@@ -10,6 +10,13 @@ return {
           "volar",
         },
       },
+      servers = {
+        vtsls = {
+          settings = {
+            autoUseWorkspaceTsdk = false,
+          },
+        },
+      },
     },
   },
 }

@@ -139,8 +139,9 @@ History Items[$e]=file:///home/hmeqo/workspace
 [General]
 BrowserApplication=google-chrome.desktop
 ColorSchemeHash=2823fd85d4dc3e2f05a21c28d68753f841ff70ed
+XftAntialias=true
 XftHintStyle=hintslight
-XftSubPixel=rgb
+XftSubPixel=none
 fixed=Hack,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 font=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 menuFont=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
@@ -149,12 +150,11 @@ toolBarFont=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [KDE]
 LookAndFeelPackage=FluentDark
-widgetStyle=kvantum-dark
 
 [KFileDialog Settings]
 Allow Expansion=false
 Automatically select filename extension=true
-Breadcrumb Navigation=true
+Breadcrumb Navigation=false
 Decoration position=2
 LocationCombo Completionmode=5
 PathCombo Completionmode=5

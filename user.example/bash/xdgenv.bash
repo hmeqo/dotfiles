@@ -26,13 +26,15 @@ export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
 export GOCACHE="$XDG_CACHE_HOME/go-build"
 
 # npm
-export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npmrc"
-npm_config='prefix=${XDG_DATA_HOME}/npm
+if command -v npm >/dev/null; then
+    export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npmrc"
+    npm_config='prefix=${XDG_DATA_HOME}/npm
 cache=${XDG_CACHE_HOME}/npm
 init-module=${XDG_CONFIG_HOME}/npm/config/npm-init.js
 logs-dir=${XDG_STATE_HOME}/npm/logs'
-if [[ ! -f "$NPM_CONFIG_USERCONFIG" ]] || ! grep -q "$npm_config" "$NPM_CONFIG_USERCONFIG"; then
-    echo -e "\n$npm_config\n" >>"$NPM_CONFIG_USERCONFIG"
+    if [[ ! -f "$NPM_CONFIG_USERCONFIG" ]] || ! grep -q "$npm_config" "$NPM_CONFIG_USERCONFIG"; then
+        echo -e "\n$npm_config\n" >>"$NPM_CONFIG_USERCONFIG"
+    fi
 fi
 
 # Mariadb
@@ -47,9 +49,14 @@ export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 # GTK 2
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtkrc-2.0"
 
+# Android
+export ANDROID_USER_HOME="$XDG_DATA_HOME"/android
+
 # wget
-[[ -f "$XDG_CONFIG_HOME/wgetrc" ]] || touch "$XDG_CONFIG_HOME/wgetrc"
-export WGETRC="$XDG_CONFIG_HOME/wgetrc"
+if command -v wget >/dev/null; then
+    [[ -f "$XDG_CONFIG_HOME/wgetrc" ]] || touch "$XDG_CONFIG_HOME/wgetrc"
+    export WGETRC="$XDG_CONFIG_HOME/wgetrc"
+fi
 
 # CUDA
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
