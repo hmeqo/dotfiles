@@ -1,1 +1,1 @@
-loadlist=("$DOTFILES/xdgenv/env.bash" $loadlist)
+loadlist=("$DOTFILES/user/bash/xdgenv.bash" $loadlist)

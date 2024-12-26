@@ -17,6 +17,7 @@ vim.filetype.add {
     ["code-workspace"] = "jsonc",
     ["json"] = "jsonc",
     ["rasi"] = "rasi",
+    ["dae"] = "conf",
   },
 }
 

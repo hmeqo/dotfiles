@@ -18,7 +18,7 @@ DockCornerRadius=10
 MenuCornerRadius=10
 NoiseStrength=14
 TopCornerRadius=10
-WindowClasses=konsole\nkitty\norg.wezfurlong.wezterm\nneovide\ndolphin\ncode\nvscodeium\ndev.zed.Zed\nidea\njetbrains-fleet\npot\nlutris
+WindowClasses=konsole\nkitty\norg.wezfurlong.wezterm\nneovide\ndolphin\ncode\nvscodeium\ndev.zed.Zed\nidea\njetbrains-fleet\npot\nlutris\nthunderbird
 
 [Effect-glide]
 InRotationAngle=6
@@ -33,11 +33,14 @@ InactivityDuration=5
 Duration=300
 ExcludedWindowClasses=krunner,yakuake,org.jackhuang.hmcl.Launcher,vlc
 
+[Effect-thumbnailaside]
+MaxWidth=400
+
 [Effect-zoom]
 MouseTracking=2
 
 [IncludeExclude]
-Exclusions=yakuake
+Exclusions=yakuake,bottles
 
 [MaximizeTile]
 DisableOutlineTile=false
@@ -64,18 +67,20 @@ movewindowEnabled=true
 poloniumEnabled=true
 screenedgeEnabled=false
 squash2Enabled=false
+thumbnailasideEnabled=true
 truely-maximizedEnabled=false
 
 [PrimaryOutline]
 ActiveOutlineAlpha=129
 InactiveOutlineAlpha=0
-InactiveOutlineColor=102,102,102
-InactiveOutlineThickness=0
-OutlineColor=102,102,102
+InactiveOutlineThickness=0.75
+OutlineColor=136,136,136
+OutlineThickness=0.75
 
 [Round-Corners]
 InactiveCornerRadius=8
-ShadowSize=20
+InactiveShadowSize=30
+ShadowSize=30
 Size=8
 
 [Script-krohnkite]
@@ -97,15 +102,19 @@ EngineType=4
 InsertionPoint=2
 
 [SecondOutline]
+ActiveSecondOutlineAlpha=129
+InactiveSecondOutlineAlpha=0
 InactiveSecondOutlineThickness=0
+SecondOutlineColor=136,136,136
 SecondOutlineThickness=0
+
+[Shadow]
+ActiveShadowAlpha=123
+InactiveShadowAlpha=123
 
 [SubSession: f6743ef6-593b-4d08-a00d-28fb62701320]
 active=-1
 count=0
-
-[TabBox]
-LayoutName=sidebar
 
 [Tiling]
 padding=8
@@ -139,8 +148,6 @@ BorderSize=None
 BorderSizeAuto=false
 ButtonsOnLeft=F
 ButtonsOnRight=IAX
-library=org.kde.kwin.aurorae
-theme=__aurorae__svg__WillowDark
 
 [ًRound-Corners]
 InactiveCornerRadius=8

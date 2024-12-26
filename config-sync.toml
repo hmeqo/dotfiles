@@ -19,7 +19,13 @@ links = [
     { source = "config/fish/functions/clear_univirsal_env.fish", target = "~/.config/fish/functions/clear_univirsal_env.fish" },
     { source = "config/fish/functions/fish_user_key_bindings.fish", target = "~/.config/fish/functions/fish_user_key_bindings.fish" },
 ]
-depends = { system = ["fish"], other-items = ["starship"] }
+depends = { system = [
+    "fish",
+], other-items = [
+    "starship",
+], fisher = [
+    "patrickF1/fzf.fish",
+] }
 
 [options.zsh]
 tags = ["shell"]
@@ -223,6 +229,13 @@ links = [{ source = "config/ruff", target = "~/.config/ruff" }]
 tags = ["video player"]
 links = [{ source = "config/mpv", target = "~/.config/mpv" }]
 depends = { system = ["mpv"] }
+
+[options.mangohud]
+tags = ["game"]
+links = [
+    { source = "config/MangoHud/MangoHud.conf", target = "~/.config/MangoHud/MangoHud.conf" },
+]
+depends = { system = ["mangohud"] }
 
 [options.scripts]
 tags = ["scripts"]
