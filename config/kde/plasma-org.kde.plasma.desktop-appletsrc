@@ -31,7 +31,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][1][General]
-positions={"1920x1080":[]\\,"3840x2160":[]\\,"1536x864":[""]}
+positions={"1920x1080":["1"\\,"17"\\,"desktop:/chrome-glpobpgghmncekfeadbelacmbbkpgbcd-Default.desktop"\\,"0"\\,"0"]\\,"3840x2160":[]\\,"1536x864":[""]}
 sortMode=-1
 
 [Containments][1][Wallpaper][com.github.catsout.wallpaperEngineKde][General]
@@ -244,7 +244,7 @@ plugin=org.kde.plasma.digitalclock
 
 [Containments][27][Applets][50][Configuration]
 PreloadWeight=100
-popupHeight=453
+popupHeight=455
 popupWidth=814
 
 [Containments][27][Applets][50][Configuration][Appearance]
@@ -305,7 +305,7 @@ immutability=1
 lastScreen=0
 location=3
 plugin=org.kde.plasma.private.systemtray
-popupHeight=443
+popupHeight=444
 popupWidth=452
 wallpaperplugin=org.kde.image
 
@@ -352,6 +352,7 @@ plugin=org.kde.plasma.volume
 PreloadWeight=100
 
 [Containments][31][Applets][37][Configuration][General]
+currentTab=streams
 migrated=true
 
 [Containments][31][Applets][38]
