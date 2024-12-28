@@ -3,6 +3,9 @@ add_newline = true
 
 format = """
 $os\
+$hostname\
+$localip\
+$username\
 $directory\
 $singularity\
 $kubernetes\
@@ -75,14 +78,11 @@ $git_status\
 $battery\
 $time\
 \n\
-$hostname\
-$localip\
 $shlvl\
 $shell\
 $env_var\
 $jobs\
 $sudo\
-$username\
 $character\
 """
 
@@ -129,19 +129,23 @@ style = 'greee'
 [username]
 style_user = "bright-yellow bold"
 style_root = "purple bold"
-format = "[⭘ $user]($style) "
+# format = "[⭘ $user]($style) "
+format = "[$user]($style) "
 disabled = false
-show_always = false
+# show_always = true
 
 [os]
 # disabled = false
 
 [hostname]
+format = "[$symbol$hostname ]($style)"
+ssh_only = true
 ssh_symbol = " "
 
 [cmd_duration]
 # format = "[◄ $duration ](white)"
-format = "[ $duration ](white)"
+format = "[ $duration ]($style)"
+style = "white"
 
 [jobs]
 format = "[$symbol$number]($style) "
@@ -150,8 +154,8 @@ symbol = "[▶](blue)"
 
 [localip]
 ssh_only = true
-format = " ◯[$localipv4](bold magenta)"
-disabled = false
+format = "[$localipv4 ](bold magenta)"
+disabled = true
 
 [time]
 disabled = false

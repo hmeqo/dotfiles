@@ -341,11 +341,11 @@ toggle do not disturb=none,,Toggle do not disturb
 [services][curl.desktop]
 _launch=Ctrl+Alt+D
 
+[services][kitty.desktop]
+_launch=Meta+Return
+
 [services][net.local.spectacle.desktop]
 _launch=Meta+Ctrl+Shift+S
-
-[services][org.kde.konsole.desktop]
-_launch=Meta+Return\tCtrl+Alt+T
 
 [services][org.kde.krunner.desktop]
 RunClipboard=none
