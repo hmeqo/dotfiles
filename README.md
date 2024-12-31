@@ -42,12 +42,12 @@ Some ways to set `DOTFILES` environment variable:
 
 - Choose one option of `fish`, `bash`, `zsh` and set it as default shell.
 
-- Add `export DOTFILES=~/.config/dotfiles` to you shell configuration file.
+- Add `export DOTFILES=$HOME/.config/dotfiles` to you shell configuration file.
 
 - Add `DOTFILES=/<your_user_home>/.config/dotfiles` to `~/.config/environment.d/00-dotfiles.conf` (need systemd)
 
 ```bash
-export DOTFILES=~/.config/dotfiles
+export DOTFILES=$HOME/.config/dotfiles
 ```
 
 ### Fonts dependencies

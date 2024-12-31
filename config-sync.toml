@@ -16,7 +16,7 @@ tags = ["shell"]
 links = [
     { source = "config/fish/config.fish", target = "~/.config/fish/config.fish" },
     { source = "config/fish/functions/fish_mode_prompt.fish", target = "~/.config/fish/functions/fish_mode_prompt.fish" },
-    { source = "config/fish/functions/clear_univirsal_env.fish", target = "~/.config/fish/functions/clear_univirsal_env.fish" },
+    { source = "config/fish/functions/clean_univirsal_env.fish", target = "~/.config/fish/functions/clean_univirsal_env.fish" },
     { source = "config/fish/functions/fish_user_key_bindings.fish", target = "~/.config/fish/functions/fish_user_key_bindings.fish" },
 ]
 depends = { system = [

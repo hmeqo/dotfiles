@@ -145,5 +145,5 @@ compinit
 # Customize configuration
 # -----------------
 
-export DOTFILES="${DOTFILES:-~/.config/dotfiles}"
+export DOTFILES="${DOTFILES:-$HOME/.config/dotfiles}"
 . "$DOTFILES/config/zsh/loader/interactive.zsh"
