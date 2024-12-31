@@ -3,5 +3,5 @@
 autoload -Uz compinit
 compinit
 
-export DOTFILES="${DOTFILES:-~/.config/dotfiles}"
+export DOTFILES="${DOTFILES:-$HOME/.config/dotfiles}"
 . "$DOTFILES/config/zsh/loader/login.zsh"

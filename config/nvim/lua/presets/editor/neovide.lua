@@ -25,6 +25,8 @@ return {
           -- linespace = 0,
         },
         g = { -- configure vim.g variables
+          -- neovide_no_idle = true,
+
           -- -- configure scaling
           -- neovide_scale_factor = 1.0,
           -- -- configure padding

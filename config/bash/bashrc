@@ -2,7 +2,5 @@
 
 [[ $- != *i* ]] && return
 
-export DOTFILES="${DOTFILES:-~/.config/dotfiles}"
+export DOTFILES="${DOTFILES:-$HOME/.config/dotfiles}"
 . "$DOTFILES/config/bash/loader/interactive.bash"
-
-PATH=~/.console-ninja/.bin:$PATH
