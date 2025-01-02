@@ -15,7 +15,7 @@ export RADV_PERFTEST=gpl
 export SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0
 
 # Fcitx5
-if [[ $XDG_SESSION_TYPE != "wayland" ]]; then
+if [[ "$XDG_SESSION_TYPE" != "wayland" ]]; then
     export GTK_IM_MODULE=fcitx
 fi
 export QT_IM_MODULE=fcitx
