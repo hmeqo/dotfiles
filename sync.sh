@@ -1,7 +1,7 @@
 init_venv() {
   if command -v uv >/dev/null; then
     uv sync
-    alias confsync="uv run confsync"
+    source .venv/bin/activate
   else
     python_version=$(python --version)
     if ! [[ $python_version =~ ^Python\ 3\.1[1-9]+\.[0-9]+$ ]]; then
