@@ -107,7 +107,7 @@ format = "$symbol "
 [directory]
 # home_symbol = "⌂"
 home_symbol = " "
-truncation_length = 2
+# truncation_length = 2
 truncation_symbol = "󰉋 "
 # read_only = " ◈"
 read_only = " 󰌾"

@@ -15,7 +15,7 @@ set -gx RADV_PERFTEST gpl
 set -gx SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS 0
 
 # Fcitx5
-if test $XDG_SESSION_TYPE != wayland
+if test "$XDG_SESSION_TYPE" != wayland
     set -gx GTK_IM_MODULE fcitx
 end
 set -gx QT_IM_MODULE fcitx

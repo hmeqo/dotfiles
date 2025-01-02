@@ -18,6 +18,7 @@ DockCornerRadius=10
 MenuCornerRadius=10
 NoiseStrength=14
 TopCornerRadius=10
+TransparentBlur=false
 WindowClasses=konsole\nkitty\norg.wezfurlong.wezterm\nneovide\ndolphin\ncode\nvscodeium\ndev.zed.Zed\nidea\njetbrains-fleet\npot\nlutris\nthunderbird
 
 [Effect-glide]
@@ -71,11 +72,10 @@ thumbnailasideEnabled=true
 truely-maximizedEnabled=false
 
 [PrimaryOutline]
-ActiveOutlineAlpha=129
-InactiveOutlineAlpha=0
-InactiveOutlineThickness=0.75
+ActiveOutlineAlpha=82
+InactiveOutlineAlpha=35
+InactiveOutlineColor=136,136,136
 OutlineColor=136,136,136
-OutlineThickness=0.75
 
 [Round-Corners]
 InactiveCornerRadius=8
@@ -145,6 +145,7 @@ RollOverDesktops=true
 
 [Xwayland]
 Scale=1
+XwaylandEisNoPromptApps=steam
 
 [org.kde.kdecoration2]
 BorderSize=None

@@ -6,14 +6,10 @@ DOTFILES="${DOTFILES:-$USER_HOME/.config/dotfiles}"
 mkdir -p "$LOCAL_BIN"
 mkdir -p "$APPLICATIONS"
 
-for file in "$DOTFILES/fakehome/bin/"*; do
-  if [[ -f $file ]]; then
-    ln -sf "$file" "$LOCAL_BIN/$(basename "$file")"
-  fi
-done
+if echo -n "Install fakehome only? [y/N] " && read -r answer && [[ $answer = y* ]]; then
+  ln -sf "$DOTFILES/fakehome/bin/fakehome" "$LOCAL_BIN/"
+else
+  ln -sf "$DOTFILES/fakehome/bin/"* "$LOCAL_BIN/"
 
-for file in "$DOTFILES/fakehome/applications/"*; do
-  if [[ -f $file ]]; then
-    ln -sf "$file" "$APPLICATIONS/$(basename "$file")"
-  fi
-done
+  ln -sf "$DOTFILES/fakehome/applications/"* "$APPLICATIONS/"
+fi
