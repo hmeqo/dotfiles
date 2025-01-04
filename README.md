@@ -4,7 +4,7 @@
 KDE
 </div>
 
-![kde_preview](https://github.com/user-attachments/assets/4047bdae-dc57-426d-93d6-8774c10fc743)
+![kde-preview](https://github.com/user-attachments/assets/02d225bb-f09b-4007-bf82-73386df24cc3)
 
 <div style="text-align:center">
 Hyprland
