@@ -146,4 +146,6 @@ compinit
 # -----------------
 
 export DOTFILES="${DOTFILES:-$HOME/.config/dotfiles}"
-. "$DOTFILES/config/zsh/loader/interactive.zsh"
+for file in $("$DOTFILES/utils/loadconf.py" "$DOTFILES/config/zsh/conf.interactive.d" "$DOTFILES/user/zsh/conf.interactive.d"); do
+  source "$file"
+done

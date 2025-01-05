@@ -15,9 +15,9 @@ depends = { system = ["bash"] }
 tags = ["shell"]
 links = [
     { source = "config/fish/config.fish", target = "~/.config/fish/config.fish" },
+    { source = "config/fish/functions/_50_keybindings.fish", target = "~/.config/fish/functions/_50_keybindings.fish" },
     { source = "config/fish/functions/fish_mode_prompt.fish", target = "~/.config/fish/functions/fish_mode_prompt.fish" },
     { source = "config/fish/functions/clean_univirsal_env.fish", target = "~/.config/fish/functions/clean_univirsal_env.fish" },
-    { source = "config/fish/functions/fish_user_key_bindings.fish", target = "~/.config/fish/functions/fish_user_key_bindings.fish" },
 ]
 depends = { system = [
     "fish",
@@ -101,8 +101,19 @@ links = [
     { source = "local/share/yakuake/kns_skins/materia-dark", target = "~/.local/share/yakuake/kns_skins/materia-dark" },
 
     # kwin
-    { source = "local/share/kwin", target = "~/.local/share/kwin" },
-    { source = "local/share/plasma", target = "~/.local/share/plasma" },
+    { source = "local/share/kwin/effects/kwin4_effect_geometry_change", target = "~/.local/share/kwin/effects/kwin4_effect_geometry_change" },
+    { source = "local/share/kwin/scripts/krohnkite", target = "~/.local/share/kwin/scripts/krohnkite" },
+    { source = "local/share/kwin/scripts/kzones", target = "~/.local/share/kwin/scripts/kzones" },
+    { source = "local/share/kwin/scripts/movewindow", target = "~/.local/share/kwin/scripts/movewindow" },
+    { source = "local/share/kwin/scripts/temporary-virtual-desktops", target = "~/.local/share/kwin/scripts/temporary-virtual-desktops" },
+    { source = "local/share/plasma/desktoptheme/Fluent-round-dark", target = "~/.local/share/plasma/desktoptheme/Fluent-round-dark" },
+    { source = "local/share/plasma/look-and-feel/FluentDark", target = "~/.local/share/plasma/look-and-feel/FluentDark" },
+    { source = "local/share/plasma/look-and-feel/FluentLight", target = "~/.local/share/plasma/look-and-feel/FluentLight" },
+    { source = "local/share/plasma/plasmoids/com.github.antroids.application-title-bar", target = "~/.local/share/plasma/plasmoids/com.github.antroids.application-title-bar" },
+    { source = "local/share/plasma/plasmoids/com.github.prayag2.modernclock", target = "~/.local/share/plasma/plasmoids/com.github.prayag2.modernclock" },
+    { source = "local/share/plasma/plasmoids/org.kde.netspeedWidget", target = "~/.local/share/plasma/plasmoids/org.kde.netspeedWidget" },
+    { source = "local/share/plasma/plasmoids/org.kde.plasma.ginti", target = "~/.local/share/plasma/plasmoids/org.kde.plasma.ginti" },
+    { source = "local/share/plasma/plasmoids/org.kde.plasma.simplekickoff", target = "~/.local/share/plasma/plasmoids/org.kde.plasma.simplekickoff" },
 
     # icons
     { source = "local/share/icons/Fluent", target = "~/.local/share/icons/Fluent" },
@@ -131,7 +142,7 @@ system = [
     "kwin-effect-rounded-corners-git",
     "kwin-effects-forceblur-git",
 ]
-other-items = ["kvantum", "fcitx5", "wallpaper-hmeqo"]
+other-items = ["kvantum", "fcitx5", "wallpaper-hmeqo", "fontconfig"]
 
 [options.fontconfig]
 links = [{ source = "config/fontconfig", target = "~/.config/fontconfig" }]
@@ -181,7 +192,7 @@ depends = { system = [
     "rofimoji",
     "dunst",
     "kservice",
-    "[plasma-workspace/archlinux-xdg-menu]",
+    "qt6ct+archlinux-xdg-menu/plasma-workspace",
     "systemsettings",
     "nwg-look",
     "network-manager-applet",

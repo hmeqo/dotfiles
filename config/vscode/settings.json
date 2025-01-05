@@ -440,7 +440,7 @@
         "editor.defaultFormatter": "redhat.vscode-xml"
     },
     "[markdown]": {
-        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
         "editor.wordWrap": "off"
     },
     "[typescriptreact]": {
