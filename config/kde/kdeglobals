@@ -134,12 +134,11 @@ ForegroundVisited=0,188,212
 
 [DirSelect Dialog]
 DirSelectDialog Size=839,579
-History Items[$e]=file:///home/hmeqo/workspace
+History Items[$e]=file:$HOME/workspace
 
 [General]
 BrowserApplication=google-chrome.desktop
 ColorSchemeHash=2823fd85d4dc3e2f05a21c28d68753f841ff70ed
-XftAntialias=true
 XftHintStyle=hintslight
 XftSubPixel=none
 fixed=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
@@ -150,6 +149,7 @@ toolBarFont=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [KDE]
 LookAndFeelPackage=FluentDark
+widgetStyle=kvantum-dark
 
 [KFileDialog Settings]
 Allow Expansion=false

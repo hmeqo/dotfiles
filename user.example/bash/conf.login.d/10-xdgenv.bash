@@ -1,0 +1,1 @@
+. "$DOTFILES/xdgenv/env.bash"

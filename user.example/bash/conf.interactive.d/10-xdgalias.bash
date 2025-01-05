@@ -1,0 +1,1 @@
+. "$DOTFILES/xdgenv/alias.bash"

@@ -102,8 +102,7 @@ EngineType=4
 InsertionPoint=2
 
 [SecondOutline]
-ActiveSecondOutlineAlpha=129
-InactiveSecondOutlineAlpha=0
+InactiveSecondOutlineColor=136,136,136
 InactiveSecondOutlineThickness=0
 SecondOutlineColor=136,136,136
 SecondOutlineThickness=0
@@ -115,9 +114,6 @@ InactiveShadowAlpha=123
 [SubSession: f6743ef6-593b-4d08-a00d-28fb62701320]
 active=-1
 count=0
-
-[TabBox]
-LayoutName=sidebar
 
 [Tiling]
 padding=8

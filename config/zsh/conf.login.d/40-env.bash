@@ -1,0 +1,1 @@
+../../bash/conf.login.d/40-env.bash
