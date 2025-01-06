@@ -153,11 +153,11 @@ wheels = [
 
 [[package]]
 name = "pygments"
-version = "2.18.0"
+version = "2.19.1"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/8e/62/8336eff65bcbc8e4cb5d05b55faf041285951b6e80f33e2bff2024788f31/pygments-2.18.0.tar.gz", hash = "sha256:786ff802f32e91311bff3889f6e9a86e81505fe99f2735bb6d60ae0c5004f199", size = 4891905 }
+sdist = { url = "https://files.pythonhosted.org/packages/7c/2d/c3338d48ea6cc0feb8446d8e6937e1408088a72a39937982cc6111d17f84/pygments-2.19.1.tar.gz", hash = "sha256:61c16d2a8576dc0649d9f39e089b5f02bcd27fba10d8fb4dcc28173f7a45151f", size = 4968581 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/f7/3f/01c8b82017c199075f8f788d0d906b9ffbbc5a47dc9918a945e13d5a2bda/pygments-2.18.0-py3-none-any.whl", hash = "sha256:b8e6aca0523f3ab76fee51799c488e38782ac06eafcf95e7ba832985c8e7b13a", size = 1205513 },
+    { url = "https://files.pythonhosted.org/packages/8a/0b/9fcc47d19c48b59121088dd6da2488a49d5f72dacf8262e2790a1d2c7d15/pygments-2.19.1-py3-none-any.whl", hash = "sha256:9ea1544ad55cecf4b8242fab6dd35a93bbce657034b0611ee383099054ab6d8c", size = 1225293 },
 ]
 
 [[package]]
@@ -175,7 +175,7 @@ wheels = [
 
 [[package]]
 name = "simple-config-sync"
-version = "0.1.19"
+version = "0.1.20"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
@@ -183,9 +183,9 @@ dependencies = [
     { name = "textual" },
     { name = "toml" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/2c/52/fafc0907d5375f87702b9ce4fb6ac1e158c1ea09277daabb9443eff8bfac/simple_config_sync-0.1.19.tar.gz", hash = "sha256:c090f25a0cf5e7679139666bd6433a16bdd322897c9df7d6ccb977932cf0cc21", size = 6150 }
+sdist = { url = "https://files.pythonhosted.org/packages/4d/cf/8dec569dfea07cc88430ab6ffd2f0a8f3dc1403abfa8217e4c642b58743a/simple_config_sync-0.1.20.tar.gz", hash = "sha256:dcdbf4257d467454d13f1257d92e9518c4677f4a9402c6f5424b02f8747e680f", size = 17813 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/fe/84/41a2f55b97f40f90559902e373f5ab39490abcd65cfd2bbee914d2aebd41/simple_config_sync-0.1.19-py3-none-any.whl", hash = "sha256:0ea06d1b88d12204c879b31ea5ce623af90100a099d3f9951b343c491b1634c5", size = 7378 },
+    { url = "https://files.pythonhosted.org/packages/26/17/f693c2893e0b6f7e1b0ea3ea6f283fa9fa37e7dc14c768562bdf3c4b28bf/simple_config_sync-0.1.20-py3-none-any.whl", hash = "sha256:8166c5470329c0c5432c8e02784c3f1fbc167a2718187b1eb3a90be531fbd79a", size = 8197 },
 ]
 
 [[package]]
