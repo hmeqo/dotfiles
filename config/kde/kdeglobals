@@ -147,6 +147,9 @@ menuFont=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 smallestReadableFont=Maple Mono NF,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 toolBarFont=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
+[Icons]
+Theme=Fluent-dark
+
 [KDE]
 LookAndFeelPackage=FluentDark
 widgetStyle=kvantum-dark

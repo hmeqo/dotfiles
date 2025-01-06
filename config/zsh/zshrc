@@ -146,6 +146,9 @@ compinit
 # -----------------
 
 export DOTFILES="${DOTFILES:-$HOME/.config/dotfiles}"
+[[ "$IS_LOGIN" = 1 ]] || for file in $("$DOTFILES/utils/loadconf.py" "$DOTFILES/config/bash/functions" "$DOTFILES/user/bash/functions"); do
+  source "$file"
+done
 for file in $("$DOTFILES/utils/loadconf.py" "$DOTFILES/config/zsh/conf.interactive.d" "$DOTFILES/user/zsh/conf.interactive.d"); do
   source "$file"
 done

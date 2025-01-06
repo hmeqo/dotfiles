@@ -306,7 +306,7 @@ format = "buf [$symbol $version $buf_version]($style) "
 symbol = " "
 
 [c]
-format = "$symbol($version(-$name))]($style) "
+format = "c [$symbol($version(-$name))]($style) "
 # symbol = "ℂ "
 symbol = " "
 

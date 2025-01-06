@@ -4,10 +4,10 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 # Bash
-export HISTFILE="$XDG_STATE_HOME/bash_history"
+export HISTFILE="$XDG_DATA_HOME/bash_history"
 
 # python
-export PYTHON_HISTORY="$XDG_STATE_HOME/python_history"
+export PYTHON_HISTORY="$XDG_DATA_HOME/python_history"
 export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
 export PYPIRC="$XDG_CONFIG_HOME/pypirc"
 
@@ -38,7 +38,7 @@ logs-dir=${XDG_STATE_HOME}/npm/logs'
 fi
 
 # Mariadb
-export MYSQL_HISTFILE="$XDG_STATE_HOME/mariadb_history"
+export MYSQL_HISTFILE="$XDG_DATA_HOME/mariadb_history"
 
 # Redis
 export REDISCLI_HISTFILE="$XDG_DATA_HOME/redis/rediscli_history"

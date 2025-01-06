@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+
+picked_font=$(printf "%s\n" "$(pyfiglet -l)" | fzf --layout=reverse --preview="echo -e {}\n; pyfiglet -f '{}' $*" --preview-window=right,80%)
+[[ -n "$picked_font" ]] || return
+output=$(echo -e "$@" | xargs -0 pyfiglet -f "$picked_font")
+
+echo "$output"
+# Copy to clipboard
+if command -v wl-copy >/dev/null && [[ "$XDG_SESSION_TYPE" = wayland ]]; then
+    echo "$output" | wl-copy
+elif command -v xclip >/dev/null && [[ "$XDG_SESSION_TYPE" = x11 ]]; then
+    echo "$output" | xclip
+fi

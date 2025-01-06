@@ -18,6 +18,8 @@ links = [
     { source = "config/fish/functions/_50_keybindings.fish", target = "~/.config/fish/functions/_50_keybindings.fish" },
     { source = "config/fish/functions/fish_mode_prompt.fish", target = "~/.config/fish/functions/fish_mode_prompt.fish" },
     { source = "config/fish/functions/clean_univirsal_env.fish", target = "~/.config/fish/functions/clean_univirsal_env.fish" },
+    { source = "config/fish/functions/proxyoff.fish", target = "~/.config/fish/functions/proxyoff.fish" },
+    { source = "config/fish/functions/proxyon.fish", target = "~/.config/fish/functions/proxyon.fish" },
 ]
 depends = { system = [
     "fish",
@@ -31,6 +33,15 @@ depends = { system = [
 tags = ["shell"]
 links = [
     { source = "config/zsh/zshenv", target = "~/.zshenv" },
+    { source = "config/zsh/zimrc", target = "~/.config/zsh/.zimrc" },
+    { source = "config/zsh/zprofile", target = "~/.config/zsh/.zprofile" },
+    { source = "config/zsh/zshrc", target = "~/.config/zsh/.zshrc" },
+]
+depends = { system = ["zsh"] }
+
+[options.zsh-no-zshenv]
+tags = ["shell"]
+links = [
     { source = "config/zsh/zimrc", target = "~/.config/zsh/.zimrc" },
     { source = "config/zsh/zprofile", target = "~/.config/zsh/.zprofile" },
     { source = "config/zsh/zshrc", target = "~/.config/zsh/.zshrc" },
@@ -252,10 +263,8 @@ depends = { system = ["mangohud"] }
 tags = ["scripts"]
 links = [
     { source = "local/bin/kde-no-global-menu", target = "~/.local/bin/kde-no-global-menu" },
-    { source = "local/bin/proxy_off", target = "~/.local/bin/proxy_off" },
-    { source = "local/bin/proxy_on", target = "~/.local/bin/proxy_on" },
+    { source = "local/bin/pyfiglet-picker", target = "~/.local/bin/pyfiglet-picker" },
     { source = "local/bin/sshs", target = "~/.local/bin/sshs" },
-    { source = "local/bin/pyfiglet-picker.fish", target = "~/.local/bin/pyfiglet-picker.fish" },
     { source = "local/bin/toggle-boost", target = "~/.local/bin/toggle-boost" },
     { source = "local/bin/togif", target = "~/.local/bin/togif" },
 ]

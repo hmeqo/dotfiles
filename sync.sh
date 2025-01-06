@@ -1,6 +1,6 @@
 init_venv() {
   if command -v uv >/dev/null; then
-    uv sync
+    uv sync --frozen
     source .venv/bin/activate
   else
     python_version=$(python --version)

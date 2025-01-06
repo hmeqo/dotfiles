@@ -3,6 +3,11 @@
 [[ $- != *i* ]] && return
 
 export DOTFILES="${DOTFILES:-$HOME/.config/dotfiles}"
+[[ "$IS_LOGIN" = 1 ]] || for file in $("$DOTFILES/utils/loadconf.py" "$DOTFILES/config/bash/functions" "$DOTFILES/user/bash/functions"); do
+  source "$file"
+done
 for file in $("$DOTFILES/utils/loadconf.py" "$DOTFILES/config/bash/conf.interactive.d" "$DOTFILES/user/bash/conf.interactive.d"); do
   source "$file"
 done
+
+PATH=~/.console-ninja/.bin:$PATH
