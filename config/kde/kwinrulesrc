@@ -10,7 +10,7 @@ wmclassmatch=3
 Description=Transparent
 opacityactive=90
 opacityactiverule=2
-wmclass=dolphin|Code|code|idea|jetbrains-fleet
+wmclass=dolphin|Code|code|Windsurf|idea|jetbrains-fleet
 wmclassmatch=3
 
 [General]

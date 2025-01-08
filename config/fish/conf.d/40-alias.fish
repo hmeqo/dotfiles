@@ -28,8 +28,14 @@ if type -q tmux
     alias tk='tmux kill-session -t'
 end
 
+if type -q dust
+    alias du='dust -r -d1'
+else
+    alias du='du -d1'
+end
+
 if type -q duf
     alias df='duf --only=local,fuse'
 end
 
-# alias color_test='curl https://gist.githubusercontent.com/lilydjwg/fdeaf79e921c2f413f44b6f613f6ad53/raw/94d8b2be62657e96488038b0e547e3009ed87d40/colors.py | python'
+alias color_test='curl https://gist.githubusercontent.com/lilydjwg/fdeaf79e921c2f413f44b6f613f6ad53/raw/94d8b2be62657e96488038b0e547e3009ed87d40/colors.py | python'
