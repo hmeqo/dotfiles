@@ -1,13 +1,19 @@
 #!/usr/bin/bash
 
-[[ $- != *i* ]] && return
-
 export DOTFILES="${DOTFILES:-$HOME/.config/dotfiles}"
-[[ "$IS_LOGIN" = 1 ]] || for file in $("$DOTFILES/utils/loadconf.py" "$DOTFILES/config/bash/functions" "$DOTFILES/user/bash/functions"); do
-  source "$file"
-done
-for file in $("$DOTFILES/utils/loadconf.py" "$DOTFILES/config/bash/conf.interactive.d" "$DOTFILES/user/bash/conf.interactive.d"); do
-  source "$file"
-done
 
-PATH=~/.console-ninja/.bin:$PATH
+# Define functions and conf.d directories
+# functions_dirs=("$DOTFILES/config/bash/functions" "$DOTFILES/user/bash/functions")
+confd_dirs=("${CONFD_LIST[@]}" "$DOTFILES/config/bash/conf.d" "$DOTFILES/user/bash/conf.d")
+if [[ $- == *i* ]]; then
+  confd_dirs=("${confd_dirs[@]}" "$DOTFILES/config/bash/conf.d/interactive" "$DOTFILES/user/bash/conf.d/interactive")
+fi
+# Load the configuration
+# for file in $(echo "${functions_dirs[@]}" | xargs "$DOTFILES/utils/collectconf"); do
+#   source "$file"
+# done
+for file in $("$DOTFILES/utils/collectconf" "${confd_dirs[@]}"); do
+  source "$file"
+done
+# unset functions_dirs
+unset confd_dirs

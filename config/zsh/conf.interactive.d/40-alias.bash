@@ -1,1 +1,0 @@
-../../bash/conf.interactive.d/40-alias.bash

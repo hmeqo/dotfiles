@@ -129,7 +129,7 @@ unset key
 # }}} End configuration added by Zim install
 
 # Lines configured by zsh-newuser-install
-HISTFILE=$ZDOTDIR/.zsh_history
+HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh_history"
 HISTSIZE=1000
 SAVEHIST=1000
 bindkey -e
@@ -146,9 +146,14 @@ compinit
 # -----------------
 
 export DOTFILES="${DOTFILES:-$HOME/.config/dotfiles}"
-[[ "$IS_LOGIN" = 1 ]] || for file in $("$DOTFILES/utils/loadconf.py" "$DOTFILES/config/bash/functions" "$DOTFILES/user/bash/functions"); do
+
+# Define functions and conf.d directories
+confd_dirs=("${confd_dirs[@]}" "$DOTFILES/config/zsh/conf.d" "$DOTFILES/user/zsh/conf.d")
+if [[ $- == *i* ]]; then
+  confd_dirs=("${confd_dirs[@]}" "$DOTFILES/config/zsh/conf.d/interactive" "$DOTFILES/user/zsh/conf.d/interactive")
+fi
+# Load the configuration
+for file in $("$DOTFILES/utils/collectconf" "${confd_dirs[@]}"); do
   source "$file"
 done
-for file in $("$DOTFILES/utils/loadconf.py" "$DOTFILES/config/zsh/conf.interactive.d" "$DOTFILES/user/zsh/conf.interactive.d"); do
-  source "$file"
-done
+unset confd_dirs

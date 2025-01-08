@@ -1,11 +1,7 @@
 #!/usr/bin/bash
 
-export IS_LOGIN=1
 export DOTFILES="${DOTFILES:-$HOME/.config/dotfiles}"
-for file in $("$DOTFILES/utils/loadconf.py" "$DOTFILES/config/bash/functions" "$DOTFILES/user/bash/functions"); do
-  source "$file"
-done
-for file in $("$DOTFILES/utils/loadconf.py" "$DOTFILES/config/bash/conf.login.d" "$DOTFILES/user/bash/conf.login.d"); do
-  source "$file"
-done
+
+confd_dirs=("$DOTFILES/config/bash/conf.d/login" "$DOTFILES/user/bash/conf.d/login")
+
 . "$DOTFILES/config/bash/bashrc"

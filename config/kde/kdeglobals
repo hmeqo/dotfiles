@@ -134,7 +134,7 @@ ForegroundVisited=0,188,212
 
 [DirSelect Dialog]
 DirSelectDialog Size=839,579
-History Items[$e]=file:$HOME/workspace
+History Items[$e]=
 
 [General]
 BrowserApplication=google-chrome.desktop

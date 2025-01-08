@@ -2,6 +2,9 @@
 Enabled=true
 ScrollFactor=1
 
+[Libinput][2][14][ETPS/2 Elantech Touchpad]
+Enabled=true
+
 [Libinput][6392][3993][USB OPTICAL MOUSE ]
 PointerAcceleration=-0.400
 

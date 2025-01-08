@@ -31,7 +31,7 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "simple-config-sync", specifier = ">=0.1.19" }]
+requires-dist = [{ name = "simple-config-sync", specifier = ">=0.1.21" }]
 
 [[package]]
 name = "linkify-it-py"
@@ -175,7 +175,7 @@ wheels = [
 
 [[package]]
 name = "simple-config-sync"
-version = "0.1.20"
+version = "0.1.21"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
@@ -183,9 +183,9 @@ dependencies = [
     { name = "textual" },
     { name = "toml" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/4d/cf/8dec569dfea07cc88430ab6ffd2f0a8f3dc1403abfa8217e4c642b58743a/simple_config_sync-0.1.20.tar.gz", hash = "sha256:dcdbf4257d467454d13f1257d92e9518c4677f4a9402c6f5424b02f8747e680f", size = 17813 }
+sdist = { url = "https://files.pythonhosted.org/packages/c9/8b/1d408f0891f77b58b08a52ed51450ef4f0439ac99933ebd999bdecafc6e2/simple_config_sync-0.1.21.tar.gz", hash = "sha256:a17add473fc7bd5a3295a16ac448731a557da8d0badcf0e5d8704da32e1f37b8", size = 17798 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/26/17/f693c2893e0b6f7e1b0ea3ea6f283fa9fa37e7dc14c768562bdf3c4b28bf/simple_config_sync-0.1.20-py3-none-any.whl", hash = "sha256:8166c5470329c0c5432c8e02784c3f1fbc167a2718187b1eb3a90be531fbd79a", size = 8197 },
+    { url = "https://files.pythonhosted.org/packages/fe/b0/0d9017d86c585cb9ae73941516fdf8761d9d3947707e0319fa0fd81a2853/simple_config_sync-0.1.21-py3-none-any.whl", hash = "sha256:2dd2fe1e0cdbbdf7c580461053b469acf8b74f5e0dc70b3856278ebf2fd90119", size = 8206 },
 ]
 
 [[package]]
