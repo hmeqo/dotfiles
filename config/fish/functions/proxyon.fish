@@ -37,5 +37,5 @@ function proxyon
     return 0
 end
 
-complete -c proxyon -f -d 'Proxy type' -a 'tor glider clash clash_verge clash_verge_rev clash_rev v2raya v2raya_global' -n __fish_use_subcommand
+complete -c proxyon -f -d 'Proxy tool' -a 'tor glider clash clash_verge clash_verge_rev clash_rev v2raya v2raya_global' -n __fish_use_subcommand
 complete -c proxyon -f -d 'Proxy address' -a 'address:port' -n __fish_use_subcommand

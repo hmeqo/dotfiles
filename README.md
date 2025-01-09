@@ -2,17 +2,11 @@
 
 <details>
 <summary>KDE</summary>
-<div style="text-align:center">
-KDE
-</div>
-<img src="https://github.com/user-attachments/assets/02d225bb-f09b-4007-bf82-73386df24cc3" alt="kde-preview">
+<img src="https://github.com/user-attachments/assets/a0d861cc-9e99-4ea8-8a7a-28f30fa9d3ec" alt="kde-preview">
 </details>
 
 <details>
 <summary>Hyprland</summary>
-<div style="text-align:center">
-Hyprland
-</div>
 <img src="https://github.com/user-attachments/assets/c5ed14a4-237c-486a-888a-a48f8de4eee2" alt="hyprland_preview">
 </details>
 

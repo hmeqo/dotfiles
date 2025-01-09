@@ -1,6 +1,6 @@
 [Appearance]
-ColorScheme=Breeze
-Font=FiraCode Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+ColorScheme=Transparent
+Font=FiraCode Nerd Font,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [General]
 Command=$SHELL
