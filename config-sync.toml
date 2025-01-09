@@ -1,6 +1,8 @@
 [options.fastfetch]
 tags = ["Cyber ID card"]
-links = [{ source = "config/fastfetch", target = "~/.config/fastfetch" }]
+links = [
+    { source = "config/fastfetch/config.jsonc", target = "~/.config/fastfetch/config.jsonc" },
+]
 depends = { system = ["fastfetch"] }
 
 [options.bash]
@@ -16,8 +18,8 @@ tags = ["shell"]
 links = [
     { source = "config/fish/config.fish", target = "~/.config/fish/config.fish" },
     { source = "config/fish/functions/_50_keybindings.fish", target = "~/.config/fish/functions/_50_keybindings.fish" },
-    { source = "config/fish/functions/fish_mode_prompt.fish", target = "~/.config/fish/functions/fish_mode_prompt.fish" },
     { source = "config/fish/functions/clean_univirsal_env.fish", target = "~/.config/fish/functions/clean_univirsal_env.fish" },
+    { source = "config/fish/functions/fish_mode_prompt.fish", target = "~/.config/fish/functions/fish_mode_prompt.fish" },
     { source = "config/fish/functions/proxyoff.fish", target = "~/.config/fish/functions/proxyoff.fish" },
     { source = "config/fish/functions/proxyon.fish", target = "~/.config/fish/functions/proxyon.fish" },
 ]
@@ -48,6 +50,13 @@ links = [
 ]
 depends = { system = ["zsh"] }
 
+[options.starship]
+tags = ["shell"]
+links = [
+    { source = "config/starship.toml", target = "~/.config/starship.toml" },
+]
+depends = { system = ["starship"] }
+
 [options.tmux]
 tags = ["shell"]
 links = [
@@ -55,12 +64,15 @@ links = [
 ]
 depends = { system = ["tmux", "tmux-plugin-manager"] }
 
-[options.starship]
-tags = ["shell"]
-links = [
-    { source = "config/starship.toml", target = "~/.config/starship.toml" },
-]
-depends = { system = ["starship"] }
+[options.wezterm]
+tags = ["terminal"]
+links = [{ source = "config/wezterm", target = "~/.config/wezterm" }]
+depends = { system = ["wezterm"] }
+
+[options.kitty]
+tags = ["terminal"]
+links = [{ source = "config/kitty", target = "~/.config/kitty" }]
+depends = { system = ["kitty"] }
 
 [options.neovim]
 tags = ["editor"]
@@ -74,16 +86,6 @@ links = [
     { source = "config/vscode/settings.json", target = "~/.config/Code/User/settings.json" },
     { source = "config/vscode/keybindings.json", target = "~/.config/Code/User/keybindings.json" },
 ]
-
-[options.wezterm]
-tags = ["terminal"]
-links = [{ source = "config/wezterm", target = "~/.config/wezterm" }]
-depends = { system = ["wezterm"] }
-
-[options.kitty]
-tags = ["terminal"]
-links = [{ source = "config/kitty", target = "~/.config/kitty" }]
-depends = { system = ["kitty"] }
 
 [options.kde]
 tags = ["DE"]
@@ -112,11 +114,13 @@ links = [
     { source = "local/share/yakuake/kns_skins/materia-dark", target = "~/.local/share/yakuake/kns_skins/materia-dark" },
 
     # kwin
-    { source = "local/share/kwin/effects/kwin4_effect_geometry_change", target = "~/.local/share/kwin/effects/kwin4_effect_geometry_change" },
-    { source = "local/share/kwin/scripts/krohnkite", target = "~/.local/share/kwin/scripts/krohnkite" },
-    { source = "local/share/kwin/scripts/kzones", target = "~/.local/share/kwin/scripts/kzones" },
-    { source = "local/share/kwin/scripts/movewindow", target = "~/.local/share/kwin/scripts/movewindow" },
-    { source = "local/share/kwin/scripts/temporary-virtual-desktops", target = "~/.local/share/kwin/scripts/temporary-virtual-desktops" },
+    { source = "local/share/kwin/effects", target = "~/.local/share/kwin/effects" },
+    { source = "local/share/kwin/scripts", target = "~/.local/share/kwin/scripts" },
+    # { source = "local/share/kwin/effects/kwin4_effect_geometry_change", target = "~/.local/share/kwin/effects/kwin4_effect_geometry_change" },
+    # { source = "local/share/kwin/scripts/krohnkite", target = "~/.local/share/kwin/scripts/krohnkite" },
+    # { source = "local/share/kwin/scripts/kzones", target = "~/.local/share/kwin/scripts/kzones" },
+    # { source = "local/share/kwin/scripts/movewindow", target = "~/.local/share/kwin/scripts/movewindow" },
+    # { source = "local/share/kwin/scripts/temporary-virtual-desktops", target = "~/.local/share/kwin/scripts/temporary-virtual-desktops" },
     { source = "local/share/plasma/desktoptheme/Fluent-round-dark", target = "~/.local/share/plasma/desktoptheme/Fluent-round-dark" },
     { source = "local/share/plasma/look-and-feel/FluentDark", target = "~/.local/share/plasma/look-and-feel/FluentDark" },
     { source = "local/share/plasma/look-and-feel/FluentLight", target = "~/.local/share/plasma/look-and-feel/FluentLight" },

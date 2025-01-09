@@ -129,7 +129,7 @@ Move Tablet to Next Output=none,none,Move the tablet to the next output
 Move Window to the Bottom-Center=Meta+Num+2,none,Move Window to the Bottom-Center
 Move Window to the Bottom-Left=Meta+Num+1,none,Move Window to the Bottom-Left
 Move Window to the Bottom-Right=Meta+Num+3,none,Move Window to the Bottom-Right
-Move Window to the Center=Meta+Num+5,none,Move Window to the Center
+Move Window to the Center=none,none,Move Window to the Center
 Move Window to the Center-Left=Meta+Num+4,none,Move Window to the Center-Left
 Move Window to the Center-Right=Meta+Num+6,none,Move Window to the Center-Right
 Move Window to the Top-Center=Meta+Num+8,none,Move Window to the Top-Center
@@ -212,7 +212,7 @@ Window Maximize Horizontal=none,,Maximise Window Horizontally
 Window Maximize Vertical=none,,Maximise Window Vertically
 Window Minimize=Meta+PgDown,Meta+PgDown,Minimise Window
 Window Move=none,,Move Window
-Window Move Center=Meta+Shift+Num+Clear,,Move Window to the Centre
+Window Move Center=Meta+Num+5,,Move Window to the Centre
 Window No Border=Meta+Alt+F11,,Toggle Window Titlebar and Frame
 Window On All Desktops=none,,Keep Window on All Desktops
 Window One Desktop Down=Meta+Ctrl+Shift+Down,Meta+Ctrl+Shift+Down,Window One Desktop Down
@@ -347,6 +347,9 @@ _launch=Meta+Return
 [services][net.local.spectacle.desktop]
 _launch=Meta+Ctrl+Shift+S
 
+[services][org.kde.konsole.desktop]
+_launch=none
+
 [services][org.kde.krunner.desktop]
 RunClipboard=none
 _launch=Search\tMeta+Space
@@ -354,6 +357,9 @@ _launch=Search\tMeta+Space
 [services][org.kde.spectacle.desktop]
 RectangularRegionScreenShot=Meta+Shift+Print\tMeta+Shift+S
 _launch=Print
+
+[services][org.wezfurlong.wezterm.desktop]
+_launch=Meta+Shift+Return
 
 [wacomtablet]
 Map to fullscreen=Meta+Ctrl+F11,Meta+Ctrl+F,Map to fullscreen
@@ -368,4 +374,4 @@ _k_friendly_name=Wacom Tablet
 
 [yakuake]
 _k_friendly_name=Yakuake
-toggle-window-state=Ctrl+Alt+Y,F12,Open/Retract Yakuake
+toggle-window-state=Meta+`,F12,Open/Retract Yakuake

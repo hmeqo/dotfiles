@@ -1,13 +1,13 @@
 [Appearance]
-ColorScheme=Transparent
+ColorScheme=Breeze (Transparent)
 Font=FiraCode Nerd Font,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [General]
 Command=$SHELL
 Name=Transparent
 Parent=FALLBACK/
-TerminalColumns=90
-TerminalRows=30
+TerminalColumns=108
+TerminalRows=34
 
 [Scrolling]
 HistoryMode=1

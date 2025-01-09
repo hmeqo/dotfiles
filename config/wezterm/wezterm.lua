@@ -5,6 +5,7 @@ return {
   color_scheme = "Dark+",
   colors = {
     background = "#232627",
+    -- background = "#252525",
   },
 
   font = wezterm.font_with_fallback {
@@ -17,8 +18,10 @@ return {
   -- allow_square_glyphs_to_overflow_width = "WhenFollowedBySpace",
   default_cursor_style = "SteadyBar",
 
-  initial_rows = 30,
-  initial_cols = 90,
+  -- initial_rows = 30,
+  -- initial_cols = 90,
+  initial_rows = 34,
+  initial_cols = 108,
   window_padding = {
     left = 2,
     right = 0,

@@ -2,122 +2,147 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
     // "source": "arch3",
-    // "color": {
-    //   "1": "yellow",
-    //   "2": "cyan"
-    // },
     "padding": {
-      "top": 2,
+      "top": 1,
       "left": 1,
       "right": 2
+    },
+    "color": {
+      "1": "red",
+      "2": "yellow"
     }
   },
   "display": {
+    // "separator": " -> ",
     "separator": "  ",
-    "constants": ["──────────────────────────────"]
+    "constants": ["──────────────────────────────", "─────────────"]
   },
   "modules": [
-    // Title
-    {
-      "type": "title",
-      "format": "{#}╭───────────── {user-name-colored}@{host-name-colored}"
-    },
-    // System Information
     {
       "type": "custom",
-      "format": "{#}│ {#}System Information"
+      "format": "{#90}┌{$1}{$1}┐"
+    },
+    {
+      "type": "title",
+      // "key": " HOST",
+      "format": "{#keys} {user-name-colored}@{host-name-colored}"
     },
     {
       "type": "os",
-      "key": "{#}│  {#keys}󰍹 OS"
+      "key": "{icon} OS",
+      "keyColor": "yellow"
     },
     {
       "type": "kernel",
-      "key": "{#}│  {#keys}󰒋 Kernel"
-    },
-    {
-      "type": "uptime",
-      "key": "{#}│  {#keys}󰅐 Uptime"
+      "key": "│ ├ Kernel",
+      "keyColor": "yellow"
     },
     {
       "type": "packages",
-      "key": "{#}│  {#keys}󰏖 Packages",
-      // show package manager and count
-      "format": "{all}"
-    },
-    {
-      "type": "custom",
-      "format": "│"
-    },
-    // Desktop Environment
-    {
-      "type": "custom",
-      "format": "{#}│ {#}Desktop Environment"
-    },
-    {
-      "type": "de",
-      "key": "{#}│  {#keys}󰧨 DE"
-    },
-    {
-      "type": "wm",
-      "key": "{#}│  {#keys}󱂬 WM"
-    },
-    {
-      "type": "wmtheme",
-      "key": "{#}│  {#keys}󰉼 Theme"
-    },
-    {
-      "type": "display",
-      "key": "{#}│  {#keys}󰹑 Resolution"
+      "key": "│ ├󰏖 Packages",
+      "keyColor": "yellow"
     },
     {
       "type": "shell",
-      "key": "{#}│  {#keys}󰞷 Shell"
+      "key": "│ └󰞷 Shell",
+      "keyColor": "yellow"
     },
     {
-      "type": "terminalfont",
-      "key": "{#}│  {#keys}󰛖 Font"
+      "type": "wm",
+      "key": " DE/WM",
+      "keyColor": "blue"
     },
     {
-      "type": "custom",
-      "format": "{#}│"
+      "type": "lm",
+      "key": "│ ├󰧨 LM",
+      "keyColor": "blue"
     },
-    // Hardware Information
     {
-      "type": "custom",
-      "format": "{#}│ {#}Hardware Information"
+      "type": "wmtheme",
+      "key": "│ ├󰉼 WM Theme",
+      "keyColor": "blue"
+    },
+    {
+      "type": "icons",
+      "key": "│ ├ Icons",
+      "keyColor": "blue"
+    },
+    {
+      "type": "terminal",
+      "key": "│ ├ Terminal",
+      "keyColor": "blue"
+    },
+    {
+      "type": "wallpaper",
+      "key": "│ └󰸉 Wallpaper",
+      "keyColor": "blue"
+    },
+    {
+      "type": "host",
+      "key": "󰌢 PC",
+      "keyColor": "green"
     },
     {
       "type": "cpu",
-      "key": "{#}│  {#keys}󰻠 CPU"
+      "key": "│ ├ CPU",
+      "keyColor": "green"
     },
     {
       "type": "gpu",
-      "key": "{#}│  {#keys}󰢮 GPU"
-    },
-    {
-      "type": "memory",
-      "key": "{#}│  {#keys}󰍛 Memory"
+      "key": "│ ├󰢮 GPU",
+      "keyColor": "green"
     },
     {
       "type": "disk",
-      "key": "{#}│  {#keys}󰋊 Disk (/)",
-      "folders": "/"
+      "key": "│ ├ Disk",
+      "keyColor": "green"
     },
+    {
+      "type": "memory",
+      "key": "│ ├ Memory",
+      "keyColor": "green"
+    },
+    {
+      "type": "swap",
+      "key": "│ ├󰯍 Swap",
+      "keyColor": "green"
+    },
+    {
+      "type": "uptime",
+      "key": "│ ├󰅐 Uptime",
+      "keyColor": "green"
+    },
+    {
+      "type": "display",
+      "key": "│ └󰍹 Display",
+      "keyColor": "green"
+    },
+    {
+      "type": "sound",
+      "key": " SND",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "player",
+      "key": "│ ├󰥠 Player",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "media",
+      "key": "│ └󰝚 Media",
+      "keyColor": "cyan"
+    },
+    // {
+    //   "type": "custom",
+    //   "format": "│"
+    // },
+    // {
+    //   "type": "custom",
+    //   "format": "│ {#90}  {#31}  {#32}  {#33}  {#34}  {#35}  {#36}  {#37}  {#38}  {#39}    {#38}  {#37}  {#36}  {#35}  {#34}  {#33}  {#32}  {#31}  {#90}"
+    // },
     {
       "type": "custom",
-      "format": "{#}│"
-    },
-    // Colors
-    {
-      "type": "colors",
-      "key": "{#}│",
-      "symbol": "circle"
-    },
-    // Footer
-    {
-      "type": "custom",
-      "format": "╰{$1}{$1}"
+      "format": "{#90}└{$1}{$1}┘"
     }
   ]
 }
