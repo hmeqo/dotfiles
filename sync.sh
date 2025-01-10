@@ -1,7 +1,6 @@
 init_venv() {
   if command -v uv >/dev/null; then
     uv sync --frozen
-    source .venv/bin/activate
   else
     python_version=$(python --version)
     if ! [[ $python_version =~ ^Python\ 3\.1[1-9]+\.[0-9]+$ ]]; then
@@ -12,6 +11,13 @@ init_venv() {
     source .venv/bin/activate
     pip install -r requirements.txt
   fi
+}
+
+install_crates() {
+  cd crates/collectconf || return
+  cargo build --release
+  cargo install --path . --root '../../local' --force -q
+  cd ../../
 }
 
 replace_userhome_string() {
@@ -25,7 +31,20 @@ replace_userhome_string() {
   fi
 }
 
-init_venv
-replace_userhome_string
+if [[ $1 = "init" ]]; then
+  replace_userhome_string
 
-confsync tui
+  init_venv
+
+  install_crates
+elif [[ $1 = "tui" ]]; then
+  source .venv/bin/activate
+  confsync tui
+elif [[ $1 = "install-fakehome" ]]; then
+  ./local/fakehome/sync.sh
+else
+  echo "Usage: $0 [init|tui|install-fakehome]"
+  echo "    init: Initialize dotfiles, you need run it every time after pull"
+  echo "    tui: Run confsync tui"
+  echo "    install-fakehome: Install fakehome"
+fi

@@ -40,9 +40,9 @@ WallpaperSource[$e]=file:///mnt/shared/SteamLibrary/steamapps/workshop/content/4
 WallpaperWorkShopId=1169486096
 
 [Containments][1][Wallpaper][org.kde.image][General]
-Image=/home/hmeqo/.local/share/wallpapers/hmeqo/WW_win95_v004_dark_post.png
-PreviewImage=/home/hmeqo/.local/share/wallpapers/hmeqo/WW_win95_v004_dark_post.png
-SlidePaths=/home/hmeqo/.local/share/wallpapers/,/usr/share/wallpapers/
+Image=/home/hmeqo/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/wallpapers/hmeqo/WW_win95_v004_dark_post.png
+PreviewImage=/home/hmeqo/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/wallpapers/hmeqo/WW_win95_v004_dark_post.png
+SlidePaths=/home/hmeqo/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments][115]
 ItemGeometries-0x0=Applet-53:640,368,656,160,0;
@@ -65,9 +65,9 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][115][Wallpaper][org.kde.image][General]
-Image=/home/hmeqo/.config/dotfiles/local/share/wallpapers/hmeqo/WW_win95_v004_dark_post.png
-PreviewImage=/home/hmeqo/.config/dotfiles/local/share/wallpapers/hmeqo/WW_win95_v004_dark_post.png
-SlidePaths=/home/hmeqo/.local/share/wallpapers/,/usr/share/wallpapers/
+Image=/home/hmeqo/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.config/dotfiles/local/share/wallpapers/hmeqo/WW_win95_v004_dark_post.png
+PreviewImage=/home/hmeqo/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.config/dotfiles/local/share/wallpapers/hmeqo/WW_win95_v004_dark_post.png
+SlidePaths=/home/hmeqo/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments][127]
 ItemGeometries-1920x1080=
@@ -113,7 +113,7 @@ DialogWidth=720
 
 [Containments][2][Applets][126][Configuration][General]
 favoritesPortedToKAstats=true
-icon=/home/hmeqo/.config/dotfiles/local/share/icons/logo/arch_linux_dark.svg
+icon=/home/hmeqo/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.config/dotfiles/local/share/icons/logo/arch_linux_dark.svg
 systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
 
 [Containments][2][Applets][126][Configuration][Shortcuts]
@@ -309,7 +309,7 @@ immutability=1
 lastScreen=0
 location=3
 plugin=org.kde.plasma.private.systemtray
-popupHeight=433
+popupHeight=434
 popupWidth=452
 wallpaperplugin=org.kde.image
 
@@ -427,7 +427,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][31][Applets][46][Configuration]
-PreloadWeight=62
+PreloadWeight=82
 
 [Containments][31][Applets][47]
 immutability=1

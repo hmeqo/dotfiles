@@ -30,9 +30,9 @@ var layout = {
                     "DialogWidth": "1920"
                 },
                 "/Wallpaper/org.kde.image/General": {
-                    "Image": "/home/hmeqo/.config/dotfiles/local/share/wallpapers/kde/wallhaven3.jpg",
-                    "PreviewImage": "/home/hmeqo/.config/dotfiles/local/share/wallpapers/kde/wallhaven3.jpg",
-                    "SlidePaths": "/home/hmeqo/.local/share/wallpapers/,/usr/share/wallpapers/"
+                    "Image": "/home/hmeqo/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.config/dotfiles/local/share/wallpapers/kde/wallhaven3.jpg",
+                    "PreviewImage": "/home/hmeqo/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.config/dotfiles/local/share/wallpapers/kde/wallhaven3.jpg",
+                    "SlidePaths": "/home/hmeqo/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/wallpapers/,/usr/share/wallpapers/"
                 }
             },
             "wallpaperPlugin": "org.kde.image"
@@ -55,7 +55,7 @@ var layout = {
                         },
                         "/General": {
                             "favoritesPortedToKAstats": "true",
-                            "icon": "/home/hmeqo/.config/dotfiles/local/share/icons/logo/arch_linux_dark.svg",
+                            "icon": "/home/hmeqo/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.local/share/fakehome/.config/dotfiles/local/share/icons/logo/arch_linux_dark.svg",
                             "systemFavorites": "suspend\\,hibernate\\,reboot\\,shutdown"
                         },
                         "/Shortcuts": {

@@ -153,7 +153,7 @@ if [[ $- == *i* ]]; then
   confd_dirs=("${confd_dirs[@]}" "$DOTFILES/config/zsh/conf.d/interactive" "$DOTFILES/user/zsh/conf.d/interactive")
 fi
 # Load the configuration
-for file in $("$DOTFILES/utils/collectconf" "${confd_dirs[@]}"); do
+for file in $("$DOTFILES/local/bin/collectconf" "${confd_dirs[@]}"); do
   source "$file"
 done
 unset confd_dirs
