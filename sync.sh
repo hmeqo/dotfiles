@@ -14,10 +14,8 @@ init_venv() {
 }
 
 install_crates() {
-  cd crates/collectconf || return
   cargo build --release
-  cargo install --path . --root '../../local' --force -q
-  cd ../../
+  cargo install --path crates/* --root './local' --force -q
 }
 
 replace_userhome_string() {
