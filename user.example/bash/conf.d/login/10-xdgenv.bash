@@ -1,1 +1,1 @@
-. "$DOTFILES/xdgenv/env.bash"
+. "$DOTFILES/local/xdgenv/env.bash"

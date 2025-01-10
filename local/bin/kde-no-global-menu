@@ -2,5 +2,5 @@
 
 qdbus6 org.kde.kded6 /kded org.kde.kded6.unloadModule "appmenu"
 "$@" &
-sleep 1
+sleep 3
 qdbus6 org.kde.kded6 /kded org.kde.kded6.loadModule "appmenu"

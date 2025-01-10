@@ -175,7 +175,7 @@ wheels = [
 
 [[package]]
 name = "simple-config-sync"
-version = "0.1.21"
+version = "0.1.22"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
@@ -183,9 +183,9 @@ dependencies = [
     { name = "textual" },
     { name = "toml" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c9/8b/1d408f0891f77b58b08a52ed51450ef4f0439ac99933ebd999bdecafc6e2/simple_config_sync-0.1.21.tar.gz", hash = "sha256:a17add473fc7bd5a3295a16ac448731a557da8d0badcf0e5d8704da32e1f37b8", size = 17798 }
+sdist = { url = "https://files.pythonhosted.org/packages/b8/18/67f4f165ea7acac88a30c2b9a0f1ee1e46a4327481e1545b80c1f422694c/simple_config_sync-0.1.22.tar.gz", hash = "sha256:da88302c7bdcba5bc84986416e10aaa6648ef316d8301bb5e9c8a64bf1cd9b0a", size = 18195 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/fe/b0/0d9017d86c585cb9ae73941516fdf8761d9d3947707e0319fa0fd81a2853/simple_config_sync-0.1.21-py3-none-any.whl", hash = "sha256:2dd2fe1e0cdbbdf7c580461053b469acf8b74f5e0dc70b3856278ebf2fd90119", size = 8206 },
+    { url = "https://files.pythonhosted.org/packages/f0/8b/de2f537c00d9fa9dda5554ab3b37adf110dd801b1cf12b54b72f27930a21/simple_config_sync-0.1.22-py3-none-any.whl", hash = "sha256:a9e9071f1b0c0db8f3eaa4bbfede1d73a726fd61c4e1d9056f7bc224fd57518e", size = 8942 },
 ]
 
 [[package]]

@@ -1,1 +1,1 @@
-source "$DOTFILES/xdgenv/alias.fish"
+source "$DOTFILES/local/xdgenv/alias.fish"

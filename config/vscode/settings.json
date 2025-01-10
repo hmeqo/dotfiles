@@ -452,8 +452,9 @@
     "[yaml]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
-    "prettier.tabWidth": 4,
-    "prettier.printWidth": 120,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.autoImportCompletions": false,
+    "pyqt-integration.qtdesigner.path": "designer",
     "clangd.arguments": [
         // 代码风格 microsoft, google
         "--fallback-style=microsoft",
@@ -474,13 +475,12 @@
         "--pch-storage=disk"
     ],
     "clangd.fallbackFlags": ["-Wno-deprecated-declarations"],
-    "python.analysis.typeCheckingMode": "basic",
-    "python.analysis.autoImportCompletions": false,
-    "pyqt-integration.qtdesigner.path": "designer",
     "java.eclipse.downloadSources": true,
     "java.configuration.maven.userSettings": "~/.config/maven/settings.xml",
     "xml.format.grammarAwareFormatting": false,
     "xml.server.workDir": "~/.cache/lemminx",
+    "prettier.tabWidth": 4,
+    "prettier.printWidth": 120,
     "typescript.preferences.useAliasesForRenames": false,
     "vue.server.hybridMode": false,
     "projectManager.sortList": "Name",

@@ -114,21 +114,8 @@ links = [
     { source = "local/share/yakuake/kns_skins/materia-dark", target = "~/.local/share/yakuake/kns_skins/materia-dark" },
 
     # kwin
-    { source = "local/share/kwin/effects", target = "~/.local/share/kwin/effects" },
-    { source = "local/share/kwin/scripts", target = "~/.local/share/kwin/scripts" },
-    # { source = "local/share/kwin/effects/kwin4_effect_geometry_change", target = "~/.local/share/kwin/effects/kwin4_effect_geometry_change" },
-    # { source = "local/share/kwin/scripts/krohnkite", target = "~/.local/share/kwin/scripts/krohnkite" },
-    # { source = "local/share/kwin/scripts/kzones", target = "~/.local/share/kwin/scripts/kzones" },
-    # { source = "local/share/kwin/scripts/movewindow", target = "~/.local/share/kwin/scripts/movewindow" },
-    # { source = "local/share/kwin/scripts/temporary-virtual-desktops", target = "~/.local/share/kwin/scripts/temporary-virtual-desktops" },
-    { source = "local/share/plasma/desktoptheme/Fluent-round-dark", target = "~/.local/share/plasma/desktoptheme/Fluent-round-dark" },
-    { source = "local/share/plasma/look-and-feel/FluentDark", target = "~/.local/share/plasma/look-and-feel/FluentDark" },
-    { source = "local/share/plasma/look-and-feel/FluentLight", target = "~/.local/share/plasma/look-and-feel/FluentLight" },
-    { source = "local/share/plasma/plasmoids/com.github.antroids.application-title-bar", target = "~/.local/share/plasma/plasmoids/com.github.antroids.application-title-bar" },
-    { source = "local/share/plasma/plasmoids/com.github.prayag2.modernclock", target = "~/.local/share/plasma/plasmoids/com.github.prayag2.modernclock" },
-    { source = "local/share/plasma/plasmoids/org.kde.netspeedWidget", target = "~/.local/share/plasma/plasmoids/org.kde.netspeedWidget" },
-    { source = "local/share/plasma/plasmoids/org.kde.plasma.ginti", target = "~/.local/share/plasma/plasmoids/org.kde.plasma.ginti" },
-    { source = "local/share/plasma/plasmoids/org.kde.plasma.simplekickoff", target = "~/.local/share/plasma/plasmoids/org.kde.plasma.simplekickoff" },
+    { source = "local/share/kwin", target = "~/.local/share/kwin" },
+    { source = "local/share/plasma", target = "~/.local/share/plasma" },
 
     # icons
     { source = "local/share/icons/Fluent", target = "~/.local/share/icons/Fluent" },

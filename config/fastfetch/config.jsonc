@@ -15,106 +15,127 @@
   "display": {
     // "separator": " -> ",
     "separator": "  ",
-    "constants": ["──────────────────────────────", "─────────────"]
+    "constants": ["──────────────────────────────", "──────────────"]
   },
   "modules": [
-    {
-      "type": "custom",
-      "format": "{#90}┌{$1}{$1}┐"
-    },
+    // {
+    //   "type": "custom",
+    //   "format": "{#1}{#90}┌{$1}{$1}┐"
+    // },
     {
       "type": "title",
       // "key": " HOST",
-      "format": "{#keys} {user-name-colored}@{host-name-colored}"
+      // "format": "{#keys} {user-name-colored}@{host-name-colored}"
+      "format": "{#1}{#90}╭{$2} {#keys} {user-name-colored}@{host-name-colored}"
+    },
+    {
+      "type": "custom",
+      "format": "{#1} System Information",
+      "outputColor": "yellow"
     },
     {
       "type": "os",
-      "key": "{icon} OS",
+      "key": "│  {icon} OS",
       "keyColor": "yellow"
     },
     {
       "type": "kernel",
-      "key": "│ ├ Kernel",
+      "key": "│   Kernel",
       "keyColor": "yellow"
     },
     {
       "type": "packages",
-      "key": "│ ├󰏖 Packages",
+      "key": "│  󰏖 Packages",
       "keyColor": "yellow"
     },
     {
       "type": "shell",
-      "key": "│ └󰞷 Shell",
+      "key": "│  󰞷 Shell",
       "keyColor": "yellow"
     },
     {
+      "type": "uptime",
+      "key": "│  󰅐 Uptime",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "custom",
+      "format": "{#1} Desktop Environment",
+      "outputColor": "blue"
+    },
+    {
+      "type": "terminal",
+      "key": "│   Terminal",
+      "keyColor": "blue"
+    },
+    {
       "type": "wm",
-      "key": " DE/WM",
+      "key": "│   DE/WM",
       "keyColor": "blue"
     },
     {
       "type": "lm",
-      "key": "│ ├󰧨 LM",
+      "key": "│  󰧨 LM",
       "keyColor": "blue"
     },
     {
       "type": "wmtheme",
-      "key": "│ ├󰉼 WM Theme",
+      "key": "│   WM Theme",
+      "keyColor": "blue"
+    },
+    {
+      "type": "theme",
+      "key": "│  󰉼 Theme",
       "keyColor": "blue"
     },
     {
       "type": "icons",
-      "key": "│ ├ Icons",
-      "keyColor": "blue"
-    },
-    {
-      "type": "terminal",
-      "key": "│ ├ Terminal",
+      "key": "│  󰀻 Icons",
       "keyColor": "blue"
     },
     {
       "type": "wallpaper",
-      "key": "│ └󰸉 Wallpaper",
+      "key": "│  󰸉 Wallpaper",
       "keyColor": "blue"
     },
     {
+      "type": "custom",
+      "format": "{#1} Hardware Information",
+      "outputColor": "green"
+    },
+    {
       "type": "host",
-      "key": "󰌢 PC",
+      "key": "│  󰌢 HOST",
       "keyColor": "green"
     },
     {
       "type": "cpu",
-      "key": "│ ├ CPU",
+      "key": "│   CPU",
       "keyColor": "green"
     },
     {
       "type": "gpu",
-      "key": "│ ├󰢮 GPU",
+      "key": "│  󰢮 GPU",
       "keyColor": "green"
     },
     {
       "type": "disk",
-      "key": "│ ├ Disk",
+      "key": "│   Disk",
       "keyColor": "green"
     },
     {
       "type": "memory",
-      "key": "│ ├ Memory",
+      "key": "│   Memory",
       "keyColor": "green"
     },
     {
       "type": "swap",
-      "key": "│ ├󰯍 Swap",
-      "keyColor": "green"
-    },
-    {
-      "type": "uptime",
-      "key": "│ ├󰅐 Uptime",
+      "key": "│  󰯍 Swap",
       "keyColor": "green"
     },
     {
       "type": "display",
-      "key": "│ └󰍹 Display",
+      "key": "│  󰍹 Display",
       "keyColor": "green"
     },
     {
@@ -124,25 +145,26 @@
     },
     {
       "type": "player",
-      "key": "│ ├󰥠 Player",
+      "key": "│  󰥠 Player",
       "keyColor": "cyan"
     },
     {
       "type": "media",
-      "key": "│ └󰝚 Media",
+      "key": "│  󰝚 Media",
       "keyColor": "cyan"
     },
     // {
     //   "type": "custom",
-    //   "format": "│"
-    // },
-    // {
-    //   "type": "custom",
-    //   "format": "│ {#90}  {#31}  {#32}  {#33}  {#34}  {#35}  {#36}  {#37}  {#38}  {#39}    {#38}  {#37}  {#36}  {#35}  {#34}  {#33}  {#32}  {#31}  {#90}"
+    //   "format": "{#1}{#90}│"
     // },
     {
       "type": "custom",
-      "format": "{#90}└{$1}{$1}┘"
+      // "format": "{#1}{#90}└{$1}{$1}┘"
+      "format": "{#1}{#90}╰───────────────────────────────────────────────────────────"
+    },
+    {
+      "type": "custom",
+      "format": " {#90}  {#31}  {#32}  {#33}  {#34}  {#35}  {#36}  {#37}  {#38}  {#39}    {#38}  {#37}  {#36}  {#35}  {#34}  {#33}  {#32}  {#31}  {#90} "
     }
   ]
 }

@@ -27,8 +27,11 @@ Use `confsync` to manage dotfiles.
 It will display a tui in the terminal to choose which ones you want to sync.
 
 ```bash
-# run sync.sh that will automatically create python virtual environment and start `confsync tui`
-./sync.sh
+# run sync.sh that will automatically create python virtual environment, you need run it every time after pull
+./sync.sh init
+
+# start `confsync tui`
+./sync.sh tui
 ```
 
 If you already have a configuration file, don’t worry - it will be safely backed up to `~/.config/dotfiles/backup` before the synchronization process begins.

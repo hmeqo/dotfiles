@@ -9,10 +9,10 @@ if [[ $- == *i* ]]; then
   confd_dirs=("${confd_dirs[@]}" "$DOTFILES/config/bash/conf.d/interactive" "$DOTFILES/user/bash/conf.d/interactive")
 fi
 # Load the configuration
-# for file in $(echo "${functions_dirs[@]}" | xargs "$DOTFILES/utils/collectconf"); do
+# for file in $(echo "${functions_dirs[@]}" | xargs "$DOTFILES/local/bin/collectconf"); do
 #   source "$file"
 # done
-for file in $("$DOTFILES/utils/collectconf" "${confd_dirs[@]}"); do
+for file in $("$DOTFILES/local/bin/collectconf" "${confd_dirs[@]}"); do
   source "$file"
 done
 # unset functions_dirs
