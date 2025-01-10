@@ -10,14 +10,14 @@ fi
 
 for file in "$LOCAL_BIN"/*; do
   [[ -L "$file" ]] || continue
-  if [[ $(readlink "$file") = "$DOTFILES/fakehome/bin/"* ]]; then
+  if [[ $(readlink "$file") = "$DOTFILES/local/fakehome/bin/"* ]]; then
     unlink "$file"
   fi
 done
 
 for file in "$APPLICATIONS"/*; do
   [[ -L "$file" ]] || continue
-  if [[ $(readlink "$file") = "$DOTFILES/fakehome/applications/"* ]]; then
+  if [[ $(readlink "$file") = "$DOTFILES/local/fakehome/applications/"* ]]; then
     unlink "$file"
   fi
 done
