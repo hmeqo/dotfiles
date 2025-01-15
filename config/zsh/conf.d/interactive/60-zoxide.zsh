@@ -1,1 +1,1 @@
-[[ ! -x "$(command -v zoxide)" ]] || eval $(zoxide init zsh)
+[[ ! -x "$(command -v zoxide)" ]] || eval "$(zoxide init zsh)"

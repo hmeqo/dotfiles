@@ -329,7 +329,7 @@
 
     // "file://${userHome}/.config/dotfiles/config/vscode/ui.css",
     "vscode_custom_css.imports": [
-        "file://${userHome}/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.4/dist/updateHandler.js"
+        "file://${userHome}/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
     ],
     "animations.CursorAnimation": true,
     "animations.Enabled": true,
@@ -527,13 +527,10 @@
     "indentRainbow.ignoreErrorLanguages": ["*"],
     "indentRainbow.indicatorStyle": "light",
     "indentRainbow.colors": ["rgba(255,255,64,0.08)", "rgba(255,127,255,0.08)", "rgba(0,127,255,0.08)"],
-    "sortJSON.contextMenu": false,
     "cSpell.allowCompoundWords": true,
-    "cSpell.showStatus": false,
+    "cSpell.diagnosticLevel": "Hint",
     "cSpell.showSuggestionsLinkInEditorContextMenu": false,
     "cSpell.showCommandsInEditorContextMenu": false,
-    "cSpell.textDecorationColor": "#888",
-    "cSpell.textDecorationStyle": "dashed",
     "cSpell.userWords": [
         "alova",
         "clangd",

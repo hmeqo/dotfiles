@@ -78,8 +78,13 @@ InactiveOutlineColor=136,136,136
 OutlineColor=136,136,136
 
 [Round-Corners]
+ActiveOutlineAlpha=82
+Exclusions=yakuake
 InactiveCornerRadius=8
+InactiveOutlineAlpha=35
+InactiveOutlineColor=136,136,136
 InactiveShadowSize=30
+OutlineColor=136,136,136
 ShadowSize=30
 Size=8
 
@@ -114,6 +119,9 @@ InactiveShadowAlpha=123
 [SubSession: f6743ef6-593b-4d08-a00d-28fb62701320]
 active=-1
 count=0
+
+[TabBox]
+LayoutName=sidebar
 
 [Tiling]
 padding=8
