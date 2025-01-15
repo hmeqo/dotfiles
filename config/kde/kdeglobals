@@ -138,6 +138,7 @@ History Items[$e]=
 
 [General]
 BrowserApplication=google-chrome.desktop
+ColorScheme=FluentDark
 ColorSchemeHash=2823fd85d4dc3e2f05a21c28d68753f841ff70ed
 XftHintStyle=hintslight
 XftSubPixel=none
@@ -149,6 +150,7 @@ toolBarFont=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [KDE]
 LookAndFeelPackage=FluentDark
+widgetStyle=kvantum-dark
 
 [KFileDialog Settings]
 Allow Expansion=false

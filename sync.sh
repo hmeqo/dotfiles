@@ -40,9 +40,12 @@ elif [[ $1 = "tui" ]]; then
   confsync tui
 elif [[ $1 = "install-fakehome" ]]; then
   ./local/fakehome/sync.sh
+elif [[ $1 = "uninstall-fakehome" ]]; then
+  ./local/fakehome/uninstall.sh
 else
-  echo "Usage: $0 [init|tui|install-fakehome]"
+  echo "Usage: $0 [init|tui|install-fakehome|uninstall-fakehome]"
   echo "    init: Initialize dotfiles, you need run it every time after pull"
   echo "    tui: Run confsync tui"
   echo "    install-fakehome: Install fakehome"
+  echo "    uninstall-fakehome: Uninstall fakehome"
 fi
