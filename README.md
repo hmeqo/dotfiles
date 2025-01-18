@@ -51,10 +51,15 @@ You can change the location of dotfiles to your favorite location
 
 ### Fonts dependencies
 
-Your need install these fonts manually, if you want to use KDE or hyprland.
+Your need install these fonts manually.
 
 - FiraCode Nerd Font (Nerd Font)
+
+  Required By: `konsole` `wazterm` `kitty` `dunst` `rofi`
+
 - Maple Mono NF
+
+  Required By: `kde` `hyprland`
 
 ### KDE dotfiles
 
@@ -73,23 +78,21 @@ git submodule update --init local/share/wallpapers/hmeqo
 
 And sync `kde` option and it's dependencies options `kvantum`, `fcitx5`, `wallpaper-hmeqo`.
 
-Now, enjoy!
-
 ### fakehome
 
-Default for code hmcl-bin jetbrains-fleet minecraft-launcher steam thunderbird ..., and you can use `fakehome xxx` manually.
+Fakehome is a program that allows you to run a program in a fake home directory, and it will not create any trash in your home directory.
 
 - Install
 
   ```bash
-  $DOTFILES/fakehome/sync.sh
+  ./sync.sh install-fakehome
   ```
 
 - Uninstall
 
   ```bash
   # uninstall
-  $DOTFILES/fakehome/uninstall.sh
+  ./sync.sh uninstall-fakehome
   ```
 
 ## Configuration
@@ -112,9 +115,10 @@ Default for code hmcl-bin jetbrains-fleet minecraft-launcher steam thunderbird .
 
 ### Customize propmt program
 
-Default prompter is starship, example to use oh-my-posh, set `prompter` to `$DOTFILES/user/bash/loader/interactive.bash`
+Default prompter is starship, example to use oh-my-posh, set `prompter` to `$DOTFILES/user/bash/conf.d`
+
+`$DOTFILES/user/bash/conf.d/interactive/20-prompt.bash`:
 
 ```bash
-# $DOTFILES/user/bash/conf.d/interactive/20-prompt.bash
 prompter=oh-my-posh
 ```

@@ -248,7 +248,7 @@ plugin=org.kde.plasma.digitalclock
 
 [Containments][27][Applets][50][Configuration]
 PreloadWeight=100
-popupHeight=479
+popupHeight=481
 popupWidth=814
 
 [Containments][27][Applets][50][Configuration][Appearance]
@@ -310,7 +310,7 @@ immutability=1
 lastScreen=0
 location=3
 plugin=org.kde.plasma.private.systemtray
-popupHeight=442
+popupHeight=445
 popupWidth=452
 wallpaperplugin=org.kde.image
 
@@ -428,7 +428,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][31][Applets][46][Configuration]
-PreloadWeight=66
+PreloadWeight=38
 
 [Containments][31][Applets][47]
 immutability=1
