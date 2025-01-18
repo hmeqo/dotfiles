@@ -1,3 +1,8 @@
+# Dotfiles
+
+[![en](https://img.shields.io/badge/lang-en-red.svg)](./README.md)
+[![zh-hans](https://img.shields.io/badge/lang-zh--hans-green.svg)](./README.zh-cn.md)
+
 ## Preview
 
 <details>
