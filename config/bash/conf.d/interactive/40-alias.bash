@@ -1,20 +1,18 @@
-alias grep='grep --color=auto'
-
 if command -v exa >/dev/null; then
-    alias ls='exa --icons --sort=type'
-    alias lsa='ls -A'
-    alias l='ls -lh'
-    alias ll='ls -Alh'
-    alias la='ls -alh'
+    alias __ls='exa --icons -s=type'
+    alias __ll='__ls -lh'
     alias lt='ls -lTah'
 else
-    alias ls='ls --color=auto --sort=type'
-    alias lsa='ls -A'
-    alias l='ls -lh'
-    alias ll='ls -Alh'
-    alias la='ls -alh'
+    alias __ls='ls --color=auto -s=type'
+    alias __ll='__ls -lh'
     alias lt='tree -pCsh'
 fi
+alias ls='__ls -A'
+alias lsa='__ls -a'
+alias lsh=__ls
+alias ll='__ll -A'
+alias lla='__ll -a'
+alias llh=__ll
 
 if command -v bat >/dev/null; then
     alias batp='bat --paging=always'
@@ -41,3 +39,5 @@ if command -v duf >/dev/null; then
 fi
 
 alias color_test='curl https://gist.githubusercontent.com/lilydjwg/fdeaf79e921c2f413f44b6f613f6ad53/raw/94d8b2be62657e96488038b0e547e3009ed87d40/colors.py | python'
+
+alias grep='grep --color=auto'

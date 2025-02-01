@@ -2,7 +2,7 @@ function _50_keybindings
     fish_vi_key_bindings
 
     bind --preset --mode visual -m default v end-selection repaint-mode
-    # bind -M insert jk "if commandline -P; commandline -f cancel; else; set fish_bind_mode default; commandline -f backward-char force-repaint; end"
+    # bind --mode insert jk "if commandline -P; commandline -f cancel; else; set fish_bind_mode default; commandline -f backward-char force-repaint; end"
     bind --mode insert \ei accept-autosuggestion
 
     for mode in default insert

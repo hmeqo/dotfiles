@@ -1,23 +1,23 @@
 if command -sq exa
-    alias ls 'exa --icons -s=type'
-    alias lsa 'ls -A'
-    alias l 'ls -lh'
-    alias ll 'ls -Alh'
-    alias la 'ls -alh'
+    alias __ls 'exa --icons -s=type'
+    alias __ll '__ls -lh'
     alias lt 'ls -lTah'
 else
-    alias ls 'ls --color=auto -s=type'
-    alias lsa 'ls -A'
-    alias l 'ls -lh'
-    alias ll 'ls -Alh'
-    alias la 'ls -alh'
+    alias __ls 'ls --color=auto -s=type'
+    alias __ll '__ls -lh'
     alias lt 'tree -pCsh'
 end
+alias ls '__ls -A'
+alias lsa '__ls -a'
+alias lsh __ls
+alias ll '__ll -A'
+alias lla '__ll -a'
+alias llh __ll
 
 if command -sq bat
     alias batp 'bat --paging=always'
     alias cat 'bat -pp'
-    alias ccat '/usr/bin/cat'
+    alias ccat /usr/bin/cat
 end
 
 if command -sq tmux

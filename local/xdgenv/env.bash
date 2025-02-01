@@ -37,6 +37,9 @@ logs-dir=${XDG_STATE_HOME}/npm/logs'
     fi
 fi
 
+# Sqlite
+export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
+
 # Mariadb
 export MYSQL_HISTFILE="$XDG_DATA_HOME/mariadb_history"
 
@@ -48,15 +51,6 @@ export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 
 # GTK 2
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtkrc-2.0"
-
-# Android
-export ANDROID_USER_HOME="$XDG_DATA_HOME"/android
-
-# wget
-if command -v wget >/dev/null; then
-    [[ -f "$XDG_CONFIG_HOME/wgetrc" ]] || touch "$XDG_CONFIG_HOME/wgetrc"
-    export WGETRC="$XDG_CONFIG_HOME/wgetrc"
-fi
 
 # CUDA
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
