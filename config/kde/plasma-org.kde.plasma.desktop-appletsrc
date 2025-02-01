@@ -31,7 +31,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][1][General]
-positions={"1920x1080":["1"\\,"17"\\,"desktop:/analyze.html"\\,"0"\\,"0"]\\,"3840x2160":[]}
+positions={"1920x1080":["1"\\,"17"\\,"desktop:/a.kdenlive.ass"\\,"0"\\,"1"\\,"desktop:/a_backup0.kdenlive"\\,"0"\\,"2"\\,"desktop:/a.kdenlive"\\,"0"\\,"0"\\,"desktop:/a_backup1.kdenlive"\\,"0"\\,"3"]\\,"3840x2160":[]}
 sortMode=-1
 
 [Containments][1][Wallpaper][com.github.catsout.wallpaperEngineKde][General]
@@ -220,6 +220,22 @@ shortUnits=true
 showLowSpeeds=true
 speedLayout=columns
 
+[Containments][27][Applets][130]
+immutability=1
+plugin=org.kde.windowtitle
+
+[Containments][27][Applets][130][Configuration][Appearance]
+altTxt=
+customSize=18
+fixedLength=320
+lengthKind=2
+midSpace=4
+txt=%a
+
+[Containments][27][Applets][130][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
 [Containments][27][Applets][28]
 immutability=1
 plugin=org.kde.plasma.appmenu
@@ -248,7 +264,7 @@ plugin=org.kde.plasma.digitalclock
 
 [Containments][27][Applets][50][Configuration]
 PreloadWeight=100
-popupHeight=481
+popupHeight=497
 popupWidth=814
 
 [Containments][27][Applets][50][Configuration][Appearance]
@@ -259,7 +275,6 @@ fontFamily=Maple Mono NF
 fontSize=7
 fontStyleName=Regular
 fontWeight=400
-pin=true
 showDate=false
 showSeconds=Always
 
@@ -274,10 +289,9 @@ plugin=com.github.antroids.application-title-bar
 [Containments][27][Applets][55][Configuration][Appearance]
 widgetButtonsAuroraeTheme=summaculate-night-opaque
 widgetButtonsIconsTheme=Aurorae
-widgetButtonsMargins=2
-widgetElements=windowCloseButton,windowMinimizeButton,windowMaximizeButton,windowIcon,windowTitle
+widgetElements=windowCloseButton,windowMinimizeButton,windowMaximizeButton
 widgetElementsMaximized=windowCloseButton,windowMinimizeButton,windowMaximizeButton,windowIcon,windowTitle
-widgetMargins=2
+widgetMargins=4
 widgetSpacing=6
 windowTitleFontBold=false
 windowTitleFontSize=10
@@ -287,6 +301,9 @@ windowTitleMarginsRight=4
 windowTitleSource=AppName
 windowTitleSourceMaximized=AppName
 windowTitleUndefined=
+
+[Containments][27][Applets][55][Configuration][Behavior]
+widgetActiveTaskFilterNotMaximized=true
 
 [Containments][27][Applets][55][Configuration][ConfigDialog]
 DialogHeight=540
@@ -301,7 +318,7 @@ expanding=false
 length=5
 
 [Containments][27][General]
-AppletOrder=100;55;28;103;99;120;121;122;105;30;50;106
+AppletOrder=99;55;130;28;103;100;120;121;122;105;30;50;106
 
 [Containments][31]
 activityId=
@@ -310,7 +327,7 @@ immutability=1
 lastScreen=0
 location=3
 plugin=org.kde.plasma.private.systemtray
-popupHeight=445
+popupHeight=467
 popupWidth=452
 wallpaperplugin=org.kde.image
 
@@ -357,6 +374,7 @@ plugin=org.kde.plasma.volume
 PreloadWeight=100
 
 [Containments][31][Applets][37][Configuration][General]
+currentTab=streams
 migrated=true
 
 [Containments][31][Applets][38]
@@ -428,7 +446,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][31][Applets][46][Configuration]
-PreloadWeight=38
+PreloadWeight=51
 
 [Containments][31][Applets][47]
 immutability=1

@@ -4,10 +4,10 @@ set -gx XDG_STATE_HOME "$HOME/.local/state"
 set -gx XDG_CACHE_HOME "$HOME/.cache"
 
 # Bash
-set -gx HISTFILE "$XDG_STATE_HOME/bash_history"
+set -gx HISTFILE "$XDG_DATA_HOME/bash_history"
 
 # python
-set -gx PYTHON_HISTORY "$XDG_STATE_HOME/python_history"
+set -gx PYTHON_HISTORY "$XDG_DATA_HOME/python_history"
 set -gx PYENV_ROOT "$XDG_DATA_HOME/pyenv"
 set -gx PYPIRC "$XDG_CONFIG_HOME/pypirc"
 
@@ -37,26 +37,20 @@ logs-dir=${XDG_STATE_HOME}/npm/logs'
     end
 end
 
+# Sqlite
+set -gx SQLITE_HISTORY "$XDG_DATA_HOME/sqlite_history"
+
 # Mariadb
-set -gx MYSQL_HISTFILE "$XDG_STATE_HOME/mariadb_history"
+set -gx MYSQL_HISTFILE "$XDG_DATA_HOME/mariadb_history"
 
 # Redis
-set -gx REDISCLI_HISTFILE "$XDG_STATE_HOME/rediscli_history"
+set -gx REDISCLI_HISTFILE "$XDG_DATA_HOME/rediscli_history"
 
 # GnuPg
 set -gx GNUPGHOME "$XDG_DATA_HOME/gnupg"
 
 # GTK 2
 set -gx GTK2_RC_FILES "$XDG_CONFIG_HOME/gtkrc-2.0"
-
-# Android
-set -gx ANDROID_USER_HOME "$XDG_DATA_HOME/android"
-
-# wget
-if type -q wget
-    test -f "$XDG_CONFIG_HOME/wgetrc" || touch "$XDG_CONFIG_HOME/wgetrc"
-    set -gx WGETRC "$XDG_CONFIG_HOME/wgetrc"
-end
 
 # CUDA
 set -gx CUDA_CACHE_PATH "$XDG_CACHE_HOME/nv"

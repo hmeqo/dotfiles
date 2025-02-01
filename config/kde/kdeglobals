@@ -133,8 +133,8 @@ ForegroundPositive=1,162,153
 ForegroundVisited=0,188,212
 
 [DirSelect Dialog]
-DirSelectDialog Size=839,579
-History Items[$e]=
+DirSelectDialog Size=1920,1056
+History Items[$e]=file:$HOME/repos/python/drf-apischema
 
 [General]
 BrowserApplication=google-chrome.desktop

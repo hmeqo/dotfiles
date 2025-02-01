@@ -280,7 +280,7 @@
         },
         {
             "before": ["<C-i>"],
-            "commands": ["editor.action.triggerSuggest"]
+            "commands": ["inlineChat.startWithCurrentLine"]
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
@@ -553,5 +553,6 @@
     "GitCommitPlugin.ShowEmoji": false,
     "minapp-vscode.disableAutoConfig": true,
     "console-ninja.featureSet": "Community",
-    "tailwindMagic.attributifyMode": false
+    "tailwindMagic.attributifyMode": false,
+    "continue.showInlineTip": false
 }

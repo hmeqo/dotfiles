@@ -165,16 +165,6 @@
         "command": "workbench.action.quit"
     },
     {
-        "key": "ctrl+l",
-        "command": "-expandLineSelection",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "editor.action.addSelectionToNextFindMatch",
-        "when": "editorFocus"
-    },
-    {
         "key": "ctrl+d",
         "command": "-editor.action.addSelectionToNextFindMatch",
         "when": "editorFocus"
@@ -268,13 +258,13 @@
         "when": "!explorerResourceIsFolder && filesExplorerFocus && foldersViewVisible && !inputFocus"
     },
     {
-        "key": "o",
+        "key": "s",
         "command": "list.toggleExpand",
         "when": "explorerResourceIsFolder && filesExplorerFocus && foldersViewVisible && !inputFocus"
     },
     {
-        "key": "o",
-        "command": "explorer.openAndPassFocus",
+        "key": "s",
+        "command": "explorer.openToSide",
         "when": "!explorerResourceIsFolder && filesExplorerFocus && foldersViewVisible && !inputFocus"
     },
     {
@@ -402,6 +392,16 @@
         "command": "editor.action.inlineSuggest.commit",
         "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus"
     },
+    {
+        "key": "ctrl+f7",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+shift+f7",
+        "command": "editor.action.selectHighlights",
+        "when": "editorFocus"
+    },
 
     // ███████╗██╗  ██╗████████╗███████╗███╗   ██╗███████╗██╗ ██████╗ ███╗   ██╗
     // ██╔════╝╚██╗██╔╝╚══██╔══╝██╔════╝████╗  ██║██╔════╝██║██╔═══██╗████╗  ██║
@@ -427,11 +427,6 @@
         "command": "-codeium.diffActionReject",
         "when": "editorTextFocus && !inlineSuggestionsVisible"
     },
-    {
-        "key": "ctrl+i",
-        "command": "-codeium.openCodeiumCommand",
-        "when": "codeium.commandEnabled && editorTextFocus && !inlineSuggestionsVisible"
-    },
     // Vscode Speech
     {
         "key": "alt+d",
@@ -446,14 +441,9 @@
 
     // Github Copilot
     {
-        "key": "ctrl+/",
-        "command": "-github.copilot.acceptCursorPanelSolution",
-        "when": "github.copilot.activated && github.copilot.panelVisible"
-    },
-    {
         "key": "ctrl+enter",
         "command": "-github.copilot.generate",
-        "when": "editorTextFocus && github.copilot.activated && !inInteractiveInput && !interactiveEditorFocused"
+        "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused && !inInteractiveInput && !interactiveEditorFocused"
     },
 
     //  ██████╗ ████████╗██╗  ██╗███████╗██████╗

@@ -189,6 +189,7 @@ Switch to Screen Above=none,,Switch to Screen Above
 Switch to Screen Below=none,,Switch to Screen Below
 Switch to Screen to the Left=none,,Switch to Screen to the Left
 Switch to Screen to the Right=none,,Switch to Screen to the Right
+Toggle=Meta+Ctrl+Alt+P,Meta+Ctrl+Alt+P,Toggle Show Paint
 Toggle Night Color=none,none,Suspend/Resume Night Light
 Toggle Window Raise/Lower=none,,Toggle Window Raise/Lower
 ToggleCurrentThumbnail=Meta+Alt+T,Meta+Ctrl+T,Toggle Thumbnail for Current Window
@@ -341,18 +342,15 @@ toggle do not disturb=none,,Toggle do not disturb
 [services][curl.desktop]
 _launch=Ctrl+Alt+D
 
-[services][kitty.desktop]
-_launch=Meta+Return
-
 [services][net.local.spectacle.desktop]
 _launch=Meta+Ctrl+Shift+S
 
 [services][org.kde.konsole.desktop]
-_launch=none
+_launch=Meta+Return
 
 [services][org.kde.krunner.desktop]
 RunClipboard=none
-_launch=Search\tMeta+Space
+_launch=Meta+Space\tAlt+Space\tSearch
 
 [services][org.kde.spectacle.desktop]
 RectangularRegionScreenShot=Meta+Shift+Print\tMeta+Shift+S
