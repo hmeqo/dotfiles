@@ -15,14 +15,14 @@ init_venv() {
 
 install_crates() {
   cargo build --release
-  cargo install --path crates/* --root './local' --force -q
+  cargo install --path crates/* --root './lib' --force -q
 }
 
 replace_userhome_string() {
   if command -v rg >/dev/null; then
-    files=$(rg -l '/home/hmeqo' {config,local})
+    files=$(rg -l '/home/hmeqo' data/{config,local})
   else
-    files=$(grep -l '/home/hmeqo' -r {config,local})
+    files=$(grep -l '/home/hmeqo' -r data/{config,local})
   fi
   if [[ -n "$files" ]]; then
     echo "$files" | sed 's/.*/"&"/' | xargs sed -i "s#/home/hmeqo#$HOME#g"
@@ -39,9 +39,9 @@ elif [[ $1 = "tui" ]]; then
   source .venv/bin/activate
   confsync tui
 elif [[ $1 = "install-fakehome" ]]; then
-  ./local/fakehome/sync.sh
+  ./lib/share/fakehome/sync.sh
 elif [[ $1 = "uninstall-fakehome" ]]; then
-  ./local/fakehome/uninstall.sh
+  ./lib/share/fakehome/uninstall.sh
 else
   echo "Usage: $0 [init|tui|install-fakehome|uninstall-fakehome]"
   echo "    init: Initialize dotfiles, you need run it every time after pull"

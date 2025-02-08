@@ -1,27 +1,27 @@
 [options.fastfetch]
 tags = ["Cyber ID card"]
 links = [
-    { source = "config/fastfetch/config.jsonc", target = "~/.config/fastfetch/config.jsonc" },
+    { source = "data/config/fastfetch/config.jsonc", target = "~/.config/fastfetch/config.jsonc" },
 ]
 depends = { system = ["fastfetch"] }
 
 [options.bash]
 tags = ["shell"]
 links = [
-    { source = "config/bash/bash_profile", target = "~/.bash_profile" },
-    { source = "config/bash/bashrc", target = "~/.bashrc" },
+    { source = "data/config/bash/bash_profile", target = "~/.bash_profile" },
+    { source = "data/config/bash/bashrc", target = "~/.bashrc" },
 ]
 depends = { system = ["bash"] }
 
 [options.fish]
 tags = ["shell"]
 links = [
-    { source = "config/fish/config.fish", target = "~/.config/fish/config.fish" },
-    { source = "config/fish/functions/_50_keybindings.fish", target = "~/.config/fish/functions/_50_keybindings.fish" },
-    { source = "config/fish/functions/clean_univirsal_env.fish", target = "~/.config/fish/functions/clean_univirsal_env.fish" },
-    { source = "config/fish/functions/fish_mode_prompt.fish", target = "~/.config/fish/functions/fish_mode_prompt.fish" },
-    { source = "config/fish/functions/proxyoff.fish", target = "~/.config/fish/functions/proxyoff.fish" },
-    { source = "config/fish/functions/proxyon.fish", target = "~/.config/fish/functions/proxyon.fish" },
+    { source = "data/config/fish/config.fish", target = "~/.config/fish/config.fish" },
+    { source = "data/config/fish/functions/_50_keybindings.fish", target = "~/.config/fish/functions/_50_keybindings.fish" },
+    { source = "data/config/fish/functions/clean_univirsal_env.fish", target = "~/.config/fish/functions/clean_univirsal_env.fish" },
+    { source = "data/config/fish/functions/fish_mode_prompt.fish", target = "~/.config/fish/functions/fish_mode_prompt.fish" },
+    { source = "data/config/fish/functions/proxyoff.fish", target = "~/.config/fish/functions/proxyoff.fish" },
+    { source = "data/config/fish/functions/proxyon.fish", target = "~/.config/fish/functions/proxyon.fish" },
 ]
 depends = { system = [
     "fish",
@@ -34,107 +34,108 @@ depends = { system = [
 [options.zsh]
 tags = ["shell"]
 links = [
-    { source = "config/zsh/zshenv", target = "~/.zshenv" },
-    { source = "config/zsh/zimrc", target = "~/.config/zsh/.zimrc" },
-    { source = "config/zsh/zprofile", target = "~/.config/zsh/.zprofile" },
-    { source = "config/zsh/zshrc", target = "~/.config/zsh/.zshrc" },
+    { source = "data/config/zsh/zshenv", target = "~/.zshenv" },
+    { source = "data/config/zsh/zimrc", target = "~/.config/zsh/.zimrc" },
+    { source = "data/config/zsh/zprofile", target = "~/.config/zsh/.zprofile" },
+    { source = "data/config/zsh/zshrc", target = "~/.config/zsh/.zshrc" },
 ]
 depends = { system = ["zsh"] }
 
 [options.zsh-no-zshenv]
 tags = ["shell"]
 links = [
-    { source = "config/zsh/zimrc", target = "~/.config/zsh/.zimrc" },
-    { source = "config/zsh/zprofile", target = "~/.config/zsh/.zprofile" },
-    { source = "config/zsh/zshrc", target = "~/.config/zsh/.zshrc" },
+    { source = "data/config/zsh/zimrc", target = "~/.config/zsh/.zimrc" },
+    { source = "data/config/zsh/zprofile", target = "~/.config/zsh/.zprofile" },
+    { source = "data/config/zsh/zshrc", target = "~/.config/zsh/.zshrc" },
 ]
 depends = { system = ["zsh"] }
 
 [options.starship]
 tags = ["shell"]
 links = [
-    { source = "config/starship.toml", target = "~/.config/starship.toml" },
+    { source = "data/config/starship.toml", target = "~/.config/starship.toml" },
 ]
 depends = { system = ["starship"] }
 
 [options.tmux]
 tags = ["shell"]
 links = [
-    { source = "config/tmux/tmux.conf", target = "~/.config/tmux/tmux.conf" },
+    { source = "data/config/tmux/tmux.conf", target = "~/.config/tmux/tmux.conf" },
 ]
 depends = { system = ["tmux", "tmux-plugin-manager"] }
 
 [options.wezterm]
 tags = ["terminal"]
-links = [{ source = "config/wezterm", target = "~/.config/wezterm" }]
+links = [{ source = "data/config/wezterm", target = "~/.config/wezterm" }]
 depends = { system = ["wezterm"] }
 
 [options.kitty]
 tags = ["terminal"]
-links = [{ source = "config/kitty", target = "~/.config/kitty" }]
+links = [{ source = "data/config/kitty", target = "~/.config/kitty" }]
 depends = { system = ["kitty"] }
 
 [options.neovim]
 tags = ["editor"]
-links = [{ source = "config/nvim", target = "~/.config/nvim" }]
+links = [{ source = "data/config/nvim", target = "~/.config/nvim" }]
 depends = { system = ["neovim"] }
 
 [options.vscode]
 tags = ["editor"]
 links = [
-    { source = "config/vscode/snippets", target = "~/.config/Code/User/snippets" },
-    { source = "config/vscode/settings.json", target = "~/.config/Code/User/settings.json" },
-    { source = "config/vscode/keybindings.json", target = "~/.config/Code/User/keybindings.json" },
+    { source = "data/config/vscode/snippets", target = "~/.config/Code/User/snippets" },
+    { source = "data/config/vscode/settings.json", target = "~/.config/Code/User/settings.json" },
+    { source = "data/config/vscode/keybindings.json", target = "~/.config/Code/User/keybindings.json" },
 ]
 
 [options.kde]
 tags = ["DE"]
 links = [
-    { source = "config/kde/kactivitymanagerdrc", target = "~/.config/kactivitymanagerdrc" },
-    { source = "config/kde/kcminputrc", target = "~/.config/kcminputrc" },
-    { source = "config/kde/kdeglobals", target = "~/.config/kdeglobals" },
-    { source = "config/kde/kglobalshortcutsrc", target = "~/.config/kglobalshortcutsrc" },
-    { source = "config/kde/krunnerrc", target = "~/.config/krunnerrc" },
-    { source = "config/kde/kscreenlockerrc", target = "~/.config/kscreenlockerrc" },
-    { source = "config/kde/kwinrc", target = "~/.config/kwinrc" },
-    { source = "config/kde/kwinrulesrc", target = "~/.config/kwinrulesrc" },
-    { source = "config/kde/plasma-org.kde.plasma.desktop-appletsrc", target = "~/.config/plasma-org.kde.plasma.desktop-appletsrc" },
-    { source = "config/kde/plasmarc", target = "~/.config/plasmarc" },
-    { source = "config/kde/plasmashellrc", target = "~/.config/plasmashellrc" },
+    { source = "data/config/kde/kactivitymanagerdrc", target = "~/.config/kactivitymanagerdrc" },
+    { source = "data/config/kde/kcminputrc", target = "~/.config/kcminputrc" },
+    { source = "data/config/kde/kdeglobals", target = "~/.config/kdeglobals" },
+    { source = "data/config/kde/kglobalshortcutsrc", target = "~/.config/kglobalshortcutsrc" },
+    { source = "data/config/kde/krunnerrc", target = "~/.config/krunnerrc" },
+    { source = "data/config/kde/kscreenlockerrc", target = "~/.config/kscreenlockerrc" },
+    { source = "data/config/kde/kwinrc", target = "~/.config/kwinrc" },
+    { source = "data/config/kde/kwinrulesrc", target = "~/.config/kwinrulesrc" },
+    { source = "data/config/kde/plasma-org.kde.plasma.desktop-appletsrc", target = "~/.config/plasma-org.kde.plasma.desktop-appletsrc" },
+    { source = "data/config/kde/plasmarc", target = "~/.config/plasmarc" },
+    { source = "data/config/kde/plasmashellrc", target = "~/.config/plasmashellrc" },
 
     # konsole
-    { source = "config/kde/konsolerc", target = "~/.config/konsolerc" },
-    { source = "local/share/konsole/Dolphin.profile", target = "~/.local/share/konsole/Dolphin.profile" },
-    { source = "local/share/konsole/Transparent.colorscheme", target = "~/.local/share/konsole/Transparent.colorscheme" },
-    { source = "local/share/konsole/Transparent.profile", target = "~/.local/share/konsole/Transparent.profile" },
-    { source = "local/share/konsole/Yakuake.profile", target = "~/.local/share/konsole/Yakuake.profile" },
+    { source = "data/config/kde/konsolerc", target = "~/.config/konsolerc" },
+    { source = "data/local/share/konsole/Dolphin.profile", target = "~/.local/share/konsole/Dolphin.profile" },
+    { source = "data/local/share/konsole/Transparent.colorscheme", target = "~/.local/share/konsole/Transparent.colorscheme" },
+    { source = "data/local/share/konsole/Transparent.profile", target = "~/.local/share/konsole/Transparent.profile" },
+    { source = "data/local/share/konsole/Yakuake.profile", target = "~/.local/share/konsole/Yakuake.profile" },
 
     # yakuake
-    { source = "config/kde/yakuakerc", target = "~/.config/yakuakerc" },
-    { source = "local/share/yakuake/kns_skins/materia-dark", target = "~/.local/share/yakuake/kns_skins/materia-dark" },
+    { source = "data/config/kde/yakuakerc", target = "~/.config/yakuakerc" },
+    { source = "data/local/share/yakuake/kns_skins/materia-dark", target = "~/.local/share/yakuake/kns_skins/materia-dark" },
 
     # kwin
-    { source = "local/share/kwin", target = "~/.local/share/kwin" },
-    { source = "local/share/plasma", target = "~/.local/share/plasma" },
+    { source = "data/local/share/kwin", target = "~/.local/share/kwin" },
+    { source = "data/local/share/plasma", target = "~/.local/share/plasma" },
 
     # icons
-    { source = "local/share/icons/Fluent", target = "~/.local/share/icons/Fluent" },
-    { source = "local/share/icons/Fluent-dark", target = "~/.local/share/icons/Fluent-dark" },
-    { source = "local/share/icons/Fluent-light", target = "~/.local/share/icons/Fluent-light" },
+    { source = "data/local/share/icons/Fluent", target = "~/.local/share/icons/Fluent" },
+    { source = "data/local/share/icons/Fluent-dark", target = "~/.local/share/icons/Fluent-dark" },
+    { source = "data/local/share/icons/Fluent-light", target = "~/.local/share/icons/Fluent-light" },
+    { source = "data/local/share/icons/logo", target = "~/.local/share/icons/logo" },
 
     # themes
-    { source = "local/share/themes/Fluent-round-Dark", target = "~/.local/share/themes/Fluent-round-Dark" },
-    { source = "local/share/themes/Fluent-round-Light", target = "~/.local/share/themes/Fluent-round-Light" },
+    { source = "data/local/share/themes/Fluent-round-Dark", target = "~/.local/share/themes/Fluent-round-Dark" },
+    { source = "data/local/share/themes/Fluent-round-Light", target = "~/.local/share/themes/Fluent-round-Light" },
 
     # color schemes
-    { source = "local/share/color-schemes/FluentDark.colors", target = "~/.local/share/color-schemes/FluentDark.colors" },
-    { source = "local/share/color-schemes/FluentLight.colors", target = "~/.local/share/color-schemes/FluentLight.colors" },
+    { source = "data/local/share/color-schemes/FluentDark.colors", target = "~/.local/share/color-schemes/FluentDark.colors" },
+    { source = "data/local/share/color-schemes/FluentLight.colors", target = "~/.local/share/color-schemes/FluentLight.colors" },
 
     # window decoration
-    { source = "local/share/aurorae/themes/summaculate-day-opaque", target = "~/.local/share/aurorae/themes/summaculate-day-opaque" },
-    { source = "local/share/aurorae/themes/summaculate-night-opaque", target = "~/.local/share/aurorae/themes/summaculate-night-opaque" },
-    { source = "local/share/aurorae/themes/WillowDark", target = "~/.local/share/aurorae/themes/WillowDark" },
-    { source = "local/share/aurorae/themes/WillowLight", target = "~/.local/share/aurorae/themes/WillowLight" },
+    { source = "data/local/share/aurorae/themes/summaculate-day-opaque", target = "~/.local/share/aurorae/themes/summaculate-day-opaque" },
+    { source = "data/local/share/aurorae/themes/summaculate-night-opaque", target = "~/.local/share/aurorae/themes/summaculate-night-opaque" },
+    { source = "data/local/share/aurorae/themes/WillowDark", target = "~/.local/share/aurorae/themes/WillowDark" },
+    { source = "data/local/share/aurorae/themes/WillowLight", target = "~/.local/share/aurorae/themes/WillowLight" },
 ]
 [options.kde.depends]
 system = [
@@ -147,15 +148,15 @@ system = [
 other-items = ["kvantum", "fcitx5", "wallpaper-hmeqo", "fontconfig"]
 
 [options.fontconfig]
-links = [{ source = "config/fontconfig", target = "~/.config/fontconfig" }]
+links = [{ source = "data/config/fontconfig", target = "~/.config/fontconfig" }]
 
 [options.kvantum]
 tags = ["qt", "theme"]
-links = [{ source = "config/Kvantum", target = "~/.config/Kvantum" }]
+links = [{ source = "data/config/Kvantum", target = "~/.config/Kvantum" }]
 
 [options.fcitx5]
 tags = ["input method"]
-links = [{ source = "config/fcitx5", target = "~/.config/fcitx5" }]
+links = [{ source = "data/config/fcitx5", target = "~/.config/fcitx5" }]
 depends = { system = [
     "fcitx5-im",
     "fcitx5-skin-fluentdark-git",
@@ -166,22 +167,22 @@ depends = { system = [
 [options.wallpaper-hmeqo]
 tags = ["wallpaper"]
 links = [
-    { source = "local/share/wallpapers/hmeqo", target = "~/.local/share/wallpapers/hmeqo" },
+    { source = "data/local/share/wallpapers/hmeqo", target = "~/.local/share/wallpapers/hmeqo" },
 ]
-depends = { git-submodule = ["local/share/wallpapers/hmeqo"] }
+depends = { git-submodule = ["data/local/share/wallpapers/hmeqo"] }
 
 [options.wallpaper-stephan-raabe]
 tags = ["wallpaper"]
 links = [
-    { source = "local/share/wallpapers/stephan-raabe", target = "~/.local/share/wallpapers/stephan-raabe" },
+    { source = "data/local/share/wallpapers/stephan-raabe", target = "~/.local/share/wallpapers/stephan-raabe" },
 ]
-depends = { git-submodule = ["local/share/wallpapers/stephan-raabe"] }
+depends = { git-submodule = ["data/local/share/wallpapers/stephan-raabe"] }
 
 [options.hyprland]
 tags = ["WM"]
 links = [
-    { source = "config/hypr", target = "~/.config/hypr" },
-    { source = "local/bin/waybarswitchtheme", target = "~/.local/bin/waybarswitchtheme" },
+    { source = "data/config/hypr", target = "~/.config/hypr" },
+    { source = "data/config/hypr/scripts/waybarswitchtheme", target = "~/.local/bin/waybarswitchtheme" },
 ]
 depends = { system = [
     "hyprland",
@@ -222,40 +223,41 @@ depends = { system = [
 
 [options.rofi]
 tags = ["application launcher"]
-links = [{ source = "config/rofi", target = "~/.config/rofi" }]
+links = [{ source = "data/config/rofi", target = "~/.config/rofi" }]
 depends = { system = ["rofi-wayland"] }
 
 [options.waybar]
-links = [{ source = "config/waybar", target = "~/.config/waybar" }]
+links = [{ source = "data/config/waybar", target = "~/.config/waybar" }]
 depends = { system = ["waybar"] }
 
 [options.dunst]
 tags = ["notification"]
-links = [{ source = "config/dunst", target = "~/.config/dunst" }]
+links = [{ source = "data/config/dunst", target = "~/.config/dunst" }]
 depends = { system = ["dunst"] }
 
 [options.ruff]
 tags = ["python", "linter"]
-links = [{ source = "config/ruff", target = "~/.config/ruff" }]
+links = [{ source = "data/config/ruff", target = "~/.config/ruff" }]
 
 [options.mpv]
 tags = ["video player"]
-links = [{ source = "config/mpv", target = "~/.config/mpv" }]
+links = [{ source = "data/config/mpv", target = "~/.config/mpv" }]
 depends = { system = ["mpv"] }
 
 [options.mangohud]
 tags = ["game"]
 links = [
-    { source = "config/MangoHud/MangoHud.conf", target = "~/.config/MangoHud/MangoHud.conf" },
+    { source = "data/config/MangoHud/MangoHud.conf", target = "~/.config/MangoHud/MangoHud.conf" },
 ]
 depends = { system = ["mangohud"] }
 
 [options.scripts]
 tags = ["scripts"]
 links = [
-    { source = "local/bin/kde-no-global-menu", target = "~/.local/bin/kde-no-global-menu" },
-    { source = "local/bin/pyfiglet-picker", target = "~/.local/bin/pyfiglet-picker" },
-    { source = "local/bin/sshs", target = "~/.local/bin/sshs" },
-    { source = "local/bin/toggle-boost", target = "~/.local/bin/toggle-boost" },
-    { source = "local/bin/togif", target = "~/.local/bin/togif" },
+    { source = "data/local/bin/gifgen", target = "~/.local/bin/gifgen" },
+    { source = "data/local/bin/kde-no-global-menu", target = "~/.local/bin/kde-no-global-menu" },
+    { source = "data/local/bin/pyfiglet-picker", target = "~/.local/bin/pyfiglet-picker" },
+    { source = "data/local/bin/sshs", target = "~/.local/bin/sshs" },
+    { source = "data/local/bin/toggle-boost", target = "~/.local/bin/toggle-boost" },
+    { source = "data/local/bin/togif", target = "~/.local/bin/togif" },
 ]

@@ -1,0 +1,35 @@
+#!/usr/bin/bash
+
+export FAKE_HOME="${FAKE_HOME:-"${XDG_DATA_HOME:-$HOME/.local/share}/fakehome"}"
+
+# If we are already in $fake_home, just run
+if [[ "$HOME" = "$FAKE_HOME" ]]; then
+    exec "$@"
+fi
+
+mkdir -p "$FAKE_HOME"
+
+link_home_file() {
+    link_name="${1/#$HOME/$FAKE_HOME}"
+    if [[ ! -e "$link_name" ]]; then
+        ln -s "$1" "$link_name"
+    fi
+}
+
+# Remove all dead links (not link to $fake_home)
+for file in "$FAKE_HOME"/{*,.*}; do
+    [[ -L "$file" ]] || continue
+    if [[ $(readlink "$file") != "$FAKE_HOME"/* ]] && [[ ! -e "$file" ]]; then
+        unlink "$file"
+    fi
+done
+
+# Link all files in $HOME to $fake_home
+for file in "$HOME"/{*,.*}; do
+    link_home_file "$file"
+done
+
+# Set environment and run
+export HOME="$FAKE_HOME"
+export _JAVA_OPTIONS="$_JAVA_OPTIONS -Duser.home=$FAKE_HOME"
+exec "$@"

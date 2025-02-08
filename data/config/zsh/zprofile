@@ -1,0 +1,10 @@
+#!/usr/bin/zsh
+
+autoload -Uz compinit
+compinit
+
+export DOTFILES="${DOTFILES:-$HOME/.config/dotfiles}"
+
+confd_dirs=("$DOTFILES/data/config/zsh/conf.d/login" "$DOTFILES/data/user/zsh/conf.d/login")
+
+. "$DOTFILES/data/config/bash/bashrc"
