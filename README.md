@@ -78,7 +78,7 @@ paru -S kwin-effect-rounded-corners-git kwin-effects-forceblur-git ttf-maple
 Clone wallpapers repository.
 
 ```bash
-git submodule update --init local/share/wallpapers/hmeqo
+git submodule update --init data/local/share/wallpapers/hmeqo
 ```
 
 And sync `kde` option and it's dependencies options `kvantum`, `fcitx5`, `wallpaper-hmeqo`.
@@ -120,9 +120,9 @@ Fakehome is a program that allows you to run a program in a fake home directory,
 
 ### Customize propmt program
 
-Default prompter is starship, example to use oh-my-posh, set `prompter` to `$DOTFILES/user/bash/conf.d`
+Default prompter is starship, example to use oh-my-posh, set `prompter` to `$DOTFILES/data/user/bash/conf.d`
 
-`$DOTFILES/user/bash/conf.d/interactive/20-prompt.bash`:
+`$DOTFILES/data/user/bash/conf.d/interactive/20-prompt.bash`:
 
 ```bash
 prompter=oh-my-posh

@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+
+CONFIG_DIR="$DOTFILES/data/config/dunst"
+
+CONFIG_FILES=("$CONFIG_DIR/dunstrc")
+
+trap "killall dunst" EXIT
+
+while true; do
+    dunst &
+    inotifywait -e create,modify "${CONFIG_FILES[@]}"
+    killall dunst
+done

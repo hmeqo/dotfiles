@@ -116,9 +116,9 @@ git submodule update --init local/share/wallpapers/hmeqo
 
 ### 自定义提示符程序
 
-默认是 starship, 可通过以下方式修改为 oh-my-posh, 设置 `prompter` 到 `$DOTFILES/user/bash/conf.d`, 其他 shell 同理
+默认是 starship, 可通过以下方式修改为 oh-my-posh, 设置 `prompter` 到 `$DOTFILES/data/user/bash/conf.d`, 其他 shell 同理
 
-`$DOTFILES/user/bash/conf.d/interactive/20-prompt.bash`:
+`$DOTFILES/data/user/bash/conf.d/interactive/20-prompt.bash`:
 
 ```bash
 prompter=oh-my-posh
