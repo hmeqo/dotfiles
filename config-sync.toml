@@ -74,6 +74,16 @@ tags = ["terminal"]
 links = [{ source = "data/config/kitty", target = "~/.config/kitty" }]
 depends = { system = ["kitty"] }
 
+[options.yazi]
+tags = ["file explorer"]
+links = [
+    { source = "data/config/yazi/init.lua", target = "~/.config/yazi/init.lua" },
+    { source = "data/config/yazi/keymap.toml", target = "~/.config/yazi/keymap.toml" },
+    { source = "data/config/yazi/package.toml", target = "~/.config/yazi/package.toml" },
+    { source = "data/config/yazi/yazi.toml", target = "~/.config/yazi/yazi.toml" },
+]
+depends = { system = ["yazi"], post-exec = ["ya pack -i"] }
+
 [options.neovim]
 tags = ["editor"]
 links = [{ source = "data/config/nvim", target = "~/.config/nvim" }]
@@ -209,9 +219,6 @@ depends = { system = [
     "cmake",
     "meson",
     "cpio",
-], hyprpm-add = [
-    "https://github.com/hyprwm/hyprland-plugins",
-    "https://github.com/KZDKM/Hyprspace",
 ], other-items = [
     "rofi",
     "waybar",
@@ -219,6 +226,8 @@ depends = { system = [
     "wallpaper-hmeqo",
     "fcitx5",
     "kvantum",
+], post-exec = [
+    "hyprpm add https://github.com/dawsers/hyprscroller",
 ] }
 
 [options.rofi]

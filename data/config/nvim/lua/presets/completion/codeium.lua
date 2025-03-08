@@ -30,7 +30,7 @@ return {
             --   function() return vim.fn["codeium#Clear"]() end,
             --   expr = true,
             -- },
-            ["<M-i>"] = {
+            ["<M-/>"] = {
               function() return vim.fn["codeium#Accept"]() end,
               expr = true,
             },

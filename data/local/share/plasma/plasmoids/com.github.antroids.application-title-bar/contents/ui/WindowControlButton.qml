@@ -25,6 +25,35 @@ Item {
         AppMenuButton
     }
 
+    function getAccessibleName(type) {
+        switch (type) {
+        case WindowControlButton.Type.MinimizeButton:
+            return "Minimize";
+        case WindowControlButton.Type.MaximizeButton:
+            return "Maximize";
+        case WindowControlButton.Type.RestoreButton:
+            return "Restore";
+        case WindowControlButton.Type.CloseButton:
+            return "Close";
+        case WindowControlButton.Type.AllDesktopsButton:
+            return "All Desktops";
+        case WindowControlButton.Type.KeepAboveButton:
+            return "Keep Above";
+        case WindowControlButton.Type.KeepBelowButton:
+            return "Keep Below";
+        case WindowControlButton.Type.ShadeButton:
+            return "Shade";
+        case WindowControlButton.Type.HelpButton:
+            return "Help";
+        case WindowControlButton.Type.MenuButton:
+            return "Menu";
+        case WindowControlButton.Type.AppMenuButton:
+            return "Application Menu";
+        default:
+            return "";
+        }
+    }
+
     /*
     *  Active* - icons for active windows.
     *  *Disabled - disabled non-interactive buttons
@@ -57,14 +86,20 @@ Item {
     property int buttonType
     property string action: WCB.getAction(buttonType)
     property bool active: true
-    property bool hovered: false
-    property bool pressed: false
+    property bool hovered: hoverHandler.hovered
+    property bool pressed: tapHandler.pressed
     property bool checked: false
     property int iconTheme: WindowControlButton.IconTheme.Plasma
     property int animationDuration: 100
-    property MouseArea mouseArea: buttonMouseArea
     property int iconState: WindowControlButton.IconState.Active
-    property alias mouseAreaEnabled: buttonMouseArea.enabled
+    property bool mouseAreaEnabled: enabled
+
+    Accessible.role: Accessible.Button
+    Accessible.focusable: true
+    Accessible.name: i18n(getAccessibleName(buttonType))
+    Accessible.onPressAction: buttonActionCall()
+    Accessible.checked: checked
+    Accessible.pressed: pressed
 
     signal actionCall(int action)
 
@@ -78,19 +113,24 @@ Item {
     onPressedChanged: Qt.callLater(updateIconState)
     onCheckedChanged: Qt.callLater(updateIconState)
 
-    MouseArea {
-        id: buttonMouseArea
+    function buttonActionCall() {
+        button.actionCall(WCB.getAction(button.buttonType));
+    }
 
-        anchors.fill: parent
+    HoverHandler {
+        id: hoverHandler
+        enabled: button.mouseAreaEnabled
+    }
+
+    TapHandler {
+        id: tapHandler
+        enabled: button.mouseAreaEnabled
         acceptedButtons: Qt.LeftButton
-        enabled: button.enabled
-        hoverEnabled: true
-        onEntered: button.hovered = true
-        onExited: button.hovered = false
-        onPressed: button.pressed = true
-        onReleased: button.pressed = false
-        onClicked: function () {
-            button.actionCall(WCB.getAction(button.buttonType));
+        gesturePolicy: TapHandler.WithinBounds
+        exclusiveSignals: TapHandler.SingleTap
+
+        onTapped: function () {
+            buttonActionCall();
         }
     }
 

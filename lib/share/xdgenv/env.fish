@@ -37,6 +37,9 @@ logs-dir=${XDG_STATE_HOME}/npm/logs'
     end
 end
 
+# nvm
+set -gx NVM_DIR "$XDG_DATA_HOME"/nvm
+
 # Sqlite
 set -gx SQLITE_HISTORY "$XDG_DATA_HOME/sqlite_history"
 
