@@ -35,7 +35,8 @@ return {
           -- neovide_padding_right = 0,
           -- neovide_padding_left = 0,
 
-          neovide_transparency = 0.9,
+          neovide_opacity = 0.9,
+          -- neovide_normal_opacity = 0.9,
           neovide_hide_mouse_when_typing = true,
           neovide_cursor_vfx_mode = "wireframe",
         },

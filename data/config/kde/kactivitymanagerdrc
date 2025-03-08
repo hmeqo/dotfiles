@@ -1,11 +1,11 @@
 [activities]
 bb398e82-3eda-4606-a864-1a5f49cc17b7=Default
-f6743ef6-593b-4d08-a00d-28fb62701320=Untiling
+f6743ef6-593b-4d08-a00d-28fb62701320=Gaming
 
 [activities-icons]
 f6743ef6-593b-4d08-a00d-28fb62701320=activities
 
 [main]
 currentActivity=bb398e82-3eda-4606-a864-1a5f49cc17b7
-runningActivities=bb398e82-3eda-4606-a864-1a5f49cc17b7,f6743ef6-593b-4d08-a00d-28fb62701320
-stoppedActivities=
+runningActivities=bb398e82-3eda-4606-a864-1a5f49cc17b7
+stoppedActivities=f6743ef6-593b-4d08-a00d-28fb62701320

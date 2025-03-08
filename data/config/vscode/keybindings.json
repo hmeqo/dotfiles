@@ -368,6 +368,11 @@
         "when": "suggestWidgetVisible && textInputFocus"
     },
     {
+        "key": "ctrl+e",
+        "command": "hideCodeActionWidget",
+        "when": "codeActionMenuVisible"
+    },
+    {
         "key": "ctrl+n",
         "command": "selectNextCodeAction",
         "when": "codeActionMenuVisible"
@@ -388,7 +393,7 @@
         "when": "codeActionMenuVisible"
     },
     {
-        "key": "alt+i",
+        "key": "alt+/",
         "command": "editor.action.inlineSuggest.commit",
         "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus"
     },
