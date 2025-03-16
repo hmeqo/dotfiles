@@ -133,8 +133,8 @@ ForegroundPositive=1,162,153
 ForegroundVisited=0,188,212
 
 [DirSelect Dialog]
-DirSelectDialog Size=839,579
-History Items[$e]=file:$HOME/workspace/jhsk/uniapp/dist/dev/mp-weixin,file:$HOME/workspace/jhsk,file:$HOME/.config/dotfiles,file:$HOME/repos/python/drf-apischema
+DirSelectDialog Size=964,579
+History Items[$e]=file:$HOME/workspace/projects/jhsk/website/uniapp/dist/dev/mp-weixin,file:$HOME/workspace/projects/jhsk/website/uniapp/dist/build/mp-weixin,file:$HOME/workspace/jhsk/uniapp/dist/build/mp-weixin,file:$HOME/workspace/jhsk/uniapp/dist/dev/mp-weixin,file:$HOME/workspace/jhsk/uniapp/dist/dev/mp-weixin,file:$HOME/workspace/jhsk/uniapp/dist/dev/mp-weixin,file:$HOME/workspace/jhsk,file:$HOME/.config/dotfiles,file:$HOME/repos/python/drf-apischema
 
 [General]
 BrowserApplication=google-chrome.desktop
@@ -156,7 +156,7 @@ LookAndFeelPackage=FluentDark
 [KFileDialog Settings]
 Allow Expansion=false
 Automatically select filename extension=true
-Breadcrumb Navigation=false
+Breadcrumb Navigation=true
 Decoration position=2
 LocationCombo Completionmode=5
 PathCombo Completionmode=5

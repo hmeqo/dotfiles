@@ -9,6 +9,8 @@ EnumerateBackwardKeys=
 EnumerateSkipFirst=False
 # Enumerate Input Method Group Backward
 EnumerateGroupBackwardKeys=
+# Time limit in milliseconds for triggering modifier key shortcuts
+ModifierOnlyKeyTimeout=250
 
 [Hotkey/TriggerKeys]
 0=Alt+Shift+Shift_L
