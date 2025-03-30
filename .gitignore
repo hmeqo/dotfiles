@@ -219,6 +219,7 @@ backup
 /data/config/fish/fish_variables
 /data/user
 
+!/lib
 /lib/bin/collectconf
 /lib/.crates*
 

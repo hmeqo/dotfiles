@@ -37,8 +37,8 @@ logs-dir=${XDG_STATE_HOME}/npm/logs'
     fi
 fi
 
-# nvm
-export NVM_DIR="$XDG_DATA_HOME"/nvm
+# nuget
+export NUGET_PACKAGES="$XDG_CACHE_HOME/NuGetPackages"
 
 # Sqlite
 export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"

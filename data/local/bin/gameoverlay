@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+mangohud --dlsym gamemoderun switcherooctl launch "$@"

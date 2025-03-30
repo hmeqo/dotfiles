@@ -3,5 +3,5 @@
 
 # set -gx SSLKEYLOGFILE "$HOME/.local/share/sslkeylog.log"
 
-set -gx GAMEMODERUNEXEC "switcherooctl launch"
+# set -gx GAMEMODERUNEXEC ""
 set -gx SDL_VIDEODRIVER wayland

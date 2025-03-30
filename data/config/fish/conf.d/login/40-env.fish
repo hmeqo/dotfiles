@@ -19,8 +19,11 @@ set -gx SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS 0
 # Fcitx5
 if test "$XDG_SESSION_TYPE" != wayland
     set -gx GTK_IM_MODULE fcitx
+else
+    if test "$XDG_SESSION_DESKTOP" != KDE
+        set -gx QT_IM_MODULE fcitx
+    end
 end
-set -gx QT_IM_MODULE fcitx
 set -gx XMODIFIERS @im=fcitx
 set -gx SDL_IM_MODULE fcitx
 set -gx INPUT_METHOD fcitx

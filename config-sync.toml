@@ -121,31 +121,9 @@ links = [
 
     # yakuake
     { source = "data/config/kde/yakuakerc", target = "~/.config/yakuakerc" },
-    { source = "data/local/share/yakuake/kns_skins/materia-dark", target = "~/.local/share/yakuake/kns_skins/materia-dark" },
-
-    # kwin
-    { source = "data/local/share/kwin", target = "~/.local/share/kwin" },
-    { source = "data/local/share/plasma", target = "~/.local/share/plasma" },
 
     # icons
-    { source = "data/local/share/icons/Fluent", target = "~/.local/share/icons/Fluent" },
-    { source = "data/local/share/icons/Fluent-dark", target = "~/.local/share/icons/Fluent-dark" },
-    { source = "data/local/share/icons/Fluent-light", target = "~/.local/share/icons/Fluent-light" },
     { source = "data/local/share/icons/logo", target = "~/.local/share/icons/logo" },
-
-    # themes
-    { source = "data/local/share/themes/Fluent-round-Dark", target = "~/.local/share/themes/Fluent-round-Dark" },
-    { source = "data/local/share/themes/Fluent-round-Light", target = "~/.local/share/themes/Fluent-round-Light" },
-
-    # color schemes
-    { source = "data/local/share/color-schemes/FluentDark.colors", target = "~/.local/share/color-schemes/FluentDark.colors" },
-    { source = "data/local/share/color-schemes/FluentLight.colors", target = "~/.local/share/color-schemes/FluentLight.colors" },
-
-    # window decoration
-    { source = "data/local/share/aurorae/themes/summaculate-day-opaque", target = "~/.local/share/aurorae/themes/summaculate-day-opaque" },
-    { source = "data/local/share/aurorae/themes/summaculate-night-opaque", target = "~/.local/share/aurorae/themes/summaculate-night-opaque" },
-    { source = "data/local/share/aurorae/themes/WillowDark", target = "~/.local/share/aurorae/themes/WillowDark" },
-    { source = "data/local/share/aurorae/themes/WillowLight", target = "~/.local/share/aurorae/themes/WillowLight" },
 ]
 [options.kde.depends]
 system = [
@@ -155,6 +133,22 @@ system = [
     "kwin-effect-rounded-corners-git",
     "kwin-effects-forceblur-git",
 ]
+kwin-effects = ["kwin4_effect_geometry_change"]
+kwin-scripts = ["kzones", "movewindow"]
+plasma-desktoptheme = ["Fluent-round-dark"]
+plasma-plasmoids = [
+    "com.github.antroids.application-title-bar",
+    "com.github.prayag2.modernclock",
+    "org.kde.netspeedWidget",
+    "org.kde.plasma.ginti",
+    "org.kde.plasma.simplekickoff",
+    "plasma6-applets-panel-colorizer",
+]
+icons = ["Fluent", "Fluent-dark", "Fluent-light"]
+gtk-themes = ["Fluent-round"]
+color-schemes = ["Fluent"]
+window-decoration = ["summaculate", "Willow"]
+yakuake-skin = ["materia-dark"]
 other-items = ["kvantum", "fcitx5", "wallpaper-hmeqo", "fontconfig"]
 
 [options.fontconfig]
@@ -162,7 +156,10 @@ links = [{ source = "data/config/fontconfig", target = "~/.config/fontconfig" }]
 
 [options.kvantum]
 tags = ["qt", "theme"]
-links = [{ source = "data/config/Kvantum", target = "~/.config/Kvantum" }]
+links = [
+    { source = "data/config/Kvantum/kvantum.kvconfig", target = "~/.config/Kvantum/kvantum.kvconfig" },
+]
+depends = { theme = ["Fluent-round"] }
 
 [options.fcitx5]
 tags = ["input method"]
@@ -263,6 +260,7 @@ depends = { system = ["mangohud"] }
 [options.scripts]
 tags = ["scripts"]
 links = [
+    { source = "data/local/bin/gameoverlay", target = "~/.local/bin/gameoverlay" },
     { source = "data/local/bin/gifgen", target = "~/.local/bin/gifgen" },
     { source = "data/local/bin/kde-no-global-menu", target = "~/.local/bin/kde-no-global-menu" },
     { source = "data/local/bin/pyfiglet-picker", target = "~/.local/bin/pyfiglet-picker" },
