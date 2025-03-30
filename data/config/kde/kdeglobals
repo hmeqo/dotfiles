@@ -133,25 +133,30 @@ ForegroundPositive=1,162,153
 ForegroundVisited=0,188,212
 
 [DirSelect Dialog]
-DirSelectDialog Size=964,579
-History Items[$e]=file:$HOME/workspace/projects/jhsk/website/uniapp/dist/dev/mp-weixin,file:$HOME/workspace/projects/jhsk/website/uniapp/dist/build/mp-weixin,file:$HOME/workspace/jhsk/uniapp/dist/build/mp-weixin,file:$HOME/workspace/jhsk/uniapp/dist/dev/mp-weixin,file:$HOME/workspace/jhsk/uniapp/dist/dev/mp-weixin,file:$HOME/workspace/jhsk/uniapp/dist/dev/mp-weixin,file:$HOME/workspace/jhsk,file:$HOME/.config/dotfiles,file:$HOME/repos/python/drf-apischema
+DirSelectDialog Size=1024,576
+History Items[$e]=file:$HOME/workspace/projects/jhsk,file:///mnt/data1/home/hmeqo/SteamLibrary,file:$HOME/.local/share/Steam,file:$HOME/.local/share/Steam,file:$HOME/.local/share/,file:$HOME/.local/share/,file:///mnt/data1/home/hmeqo/.local/share/Steam,file:$HOME/.local/share/Steam,file:$HOME/Videos/obs,file:$HOME/Videos
 
 [General]
 BrowserApplication=google-chrome.desktop
+ColorScheme=FluentDark
 ColorSchemeHash=2823fd85d4dc3e2f05a21c28d68753f841ff70ed
+TerminalApplication=kitty
+TerminalService=kitty.desktop
+XftAntialias=true
 XftHintStyle=hintslight
-XftSubPixel=none
-fixed=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-font=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-menuFont=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-smallestReadableFont=Maple Mono NF,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-toolBarFont=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+XftSubPixel=rgb
+fixed=FiraCode Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+font=FiraCode Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+menuFont=FiraCode Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+smallestReadableFont=FiraCode Nerd Font,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+toolBarFont=FiraCode Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [Icons]
-Theme=Fluent-dark
+Theme=breeze-dark
 
 [KDE]
 LookAndFeelPackage=FluentDark
+widgetStyle=kvantum-dark
 
 [KFileDialog Settings]
 Allow Expansion=false
@@ -173,13 +178,17 @@ Sort reversed=false
 Speedbar Width=140
 View Style=DetailTree
 
+[KScreen]
+ScaleFactor=1.25
+ScreenScaleFactors=eDP-1=1.25;DP-1=1.25;HDMI-1-0=1.25;
+
 [KShortcutsDialog Settings]
 Dialog Size=600,480
 
 [WM]
 activeBackground=40,40,40
 activeBlend=40,40,40
-activeFont=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+activeFont=FiraCode Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 activeForeground=223,223,223
 inactiveBackground=46,46,46
 inactiveBlend=46,46,46

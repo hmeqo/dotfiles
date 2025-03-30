@@ -4,5 +4,8 @@ DefaultProfile=Transparent.profile
 [General]
 ConfigVersion=1
 
+[MainWindow]
+ToolBarsMovable=Enabled
+
 [UiSettings]
 ColorScheme=

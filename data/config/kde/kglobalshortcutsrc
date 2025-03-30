@@ -50,7 +50,7 @@ Cycle Overview Opposite=none,none,Cycle through Grid View and Overview
 Decrease Opacity=none,,Decrease Opacity of Active Window by 5%
 Edit Tiles=Meta+T,Meta+T,Toggle Tiles Editor
 Expose=Meta+F9,Ctrl+F9,Toggle Present Windows (Current desktop)
-ExposeAll=Launch (C)\tMeta+F10,Ctrl+F10\tLaunch (C),Toggle Present Windows (All desktops)
+ExposeAll=Meta+F10\tLaunch (C),Ctrl+F10\tLaunch (C),Toggle Present Windows (All desktops)
 ExposeClass=Meta+F7,Ctrl+F7,Toggle Present Windows (Window class)
 ExposeClassCurrentDesktop=none,none,Toggle Present Windows (Window class on current desktop)
 Grid View=Meta+G,Meta+G,Toggle Grid View
@@ -110,6 +110,7 @@ MoveZoomUp=none,none,Move Zoomed Area Upwards
 Overview=Meta+W,Meta+W,Toggle Overview
 Setup Window Shortcut=none,,Setup Window Shortcut
 Show Desktop=Meta+D,Meta+D,Peek at Desktop
+Suspend Compositing=Alt+Shift+F12,Alt+Shift+F12,Suspend Compositing
 Switch One Desktop Down=Meta+Ctrl+Down,Meta+Ctrl+Down,Switch One Desktop Down
 Switch One Desktop Up=Meta+Ctrl+Up,Meta+Ctrl+Up,Switch One Desktop Up
 Switch One Desktop to the Left=Meta+Ctrl+Left,Meta+Ctrl+Left,Switch One Desktop to the Left
@@ -290,7 +291,7 @@ activate task manager entry 7=Meta+7,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
 activate widget 120=none,none,Activate Ginti Widget
-activate widget 126=none,none,Activate Simple Application Launcher Widget
+activate widget 144=none,none,Activate Simple Application Launcher Widget
 activate widget 28=none,none,Activate Global Menu Widget
 clear-history=none,,Clear Clipboard History
 clipboard_action=Meta+Ctrl+X,Meta+Ctrl+X,Automatic Action Popup Menu
@@ -312,11 +313,17 @@ toggle do not disturb=none,,Toggle do not disturb
 [services][curl.desktop]
 _launch=Ctrl+Alt+D
 
+[services][io.missioncenter.MissionCenter.desktop]
+_launch=Ctrl+Shift+Esc
+
+[services][kitty.desktop]
+_launch=Meta+Return
+
 [services][net.local.spectacle.desktop]
-_launch=Meta+Shift+S
+_launch=Meta+Alt+Q
 
 [services][org.kde.konsole.desktop]
-_launch=Meta+Return
+_launch=none
 
 [services][org.kde.krunner.desktop]
 RunClipboard=none

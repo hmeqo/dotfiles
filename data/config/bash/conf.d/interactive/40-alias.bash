@@ -1,3 +1,5 @@
+alias clearbuffer='printf '\''\033[2J\033[3J\033[1;1H'\'
+
 if command -v exa >/dev/null; then
     alias __ls='exa --icons -s=type'
     alias __ll='__ls -lh'

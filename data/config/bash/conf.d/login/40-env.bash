@@ -19,8 +19,11 @@ export SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0
 # Fcitx5
 if [[ "$XDG_SESSION_TYPE" != "wayland" ]]; then
     export GTK_IM_MODULE=fcitx
+else
+    if [[ "$XDG_SESSION_DESKTOP" != "KDE" ]]; then
+        export QT_IM_MODULE=fcitx
+    fi
 fi
-export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export SDL_IM_MODULE=fcitx
 export INPUT_METHOD=fcitx

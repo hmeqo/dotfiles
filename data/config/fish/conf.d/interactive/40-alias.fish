@@ -1,3 +1,5 @@
+alias clr 'printf \'\033[2J\033[3J\033[1;1H\''
+
 if command -sq exa
     alias __ls 'exa --icons -s=type'
     alias __ll '__ls -lh'

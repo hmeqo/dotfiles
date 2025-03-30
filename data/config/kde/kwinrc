@@ -1,5 +1,5 @@
 [Activities][LastVirtualDesktop]
-bb398e82-3eda-4606-a864-1a5f49cc17b7=d343c7eb-5447-4bd6-9479-8fe1b60ee05f
+bb398e82-3eda-4606-a864-1a5f49cc17b7=79fb8e02-4cf7-4559-bdd9-ec66608de114
 f6743ef6-593b-4d08-a00d-28fb62701320=d343c7eb-5447-4bd6-9479-8fe1b60ee05f
 
 [Desktops]
@@ -54,9 +54,6 @@ DisableRoundTile=false
 [ModifierOnlyShortcuts]
 Meta=org.kde.kglobalaccel,/component/kwin,,invokeShortcut,Overview
 
-[MouseBindings]
-CommandAll2=Activate, raise and move
-
 [Plugins]
 blurEnabled=false
 cubeEnabled=true
@@ -65,6 +62,7 @@ invertEnabled=true
 karouselEnabled=false
 kinetic_fadingpopupsEnabled=true
 krohnkiteEnabled=false
+kwin4_effect_shapecornersEnabled=false
 kwin_effect_lightlyshadersEnabled=false
 kzonesEnabled=true
 lightlyshaders_blurEnabled=true
@@ -95,12 +93,12 @@ InactiveOutlineColor=136,136,136
 InactiveOutlineThickness=0
 InactiveSecondOutlineColor=51,51,51
 InactiveSecondOutlinePalette=10
-InactiveSecondOutlineThickness=1
+InactiveSecondOutlineThickness=0
 InactiveShadowSize=30
 OutlineColor=136,136,136
 OutlineThickness=0
 SecondOutlineColor=68,68,68
-SecondOutlineThickness=1
+SecondOutlineThickness=0
 ShadowSize=30
 Size=8
 
@@ -142,17 +140,17 @@ LayoutName=sidebar
 [Tiling]
 padding=8
 
-[Tiling][903bce40-e206-5087-83b0-cef1b8606ba0]
+[Tiling][4c85f5bb-4dcb-5bec-8433-5c0e6860d679]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
-[Tiling][9c45c7ae-01d7-542d-adf0-6552eb05840a]
+[Tiling][60803436-01d0-58bb-a53f-573b3057d5f7]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
-[Tiling][ac378286-a537-509f-86ca-fd802405ac93]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
-
-[Tiling][c73684f0-83c4-5586-b5c5-86ac66d58d6c]
+[Tiling][86c6677f-0136-54ea-ba45-660eef8487da]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][d9abd89f-662c-594e-b1d7-c405e4941f34]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.61376953125},{"width":0.38623046875}]}
 
 [Wayland]
 EnablePrimarySelection=false
@@ -164,14 +162,16 @@ BorderlessMaximizedWindows=true
 RollOverDesktops=true
 
 [Xwayland]
-Scale=1
-XwaylandEisNoPromptApps=steam
+Scale=1.25
+XwaylandEisNoPromptApps=steam,xembedsniproxy
 
 [org.kde.kdecoration2]
 BorderSize=None
 BorderSizeAuto=false
 ButtonsOnLeft=F
 ButtonsOnRight=IAX
+library=org.kde.breeze
+theme=Breeze
 
 [ًRound-Corners]
 InactiveCornerRadius=8

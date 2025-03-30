@@ -1,0 +1,13 @@
+[Unit]
+Description=Mount WebDAV
+After=alist.service
+
+[Mount]
+What=http://127.0.0.1:5244/dav/
+Where=/mnt/dav
+Options=noauto,user,uid=hmeqo,gid=hmeqo
+Type=davfs
+TimeoutSec=60
+
+[Install]
+WantedBy=remote-fs.target
