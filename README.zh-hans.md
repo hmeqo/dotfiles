@@ -55,13 +55,17 @@ cd ~/.config/dotfiles
 
 你需要手动安装这些字体
 
-- FiraCode Nerd Font (Nerd Font)
+- Maple Mono
+
+  被依赖: `kde` `hyprland`
+
+- Maple Mono NF (Nerd Font)
 
   被依赖: `konsole` `wazterm` `kitty` `dunst` `rofi`
 
-- Maple Mono NF
+- Maple Mono NF CN 
 
-  被依赖: `kde` `hyprland`
+  被依赖: `vscode`
 
 ### KDE dotfiles
 

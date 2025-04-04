@@ -9,9 +9,7 @@ return {
   },
 
   font = wezterm.font_with_fallback {
-    "FiraCode Nerd Font",
-    -- Chinese
-    "Noto Sans CJK SC",
+    "Maple Mono NF",
   },
   font_size = 12,
   -- freetype_load_target = "Light",
@@ -92,9 +90,9 @@ return {
       mods = "SHIFT",
       action = wezterm.action.ScrollByPage(0.5),
     },
-    { key = "0",         mods = "CTRL", action = wezterm.action.ResetFontSize },
-    { key = "=",         mods = "CTRL", action = wezterm.action.IncreaseFontSize },
-    { key = "-",         mods = "CTRL", action = wezterm.action.DecreaseFontSize },
+    { key = "0", mods = "CTRL", action = wezterm.action.ResetFontSize },
+    { key = "=", mods = "CTRL", action = wezterm.action.IncreaseFontSize },
+    { key = "-", mods = "CTRL", action = wezterm.action.DecreaseFontSize },
     { key = "Backspace", mods = "CTRL", action = wezterm.action.SendKey { key = "w", mods = "CTRL" } },
   },
 }

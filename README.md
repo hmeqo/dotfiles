@@ -58,13 +58,17 @@ You can change the location of dotfiles to your favorite location
 
 Your need install these fonts manually.
 
-- FiraCode Nerd Font (Nerd Font)
+- Maple Mono
+
+  Required By: `kde` `hyprland`
+
+- Maple Mono NF (Nerd Font)
 
   Required By: `konsole` `wazterm` `kitty` `dunst` `rofi`
 
-- Maple Mono NF
+- Maple Mono NF CN
 
-  Required By: `kde` `hyprland`
+  Required By: `vscode`
 
 ### KDE dotfiles
 
