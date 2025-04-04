@@ -7,7 +7,7 @@
 
 <details>
 <summary>KDE</summary>
-<img src="https://github.com/user-attachments/assets/a0d861cc-9e99-4ea8-8a7a-28f30fa9d3ec" alt="kde-preview">
+<img src="https://github.com/user-attachments/assets/d78619c8-4839-49b9-826e-68a9ba267579" alt="kde-preview">
 </details>
 
 <details>
