@@ -1,5 +1,5 @@
 [Activities][LastVirtualDesktop]
-bb398e82-3eda-4606-a864-1a5f49cc17b7=79fb8e02-4cf7-4559-bdd9-ec66608de114
+bb398e82-3eda-4606-a864-1a5f49cc17b7=19298d87-3944-45b6-bb49-7a163067b99d
 f6743ef6-593b-4d08-a00d-28fb62701320=d343c7eb-5447-4bd6-9479-8fe1b60ee05f
 
 [Desktops]
@@ -53,6 +53,11 @@ DisableRoundTile=false
 
 [ModifierOnlyShortcuts]
 Meta=org.kde.kglobalaccel,/component/kwin,,invokeShortcut,Overview
+
+[MouseBindings]
+CommandAll1=Activate, raise and move
+CommandAll2=Move
+CommandAllWheel=Change Opacity
 
 [Plugins]
 blurEnabled=false
@@ -159,7 +164,6 @@ VirtualKeyboardEnabled=true
 
 [Windows]
 BorderlessMaximizedWindows=true
-RollOverDesktops=true
 
 [Xwayland]
 Scale=1.25

@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=Transparent
-Font=FiraCode Nerd Font,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+Font=Maple Mono NF,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [General]
 Command=$SHELL

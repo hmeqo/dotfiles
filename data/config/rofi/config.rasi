@@ -4,7 +4,7 @@ configuration {
     display-combi: "All";
     display-drun: "Drun";
     display-run: "Run";
-    font: "FiraCode Nerd Font 12";
+    font: "Maple Mono NF 12";
     show-icons: true;
 }
 

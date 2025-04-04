@@ -14,7 +14,7 @@
     sort = yes
     idle_threshold = 120
     # font = PingFang SC 12
-    font = FiraCode Nerd Font 12
+    font = Maple Mono NF 12
     line_height = 0
     markup = full
     format = "<b>%s %p</b>\n%b"
