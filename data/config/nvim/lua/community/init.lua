@@ -4,7 +4,6 @@ return {
   { import = "astrocommunity.recipes.heirline-mode-text-statusline" },
   -- { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
   -- { import = "astrocommunity.bars-and-lines.dropbar-nvim" },
-  -- { import = "astrocommunity.editing-support.bigfile-nvim" },
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.fish" },

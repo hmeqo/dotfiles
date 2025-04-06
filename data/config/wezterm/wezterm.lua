@@ -4,8 +4,8 @@ return {
   -- default_prog = { "/usr/bin/bash", "-l", "-c", "tmux attach || tmux" },
   color_scheme = "Dark+",
   colors = {
-    background = "#232627",
-    -- background = "#252525",
+    -- background = "#232627",
+    background = "#252525",
   },
 
   font = wezterm.font_with_fallback {
@@ -18,7 +18,7 @@ return {
 
   -- initial_rows = 30,
   -- initial_cols = 90,
-  initial_rows = 34,
+  initial_rows = 31,
   initial_cols = 108,
   window_padding = {
     left = 2,
