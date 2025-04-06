@@ -89,14 +89,6 @@ tags = ["editor"]
 links = [{ source = "data/config/nvim", target = "~/.config/nvim" }]
 depends = { system = ["neovim"] }
 
-[options.vscode]
-tags = ["editor"]
-links = [
-    { source = "data/config/vscode/snippets", target = "~/.config/Code/User/snippets" },
-    { source = "data/config/vscode/settings.json", target = "~/.config/Code/User/settings.json" },
-    { source = "data/config/vscode/keybindings.json", target = "~/.config/Code/User/keybindings.json" },
-]
-
 [options.kde]
 tags = ["DE"]
 links = [

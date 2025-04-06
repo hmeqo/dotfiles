@@ -5,6 +5,7 @@ return {
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.kotlin" },
+  -- { import = "astrocommunity.editing-support.bigfile-nvim" },
   { import = "presets.editor.neovide" },
   { import = "presets.pack.xml" },
   { import = "presets.pack.python" },
