@@ -217,7 +217,6 @@ backup
 
 /data/user
 
-!/tools
 /tools/bin/collectconf
 /tools/.crates*
 
