@@ -2,7 +2,7 @@
 return {
   { import = "astrocommunity.pack.json" },
   {
-    "jay-babu/mason-null-ls.nvim",
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
     opts = {
       ensure_installed = {
         "prettierd",

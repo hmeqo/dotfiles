@@ -41,6 +41,6 @@ proxyon() {
     export HTTPS_PROXY="$http_url"
     export FTP_PROXY="$http_url"
     export SOCKS_PROXY="$socks_url"
-    export NO_PROXY='localhost,127.0.0.1'
+    export NO_PROXY='localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'
     return 0
 }

@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 USER_HOME="$HOME"
 LOCAL_BIN="$HOME/.local/bin"
 APPLICATIONS="$HOME/.local/share/applications"
@@ -10,14 +12,14 @@ fi
 
 for file in "$LOCAL_BIN"/*; do
   [[ -L "$file" ]] || continue
-  if [[ $(readlink "$file") = "$DOTFILES/lib/share/fakehome/bin/"* ]]; then
+  if [[ $(readlink "$file") = "$DOTFILES/tools/share/fakehome/bin/"* ]]; then
     unlink "$file"
   fi
 done
 
 for file in "$APPLICATIONS"/*; do
   [[ -L "$file" ]] || continue
-  if [[ $(readlink "$file") = "$DOTFILES/lib/share/fakehome/applications/"* ]]; then
+  if [[ $(readlink "$file") = "$DOTFILES/tools/share/fakehome/applications/"* ]]; then
     unlink "$file"
   fi
 done

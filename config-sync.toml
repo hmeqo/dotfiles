@@ -18,7 +18,6 @@ tags = ["shell"]
 links = [
     { source = "data/config/fish/config.fish", target = "~/.config/fish/config.fish" },
     { source = "data/config/fish/functions/_50_keybindings.fish", target = "~/.config/fish/functions/_50_keybindings.fish" },
-    { source = "data/config/fish/functions/clean_univirsal_env.fish", target = "~/.config/fish/functions/clean_univirsal_env.fish" },
     { source = "data/config/fish/functions/fish_mode_prompt.fish", target = "~/.config/fish/functions/fish_mode_prompt.fish" },
     { source = "data/config/fish/functions/proxyoff.fish", target = "~/.config/fish/functions/proxyoff.fish" },
     { source = "data/config/fish/functions/proxyon.fish", target = "~/.config/fish/functions/proxyon.fish" },
@@ -107,7 +106,8 @@ links = [
     # konsole
     { source = "data/config/kde/konsolerc", target = "~/.config/konsolerc" },
     { source = "data/local/share/konsole/Dolphin.profile", target = "~/.local/share/konsole/Dolphin.profile" },
-    { source = "data/local/share/konsole/Transparent.colorscheme", target = "~/.local/share/konsole/Transparent.colorscheme" },
+    { source = "data/local/share/konsole/Fluent (Transparent).colorscheme", target = "~/.local/share/konsole/Fluent (Transparent).colorscheme" },
+    { source = "data/local/share/konsole/Fluent.colorscheme", target = "~/.local/share/konsole/Fluent.colorscheme" },
     { source = "data/local/share/konsole/Transparent.profile", target = "~/.local/share/konsole/Transparent.profile" },
     { source = "data/local/share/konsole/Yakuake.profile", target = "~/.local/share/konsole/Yakuake.profile" },
 

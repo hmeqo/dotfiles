@@ -1,9 +1,8 @@
 ---@type LazySpec
 return {
-  "echasnovski/mini.nvim",
+  "echasnovski/mini.align",
   version = false,
-  config = function()
-    -- Initialize mini.align
-    require("mini.align").setup()
-  end,
+  -- config = function()
+  --   require("mini.align").setup()
+  -- end,
 }

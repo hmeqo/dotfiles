@@ -133,8 +133,9 @@ ForegroundPositive=1,162,153
 ForegroundVisited=0,188,212
 
 [DirSelect Dialog]
-DirSelectDialog Size=1024,576
-History Items[$e]=file:$HOME/workspace/projects/jhsk,file:///mnt/data1/home/hmeqo/SteamLibrary,file:$HOME/.local/share/Steam,file:$HOME/.local/share/Steam,file:$HOME/.local/share/,file:$HOME/.local/share/,file:///mnt/data1/home/hmeqo/.local/share/Steam,file:$HOME/.local/share/Steam,file:$HOME/Videos/obs,file:$HOME/Videos
+DirSelectDialog Size=839,573
+History Items[$e]=file:$HOME/workspace/tmp/panshi/Panshi1.3.0_SDK_11068/SDKDemo,file:$HOME/workspace/tmp/panshi/Panshi1.3.0_SDK_11068/SDKDemo,file:$HOME/workspace/tmp/panshi/Panshi1.3.0_SDK_11068/SDKDemo,file:$HOME/workspace/tg,file:$HOME/workspace/projects/jhsk,file:///mnt/data1/home/hmeqo/SteamLibrary,file:$HOME/.local/share/Steam,file:$HOME/.local/share/Steam,file:$HOME/.local/share/,file:$HOME/.local/share/,file:///mnt/data1/home/hmeqo/.local/share/Steam,file:$HOME/.local/share/Steam,file:$HOME/Videos/obs,file:$HOME/Videos
+Splitter State=\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x9f\x00\x00\x02\xa8\x00\xff\xff\xff\xff\x01\x00\x00\x00\x01\x00
 
 [General]
 BrowserApplication=google-chrome.desktop
@@ -144,11 +145,11 @@ TerminalApplication=kitty
 TerminalService=kitty.desktop
 XftHintStyle=hintslight
 XftSubPixel=none
-fixed=Maple Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-font=Maple Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-menuFont=Maple Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-smallestReadableFont=Maple Mono,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-toolBarFont=Maple Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+fixed=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+font=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+menuFont=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+smallestReadableFont=Maple Mono NF,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+toolBarFont=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [Icons]
 Theme=Fluent-dark

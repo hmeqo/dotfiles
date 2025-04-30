@@ -1,1 +1,1 @@
-source "$DOTFILES/lib/share/xdgenv/env.fish"
+source "$DOTFILES/tools/share/xdgenv/env.fish"
