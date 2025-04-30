@@ -145,11 +145,11 @@ TerminalApplication=kitty
 TerminalService=kitty.desktop
 XftHintStyle=hintslight
 XftSubPixel=none
-fixed=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-font=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-menuFont=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-smallestReadableFont=Maple Mono NF,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-toolBarFont=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+fixed=Maple Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+font=Maple Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+menuFont=Maple Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+smallestReadableFont=Maple Mono,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+toolBarFont=Maple Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [Icons]
 Theme=Fluent-dark
