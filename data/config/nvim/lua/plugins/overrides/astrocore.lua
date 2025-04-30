@@ -3,6 +3,14 @@ return {
   "AstroNvim/astrocore",
   ---@type AstroCoreOpts
   opts = {
+    filetypes = {
+      extension = {
+        ["code-workspace"] = "jsonc",
+        ["json"] = "jsonc",
+        ["rasi"] = "rasi",
+        ["dae"] = "conf",
+      },
+    },
     sessions = {
       -- Configure auto saving
       autosave = {

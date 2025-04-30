@@ -2,14 +2,14 @@ local plugin_util = require "utils.plugin"
 
 local prefix = "<Leader>v"
 
+local ft = { "markdown", "quarto", "rmd", "codecompanion" }
+
 ---@type LazySpec
 return {
-  -- { import = "astrocommunity.pack.markdown" },
-  -- { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   { import = "astrocommunity.markdown-and-latex.markview-nvim" },
   {
     "OXY2DEV/markview.nvim",
-    -- ft = { "markdown", "quarto", "rmd" },
+    -- ft = ft,
     dependencies = {
       { "AstroNvim/astroui", opts = { icons = { Markview = "" } } },
       {
@@ -18,7 +18,7 @@ return {
         opts = {
           autocmds = {
             markview_mappings = plugin_util.auto_map_filetype {
-              ft = { "markdown", "quarto", "rmd" },
+              ft = ft,
               desc = "Markview",
               mappings = {
                 n = {
@@ -34,14 +34,14 @@ return {
                     desc = "Toggle split mode",
                   },
                   [prefix .. "h"] = {
-                    "<Cmd>Markview hybridToggle<CR>v<Esc>",
+                    "<Cmd>Markview hybridToggle<CR>",
                     desc = "Toogle hybrid mode",
                   },
                 },
               },
             },
             markview_callbacks = plugin_util.buf_enter_leave {
-              ft = { "markdown", "quarto", "rmd" },
+              ft = ft,
               on_enter = function()
                 local win = vim.api.nvim_get_current_win()
                 vim.wo[win].concealcursor = "nc"
@@ -56,10 +56,14 @@ return {
           },
         },
       },
-      opts = {
-        -- modes = { "n", "no", "c" },
-        -- hybrid_modes = { "n" },
-      },
+    },
+    opts = {
+      -- modes = { "n", "no", "c" },
+      -- hybrid_modes = { "n" },
+      -- preview = {
+      --   filetypes = { "markdown", "codecompanion" },
+      --   ignore_buftypes = {},
+      -- },
     },
   },
 }

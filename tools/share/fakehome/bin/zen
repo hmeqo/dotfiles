@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+GTK_IM_MODULE=fcitx fakehome /usr/bin/zen "$@"

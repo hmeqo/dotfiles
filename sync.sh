@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 init_venv() {
   if command -v uv >/dev/null; then
     uv sync --frozen
@@ -15,7 +17,7 @@ init_venv() {
 
 install_crates() {
   cargo build --release
-  cargo install --path crates/* --root './lib' --force -q
+  cargo install --path crates/* --root './tools' --force -q
 }
 
 replace_userhome_string() {
@@ -39,9 +41,9 @@ elif [[ $1 = "tui" ]]; then
   source .venv/bin/activate
   confsync tui
 elif [[ $1 = "install-fakehome" ]]; then
-  ./lib/share/fakehome/sync.sh
+  ./tools/share/fakehome/sync.sh
 elif [[ $1 = "uninstall-fakehome" ]]; then
-  ./lib/share/fakehome/uninstall.sh
+  ./tools/share/fakehome/uninstall.sh
 else
   echo "Usage: $0 [init|tui|install-fakehome|uninstall-fakehome]"
   echo "    init: Initialize dotfiles, you need run it every time after pull"

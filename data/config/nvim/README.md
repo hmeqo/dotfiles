@@ -10,13 +10,13 @@
     - overrides
   - presets
     Like Astronvim community, no loaded by default
-  - polish
   - user
     - community
       User custom Astronvim community pack or presets
     - plugins
       User custom plugins
     - polish
-- snippets
-  - user
+  - polish
 - user-config
+  - lua
+  - snippets

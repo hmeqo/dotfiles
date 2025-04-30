@@ -1,5 +1,5 @@
 [Activities][LastVirtualDesktop]
-bb398e82-3eda-4606-a864-1a5f49cc17b7=79fb8e02-4cf7-4559-bdd9-ec66608de114
+bb398e82-3eda-4606-a864-1a5f49cc17b7=d343c7eb-5447-4bd6-9479-8fe1b60ee05f
 f6743ef6-593b-4d08-a00d-28fb62701320=d343c7eb-5447-4bd6-9479-8fe1b60ee05f
 
 [Desktops]
@@ -57,7 +57,6 @@ Meta=org.kde.kglobalaccel,/component/kwin,,invokeShortcut,Overview
 [MouseBindings]
 CommandAll1=Activate, raise and move
 CommandAll2=Move
-CommandAllWheel=Change Opacity
 
 [Plugins]
 blurEnabled=false
@@ -155,7 +154,7 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][d9abd89f-662c-594e-b1d7-c405e4941f34]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.61376953125},{"width":0.38623046875}]}
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.849609375},{"layoutDirection":"floating","tiles":[{"height":0.2496527777777771,"width":0.15000000000000002,"x":0.849609375,"y":0.3064236111111113}],"width":0.150390625}]}
 
 [Wayland]
 EnablePrimarySelection=false

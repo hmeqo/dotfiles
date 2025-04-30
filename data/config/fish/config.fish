@@ -9,7 +9,7 @@ if status is-interactive
     set conf_dirs $conf_dirs "$DOTFILES/data/config/fish/conf.d/interactive" "$DOTFILES/data/user/fish/conf.d/interactive"
 end
 # Load the configuration
-for file in ("$DOTFILES/lib/bin/collectconf" $conf_dirs)
+for file in ("$DOTFILES/tools/bin/collectconf" $conf_dirs)
     source "$file"
 end
 set -e conf_dirs

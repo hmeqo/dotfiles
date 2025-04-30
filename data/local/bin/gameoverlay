@@ -1,3 +1,5 @@
 #!/usr/bin/bash
 
+# PROTON_NO_FSYNC=1 PROTON_NO_ESYNC=1 PROTON_USE_NTSYNC=1 PROTON_ENABLE_WAYLAND=1
+
 mangohud --dlsym gamemoderun switcherooctl launch "$@"

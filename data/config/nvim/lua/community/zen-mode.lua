@@ -9,7 +9,7 @@ return {
       opts = {
         mappings = {
           n = {
-            ["<Leader>z"] = {
+            ["<Leader>bz"] = {
               "<Cmd>ZenMode<CR>",
               desc = "Zen Mode",
             },

@@ -215,12 +215,10 @@ __pycache__
 config-sync.lock
 backup
 
-/data/config/fish/fish_plugins
-/data/config/fish/fish_variables
 /data/user
 
-!/lib
-/lib/bin/collectconf
-/lib/.crates*
+!/tools
+/tools/bin/collectconf
+/tools/.crates*
 
 .python-version

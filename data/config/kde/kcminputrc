@@ -3,7 +3,7 @@ Enabled=true
 ScrollFactor=1
 
 [Libinput][1739][52861][SYN1B8B:00 06CB:CE7D Touchpad]
-Enabled=false
+Enabled=true
 
 [Libinput][2][14][ETPS/2 Elantech Touchpad]
 Enabled=true
