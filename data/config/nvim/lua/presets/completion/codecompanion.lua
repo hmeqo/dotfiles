@@ -1,5 +1,7 @@
 local prefix = "<Leader>i"
 
+local desc = " CodeCompanion"
+
 local adapter = "deepseek"
 
 ---@type LazySpec
@@ -43,7 +45,6 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
       "j-hui/fidget.nvim",
-      { "AstroNvim/astroui", opts = { icons = { CodeCompanion = "" } } },
       {
         "AstroNvim/astrocore",
         ---@type AstroCoreOpts
@@ -51,7 +52,7 @@ return {
           mappings = {
             n = {
               [prefix] = {
-                desc = function() return require("astroui").get_icon("CodeCompanion", 1, true) .. "CodeCompanion" end,
+                desc = desc,
               },
               [prefix .. "a"] = {
                 "<Cmd>CodeCompanionActions<CR>",
@@ -68,7 +69,7 @@ return {
             },
             v = {
               [prefix] = {
-                desc = function() return require("astroui").get_icon("CodeCompanion", 1, true) .. "CodeCompanion" end,
+                desc = desc,
               },
               [prefix .. "a"] = {
                 "<Cmd>'<,'>CodeCompanionActions<CR>",
@@ -84,10 +85,10 @@ return {
       },
       {
         "MeanderingProgrammer/render-markdown.nvim",
+        ft = { "markdown", "codecompanion" },
         opts = {
           file_types = { "markdown", "codecompanion" },
         },
-        ft = { "markdown", "codecompanion" },
       },
     },
   },

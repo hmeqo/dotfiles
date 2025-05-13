@@ -1,5 +1,6 @@
----@type LazySpec
+local prefix = "<Leader>A"
 
+---@type LazySpec
 return {
   { import = "astrocommunity.completion.avante-nvim" },
   {
@@ -15,6 +16,14 @@ return {
           endpoint = "https://api.deepseek.com",
           model = "deepseek-coder",
         },
+        openrouter = {
+          __inherited_from = "openai",
+          endpoint = "https://openrouter.ai/api/v1",
+          api_key_name = "OPENROUTER_API_KEY",
+          model = "anthropic/claude-3.7-sonnet",
+          -- model = "google/gemini-2.5-pro-preview-03-25",
+          -- model = "deepseek/deepseek-chat-v3-0324",
+        },
       },
     },
     dependencies = {
@@ -28,7 +37,8 @@ return {
       {
         -- support for image pasting
         "HakonHarnes/img-clip.nvim",
-        event = "VeryLazy",
+        -- event = "User AstroFile",
+        lazy = true,
         opts = {
           -- recommended settings
           default = {
@@ -45,11 +55,13 @@ return {
       {
         -- Make sure to set this up properly if you have lazy=true
         "MeanderingProgrammer/render-markdown.nvim",
+        optional = true,
+        ft = { "markdown", "Avante" },
         opts = {
           file_types = { "markdown", "Avante" },
         },
-        ft = { "markdown", "Avante" },
       },
+      { "AstroNvim/astrocore", opts = function(_, opts) opts.mappings.v[prefix] = opts.mappings.n[prefix] end },
     },
     specs = {
       {

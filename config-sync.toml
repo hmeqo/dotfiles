@@ -5,6 +5,13 @@ links = [
 ]
 depends = { system = ["fastfetch"] }
 
+[options.fastfetch-mini]
+tags = ["Cyber ID card"]
+links = [
+    { source = "data/config/fastfetch/mini.jsonc", target = "~/.config/fastfetch/config.jsonc" },
+]
+depends = { system = ["fastfetch"] }
+
 [options.bash]
 tags = ["shell"]
 links = [

@@ -4,7 +4,7 @@ return {
   ---@type snacks.Config
   opts = {
     dashboard = {
-      width = 50,
+      width = 46,
       preset = {
         header = table.concat({
           " █████╗ ███████╗████████╗██████╗  ██████╗",
@@ -29,14 +29,14 @@ return {
         -- },
       },
       -- sections = {
-      --   { section = "header" },
+      --   { section = "header", padding = 4 },
       --   {
       --     section = "keys",
-      --     indent = 2,
-      --     padding = 2,
+      --     indent = 0,
+      --     padding = 3,
       --     gap = 1,
       --   },
-      --   { section = "recent_files", icon = " ", title = "Recent Files", indent = 3, padding = 2 },
+      --   -- { section = "recent_files", icon = " ", title = "Recent Files", indent = 3, padding = 2 },
       --   { section = "startup" },
       -- },
     },
