@@ -3,4 +3,4 @@
 	url = https://github.com/hmeqo/wallpaper.git
 [submodule "data/local/share/wallpapers/stephan-raabe"]
 	path = data/local/share/wallpapers/stephan-raabe
-	url = https://gitlab.com/stephan-raabe/wallpaper.git
+	url = https://github.com/mylinuxforwork/wallpaper.git

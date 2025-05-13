@@ -1,6 +1,6 @@
 [Activities][LastVirtualDesktop]
-bb398e82-3eda-4606-a864-1a5f49cc17b7=d343c7eb-5447-4bd6-9479-8fe1b60ee05f
-f6743ef6-593b-4d08-a00d-28fb62701320=d343c7eb-5447-4bd6-9479-8fe1b60ee05f
+bb398e82-3eda-4606-a864-1a5f49cc17b7=bff5f77a-7f39-4961-bacf-70775cee217e
+f6743ef6-593b-4d08-a00d-28fb62701320=bff5f77a-7f39-4961-bacf-70775cee217e
 
 [Desktops]
 Id_1=bff5f77a-7f39-4961-bacf-70775cee217e
@@ -59,7 +59,7 @@ CommandAll1=Activate, raise and move
 CommandAll2=Move
 
 [Plugins]
-blurEnabled=false
+blurEnabled=true
 cubeEnabled=true
 forceblurEnabled=true
 invertEnabled=true
@@ -91,7 +91,7 @@ ActiveSecondOutlinePalette=13
 DisableOutlineTile=false
 DisableRoundTile=false
 Exclusions=yakuake
-InactiveCornerRadius=8
+InactiveCornerRadius=0
 InactiveOutlineAlpha=35
 InactiveOutlineColor=136,136,136
 InactiveOutlineThickness=0
@@ -104,7 +104,7 @@ OutlineThickness=0
 SecondOutlineColor=68,68,68
 SecondOutlineThickness=0
 ShadowSize=30
-Size=8
+Size=0
 
 [Script-krohnkite]
 floatingClass=QQ
@@ -140,6 +140,7 @@ count=0
 
 [TabBox]
 LayoutName=sidebar
+OrderMinimizedMode=1
 
 [Tiling]
 padding=8
@@ -154,7 +155,7 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][d9abd89f-662c-594e-b1d7-c405e4941f34]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.849609375},{"layoutDirection":"floating","tiles":[{"height":0.2496527777777771,"width":0.15000000000000002,"x":0.849609375,"y":0.3064236111111113}],"width":0.150390625}]}
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.68896484375},{"width":0.31103515625}]}
 
 [Wayland]
 EnablePrimarySelection=false

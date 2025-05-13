@@ -2,7 +2,7 @@ local plugin_util = require "utils.plugin"
 
 local prefix = "<Leader>v"
 
-local ft = { "markdown", "quarto", "rmd", "codecompanion" }
+local ft = { "markdown", "quarto", "rmd", "Avante", "codecompanion" }
 
 ---@type LazySpec
 return {
@@ -11,7 +11,6 @@ return {
     "OXY2DEV/markview.nvim",
     -- ft = ft,
     dependencies = {
-      { "AstroNvim/astroui", opts = { icons = { Markview = "" } } },
       {
         "AstroNvim/astrocore",
         ---@type AstroCoreOpts
@@ -23,7 +22,7 @@ return {
               mappings = {
                 n = {
                   [prefix] = {
-                    desc = function() return require("astroui").get_icon("Markview", 1, true) .. "Markview" end,
+                    desc = " Markview",
                   },
                   [prefix .. "v"] = {
                     "<Cmd>Markview toggle<CR>",
