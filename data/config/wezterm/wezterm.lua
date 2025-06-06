@@ -16,10 +16,8 @@ return {
   -- allow_square_glyphs_to_overflow_width = "WhenFollowedBySpace",
   default_cursor_style = "SteadyBar",
 
-  -- initial_rows = 30,
-  -- initial_cols = 90,
-  initial_rows = 31,
-  initial_cols = 108,
+  initial_rows = 32,
+  initial_cols = 120,
   window_padding = {
     left = 2,
     right = 0,

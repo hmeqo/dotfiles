@@ -6,6 +6,9 @@ export XDG_CACHE_HOME="$HOME/.cache"
 # Bash
 export HISTFILE="$XDG_DATA_HOME/bash_history"
 
+# GnuPG
+# export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+
 # python
 export PYTHON_HISTORY="$XDG_DATA_HOME/python_history"
 export PYENV_ROOT="$XDG_DATA_HOME/pyenv"

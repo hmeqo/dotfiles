@@ -6,6 +6,9 @@ set -gx XDG_CACHE_HOME "$HOME/.cache"
 # Bash
 set -gx HISTFILE "$XDG_DATA_HOME/bash_history"
 
+# GnuPg
+# set -gx GNUPGHOME "$XDG_DATA_HOME/gnupg"
+
 # python
 set -gx PYTHON_HISTORY "$XDG_DATA_HOME/python_history"
 set -gx PYENV_ROOT "$XDG_DATA_HOME/pyenv"

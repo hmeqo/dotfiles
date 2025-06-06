@@ -5,6 +5,7 @@ DefaultProfile=Transparent.profile
 ConfigVersion=1
 
 [MainWindow]
+MenuBar=Enabled
 ToolBarsMovable=Enabled
 
 [UiSettings]

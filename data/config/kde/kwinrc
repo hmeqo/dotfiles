@@ -1,5 +1,5 @@
 [Activities][LastVirtualDesktop]
-bb398e82-3eda-4606-a864-1a5f49cc17b7=bff5f77a-7f39-4961-bacf-70775cee217e
+bb398e82-3eda-4606-a864-1a5f49cc17b7=d343c7eb-5447-4bd6-9479-8fe1b60ee05f
 f6743ef6-593b-4d08-a00d-28fb62701320=bff5f77a-7f39-4961-bacf-70775cee217e
 
 [Desktops]
@@ -59,7 +59,7 @@ CommandAll1=Activate, raise and move
 CommandAll2=Move
 
 [Plugins]
-blurEnabled=true
+blurEnabled=false
 cubeEnabled=true
 forceblurEnabled=true
 invertEnabled=true
