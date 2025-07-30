@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+
+# Fetch subscription content using curl
+read -rp "Enter subscription URL: " subscription_url
+content=$(curl -s "$subscription_url")
+
+# Decode base64 content
+decoded_content=$(echo "$content" | base64 --decode)
+
+# Parse and check for nodes
+matches=$(echo "$decoded_content" | grep -E "^ss://|^vmess://|^trojan://")
+if [ -z "$matches" ]; then
+    echo "No nodes found with prefixes ss://, vmess://, or trojan://."
+    exit 1
+fi
+
+# Single fzf call with preview and selection
+selected_node=$(echo "$matches" | fzf --prompt="Select a node: " \
+    --preview="echo -e 'Link: {}\nLabel: $(echo {} | awk -F '#' '{print $2}')'" \
+    --preview-window=right:50%:wrap)
+
+if [ -n "$selected_node" ]; then
+    echo -n "$selected_node" | wl-copy
+    echo "Node copied to clipboard!"
+fi

@@ -3,6 +3,7 @@ Enabled=true
 ScrollFactor=1
 
 [Libinput][1739][52861][SYN1B8B:00 06CB:CE7D Touchpad]
+DisableEventsOnExternalMouse=false
 DisableWhileTyping=true
 Enabled=true
 

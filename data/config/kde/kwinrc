@@ -1,5 +1,5 @@
 [Activities][LastVirtualDesktop]
-bb398e82-3eda-4606-a864-1a5f49cc17b7=d343c7eb-5447-4bd6-9479-8fe1b60ee05f
+bb398e82-3eda-4606-a864-1a5f49cc17b7=bff5f77a-7f39-4961-bacf-70775cee217e
 f6743ef6-593b-4d08-a00d-28fb62701320=bff5f77a-7f39-4961-bacf-70775cee217e
 
 [Desktops]
@@ -16,6 +16,7 @@ NoiseStrength=14
 
 [Effect-blurplus]
 BlurDecorations=true
+BlurMenus=true
 BlurStrength=4
 BottomCornerRadius=10
 DockCornerRadius=10
@@ -23,7 +24,7 @@ MenuCornerRadius=10
 NoiseStrength=14
 TopCornerRadius=10
 TransparentBlur=false
-WindowClasses=konsole\nyakuake\nkitty\norg.wezfurlong.wezterm\nneovide\ndolphin\ncode\nvscodeium\nWindsurf\ndev.zed.Zed\nidea\njetbrains-fleet\npot\nlutris\nthunderbird
+WindowClasses=konsole\nyakuake\nkitty\norg.wezfurlong.wezterm\nneovide\ndolphin\ncode\nvscodeium\nWindsurf\ndev.zed.Zed\nidea\njetbrains-fleet\npot\nlutris\nthunderbird\nTor Browser
 
 [Effect-glide]
 InRotationAngle=6
@@ -91,7 +92,7 @@ ActiveSecondOutlinePalette=13
 DisableOutlineTile=false
 DisableRoundTile=false
 Exclusions=yakuake
-InactiveCornerRadius=0
+InactiveCornerRadius=8
 InactiveOutlineAlpha=35
 InactiveOutlineColor=136,136,136
 InactiveOutlineThickness=0
@@ -104,7 +105,7 @@ OutlineThickness=0
 SecondOutlineColor=68,68,68
 SecondOutlineThickness=0
 ShadowSize=30
-Size=0
+Size=8
 
 [Script-krohnkite]
 floatingClass=QQ
@@ -139,11 +140,16 @@ active=-1
 count=0
 
 [TabBox]
-LayoutName=sidebar
 OrderMinimizedMode=1
 
 [Tiling]
-padding=8
+padding=4
+
+[Tiling][19298d87-3944-45b6-bb49-7a163067b99d][e5b64ab3-d11b-4814-b176-254930622d8a]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][480f3f4c-9307-5635-b703-97fe910f2f9c]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][4c85f5bb-4dcb-5bec-8433-5c0e6860d679]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
@@ -151,7 +157,16 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][60803436-01d0-58bb-a53f-573b3057d5f7]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][79fb8e02-4cf7-4559-bdd9-ec66608de114][e5b64ab3-d11b-4814-b176-254930622d8a]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][86c6677f-0136-54ea-ba45-660eef8487da]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][bff5f77a-7f39-4961-bacf-70775cee217e][e5b64ab3-d11b-4814-b176-254930622d8a]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
+
+[Tiling][d343c7eb-5447-4bd6-9479-8fe1b60ee05f][e5b64ab3-d11b-4814-b176-254930622d8a]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][d9abd89f-662c-594e-b1d7-c405e4941f34]
@@ -174,8 +189,6 @@ BorderSize=None
 BorderSizeAuto=false
 ButtonsOnLeft=F
 ButtonsOnRight=IAX
-library=org.kde.breeze
-theme=Breeze
 
 [ًRound-Corners]
 InactiveCornerRadius=8

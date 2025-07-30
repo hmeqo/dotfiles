@@ -1,18 +1,13 @@
 # Dotfiles
 
 [![en](https://img.shields.io/badge/lang-en-red.svg)](./README.md)
-[![zh-hans](https://img.shields.io/badge/lang-zh--hans-green.svg)](./README.zh-hans.md)
+[![zh-hans](https://img.shields.io/badge/lang-zh--hans-green.svg)](./docs/README.zh-hans.md)
 
 ## Preview
 
 <details>
 <summary>KDE</summary>
-<img src="https://github.com/user-attachments/assets/d78619c8-4839-49b9-826e-68a9ba267579" alt="kde-preview">
-</details>
-
-<details>
-<summary>Hyprland</summary>
-<img src="https://github.com/user-attachments/assets/c5ed14a4-237c-486a-888a-a48f8de4eee2" alt="hyprland_preview">
+<img src="https://github.com/user-attachments/assets/37fd93bb-4fbb-4b0d-9f54-6896d0bb2842" alt="kde-preview">
 </details>
 
 ## Install
@@ -60,11 +55,11 @@ Your need install these fonts manually.
 
 - Maple Mono
 
-  Required By: `kde` `hyprland`
+  Required By: `kde`
 
 - Maple Mono NF (Nerd Font)
 
-  Required By: `konsole` `wazterm` `kitty` `dunst` `rofi`
+  Required By: `konsole` `wazterm` `kitty`
 
 - Maple Mono NF CN
 

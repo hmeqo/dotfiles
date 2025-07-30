@@ -1,0 +1,4 @@
+export RADV_PERFTEST=gpl
+
+export SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0
+export SDL_VIDEODRIVER=wayland

@@ -1,11 +1,21 @@
 global {
   # Bind to LAN and/or WAN as you want. Replace the interface name to your own.
-  lan_interface: enp3s0, wlp5s0, tailscale0, ztyqbz64jm
+  lan_interface: enp5s0, wlo1, tailscale0, ztyqbz64jm, virbr0
   wan_interface: auto # Use "auto" to auto detect WAN interface.
 
-  log_level: info
+  # tproxy_port: 12345
+  # tproxy_port_protect: true
+
+  log_level: warn
   allow_insecure: false
   auto_config_kernel_parameter: true
+
+  # mptcp: true
+}
+
+subscription {
+  # Fill in your subscription links here.
+  Sub: 'https://example.com'
 }
 
 # dns {
@@ -49,6 +59,16 @@ dns {
   }
 }
 
+group {
+  proxy {
+    #filter: name(keyword: HK, keyword: SG)
+    filter: subtag(Sub)
+    # filter: name(keyword: '香港')
+    policy: min_moving_avg
+    # policy: fixed(1)
+  }
+}
+
 # See https://github.com/daeuniverse/dae/blob/main/docs/en/configuration/routing.md for full examples.
 routing {
   pname(NetworkManager) -> direct
@@ -56,37 +76,25 @@ routing {
 
   ### Write your rules below.
 
-  # 目标非常用端口都走直连，避免BT流量走代理
-  !dport(21,22,23,53,80,123,143,194,443,465,587,853,993,995,998) -> direct
+  pname(ssh, tor) -> direct
+  pname(tailscaled, zerotier-one) -> direct
 
   # Disable h3 because it usually consumes too much cpu/mem resources.
-  l4proto(udp) && dport(443) -> block
-  dip(geoip:private) -> direct
-  dip(geoip:cn) -> direct
-  domain(geosite:cn) -> direct
-
-  # Steam
-  domain(geosite:steam@cn, domain:steamserver.net, domain:steamcontent.com) -> direct
+  #l4proto(udp) && dport(443) -> block
 
   # Block AD
   domain(geosite:category-ads) -> block
   domain(geosite:category-ads-all) -> block
-  domain(gstatic.com) -> proxy
+
+  # 目标非常用端口都走直连，避免BT流量走代理
+  !dport(21,22,23,53,80,123,143,194,443,465,587,853,993,995,998) -> direct
+
+  # Steam
+  domain(geosite:steam@cn, domain:steamserver.net, domain:steamcontent.com) -> direct
+
+  dip(geoip:private) -> direct
+  dip(geoip:cn) -> direct
+  domain(geosite:cn) -> direct
 
   fallback: proxy
-}
-
-subscription {
-  # Fill in your subscription links here.
-  # MySubscription: 'https://xxx'
-}
-
-group {
-  proxy {
-    #filter: name(keyword: HK, keyword: SG)
-    filter: subtag(MySubscription)
-    # filter: name(keyword: HK)
-    policy: min_moving_avg
-    # policy: fixed(8)
-  }
 }
