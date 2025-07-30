@@ -4,7 +4,7 @@ end
 
 local function getfontsize()
   if os.getenv "XDG_SESSION_TYPE" == "wayland" or os.getenv "XDG_SESSION_DESKTOP" == "KDE" then
-    return "13"
+    return "12"
   else
     return "10"
   end
@@ -38,6 +38,8 @@ return {
           neovide_opacity = 0.95,
           neovide_hide_mouse_when_typing = true,
           -- neovide_cursor_vfx_mode = "wireframe",
+
+          -- neovide_fullscreen = true,
         },
       },
     },

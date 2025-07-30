@@ -129,12 +129,11 @@ system = [
     "kwallet-pam",
     "ttf-maple",
     "bibata-cursor-theme",
-    "kwin-effect-rounded-corners-git",
     "kwin-effects-forceblur-git",
 ]
 kwin-effects = ["kwin4_effect_geometry_change"]
 kwin-scripts = ["kzones", "movewindow"]
-plasma-desktoptheme = ["Fluent-round-dark"]
+plasma-desktoptheme = ["Materia Dark KDE"]
 plasma-plasmoids = [
     "com.github.antroids.application-title-bar",
     "com.github.prayag2.modernclock",
@@ -143,11 +142,11 @@ plasma-plasmoids = [
     "org.kde.plasma.simplekickoff",
     "plasma6-applets-panel-colorizer",
 ]
-icons = ["Fluent", "Fluent-dark", "Fluent-light"]
-gtk-themes = ["Fluent-round"]
-color-schemes = ["Fluent"]
-window-decoration = ["summaculate", "Willow"]
-yakuake-skin = ["materia-dark"]
+icons = ["Fluent icon theme"]
+gtk-themes = ["Fluent round gtk theme"]
+color-schemes = ["Fluent color scheme"]
+window-decoration = ["ChromeOS Aurorae"]
+yakuake-skin = ["Materia Dark KDE"]
 other-items = ["kvantum", "fcitx5", "wallpaper-hmeqo", "fontconfig"]
 
 [options.fontconfig]
@@ -184,11 +183,40 @@ links = [
 ]
 depends = { git-submodule = ["data/local/share/wallpapers/stephan-raabe"] }
 
-[options.hyprland]
-tags = ["WM"]
+[options.ruff]
+tags = ["python", "linter"]
+links = [{ source = "data/config/ruff", target = "~/.config/ruff" }]
+
+[options.mpv]
+tags = ["video player"]
+links = [{ source = "data/config/mpv", target = "~/.config/mpv" }]
+depends = { system = ["mpv"] }
+
+[options.mangohud]
+tags = ["game"]
 links = [
-    { source = "data/config/hypr", target = "~/.config/hypr" },
-    { source = "data/config/hypr/scripts/waybarswitchtheme", target = "~/.local/bin/waybarswitchtheme" },
+    { source = "data/config/MangoHud/MangoHud.conf", target = "~/.config/MangoHud/MangoHud.conf" },
+]
+depends = { system = ["mangohud"] }
+
+[options.scripts]
+tags = ["scripts"]
+links = [
+    { source = "data/local/bin/gameoverlay", target = "~/.local/bin/gameoverlay" },
+    { source = "data/local/bin/gifgen", target = "~/.local/bin/gifgen" },
+    { source = "data/local/bin/kde-no-global-menu", target = "~/.local/bin/kde-no-global-menu" },
+    { source = "data/local/bin/psubview", target = "~/.local/bin/psubview" },
+    { source = "data/local/bin/pyfiglet-picker", target = "~/.local/bin/pyfiglet-picker" },
+    { source = "data/local/bin/sshs", target = "~/.local/bin/sshs" },
+    { source = "data/local/bin/toggle-boost", target = "~/.local/bin/toggle-boost" },
+    { source = "data/local/bin/togif", target = "~/.local/bin/togif" },
+]
+
+[options.hyprland]
+tags = ["Archived", "WM"]
+links = [
+    { source = "data/archived/config/hypr", target = "~/.config/hypr" },
+    { source = "data/archived/config/hypr/scripts/waybarswitchtheme", target = "~/.local/bin/waybarswitchtheme" },
 ]
 depends = { system = [
     "hyprland",
@@ -227,43 +255,16 @@ depends = { system = [
 ] }
 
 [options.rofi]
-tags = ["application launcher"]
-links = [{ source = "data/config/rofi", target = "~/.config/rofi" }]
+tags = ["Archived", "application launcher"]
+links = [{ source = "data/archived/config/rofi", target = "~/.config/rofi" }]
 depends = { system = ["rofi-wayland"] }
 
 [options.waybar]
-links = [{ source = "data/config/waybar", target = "~/.config/waybar" }]
+tags = ["Archived"]
+links = [{ source = "data/archived/config/waybar", target = "~/.config/waybar" }]
 depends = { system = ["waybar"] }
 
 [options.dunst]
-tags = ["notification"]
-links = [{ source = "data/config/dunst", target = "~/.config/dunst" }]
+tags = ["Archived", "notification"]
+links = [{ source = "data/archived/config/dunst", target = "~/.config/dunst" }]
 depends = { system = ["dunst"] }
-
-[options.ruff]
-tags = ["python", "linter"]
-links = [{ source = "data/config/ruff", target = "~/.config/ruff" }]
-
-[options.mpv]
-tags = ["video player"]
-links = [{ source = "data/config/mpv", target = "~/.config/mpv" }]
-depends = { system = ["mpv"] }
-
-[options.mangohud]
-tags = ["game"]
-links = [
-    { source = "data/config/MangoHud/MangoHud.conf", target = "~/.config/MangoHud/MangoHud.conf" },
-]
-depends = { system = ["mangohud"] }
-
-[options.scripts]
-tags = ["scripts"]
-links = [
-    { source = "data/local/bin/gameoverlay", target = "~/.local/bin/gameoverlay" },
-    { source = "data/local/bin/gifgen", target = "~/.local/bin/gifgen" },
-    { source = "data/local/bin/kde-no-global-menu", target = "~/.local/bin/kde-no-global-menu" },
-    { source = "data/local/bin/pyfiglet-picker", target = "~/.local/bin/pyfiglet-picker" },
-    { source = "data/local/bin/sshs", target = "~/.local/bin/sshs" },
-    { source = "data/local/bin/toggle-boost", target = "~/.local/bin/toggle-boost" },
-    { source = "data/local/bin/togif", target = "~/.local/bin/togif" },
-]

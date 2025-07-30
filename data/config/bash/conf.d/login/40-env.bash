@@ -12,10 +12,6 @@ prepend_path() {
 
 export GTK_USE_PORTAL=1
 
-# Game
-export RADV_PERFTEST=gpl
-export SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0
-
 # Fcitx5
 if [[ "$XDG_SESSION_TYPE" != "wayland" ]]; then
     export GTK_IM_MODULE=fcitx

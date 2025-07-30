@@ -1,17 +1,12 @@
 # Dotfiles
 
-[![en](https://img.shields.io/badge/lang-en-red.svg)](./README.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](../README.md)
 
 ## 预览
 
 <details>
 <summary>KDE</summary>
-<img src="https://github.com/user-attachments/assets/d78619c8-4839-49b9-826e-68a9ba267579" alt="kde-preview">
-</details>
-
-<details>
-<summary>Hyprland</summary>
-<img src="https://github.com/user-attachments/assets/c5ed14a4-237c-486a-888a-a48f8de4eee2" alt="hyprland_preview">
+<img src="https://github.com/user-attachments/assets/37fd93bb-4fbb-4b0d-9f54-6896d0bb2842" alt="kde-preview">
 </details>
 
 ## 安装
@@ -57,11 +52,11 @@ cd ~/.config/dotfiles
 
 - Maple Mono
 
-  被依赖: `kde` `hyprland`
+  被依赖: `kde`
 
 - Maple Mono NF (Nerd Font)
 
-  被依赖: `konsole` `wazterm` `kitty` `dunst` `rofi`
+  被依赖: `konsole` `wazterm` `kitty`
 
 - Maple Mono NF CN 
 

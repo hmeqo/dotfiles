@@ -1,5 +1,5 @@
 [kcminputrc][Mouse]
-cursorTheme=Bibata-Modern-Ice
+cursorTheme=Breeze Dark
 
 [kdeglobals][General]
 ColorScheme=FluentDark
@@ -17,11 +17,11 @@ LayoutName=org.kde.breeze.desktop
 LayoutName=org.kde.breeze.desktop
 
 [kwinrc][org.kde.kdecoration2]
-library=org.kde.kwin.aurorae
-theme=__aurorae__svg__WillowDark
+library=org.kde.breeze
+theme=Breeze
 
 [plasmarc][Theme]
-name=Fluent-round-dark
+name=Materia
 
 [Wallpaper]
 Image=tree.jpg
