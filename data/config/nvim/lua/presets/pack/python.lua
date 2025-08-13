@@ -12,16 +12,16 @@ return {
           settings = {
             basedpyright = {
               analysis = {
-                typeCheckingMode = "off",
+                typeCheckingMode = "basic",
                 autoImportCompletions = true,
                 diagnosticSeverityOverrides = {
                   reportUnusedImport = "information",
                   reportUnusedFunction = "information",
                   reportUnusedVariable = "information",
-                  reportGeneralTypeIssues = "none",
-                  reportOptionalMemberAccess = "none",
-                  reportOptionalSubscript = "none",
-                  reportPrivateImportUsage = "none",
+                  -- reportGeneralTypeIssues = "none",
+                  -- reportOptionalMemberAccess = "none",
+                  -- reportOptionalSubscript = "none",
+                  -- reportPrivateImportUsage = "none",
                 },
               },
             },

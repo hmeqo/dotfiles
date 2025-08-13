@@ -3,28 +3,34 @@ local prefix = "<Leader>A"
 ---@type LazySpec
 return {
   { import = "astrocommunity.completion.avante-nvim" },
+  { import = "astrocommunity.editing-support.mcphub-nvim" },
   {
     "yetone/avante.nvim",
     build = "make",
     opts = {
-      provider = "deepseek",
-      auto_suggestions_provider = "deepseek",
+      provider = "gemini_flash",
+      auto_suggestions_provider = "gemini_flash",
       providers = {
-        deepseek = {
-          __inherited_from = "openai",
-          api_key_name = "DEEPSEEK_API_KEY",
-          endpoint = "https://api.deepseek.com",
-          model = "deepseek-coder",
-        },
-        openrouter = {
+        claude = {
           __inherited_from = "openai",
           endpoint = "https://openrouter.ai/api/v1",
           api_key_name = "OPENROUTER_API_KEY",
           model = "anthropic/claude-sonnet-4",
-          -- model = "google/gemini-2.5-pro-preview-03-25",
-          -- model = "deepseek/deepseek-chat-v3-0324",
+        },
+        gemini_flash = {
+          __inherited_from = "openai",
+          endpoint = "https://openrouter.ai/api/v1",
+          api_key_name = "OPENROUTER_API_KEY",
+          model = "google/gemini-2.5-flash",
+        },
+        deepseek = {
+          __inherited_from = "openai",
+          endpoint = "https://api.deepseek.com",
+          api_key_name = "DEEPSEEK_API_KEY",
+          model = "deepseek-coder",
         },
       },
+      system_prompt = "用中文交流",
     },
     dependencies = {
       --- The below dependencies are optional,
