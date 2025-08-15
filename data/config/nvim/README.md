@@ -1,12 +1,13 @@
 ## Directory structure
 
 - lua
+  - astrodefault
+    - community
+    - plugins
   - community
     Custom Astronvim community pack
-    - astrodefault
   - plugins
     Custom plugins
-    - astrodefault
     - overrides
   - presets
     Like Astronvim community, no loaded by default
@@ -17,6 +18,7 @@
       User custom plugins
     - polish
   - polish
-- user-config
+- user-config (link from $DOTFILE/config/user/nvim)
   - lua
   - snippets
+  - .env

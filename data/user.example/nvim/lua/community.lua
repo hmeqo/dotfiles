@@ -1,14 +1,17 @@
 ---@type LazySpec
 return {
   { import = "presets.editor.neovide" },
+  -- { import = "presets.editing-support.zen-mode" },
   -- { import = "astrocommunity.editing-support.bigfile-nvim" },
   -- { import = "presets.editing-support.formatter-preferred" },
   { import = "presets.markdown-and-latex.render-markdown" },
   -- { import = "presets.markdown-and-latex.markview" },
+  -- { import = "presets.completion.cmp" },
   { import = "presets.completion.windsurf" },
   -- { import = "presets.completion.codecompanion" },
   { import = "presets.completion.avante-nvim" },
   { import = "presets.snippet.luasnip" },
+  { import = "presets.media.codesnap" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.tailwindcss" },
