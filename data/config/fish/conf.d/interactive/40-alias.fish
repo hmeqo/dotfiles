@@ -1,15 +1,17 @@
 alias clr 'printf \'\033[2J\033[3J\033[1;1H\''
 
+alias wget 'curl --continue-at - --location --progress-bar --remote-name --remote-time'
+
 if command -sq fastfetch
     alias ff fastfetch
 end
 
-if command -sq exa
-    alias __ls 'exa --icons -s=type'
+if command -sq eza
+    alias __ls 'eza --icons -s=type'
     alias __ll '__ls -lh'
     alias lt 'ls -lTah'
 else
-    alias __ls 'ls --color=auto -s=type'
+    alias __ls '/usr/bin/ls --color=auto -s=type'
     alias __ll '__ls -lh'
     alias lt 'tree -pCsh'
 end

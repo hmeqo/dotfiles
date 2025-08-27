@@ -332,6 +332,9 @@ _launch=Meta+Space\tAlt+F2\tAlt+Space\tSearch
 [services][org.kde.plasma-systemmonitor.desktop]
 _launch=none
 
+[services][org.kde.spectacle.desktop]
+_launch=Print
+
 [services][org.kde.touchpadshortcuts.desktop]
 ToggleTouchpad=Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku
 

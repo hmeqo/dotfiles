@@ -9,9 +9,8 @@ return {
         opts = {
           mappings = {
             n = {
-              ["<Leader>s"] = { desc = "Suda" },
-              ["<Leader>sr"] = { "<Cmd>SudaRead<CR>", desc = "Suda Read" },
-              ["<Leader>sw"] = { "<Cmd>SudaWrite<CR>", desc = "Suda Write" },
+              ["<Leader>R"] = { "<Cmd>SudaRead<CR>", desc = "Suda Read" },
+              ["<Leader>W"] = { "<Cmd>SudaWrite<CR>", desc = "Suda Write" },
             },
           },
           options = {

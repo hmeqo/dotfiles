@@ -133,7 +133,7 @@ ForegroundPositive=1,162,153
 ForegroundVisited=0,188,212
 
 [DirSelect Dialog]
-DirSelectDialog Size=1024,576
+DirSelectDialog Size=786,581
 Splitter State=\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x9f\x00\x00\x02\xa8\x00\xff\xff\xff\xff\x01\x00\x00\x00\x01\x00
 
 [General]
@@ -152,6 +152,7 @@ toolBarFont=Maple Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [KDE]
 LookAndFeelPackage=FluentDark
+widgetStyle=kvantum-dark
 
 [KFileDialog Settings]
 Allow Expansion=false

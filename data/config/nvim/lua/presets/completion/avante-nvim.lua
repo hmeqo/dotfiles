@@ -69,11 +69,5 @@ return {
       },
       { "AstroNvim/astrocore", opts = function(_, opts) opts.mappings.v[prefix] = opts.mappings.n[prefix] end },
     },
-    specs = {
-      {
-        "Kaiser-Yang/blink-cmp-avante",
-        enabled = false,
-      },
-    },
   },
 }

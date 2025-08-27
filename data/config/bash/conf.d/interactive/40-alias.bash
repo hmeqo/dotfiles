@@ -1,4 +1,6 @@
-alias clearbuffer='printf '\''\033[2J\033[3J\033[1;1H'\'
+alias clr='printf '\''\033[2J\033[3J\033[1;1H'\'
+
+alias wget='curl --continue-at - --location --progress-bar --remote-name --remote-time'
 
 if command -v fastfetch >/dev/null; then
     alias ff='fastfetch'
@@ -9,7 +11,7 @@ if command -v exa >/dev/null; then
     alias __ll='__ls -lh'
     alias lt='ls -lTah'
 else
-    alias __ls='ls --color=auto -s=type'
+    alias __ls='/usr/bin/ls --color=auto -s=type'
     alias __ll='__ls -lh'
     alias lt='tree -pCsh'
 fi
