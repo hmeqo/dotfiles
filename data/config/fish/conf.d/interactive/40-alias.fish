@@ -11,7 +11,7 @@ if command -sq eza
     alias __ll '__ls -lh'
     alias lt 'ls -lTah'
 else
-    alias __ls '/usr/bin/ls --color=auto -s=type'
+    alias __ls '/usr/bin/ls --color'
     alias __ll '__ls -lh'
     alias lt 'tree -pCsh'
 end

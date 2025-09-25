@@ -3,7 +3,7 @@
 USER_HOME="$HOME"
 LOCAL_BIN="$HOME/.local/bin"
 APPLICATIONS="$HOME/.local/share/applications"
-DOTFILES="${DOTFILES:-$USER_HOME/.config/dotfiles}"
+DOTFILES="${DOTFILES:-$USER_HOME/.local/opt/dotfiles}"
 
 mkdir -p "$LOCAL_BIN"
 mkdir -p "$APPLICATIONS"

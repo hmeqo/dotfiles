@@ -14,11 +14,11 @@
 
 ### Clone repository
 
-Clone this repository to `~/.config/dotfiles`.
+Clone this repository to `~/.local/opt/dotfiles`.
 
 ```bash
-git clone --depth=1 https://github.com/hmeqo/dotfiles ~/.config/dotfiles
-cd ~/.config/dotfiles
+git clone --depth=1 https://github.com/hmeqo/dotfiles ~/.local/opt/dotfiles
+cd ~/.local/opt/dotfiles
 ```
 
 ### Manage symlinks with `confsync`
@@ -34,7 +34,7 @@ It will display a tui in the terminal to choose which ones you want to sync.
 ./sync.sh tui
 ```
 
-If you already have a configuration file, don’t worry - it will be safely backed up to `~/.config/dotfiles/backup` before the synchronization process begins.
+If you already have a configuration file, don’t worry - it will be safely backed up to `$DOTFILES/backup` before the synchronization process begins.
 In the event of uninstallation, your original configuration file will be restored from this backup.
 
 ### Dotfiles base environment variable
@@ -43,9 +43,9 @@ Some ways to set `DOTFILES` environment variable:
 
 - Choose one option of `fish`, `bash`, `zsh` and set it as default shell.
 
-- Add `export DOTFILES=$HOME/.config/dotfiles` to you shell configuration file.
+- Add `export DOTFILES=$HOME/.local/opt/dotfiles` to you shell configuration file.
 
-- Add `DOTFILES=<your_user_home>/.config/dotfiles` to `~/.config/environment.d/00-dotfiles.conf` (need systemd)
+- Add `DOTFILES=<your_user_home>/.local/opt/dotfiles` to `~/.config/environment.d/00-dotfiles.conf` (refer to the DM's specific behavior)
 
 You can change the location of dotfiles to your favorite location
 

@@ -1,27 +1,185 @@
-local prefix = "<Leader>A"
+local prefix = "<Leader>a"
 
 ---@type LazySpec
 return {
-  { import = "astrocommunity.completion.avante-nvim" },
-  { import = "astrocommunity.editing-support.mcphub-nvim" },
+  {
+    "yetone/avante.nvim",
+    build = vim.fn.has "win32" == 1 and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
+      or "make",
+    event = "User AstroFile", -- load on file open because Avante manages it's own bindings
+    cmd = {
+      "AvanteAsk",
+      "AvanteBuild",
+      "AvanteEdit",
+      "AvanteRefresh",
+      "AvanteSwitchProvider",
+      "AvanteShowRepoMap",
+      "AvanteModels",
+      "AvanteChat",
+      "AvanteToggle",
+      "AvanteClear",
+      "AvanteFocus",
+      "AvanteStop",
+    },
+    dependencies = {
+      { "stevearc/dressing.nvim", optional = true },
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      { "AstroNvim/astrocore", opts = function(_, opts) opts.mappings.n[prefix] = { desc = " Avante" } end },
+    },
+    opts = {
+      mappings = {
+        ask = prefix .. "<CR>",
+        edit = prefix .. "e",
+        refresh = prefix .. "r",
+        new_ask = prefix .. "n",
+        focus = prefix .. "f",
+        select_model = prefix .. "?",
+        stop = prefix .. "S",
+        select_history = prefix .. "h",
+        toggle = {
+          default = prefix .. "t",
+          debug = prefix .. "d",
+          hint = prefix .. "H",
+          suggestion = prefix .. "s",
+          repomap = prefix .. "R",
+        },
+        diff = {
+          next = "]c",
+          prev = "[c",
+        },
+        files = {
+          add_current = prefix .. ".",
+          add_all_buffers = prefix .. "B",
+        },
+      },
+    },
+    specs = { -- configure optional plugins
+      { "AstroNvim/astroui", opts = { icons = { Avante = "" } } },
+      {
+        "Kaiser-Yang/blink-cmp-avante",
+        lazy = true,
+        specs = {
+          {
+            "Saghen/blink.cmp",
+            optional = true,
+            opts = {
+              sources = {
+                default = { "avante" },
+                providers = {
+                  avante = { module = "blink-cmp-avante", name = "Avante" },
+                },
+              },
+            },
+          },
+        },
+      },
+      { -- if copilot.lua is available, default to copilot provider
+        "zbirenbaum/copilot.lua",
+        optional = true,
+        specs = {
+          {
+            "yetone/avante.nvim",
+            opts = {
+              provider = "copilot",
+              auto_suggestions_provider = "copilot",
+            },
+          },
+        },
+      },
+      {
+        -- make sure `Avante` is added as a filetype
+        "MeanderingProgrammer/render-markdown.nvim",
+        optional = true,
+        opts = function(_, opts)
+          if not opts.file_types then opts.file_types = { "markdown" } end
+          opts.file_types = require("astrocore").list_insert_unique(opts.file_types, { "Avante" })
+        end,
+      },
+      {
+        -- make sure `Avante` is added as a filetype
+        "OXY2DEV/markview.nvim",
+        optional = true,
+        opts = function(_, opts)
+          if not opts.preview then opts.preview = {} end
+          if not opts.preview.filetypes then opts.preview.filetypes = { "markdown", "quarto", "rmd" } end
+          opts.preview.filetypes = require("astrocore").list_insert_unique(opts.preview.filetypes, { "Avante" })
+        end,
+      },
+      {
+        "folke/snacks.nvim",
+        optional = true,
+        specs = {
+          {
+            "yetone/avante.nvim",
+            opts = {
+              selector = {
+                provider = "snacks",
+              },
+            },
+          },
+        },
+      },
+      {
+        "nvim-neo-tree/neo-tree.nvim",
+        optional = true,
+        opts = {
+          filesystem = {
+            commands = {
+              avante_add_files = function(state)
+                local node = state.tree:get_node()
+                local filepath = node:get_id()
+                local relative_path = require("avante.utils").relative_path(filepath)
+
+                local sidebar = require("avante").get()
+
+                local open = sidebar:is_open()
+                -- ensure avante sidebar is open
+                if not open then
+                  require("avante.api").ask()
+                  sidebar = require("avante").get()
+                end
+
+                sidebar.file_selector:add_selected_file(relative_path)
+
+                -- remove neo tree buffer
+                if not open then sidebar.file_selector:remove_selected_file "neo-tree filesystem [1]" end
+              end,
+            },
+            window = {
+              mappings = {
+                ["oa"] = "avante_add_files",
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+
+  -- { import = "astrocommunity.completion.avante-nvim" },
+  -- { import = "astrocommunity.editing-support.mcphub-nvim" },
+
   {
     "yetone/avante.nvim",
     build = "make",
     opts = {
-      provider = "gemini_flash",
-      auto_suggestions_provider = "gemini_flash",
+      provider = "openrouter",
+      auto_suggestions_provider = "autocompletion",
       providers = {
-        claude = {
+        autocompletion = {
           __inherited_from = "openai",
           endpoint = "https://openrouter.ai/api/v1",
           api_key_name = "OPENROUTER_API_KEY",
-          model = "anthropic/claude-sonnet-4",
+          model = "x-ai/grok-code-fast-1",
         },
-        gemini_flash = {
+        openrouter = {
           __inherited_from = "openai",
           endpoint = "https://openrouter.ai/api/v1",
           api_key_name = "OPENROUTER_API_KEY",
-          model = "google/gemini-2.5-flash",
+          model = "x-ai/grok-code-fast-1",
+          -- model = "google/gemini-2.5-flash",
+          -- model = "anthropic/claude-sonnet-4",
         },
         deepseek = {
           __inherited_from = "openai",
@@ -30,7 +188,23 @@ return {
           model = "deepseek-coder",
         },
       },
-      system_prompt = "用中文交流",
+      web_search_engine = {
+        provider = "google", -- tavily, serpapi, google, kagi, brave, or searxng
+        proxy = nil, -- proxy support, e.g., http://127.0.0.1:7890
+      },
+      behaviour = {
+        auto_suggestions = false, -- Experimental stage
+        auto_set_highlight_group = true,
+        auto_set_keymaps = true,
+        auto_apply_diff_after_generation = false,
+        support_paste_from_clipboard = false,
+        minimize_diff = true, -- Whether to remove unchanged lines when applying a code block
+        enable_token_counting = true, -- Whether to enable token counting. Default to true.
+        auto_approve_tool_permissions = false, -- Default: show permission prompts for all tools
+        -- Examples:
+        -- auto_approve_tool_permissions = true,                -- Auto-approve all tools (no prompts)
+        -- auto_approve_tool_permissions = {"bash", "replace_in_file"}, -- Auto-approve specific tools only
+      },
     },
     dependencies = {
       --- The below dependencies are optional,

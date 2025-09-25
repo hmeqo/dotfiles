@@ -1,4 +1,4 @@
 [Greeter][Wallpaper][org.kde.image][General]
-Image=/home/hmeqo/.config/dotfiles/data/local/share/wallpapers/stephan-raabe/astronaut_jellyfish.jpg
-PreviewImage=/home/hmeqo/.config/dotfiles/data/local/share/wallpapers/stephan-raabe/astronaut_jellyfish.jpg
+Image=/home/hmeqo/.local/opt/dotfiles/data/local/share/wallpapers/stephan-raabe/astronaut_jellyfish.jpg
+PreviewImage=/home/hmeqo/.local/opt/dotfiles/data/local/share/wallpapers/stephan-raabe/astronaut_jellyfish.jpg
 SlidePaths=/home/hmeqo/.local/share/wallpapers/,/usr/share/wallpapers/

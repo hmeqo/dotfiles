@@ -1,13 +1,3 @@
-[1fe34d29-0b2e-4701-94f7-32c45d45031d]
-Description=Frameless
-noborder=true
-noborderrule=3
-title=Tiny RDM
-types=1
-wmclass=tiny-rdm Tiny RDM
-wmclasscomplete=true
-wmclassmatch=3
-
 [273d1614-96b0-4fd0-8bb4-f37e0d0ac64c]
 Description=Transparent
 opacityactive=90
@@ -24,8 +14,8 @@ wmclass=dolphin|Code|code|Windsurf|idea|jetbrains-fleet
 wmclassmatch=3
 
 [General]
-count=3
-rules=1fe34d29-0b2e-4701-94f7-32c45d45031d,dc9511e9-a106-487e-b67b-5aa559703e08,7ae3d98e-b733-4790-a053-7521c6648475
+count=2
+rules=dc9511e9-a106-487e-b67b-5aa559703e08,7ae3d98e-b733-4790-a053-7521c6648475
 
 [bdae4665-afcc-4feb-a9cd-4e4d595575f8]
 Description=Window settings for flameshot

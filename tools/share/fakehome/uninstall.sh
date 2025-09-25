@@ -3,7 +3,7 @@
 USER_HOME="$HOME"
 LOCAL_BIN="$HOME/.local/bin"
 APPLICATIONS="$HOME/.local/share/applications"
-DOTFILES="${DOTFILES:-$USER_HOME/.config/dotfiles}"
+DOTFILES="${DOTFILES:-$USER_HOME/.local/opt/dotfiles}"
 
 if [ "$1" = "--clean" ]; then
   echo "Remove $USER_HOME/.local/share/fakehome"

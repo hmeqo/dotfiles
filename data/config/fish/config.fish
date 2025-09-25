@@ -1,4 +1,4 @@
-set -q DOTFILES || set -gx DOTFILES $HOME/.config/dotfiles
+set -q DOTFILES || set -gx DOTFILES $HOME/.local/opt/dotfiles
 
 # Define the functions and conf.d directories
 set -l conf_dirs "$DOTFILES/data/config/fish/conf.d" "$DOTFILES/data/user/fish/conf.d"

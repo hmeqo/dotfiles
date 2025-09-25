@@ -2,7 +2,7 @@
 return {
   { import = "presets.editor.neovide" },
   -- { import = "presets.editing-support.zen-mode" },
-  -- { import = "astrocommunity.editing-support.bigfile-nvim" },
+  { import = "astrocommunity.editing-support.bigfile-nvim" },
   -- { import = "presets.editing-support.formatter-preferred" },
   { import = "presets.markdown-and-latex.render-markdown" },
   -- { import = "presets.markdown-and-latex.markview" },

@@ -1,11 +1,12 @@
 [activities]
-bb398e82-3eda-4606-a864-1a5f49cc17b7=Default
-f6743ef6-593b-4d08-a00d-28fb62701320=Cool
+3925063d-e935-4a98-9bde-732e57a156af=Game
+7ab2f3ee-2f98-4111-bb48-b04b1d170fb7=Default
 
 [activities-icons]
-f6743ef6-593b-4d08-a00d-28fb62701320=activities
+3925063d-e935-4a98-9bde-732e57a156af=activities
+7ab2f3ee-2f98-4111-bb48-b04b1d170fb7=activities
 
 [main]
-currentActivity=bb398e82-3eda-4606-a864-1a5f49cc17b7
-runningActivities=bb398e82-3eda-4606-a864-1a5f49cc17b7,f6743ef6-593b-4d08-a00d-28fb62701320
-stoppedActivities=
+currentActivity=7ab2f3ee-2f98-4111-bb48-b04b1d170fb7
+runningActivities=7ab2f3ee-2f98-4111-bb48-b04b1d170fb7
+stoppedActivities=3925063d-e935-4a98-9bde-732e57a156af

@@ -2,7 +2,7 @@ local prefix = "<Leader>i"
 
 local desc = " CodeCompanion"
 
-local adapter = "deepseek"
+local defaultAdapter = "openrouter"
 
 ---@type LazySpec
 return {
@@ -19,16 +19,25 @@ return {
       },
       strategies = {
         chat = {
-          adapter = adapter,
+          adapter = defaultAdapter,
         },
         inline = {
-          adapter = adapter,
+          adapter = defaultAdapter,
         },
         agent = {
-          adapter = adapter,
+          adapter = defaultAdapter,
         },
       },
       adapters = {
+        openrouter = function()
+          return require("codecompanion.adapters").extend("openrouter", {
+            schema = {
+              model = {
+                default = "x-ai/grok-code-fast-1",
+              },
+            },
+          })
+        end,
         deepseek = function()
           return require("codecompanion.adapters").extend("deepseek", {
             schema = {

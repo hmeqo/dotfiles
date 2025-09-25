@@ -13,11 +13,11 @@
 
 ### 克隆仓库
 
-克隆仓库到 `~/.config/dotfiles`
+克隆仓库到 `~/.local/opt/dotfiles`
 
 ```bash
-git clone --depth=1 https://github.com/hmeqo/dotfiles ~/.config/dotfiles
-cd ~/.config/dotfiles
+git clone --depth=1 https://github.com/hmeqo/dotfiles ~/.local/opt/dotfiles
+cd ~/.local/opt/dotfiles
 ```
 
 ### 通过 confsync 管理链接文件
@@ -32,7 +32,7 @@ cd ~/.config/dotfiles
 ./sync.sh tui
 ```
 
-如果你已经有配置文件在目标目录了，confsync 会在同步前自动备份配置文件到 `~/.config/dotfiles/backup`，并在卸载或取消同步时恢复
+如果你已经有配置文件在目标目录了，confsync 会在同步前自动备份配置文件到 `$DOTFILES/backup`，并在卸载或取消同步时恢复
 
 ### Dotfiles 基础环境变量
 
@@ -40,9 +40,9 @@ cd ~/.config/dotfiles
 
 - 选择其中任一选项 `fish`, `bash`, `zsh` 并设置为默认 shell
 
-- 添加 `export DOTFILES=$HOME/.config/dotfiles` 到你的 shell 配置文件
+- 添加 `export DOTFILES=$HOME/.local/opt/dotfiles` 到你的 shell 配置文件
 
-- 添加 `DOTFILES=<your_user_home>/.config/dotfiles` 到 `~/.config/environment.d/00-dotfiles.conf` (依赖 systemd)
+- 添加 `DOTFILES=<your_user_home>/.local/opt/dotfiles` 到 `~/.config/environment.d/00-dotfiles.conf` (依赖DM的行为)
 
 可以修改 `DOTFILES` 来更改 dotfiles 目录的位置
 

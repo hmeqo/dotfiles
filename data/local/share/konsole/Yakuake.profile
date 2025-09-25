@@ -1,6 +1,7 @@
 [Appearance]
-ColorScheme=Fluent (Transparent)
+ColorScheme=Materia Dark (Transparent)
 Font=Maple Mono NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+UseFontBrailleChararacters=false
 
 [General]
 Command=$SHELL

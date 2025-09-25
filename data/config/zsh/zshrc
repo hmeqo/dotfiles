@@ -144,7 +144,7 @@ autoload -Uz compinit
 # Customize configuration
 # -----------------
 
-export DOTFILES="${DOTFILES:-$HOME/.config/dotfiles}"
+export DOTFILES="${DOTFILES:-$HOME/.local/opt/dotfiles}"
 
 # Define functions and conf.d directories
 confd_dirs=("${confd_dirs[@]}" "$DOTFILES/data/config/zsh/conf.d" "$DOTFILES/data/user/zsh/conf.d")

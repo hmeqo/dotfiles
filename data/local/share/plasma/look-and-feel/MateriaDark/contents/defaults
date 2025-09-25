@@ -2,10 +2,10 @@
 cursorTheme=Breeze Dark
 
 [kdeglobals][General]
-ColorScheme=FluentDark
+ColorScheme=Materia Dark
 
 [kdeglobals][KDE]
-widgetStyle=kvantum-dark
+widgetStyle=Breeze
 
 [kdeglobals][Icons]
 Theme=Fluent-dark

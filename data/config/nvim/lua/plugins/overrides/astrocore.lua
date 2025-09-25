@@ -9,6 +9,7 @@ return {
         ["json"] = "jsonc",
         ["rasi"] = "rasi",
         ["dae"] = "conf",
+        ["env"] = "conf",
       },
     },
     options = {

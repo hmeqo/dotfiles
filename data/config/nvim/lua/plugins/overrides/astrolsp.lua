@@ -7,6 +7,10 @@ return {
       format_on_save = {
         enabled = false,
       },
+      filter = function(client)
+        if vim.bo.filetype == "lua" then return client.name ~= "stylua" end
+        return true
+      end,
     },
   },
 }

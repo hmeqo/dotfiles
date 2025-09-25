@@ -1,6 +1,6 @@
 [Activities][LastVirtualDesktop]
-bb398e82-3eda-4606-a864-1a5f49cc17b7=bff5f77a-7f39-4961-bacf-70775cee217e
-f6743ef6-593b-4d08-a00d-28fb62701320=bff5f77a-7f39-4961-bacf-70775cee217e
+3925063d-e935-4a98-9bde-732e57a156af=bff5f77a-7f39-4961-bacf-70775cee217e
+7ab2f3ee-2f98-4111-bb48-b04b1d170fb7=d343c7eb-5447-4bd6-9479-8fe1b60ee05f
 
 [Desktops]
 Id_1=bff5f77a-7f39-4961-bacf-70775cee217e
@@ -24,16 +24,12 @@ MenuCornerRadius=10
 NoiseStrength=14
 TopCornerRadius=10
 TransparentBlur=false
-WindowClasses=konsole\nyakuake\nkitty\norg.wezfurlong.wezterm\nneovide\ndolphin\ncode\nvscodeium\nWindsurf\ndev.zed.Zed\nidea\njetbrains-fleet\npot\nlutris\nthunderbird\nTor Browser
+WindowClasses=konsole\nyakuake\nkitty\norg.wezfurlong.wezterm\nneovide\ndolphin\ncode\nvscodeium\nWindsurf\ndev.zed.Zed\nidea\njetbrains-fleet\npot\nlutris\nthunderbird\nTor Browser\nhiddify
 
 [Effect-glide]
 InRotationAngle=6
 OutRotationAngle=6
 OutRotationEdge=0
-
-[Effect-hidecursor]
-HideOnTyping=false
-InactivityDuration=5
 
 [Effect-kwin4_effect_geometry_change]
 Duration=300
@@ -63,6 +59,8 @@ CommandAll2=Move
 blurEnabled=false
 cubeEnabled=true
 forceblurEnabled=true
+forceblur_x11Enabled=true
+hidecursorEnabled=true
 invertEnabled=true
 karouselEnabled=false
 kinetic_fadingpopupsEnabled=true
@@ -135,12 +133,12 @@ SecondOutlineThickness=0
 ActiveShadowAlpha=123
 InactiveShadowAlpha=123
 
-[SubSession: f6743ef6-593b-4d08-a00d-28fb62701320]
+[SubSession: 3925063d-e935-4a98-9bde-732e57a156af]
 active=-1
 count=0
 
-[TabBox]
-OrderMinimizedMode=1
+[TabBoxAlternative]
+LayoutName=sidebar
 
 [Tiling]
 padding=4
@@ -164,7 +162,7 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][bff5f77a-7f39-4961-bacf-70775cee217e][e5b64ab3-d11b-4814-b176-254930622d8a]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.74658203125},{"width":0.25341796875}]}
 
 [Tiling][d343c7eb-5447-4bd6-9479-8fe1b60ee05f][e5b64ab3-d11b-4814-b176-254930622d8a]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}

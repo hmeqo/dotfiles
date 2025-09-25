@@ -112,10 +112,11 @@ links = [
 
     # konsole
     { source = "data/config/kde/konsolerc", target = "~/.config/konsolerc" },
+    { source = "data/local/share/konsole/Materia Dark.colorscheme", target = "~/.local/share/konsole/Materia Dark.colorscheme" },
+    { source = "data/local/share/konsole/Materia Dark (Dolphin).colorscheme", target = "~/.local/share/konsole/Materia Dark (Dolphin).colorscheme" },
+    { source = "data/local/share/konsole/Materia Dark (Transparent).colorscheme", target = "~/.local/share/konsole/Materia Dark (Transparent).colorscheme" },
+    { source = "data/local/share/konsole/Konsole.profile", target = "~/.local/share/konsole/Konsole.profile" },
     { source = "data/local/share/konsole/Dolphin.profile", target = "~/.local/share/konsole/Dolphin.profile" },
-    { source = "data/local/share/konsole/Fluent (Transparent).colorscheme", target = "~/.local/share/konsole/Fluent (Transparent).colorscheme" },
-    { source = "data/local/share/konsole/Fluent.colorscheme", target = "~/.local/share/konsole/Fluent.colorscheme" },
-    { source = "data/local/share/konsole/Transparent.profile", target = "~/.local/share/konsole/Transparent.profile" },
     { source = "data/local/share/konsole/Yakuake.profile", target = "~/.local/share/konsole/Yakuake.profile" },
 
     # yakuake
@@ -140,7 +141,6 @@ plasma-plasmoids = [
     "org.kde.netspeedWidget",
     "org.kde.plasma.ginti",
     "org.kde.plasma.simplekickoff",
-    "plasma6-applets-panel-colorizer",
 ]
 icons = ["Fluent icon theme"]
 gtk-themes = ["Fluent round gtk theme"]
@@ -261,7 +261,9 @@ depends = { system = ["rofi-wayland"] }
 
 [options.waybar]
 tags = ["Archived"]
-links = [{ source = "data/archived/config/waybar", target = "~/.config/waybar" }]
+links = [
+    { source = "data/archived/config/waybar", target = "~/.config/waybar" },
+]
 depends = { system = ["waybar"] }
 
 [options.dunst]

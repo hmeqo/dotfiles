@@ -40,6 +40,9 @@ logs-dir=${XDG_STATE_HOME}/npm/logs'
     end
 end
 
+# pm2
+set -gx PM2_HOME "$XDG_DATA_HOME/pm2"
+
 # nuget
 set -gx NUGET_PACKAGES "$XDG_CACHE_HOME/NuGetPackages"
 
