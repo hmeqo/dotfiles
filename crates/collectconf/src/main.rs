@@ -6,9 +6,9 @@ fn main() {
     let args: Vec<String> = env::args().collect();
     let mut lst = Vec::new();
 
-    for arg in &args[1..] {
-        if Path::new(arg).is_dir() {
-            for entry in fs::read_dir(arg).unwrap() {
+    for dirpath in &args[1..] {
+        if Path::new(dirpath).is_dir() {
+            for entry in fs::read_dir(dirpath).unwrap() {
                 let entry = entry.unwrap();
                 let path = entry.path();
                 if path.is_file() {

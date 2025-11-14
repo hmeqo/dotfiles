@@ -1,0 +1,44 @@
+#
+# 基本设置
+#
+
+# 字体(可以使用 CLI 生成有效值列表:ghostty +list-fonts)
+font-family = "Maple Mono NF"
+# 字体大小
+font-size = 12
+# 自动复制选中文本到系统剪切板
+# copy-on-select = clipboard
+# 输入文本时隐藏鼠标
+mouse-hide-while-typing = true
+# 确认关闭窗口时不显示确认提示
+# confirm-close-surface = false
+
+#
+# 主题
+#
+
+theme = Kitty Default
+foreground = #dfdfdf
+background = #171717
+background-opacity = 0.95
+
+#
+# 窗口设置
+#
+
+# window-decoration = false
+window-width = 121
+window-height = 32
+
+#
+# 按键绑定
+#
+
+keybind = ctrl+backspace=text:\x17
+
+#
+# Shader
+#
+
+# 光标轨迹特效相关文件
+custom-shader = "~/.config/ghostty/shaders/cursor_smear.glsl"

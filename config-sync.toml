@@ -80,6 +80,11 @@ tags = ["terminal"]
 links = [{ source = "data/config/kitty", target = "~/.config/kitty" }]
 depends = { system = ["kitty"] }
 
+[options.ghostty]
+tags = ["terminal"]
+links = [{ source = "data/config/ghostty", target = "~/.config/ghostty" }]
+depends = { system = ["ghostty"] }
+
 [options.yazi]
 tags = ["file explorer"]
 links = [

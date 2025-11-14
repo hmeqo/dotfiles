@@ -1,12 +1,8 @@
-[Activities][LastVirtualDesktop]
-3925063d-e935-4a98-9bde-732e57a156af=bff5f77a-7f39-4961-bacf-70775cee217e
-7ab2f3ee-2f98-4111-bb48-b04b1d170fb7=d343c7eb-5447-4bd6-9479-8fe1b60ee05f
-
 [Desktops]
 Id_1=bff5f77a-7f39-4961-bacf-70775cee217e
 Id_2=d343c7eb-5447-4bd6-9479-8fe1b60ee05f
-Id_3=79fb8e02-4cf7-4559-bdd9-ec66608de114
-Id_4=19298d87-3944-45b6-bb49-7a163067b99d
+Id_3=c531ad74-e792-4805-8375-20c17f1f4636
+Id_4=89779d91-0d75-4cbe-849b-6d0958b5f12c
 Number=4
 Rows=2
 
@@ -24,7 +20,7 @@ MenuCornerRadius=10
 NoiseStrength=14
 TopCornerRadius=10
 TransparentBlur=false
-WindowClasses=konsole\nyakuake\nkitty\norg.wezfurlong.wezterm\nneovide\ndolphin\ncode\nvscodeium\nWindsurf\ndev.zed.Zed\nidea\njetbrains-fleet\npot\nlutris\nthunderbird\nTor Browser\nhiddify
+WindowClasses=konsole\nyakuake\nkitty\nghostty\norg.wezfurlong.wezterm\nneovide\ndolphin\ncode\nvscodeium\nWindsurf\ndev.zed.Zed\nidea\njetbrains-fleet\npot\nlutris\nthunderbird\nTor Browser\nhiddify
 
 [Effect-glide]
 InRotationAngle=6
@@ -73,7 +69,6 @@ minimizeallEnabled=true
 movewindowEnabled=true
 poloniumEnabled=true
 screenedgeEnabled=false
-showpaintEnabled=true
 squash2Enabled=false
 thumbnailasideEnabled=true
 truely-maximizedEnabled=false
@@ -116,7 +111,7 @@ screenGapTop=8
 tileLayoutGap=8
 
 [Script-kzones]
-layoutsJson=[\n    {\n        "name": "Tree Grid",\n        "padding": 0,\n        "zones": [\n            {\n                "x": 0,\n                "y": 0,\n                "height": 100,\n                "width": 50\n            },\n            {\n                "x": 50,\n                "y": 0,\n                "height": 50,\n                "width": 50\n            },\n            {\n                "x": 50,\n                "y": 50,\n                "height": 50,\n                "width": 50\n            }\n        ]\n    },\n    {\n        "name": "Binary Grid",\n        "padding": 0,\n        "zones": [\n            {\n                "x": 0,\n                "y": 0,\n                "height": 100,\n                "width": 50\n            },\n            {\n                "x": 50,\n                "y": 0,\n                "height": 100,\n                "width": 50\n            }\n        ]\n    },\n    {\n        "name": "Quadrant Grid",\n        "zones": [\n            {\n                "x": 0,\n                "y": 0,\n                "height": 50,\n                "width": 50\n            },\n            {\n                "x": 0,\n                "y": 50,\n                "height": 50,\n                "width": 50\n            },\n            {\n                "x": 50,\n                "y": 50,\n                "height": 50,\n                "width": 50\n            },\n            {\n                "x": 50,\n                "y": 0,\n                "height": 50,\n                "width": 50\n            }\n        ]\n    }\n]
+layoutsJson=[\n    {\n        "name": "Binary Grid",\n        "padding": 0,\n        "zones": [\n            {\n                "x": 0,\n                "y": 0,\n                "height": 100,\n                "width": 50\n            },\n            {\n                "x": 50,\n                "y": 0,\n                "height": 100,\n                "width": 50\n            }\n        ]\n    },\n    {\n        "name": "Tree Grid",\n        "padding": 0,\n        "zones": [\n            {\n                "x": 0,\n                "y": 0,\n                "height": 100,\n                "width": 50\n            },\n            {\n                "x": 50,\n                "y": 0,\n                "height": 50,\n                "width": 50\n            },\n            {\n                "x": 50,\n                "y": 50,\n                "height": 50,\n                "width": 50\n            }\n        ]\n    },\n    {\n        "name": "Quadrant Grid",\n        "zones": [\n            {\n                "x": 0,\n                "y": 0,\n                "height": 50,\n                "width": 50\n            },\n            {\n                "x": 0,\n                "y": 50,\n                "height": 50,\n                "width": 50\n            },\n            {\n                "x": 50,\n                "y": 50,\n                "height": 50,\n                "width": 50\n            },\n            {\n                "x": 50,\n                "y": 0,\n                "height": 50,\n                "width": 50\n            }\n        ]\n    }\n]
 zoneOverlayShowWhen=1
 
 [Script-polonium]
@@ -133,9 +128,9 @@ SecondOutlineThickness=0
 ActiveShadowAlpha=123
 InactiveShadowAlpha=123
 
-[SubSession: 3925063d-e935-4a98-9bde-732e57a156af]
-active=-1
-count=0
+[TabBox]
+LayoutName=sidebar
+OrderMinimizedMode=1
 
 [TabBoxAlternative]
 LayoutName=sidebar
@@ -155,14 +150,23 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][60803436-01d0-58bb-a53f-573b3057d5f7]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][70ff64fa-acde-4e3e-b050-6d3de290b835][e5b64ab3-d11b-4814-b176-254930622d8a]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][79fb8e02-4cf7-4559-bdd9-ec66608de114][e5b64ab3-d11b-4814-b176-254930622d8a]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][86c6677f-0136-54ea-ba45-660eef8487da]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][89779d91-0d75-4cbe-849b-6d0958b5f12c][e5b64ab3-d11b-4814-b176-254930622d8a]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][bff5f77a-7f39-4961-bacf-70775cee217e][e5b64ab3-d11b-4814-b176-254930622d8a]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.74658203125},{"width":0.25341796875}]}
+
+[Tiling][c531ad74-e792-4805-8375-20c17f1f4636][e5b64ab3-d11b-4814-b176-254930622d8a]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][d343c7eb-5447-4bd6-9479-8fe1b60ee05f][e5b64ab3-d11b-4814-b176-254930622d8a]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
@@ -187,6 +191,8 @@ BorderSize=None
 BorderSizeAuto=false
 ButtonsOnLeft=F
 ButtonsOnRight=IAX
+library=org.kde.breeze
+theme=Breeze
 
 [ًRound-Corners]
 InactiveCornerRadius=8

@@ -7,7 +7,7 @@ return {
   { import = "presets.markdown-and-latex.render-markdown" },
   -- { import = "presets.markdown-and-latex.markview" },
   -- { import = "presets.completion.cmp" },
-  { import = "presets.completion.windsurf" },
+  -- { import = "presets.completion.windsurf" },
   -- { import = "presets.completion.codecompanion" },
   { import = "presets.completion.avante-nvim" },
   { import = "presets.snippet.luasnip" },
