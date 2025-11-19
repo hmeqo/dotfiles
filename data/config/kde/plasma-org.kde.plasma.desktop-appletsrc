@@ -510,7 +510,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][239][Applets][243][Applets][259][Configuration]
-PreloadWeight=57
+PreloadWeight=49
 
 [Containments][239][Applets][243][Applets][260]
 immutability=1

@@ -1,3 +1,9 @@
+if not command -sq micromamba
+  return
+end
+
+alias mamba micromamba
+
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'micromamba shell init' !!
 set -gx MAMBA_EXE /usr/bin/micromamba
