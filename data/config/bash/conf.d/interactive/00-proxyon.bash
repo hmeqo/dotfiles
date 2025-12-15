@@ -29,7 +29,7 @@ proxyon() {
         ;;
     *)
         if [[ -z "$1" ]]; then
-            echo "Usage: proxyon <type>"
+            echo "Usage: proxyon <type/address>"
             return 1
         fi
         http_url="http://$1"

@@ -1,1 +1,1 @@
-sudo -u hmeqo hyfetch
+fastfetch

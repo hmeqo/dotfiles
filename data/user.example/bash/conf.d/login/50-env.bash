@@ -1,3 +1,5 @@
+# --- path ---
+
 has_path() {
     [[ ":$PATH:" = *":$1:"* ]]
 }
@@ -41,3 +43,20 @@ fi
 if command -v cargo >/dev/null; then
     prepend_path "${CARGO_HOME:-$HOME/.cargo}/bin"
 fi
+
+# --- de ---
+
+export GTK_USE_PORTAL=1
+
+# Fcitx5
+if [[ "$XDG_SESSION_TYPE" != "wayland" ]]; then
+    export GTK_IM_MODULE=fcitx
+else
+    if [[ "$XDG_SESSION_DESKTOP" != "KDE" ]]; then
+        export QT_IM_MODULE=fcitx
+    fi
+fi
+export XMODIFIERS=@im=fcitx
+export SDL_IM_MODULE=fcitx
+export INPUT_METHOD=fcitx
+export GLFW_IM_MODULE=ibus

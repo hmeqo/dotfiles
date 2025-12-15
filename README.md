@@ -121,7 +121,7 @@ Fakehome is a program that allows you to run a program in a fake home directory,
 
 Default prompter is starship, example to use oh-my-posh, set `prompter` to `$DOTFILES/data/user/bash/conf.d`
 
-`$DOTFILES/data/user/bash/conf.d/interactive/20-prompt.bash`:
+`$DOTFILES/data/user/bash/conf.d/interactive/70-prompt.bash`:
 
 ```bash
 prompter=oh-my-posh

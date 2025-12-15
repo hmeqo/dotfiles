@@ -1,6 +1,0 @@
-# set -gx RADV_PERFTEST gpl
-
-set -gx SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS 0
-set -gx SDL_VIDEODRIVER wayland
-
-# set -gx GAMEMODERUNEXEC ""

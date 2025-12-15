@@ -25,7 +25,7 @@ function proxyon
             set socks_url "socks://127.0.0.1:2080"
         case '*'
             if test -z "$argv[1]"
-                echo "Usage: proxyon <type>"
+                echo "Usage: proxyon <type/address>"
                 return 1
             end
             set -g http_url "http://$argv[1]"

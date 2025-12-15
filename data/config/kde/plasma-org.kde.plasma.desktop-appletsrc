@@ -423,6 +423,9 @@ plugin=org.kde.plasma.keyboardlayout
 immutability=1
 plugin=org.kde.plasma.keyboardindicator
 
+[Containments][239][Applets][243][Applets][246][Configuration]
+PreloadWeight=55
+
 [Containments][239][Applets][243][Applets][246][Configuration][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
@@ -496,7 +499,7 @@ immutability=1
 plugin=org.kde.plasma.brightness
 
 [Containments][239][Applets][243][Applets][257][Configuration]
-PreloadWeight=0
+PreloadWeight=5
 
 [Containments][239][Applets][243][Applets][258]
 immutability=1
@@ -510,7 +513,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][239][Applets][243][Applets][259][Configuration]
-PreloadWeight=49
+PreloadWeight=1
 
 [Containments][239][Applets][243][Applets][260]
 immutability=1
