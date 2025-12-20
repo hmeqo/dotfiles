@@ -46,7 +46,7 @@ if command -v duf >/dev/null; then
     alias df='duf --only=local,fuse'
 fi
 
-if command -sq cyme; then
+if command -v cyme >/dev/null; then
     alias lsusb='cyme -l'
 fi
 

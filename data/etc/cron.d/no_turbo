@@ -1,1 +1,2 @@
+# To make this computer quieter, turn off intel pstate
 @reboot root echo 1 > /sys/devices/system/cpu/intel_pstate/no_turbo

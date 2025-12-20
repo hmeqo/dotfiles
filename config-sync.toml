@@ -24,7 +24,7 @@ depends = { system = ["bash"] }
 tags = ["shell"]
 links = [
     { source = "data/config/fish/config.fish", target = "~/.config/fish/config.fish" },
-    { source = "data/config/fish/functions/_50_keybindings.fish", target = "~/.config/fish/functions/_50_keybindings.fish" },
+    { source = "data/config/fish/functions/_25_keybindings.fish", target = "~/.config/fish/functions/_25_keybindings.fish" },
     { source = "data/config/fish/functions/fish_mode_prompt.fish", target = "~/.config/fish/functions/fish_mode_prompt.fish" },
     { source = "data/config/fish/functions/proxyoff.fish", target = "~/.config/fish/functions/proxyoff.fish" },
     { source = "data/config/fish/functions/proxyon.fish", target = "~/.config/fish/functions/proxyon.fish" },
@@ -212,10 +212,18 @@ links = [
     { source = "data/local/bin/kde-no-global-menu", target = "~/.local/bin/kde-no-global-menu" },
     { source = "data/local/bin/psubview", target = "~/.local/bin/psubview" },
     { source = "data/local/bin/pyfiglet-picker", target = "~/.local/bin/pyfiglet-picker" },
+    { source = "data/local/bin/reloadenv", target = "~/.local/bin/reloadenv" },
     { source = "data/local/bin/sshs", target = "~/.local/bin/sshs" },
     { source = "data/local/bin/toggle-boost", target = "~/.local/bin/toggle-boost" },
     { source = "data/local/bin/togif", target = "~/.local/bin/togif" },
 ]
+
+[options.waybar]
+tags = ["Archived"]
+links = [
+    { source = "data/archived/config/waybar", target = "~/.config/waybar" },
+]
+depends = { system = ["waybar"] }
 
 [options.hyprland]
 tags = ["Archived", "WM"]
@@ -263,13 +271,6 @@ depends = { system = [
 tags = ["Archived", "application launcher"]
 links = [{ source = "data/archived/config/rofi", target = "~/.config/rofi" }]
 depends = { system = ["rofi-wayland"] }
-
-[options.waybar]
-tags = ["Archived"]
-links = [
-    { source = "data/archived/config/waybar", target = "~/.config/waybar" },
-]
-depends = { system = ["waybar"] }
 
 [options.dunst]
 tags = ["Archived", "notification"]

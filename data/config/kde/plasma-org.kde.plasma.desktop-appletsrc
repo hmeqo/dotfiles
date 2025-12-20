@@ -77,14 +77,14 @@ immutability=1
 plugin=com.github.prayag2.modernclock
 
 [Containments][234][ConfigDialog]
-DialogHeight=952
-DialogWidth=1575
+DialogHeight=878
+DialogWidth=1202
 
 [Containments][234][General]
 positions={"0x0":[],"2048x1152":[]}
 
 [Containments][234][Wallpaper][org.kde.image][General]
-Image=/home/hmeqo/.local/opt/dotfiles/data/local/share/wallpapers/stephan-raabe/emergence.jpg
+Image=file:///home/hmeqo/.local/opt/dotfiles/data/local/share/wallpapers/stephan-raabe/geometric-abstract.jpg
 SlidePaths=/home/hmeqo/.local/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments][236]
@@ -499,7 +499,7 @@ immutability=1
 plugin=org.kde.plasma.brightness
 
 [Containments][239][Applets][243][Applets][257][Configuration]
-PreloadWeight=5
+PreloadWeight=0
 
 [Containments][239][Applets][243][Applets][258]
 immutability=1
@@ -513,7 +513,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][239][Applets][243][Applets][259][Configuration]
-PreloadWeight=1
+PreloadWeight=0
 
 [Containments][239][Applets][243][Applets][260]
 immutability=1

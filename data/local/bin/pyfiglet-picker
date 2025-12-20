@@ -1,7 +1,10 @@
 #!/usr/bin/bash
 
+# Usage:
+# pyfiglet-picker "Hello\nWorld"
+
 picked_font=$(printf "%s\n" "$(pyfiglet -l)" | fzf --layout=reverse --preview="echo -e {}\n; pyfiglet -f '{}' $*" --preview-window=right,80%)
-[[ -n "$picked_font" ]] || return
+[[ -n "$picked_font" ]] || exit 0
 output=$(echo -e "$@" | xargs -0 pyfiglet -f "$picked_font")
 
 echo "$output"

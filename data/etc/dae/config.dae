@@ -60,7 +60,9 @@ dns {
 group {
   proxy {
     filter: subtag(sub)
-    # filter: name(keyword: '香港', keyword: 'HK')
+    filter: name(keyword: '香港', keyword: 'HK')
+    filter: name(keyword: '台湾', keyword: 'TW')
+    filter: name(keyword: '美国', keyword: 'US')
     policy: min_moving_avg
     # policy: fixed(1)
   }

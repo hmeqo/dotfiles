@@ -1,4 +1,4 @@
-# --- path ---
+## --- path ---
 
 function has_path
     contains $argv[1] $PATH
@@ -14,27 +14,27 @@ end
 
 prepend_path "$HOME/.local/bin"
 
-# npm
+## npm
 if command -sq npm && test -n (npm config get prefix)
     prepend_path "$(npm config get prefix)/bin"
 end
-# pnpm
+## pnpm
 if command -sq pnpm
     set -q PNPM_HOME || set -gx PNPM_HOME "$XDG_DATA_HOME/pnpm"
     prepend_path "$PNPM_HOME"
 end
 
-# Java
+## Java
 if test -e /usr/lib/jvm/default-runtime
     set -gx JAVA_HOME /usr/lib/jvm/default-runtime
 end
-# Kotlin
+## Kotlin
 if test -e /usr/share/kotlin
     set -gx KOTLIN_HOME /usr/share/kotlin
 end
 
-# Python
-# pyenv
+## Python
+## pyenv
 if command -sq pyenv
     set -q PYENV_ROOT || set -l PYENV_ROOT "$HOME/.pyenv"
     prepend_path "$PYENV_ROOT/bin"
@@ -44,17 +44,17 @@ if command -sq mamba || command -sq micromamba
     prepend_path "$XDG_DATA_HOME/mamba/bin"
 end
 
-# Rust
+## Rust
 if command -sq cargo
     set -q CARGO_HOME || set -l CARGO_HOME "$HOME/.cargo"
     prepend_path "$CARGO_HOME/bin"
 end
 
-# --- de ---
+## --- desktop ---
 
 set -gx GTK_USE_PORTAL 1
 
-# Fcitx5
+## Input method
 if test "$XDG_SESSION_TYPE" != wayland
     set -gx GTK_IM_MODULE fcitx
 else
@@ -67,26 +67,33 @@ set -gx SDL_IM_MODULE fcitx
 set -gx INPUT_METHOD fcitx
 set -gx GLFW_IM_MODULE ibus
 
-# --- game ---
+set -gx QT_WAYLAND_TEXT_INPUT_PROTOCOL zwp_text_input_v1
 
+## --- game ---
+
+## Enable gpl for AMD GPU
 # set -gx RADV_PERFTEST gpl
 
+## SDL
 set -gx SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS 0
 set -gx SDL_VIDEODRIVER wayland
 
+## Gamemode
 # set -gx GAMEMODERUNEXEC ""
 
-# --- other ---
+## --- other ---
 
 if command -sq sccache
   set -gx RUSTC_WRAPPER "$(which sccache)"
 end
 
+## Theme
 # set -gx GTK_THEME Fluent-round-Dark
 # set -gx QT_STYLE_OVERRIDE kvantum
 
+## SSL
 # set -gx SSLKEYLOGFILE "$HOME/.local/share/sslkeylog.log"
 
-# ssh
+## ssh
 # set -gx SSH_ASKPASS /usr/bin/ksshaskpass
 # set -gx SSH_ASKPASS_REQUIRE prefer

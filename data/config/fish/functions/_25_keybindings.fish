@@ -1,4 +1,4 @@
-function _50_keybindings
+function _25_keybindings
     fish_vi_key_bindings
 
     bind --preset --mode visual -m default v end-selection repaint-mode
