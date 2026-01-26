@@ -2,5 +2,5 @@ export EDITOR=nvim
 
 # Pager
 if command -v bat >/dev/null; then
-    export PAGER=bat
+    export PAGER='bat --style=grid,numbers'
 fi

@@ -1,0 +1,14 @@
+[Unit]
+Description=Rclone Mount Service for OpenList
+After=openlist.service
+
+[Service]
+Type=notify
+ExecStart=/usr/bin/rclone mount openlist: /mnt/dav --vfs-cache-mode full --user-agent "rclone-arch-mount-service"
+ExecStop=/usr/bin/rclone rc vfs/refresh -vv --user-agent "rclone-arch-mount-service"
+Restart=on-failure
+User=hmeqo
+Group=hmeqo
+
+[Install]
+WantedBy=remote-fs.target

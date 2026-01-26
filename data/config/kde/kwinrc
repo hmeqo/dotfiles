@@ -31,9 +31,6 @@ OutRotationEdge=0
 Duration=300
 ExcludedWindowClasses=krunner,yakuake,org.jackhuang.hmcl.Launcher,vlc
 
-[Effect-thumbnailaside]
-MaxWidth=400
-
 [Effect-zoom]
 MouseTracking=2
 
@@ -201,10 +198,7 @@ Scale=1.25
 XwaylandEisNoPromptApps=steam,xembedsniproxy
 
 [org.kde.kdecoration2]
-BorderSize=None
-BorderSizeAuto=false
-ButtonsOnLeft=F
-ButtonsOnRight=IAX
+ButtonsOnLeft=MF
 library=org.kde.breeze
 theme=Breeze
 

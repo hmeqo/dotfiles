@@ -1,12 +1,5 @@
-[ActionsWidget]
-ColumnState=AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbwAAAACAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAACAAAA+gAAAAEAAAAAAAAAwgAAAAEAAAAAAAAD6AAAAABkAAAAAA==
-
 [Applets][76][Configuration]
 PreloadWeight=42
-
-[ConfigDialog]
-1920x1080 screen: Height=550
-1920x1080 screen: Width=746
 
 [General]
 Number of Actions=0
@@ -67,6 +60,15 @@ panelOpacity=1
 
 [PlasmaViews][Panel 239][Defaults]
 thickness=27
+
+[PlasmaViews][Panel 265]
+floating=1
+panelLengthMode=1
+panelOpacity=2
+panelVisibility=1
+
+[PlasmaViews][Panel 265][Defaults]
+thickness=270
 
 [PlasmaViews][Panel 27]
 alignment=132

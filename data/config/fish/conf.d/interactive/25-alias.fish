@@ -2,6 +2,10 @@ alias clr 'printf \'\033[2J\033[3J\033[1;1H\''
 
 alias wget 'curl --continue-at - --location --progress-bar --remote-name --remote-time'
 
+alias wimip 'curl ipinfo.io/ip' # alias wimip 'curl -L ipconfig.me'
+
+alias qr 'qrencode -t ANSIUTF8'
+
 if command -sq fastfetch
     alias ff fastfetch
 end

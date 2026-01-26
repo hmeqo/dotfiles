@@ -53,10 +53,17 @@ return {
           end,
           desc = "Organize imports",
         },
+        ["<C-S-k>"] = { function() vim.cmd.normal "dd" end },
+        ["<A-j>"] = { function() vim.cmd "m +1" end },
+        ["<A-k>"] = { function() vim.cmd "m -2" end },
       }
+      local M_V = vim.tbl_extend("keep", {
+        ["<A-j>"] = { function() vim.cmd "m '>+1<CR>" end },
+        ["<A-k>"] = { function() vim.cmd "m '<-2<CR>" end },
+      }, M)
 
       opts.mappings.n = vim.tbl_extend("force", opts.mappings.n or {}, M)
-      opts.mappings.v = vim.tbl_extend("force", opts.mappings.v or {}, M)
+      opts.mappings.v = vim.tbl_extend("force", opts.mappings.v or {}, M_V)
       opts.mappings.i = vim.tbl_extend("force", opts.mappings.i or {}, M)
       require("astrocore").setup(opts)
     end,

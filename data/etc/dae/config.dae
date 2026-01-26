@@ -15,95 +15,79 @@ global {
 
 subscription {
   # Fill in your subscription links here.
-  sub: 'https://example.com'
+  sub: 'https-file://example.com'
 }
 
 # See https://github.com/daeuniverse/dae/blob/main/docs/en/configuration/dns.md for full examples.
 dns {
   upstream {
     alidns: 'udp://223.5.5.5:53'
-    googledns: 'tcp+udp://8.8.8.8:53'
+    cfdns: 'tcp+udp://1.1.1.1:53'
+    googledns: 'tcp+udp://1.1.1.1:53'
+    googledns-https: 'https://dns.google/dns-query'
   }
+
   routing {
     request {
       # Block AD
       qname(geosite:category-ads-all) -> reject
 
+      qtype(https) -> googledns-https
+
       qname(geosite:cn) -> alidns
-      fallback: googledns
+      fallback: cfdns
     }
   }
 }
-# dns {
-#   upstream {
-#     googledns: 'tcp+udp://8.8.8.8:53'
-#     alidns: 'udp://223.5.5.5:53'
-#   }
-#   routing {
-#     request {
-#       qtype(https) -> reject
-#
-#       # Block AD
-#       qname(geosite:category-ads) -> reject
-#       qname(geosite:category-ads-all) -> reject
-#
-#       fallback: alidns
-#     }
-#     response {
-#       upstream(googledns) -> accept
-#       ip(geoip:private) && !qname(geosite:cn) -> googledns
-#       fallback: accept
-#     }
-#   }
-# }
 
 group {
   proxy {
     filter: subtag(sub)
-    filter: name(keyword: '香港', keyword: 'HK')
-    filter: name(keyword: '台湾', keyword: 'TW')
-    filter: name(keyword: '美国', keyword: 'US')
+    filter: name(keyword: 'HK')
+    filter: name(keyword: 'SG')
     policy: min_moving_avg
     # policy: fixed(1)
   }
 
-  proxy_us {
+  proxy_sg {
     filter: subtag(sub)
-    filter: name(keyword: '美国', keyword: 'US')
+    filter: name(keyword: 'SG')
+    policy: min_moving_avg
+    # policy: fixed(1)
   }
 }
 
 # See https://github.com/daeuniverse/dae/blob/main/docs/en/configuration/routing.md for full examples.
 routing {
+  ## No proxy
   pname(NetworkManager, systemd-resolved, dnsmasq) -> direct
-  pname(hiddify) -> must_direct
+  pname(tailscaled, zerotier-one, easytier-core) -> must_direct
   dip(224.0.0.0/3, 'ff00::/8') -> direct
-
   dip(geoip:private) -> direct
 
-  pname(tor, Telegram) -> proxy
-  pname(code, exe) -> proxy_us
-  domain(domain:.chatgpt.com, domain:.google.com, domain:registry.npmjs.org) -> proxy_us
-
-  #!pname(zen-bin) -> direct
-
-  pname(ssh, adb) -> direct
-  pname(tailscaled, zerotier-one, easytier-core) -> direct
-
-  # Disable h3 because it usually consumes too much cpu/mem resources.
+  ## Block AD
+  domain(geosite:category-ads-all) -> block
+  ## Disable h3 because it usually consumes too much cpu/mem resources.
   # l4proto(udp) && dport(443) -> block
 
-  # Block AD
-  domain(geosite:category-ads-all) -> block
+  ## Force to proxy
+  pname(tor, Telegram) -> proxy
+  pname(code) -> proxy
+  domain(openrouter.ai) -> proxy_sg
+  domain(chatgpt.com) -> proxy_sg
+  domain(geosite:google) -> proxy_sg
 
-  # 目标非常用端口都走直连，避免BT流量走代理
-  #!dport(21,22,23,53,80,123,143,194,443,465,587,853,993,995,998) -> direct
-
-  # Games
-  #domain(ext:'geosite:category-games') -> direct
-  # Steam
-  domain(geosite:steam@cn, domain:steamserver.net, domain:steamcontent.com) -> direct
-
+  ## No proxy
+  pname(ssh, adb) -> direct
+  ## 目标非常用端口都走直连，避免BT流量和游戏走代理
+  !dport(21,22,23,53,80,123,143,194,443,465,587,853,993,995,998) -> direct
+  ## ArchLinux
+  domain(ping.archlinux.org, aur.archlinux.org) -> direct
+  ## Games
+  #domain(geosite:category-games) -> direct
+  ## Steam
+  domain(geosite:steam@cn, steamserver.net, steamcontent.com) -> direct
+  ## CN
   dip(geoip:cn) -> direct
   domain(geosite:cn) -> direct
 

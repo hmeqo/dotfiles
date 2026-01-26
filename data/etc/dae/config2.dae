@@ -1,0 +1,21 @@
+# dns {
+#   upstream {
+#     googledns: 'tcp+udp://8.8.8.8:53'
+#     alidns: 'udp://223.5.5.5:53'
+#   }
+#   routing {
+#     request {
+#       qtype(https) -> reject
+#
+#       # Block AD
+#       qname(geosite:category-ads-all) -> reject
+#
+#       fallback: alidns
+#     }
+#     response {
+#       upstream(googledns) -> accept
+#       ip(geoip:private) && !qname(geosite:cn) -> googledns
+#       fallback: accept
+#     }
+#   }
+# }

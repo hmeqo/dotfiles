@@ -119,14 +119,18 @@ menuFont=Maple Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 smallestReadableFont=Maple Mono,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 toolBarFont=Maple Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
+[Icons]
+Theme=breeze
+
 [KDE]
+DefaultDarkLookAndFeel=MateriaDark
 LookAndFeelPackage=MateriaDark
 ShowDeleteCommand=false
 widgetStyle=Breeze
 
 [KFileDialog Settings]
 Allow Expansion=false
-Automatically select filename extension=true
+Automatically select filename extension=false
 Breadcrumb Navigation=true
 Decoration position=0
 Show Full Path=false

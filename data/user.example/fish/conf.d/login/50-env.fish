@@ -76,7 +76,7 @@ set -gx QT_WAYLAND_TEXT_INPUT_PROTOCOL zwp_text_input_v1
 
 ## SDL
 set -gx SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS 0
-set -gx SDL_VIDEODRIVER wayland
+set -gx SDL_VIDEODRIVER wayland,x11
 
 ## Gamemode
 # set -gx GAMEMODERUNEXEC ""
