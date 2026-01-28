@@ -84,29 +84,7 @@ DialogWidth=1202
 positions={"0x0":[],"2048x1152":[]}
 
 [Containments][234][Wallpaper][org.kde.image][General]
-Image=file:///home/hmeqo/.local/opt/dotfiles/data/local/share/wallpapers/stephan-raabe/astronaut.png
-SlidePaths=/home/hmeqo/.local/share/wallpapers/,/usr/share/wallpapers/
-
-[Containments][236]
-ItemGeometries-2048x1152=
-ItemGeometriesHorizontal=
-activityId=3925063d-e935-4a98-9bde-732e57a156af
-formfactor=0
-immutability=1
-lastScreen=0
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
-
-[Containments][236][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][236][General]
-positions={"0x0":[],"2048x1152":[]}
-
-[Containments][236][Wallpaper][org.kde.image][General]
-Image=/home/hmeqo/.local/opt/dotfiles/data/local/share/wallpapers/hmeqo/cat_green.jpg
+Image=file:///home/hmeqo/.local/opt/dotfiles/data/local/share/wallpapers/stephan-raabe/geometric-abstract.jpg
 SlidePaths=/home/hmeqo/.local/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments][239]
@@ -339,8 +317,8 @@ windowTitleSource=AppName
 windowTitleUndefined=
 
 [Containments][239][Applets][230][Configuration][ConfigDialog]
-DialogHeight=542
-DialogWidth=721
+DialogHeight=550
+DialogWidth=805
 
 [Containments][239][Applets][241]
 immutability=1
@@ -490,7 +468,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][239][Applets][243][General]
-extraItems=org.kde.plasma.bluetooth,org.kde.plasma.vault,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.manage-inputmethod,org.kde.plasma.cameraindicator,org.kde.plasma.printmanager,org.kde.plasma.weather,org.kde.plasma.clipboard,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.kscreen,Yakuake
+extraItems=org.kde.plasma.bluetooth,org.kde.plasma.vault,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.manage-inputmethod,org.kde.plasma.cameraindicator,org.kde.plasma.printmanager,org.kde.plasma.weather,org.kde.plasma.clipboard,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.kscreen
 hiddenItems=tray-id,tao application,73400334,90177550
 knownItems=org.kde.plasma.bluetooth,org.kde.plasma.vault,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.manage-inputmethod,org.kde.plasma.cameraindicator,org.kde.plasma.printmanager,org.kde.plasma.weather,org.kde.plasma.clipboard,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.kscreen
 

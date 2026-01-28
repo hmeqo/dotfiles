@@ -1,0 +1,29 @@
+#!/usr/bin/bash
+
+usage() {
+  name=$(basename "$0")
+  cat <<EOF
+Usage:
+  $name <ssh_target> <local_port> <remote_port>
+
+Example:
+  $name user@server 8080 9000
+  $name user@server localhost:8080 [::]:9000
+EOF
+}
+
+host="$1"
+local="$2"
+remote="$3"
+
+if [[ -z "$host" || -z "$local" || -z "$remote" ]]; then
+  usage
+  exit 0
+fi
+
+[[ "$local" == *:* ]] || local="localhost:$local"
+[[ "$remote" == *:* ]] || remote="[::]:$remote"
+
+shift 3
+
+ssh -NR "$remote:$local" "$host" "$@"

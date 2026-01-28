@@ -57,6 +57,7 @@ thickness=27
 floating=0
 floatingApplets=1
 panelOpacity=1
+panelVisibility=0
 
 [PlasmaViews][Panel 239][Defaults]
 thickness=27

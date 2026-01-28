@@ -208,14 +208,14 @@ depends = { system = ["mangohud"] }
 tags = ["scripts"]
 links = [
     { source = "data/local/bin/gameoverlay", target = "~/.local/bin/gameoverlay" },
-    { source = "data/local/bin/gifgen", target = "~/.local/bin/gifgen" },
     { source = "data/local/bin/kde-no-global-menu", target = "~/.local/bin/kde-no-global-menu" },
+    { source = "data/local/bin/ltr", target = "~/.local/bin/ltr" },
+    { source = "data/local/bin/rtl", target = "~/.local/bin/rtl" },
     { source = "data/local/bin/psubview", target = "~/.local/bin/psubview" },
     { source = "data/local/bin/pyfiglet-picker", target = "~/.local/bin/pyfiglet-picker" },
     { source = "data/local/bin/reloadenv", target = "~/.local/bin/reloadenv" },
     { source = "data/local/bin/sshs", target = "~/.local/bin/sshs" },
     { source = "data/local/bin/toggle-boost", target = "~/.local/bin/toggle-boost" },
-    { source = "data/local/bin/togif", target = "~/.local/bin/togif" },
 ]
 
 [options.waybar]
