@@ -1,3 +1,6 @@
+[Libinput][1133][49271][Logitech USB Optical Mouse]
+PointerAcceleration=0.400
+
 [Libinput][12538][4416][INSTANT Inphic PG9 Gaming Mouse]
 PointerAcceleration=-0.200
 PointerAccelerationProfile=2
@@ -5,6 +8,9 @@ PointerAccelerationProfile=2
 [Libinput][1267][12642][ELAN0412:01 04F3:3162 Touchpad]
 Enabled=true
 ScrollFactor=1
+
+[Libinput][1739][52861][SYN1B8B:00 06CB:CE7D Mouse]
+PointerAcceleration=0.000
 
 [Libinput][1739][52861][SYN1B8B:00 06CB:CE7D Touchpad]
 DisableEventsOnExternalMouse=false

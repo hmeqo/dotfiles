@@ -1,8 +1,7 @@
 [activities]
+30168601-0752-429f-966e-4a534cc0b9db=Game
 7ab2f3ee-2f98-4111-bb48-b04b1d170fb7=Default
 
 [activities-icons]
+30168601-0752-429f-966e-4a534cc0b9db=activities
 7ab2f3ee-2f98-4111-bb48-b04b1d170fb7=activities
-
-[main]
-currentActivity=7ab2f3ee-2f98-4111-bb48-b04b1d170fb7

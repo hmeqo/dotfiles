@@ -1,3 +1,11 @@
+[1a00bbda-7791-45a0-9382-ba5cf879b9df]
+Description=Settings for yakuake org.kde.yakuake
+above=true
+aboverule=3
+wmclass=yakuake org.kde.yakuake
+wmclasscomplete=true
+wmclassmatch=1
+
 [273d1614-96b0-4fd0-8bb4-f37e0d0ac64c]
 Description=Transparent
 opacityactive=90
@@ -6,16 +14,32 @@ wmclass=dolphin|code|code-url-handler|idea
 wmclasscomplete=true
 wmclassmatch=3
 
+[4de09bd7-34a3-4cc7-8126-744e2e7de1aa]
+layer=overlay
+layerrule=2
+
 [7ae3d98e-b733-4790-a053-7521c6648475]
 Description=Transparent
 opacityactive=95
 opacityactiverule=2
-wmclass=dolphin|Code|code|Windsurf|idea|jetbrains-fleet
+wmclass=dolphin|code
 wmclassmatch=3
 
 [General]
-count=2
-rules=dc9511e9-a106-487e-b67b-5aa559703e08,7ae3d98e-b733-4790-a053-7521c6648475
+count=4
+rules=aea6174f-e136-4519-a4d3-facbed135873,dc9511e9-a106-487e-b67b-5aa559703e08,7ae3d98e-b733-4790-a053-7521c6648475,1a00bbda-7791-45a0-9382-ba5cf879b9df
+
+[aea6174f-e136-4519-a4d3-facbed135873]
+Description=Window settings for rtsub
+above=true
+aboverule=3
+layer=overlay
+layerrule=2
+title=RTSub
+types=1
+wmclass=python3.12 rtsub
+wmclasscomplete=true
+wmclassmatch=1
 
 [bdae4665-afcc-4feb-a9cd-4e4d595575f8]
 Description=Window settings for flameshot

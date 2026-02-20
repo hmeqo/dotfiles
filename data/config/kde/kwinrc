@@ -31,6 +31,10 @@ OutRotationEdge=0
 Duration=300
 ExcludedWindowClasses=krunner,yakuake,org.jackhuang.hmcl.Launcher,vlc
 
+[Effect-thumbnailaside]
+MaxWidth=400
+Opacity=80
+
 [Effect-zoom]
 MouseTracking=2
 
@@ -134,9 +138,6 @@ OrderMinimizedMode=1
 [TabBoxAlternative]
 LayoutName=sidebar
 
-[Tiling]
-padding=4
-
 [Tiling][19298d87-3944-45b6-bb49-7a163067b99d][e5b64ab3-d11b-4814-b176-254930622d8a]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -162,24 +163,28 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][89779d91-0d75-4cbe-849b-6d0958b5f12c][e5b64ab3-d11b-4814-b176-254930622d8a]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][bff5f77a-7f39-4961-bacf-70775cee217e][78b719c9-59c7-4de2-88a6-8a309ba3dd88]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][bff5f77a-7f39-4961-bacf-70775cee217e][e5b64ab3-d11b-4814-b176-254930622d8a]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.74658203125},{"width":0.25341796875}]}
 
 [Tiling][c531ad74-e792-4805-8375-20c17f1f4636][78b719c9-59c7-4de2-88a6-8a309ba3dd88]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][c531ad74-e792-4805-8375-20c17f1f4636][e5b64ab3-d11b-4814-b176-254930622d8a]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][d343c7eb-5447-4bd6-9479-8fe1b60ee05f][78b719c9-59c7-4de2-88a6-8a309ba3dd88]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][d343c7eb-5447-4bd6-9479-8fe1b60ee05f][e5b64ab3-d11b-4814-b176-254930622d8a]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][d9abd89f-662c-594e-b1d7-c405e4941f34]
