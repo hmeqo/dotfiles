@@ -37,7 +37,7 @@ layer=overlay
 layerrule=2
 title=RTSub
 types=1
-wmclass=python3.12 rtsub
+wmclass=python3.13 rtsub
 wmclasscomplete=true
 wmclassmatch=1
 

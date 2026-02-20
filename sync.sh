@@ -1,9 +1,5 @@
 #!/usr/bin/bash
 
-init_venv() {
-  uv sync --frozen
-}
-
 install_crates() {
   cargo build --release
   cargo install --path crates/* --root './tools' --force -q
@@ -19,12 +15,9 @@ replace_userhome_string() {
 if [[ $1 = "init" ]]; then
   replace_userhome_string
 
-  init_venv
-
   install_crates
 elif [[ $1 = "tui" ]]; then
-  source .venv/bin/activate
-  confsync tui
+  uvx --from simple-config-sync confsync tui
 elif [[ $1 = "install-fakehome" ]]; then
   ./tools/share/fakehome/sync.sh
 elif [[ $1 = "uninstall-fakehome" ]]; then

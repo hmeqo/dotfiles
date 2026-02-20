@@ -1,3 +1,0 @@
-#!/usr/bin/bash
-
-uvx --from simple-config-sync confsync
