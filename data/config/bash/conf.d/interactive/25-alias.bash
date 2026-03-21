@@ -2,7 +2,7 @@ alias clr='printf '\''\033[2J\033[3J\033[1;1H'\'
 
 alias wget='curl --continue-at - --location --progress-bar --remote-name --remote-time'
 
-alias wimip='curl ipinfo.io/ip'
+alias mip='curl ipinfo.io/ip'
 
 alias qr='qrencode -t ANSIUTF8'
 

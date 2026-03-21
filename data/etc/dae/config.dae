@@ -86,7 +86,14 @@ routing {
   ## Games
   #domain(geosite:category-games) -> direct
   ## Steam
-  domain(geosite:steam@cn, steamserver.net, steamcontent.com) -> direct
+  domain(
+    steamserver.net,
+    steamcontent.com,
+    api.steampowered.com,
+    regex:.cm.steampowered.com$,
+    regex:.steamserver.net$,
+    regex:cache.*.steamcontent.com$
+  ) -> direct
   ## CN
   dip(geoip:cn) -> direct
   domain(geosite:cn) -> direct

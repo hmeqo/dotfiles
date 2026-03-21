@@ -171,15 +171,14 @@ return {
           __inherited_from = "openai",
           endpoint = "https://openrouter.ai/api/v1",
           api_key_name = "OPENROUTER_API_KEY",
-          model = "x-ai/grok-code-fast-1",
+          model = "minimax/minimax-m2.5",
         },
         openrouter = {
           __inherited_from = "openai",
           endpoint = "https://openrouter.ai/api/v1",
           api_key_name = "OPENROUTER_API_KEY",
-          model = "x-ai/grok-code-fast-1",
-          -- model = "google/gemini-2.5-flash",
-          -- model = "anthropic/claude-sonnet-4",
+          model = "minimax/minimax-m2.5",
+          -- model = "anthropic/claude-sonnet-4.6",
         },
         deepseek = {
           __inherited_from = "openai",

@@ -44,7 +44,7 @@ DialogWidth=720
 [Containments][2][Applets][84][Configuration][General]
 groupingAppIdBlacklist=org.kde.plasmashell.desktop
 groupingLauncherUrlBlacklist=applications:org.kde.plasmashell.desktop
-launchers=applications:systemsettings.desktop,applications:org.kde.dolphin.desktop,preferred://browser,applications:code.desktop
+launchers=applications:systemsettings.desktop,applications:org.kde.dolphin.desktop,applications:code.desktop,preferred://browser
 middleClickAction=Close
 showOnlyCurrentDesktop=false
 
@@ -453,32 +453,25 @@ showLowSpeeds=true
 speedLayout=columns
 updateInterval=2
 
-[Containments][239][Applets][273]
+[Containments][239][Applets][274]
 immutability=1
-plugin=org.kde.plasma.pager
+plugin=org.dhruv8sh.kara
 
-[Containments][239][Applets][273][Configuration]
-popupHeight=400
-popupWidth=560
+[Containments][239][Applets][274][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
 
-[Containments][239][Applets][273][Configuration][Appearance]
-fontSize=16
-inactiveBgColor=34,34,34,0
-inactiveBgColorChecked=true
+[Containments][239][Applets][274][Configuration][appearance]
+altColor=191,191,191
+defaultAltTextColors=false
 
-[Containments][239][Applets][273][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
+[Containments][239][Applets][274][Configuration][general]
+highlightOpacityFull=false
+spacing=8
+type=0
 
-[Containments][239][Applets][273][Configuration][General]
-activeColor=239,239,239
-activeSizeH=10
-boldOnActive=true
-customColorsEnabled=true
-dotSizeCustom=10
-forceLayout=Full
-spacingFactor=6.199999999999994
-spacingHorizontal=16
+[Containments][239][Applets][274][Configuration][type2]
+labelSource=5
 
 [Containments][239][Applets][50]
 immutability=1
@@ -503,7 +496,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][239][General]
-AppletOrder=136;230;262;241;273;242;268;204;243;50;137
+AppletOrder=136;230;262;241;274;242;268;204;243;50;137
 
 [Containments][269]
 activityId=30168601-0752-429f-966e-4a534cc0b9db

@@ -6,21 +6,15 @@ Id_4=89779d91-0d75-4cbe-849b-6d0958b5f12c
 Number=4
 Rows=2
 
+[Effect-better-blur-dx]
+BlurDecorations=true
+BlurStrength=3
+NoiseStrength=14
+WindowClasses=konsole\nyakuake\nkitty\nghostty\norg.wezfurlong.wezterm\nneovide\ndolphin\ncode\nvscodeium\nWindsurf\ndev.zed.Zed\nidea\njetbrains-fleet\npot\nlutris\nthunderbird\nTor Browser\nhiddify
+
 [Effect-blur]
 BlurStrength=4
 NoiseStrength=14
-
-[Effect-blurplus]
-BlurDecorations=true
-BlurMenus=true
-BlurStrength=4
-BottomCornerRadius=10
-DockCornerRadius=10
-MenuCornerRadius=10
-NoiseStrength=14
-TopCornerRadius=10
-TransparentBlur=false
-WindowClasses=konsole\nyakuake\nkitty\nghostty\norg.wezfurlong.wezterm\nneovide\ndolphin\ncode\nvscodeium\nWindsurf\ndev.zed.Zed\nidea\njetbrains-fleet\npot\nlutris\nthunderbird\nTor Browser\nhiddify
 
 [Effect-glide]
 InRotationAngle=6
@@ -33,7 +27,6 @@ ExcludedWindowClasses=krunner,yakuake,org.jackhuang.hmcl.Launcher,vlc
 
 [Effect-thumbnailaside]
 MaxWidth=400
-Opacity=80
 
 [Effect-zoom]
 MouseTracking=2
@@ -53,6 +46,7 @@ CommandAll1=Activate, raise and move
 CommandAll2=Move
 
 [Plugins]
+better_blur_dxEnabled=true
 blurEnabled=false
 cubeEnabled=true
 desktopchangeosdEnabled=false
@@ -135,60 +129,37 @@ InactiveShadowAlpha=123
 LayoutName=sidebar
 OrderMinimizedMode=1
 
-[TabBoxAlternative]
-LayoutName=sidebar
-
-[Tiling][19298d87-3944-45b6-bb49-7a163067b99d][e5b64ab3-d11b-4814-b176-254930622d8a]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
-
-[Tiling][480f3f4c-9307-5635-b703-97fe910f2f9c]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
-
-[Tiling][4c85f5bb-4dcb-5bec-8433-5c0e6860d679]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
-
-[Tiling][60803436-01d0-58bb-a53f-573b3057d5f7]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
-
-[Tiling][70ff64fa-acde-4e3e-b050-6d3de290b835][e5b64ab3-d11b-4814-b176-254930622d8a]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
-
-[Tiling][79fb8e02-4cf7-4559-bdd9-ec66608de114][e5b64ab3-d11b-4814-b176-254930622d8a]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
-
-[Tiling][86c6677f-0136-54ea-ba45-660eef8487da]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
-
-[Tiling][89779d91-0d75-4cbe-849b-6d0958b5f12c][78b719c9-59c7-4de2-88a6-8a309ba3dd88]
+[Tiling][89779d91-0d75-4cbe-849b-6d0958b5f12c][]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][89779d91-0d75-4cbe-849b-6d0958b5f12c][e5b64ab3-d11b-4814-b176-254930622d8a]
 padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
-[Tiling][bff5f77a-7f39-4961-bacf-70775cee217e][78b719c9-59c7-4de2-88a6-8a309ba3dd88]
+[Tiling][bff5f77a-7f39-4961-bacf-70775cee217e][]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][bff5f77a-7f39-4961-bacf-70775cee217e][e5b64ab3-d11b-4814-b176-254930622d8a]
 padding=4
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.74658203125},{"width":0.25341796875}]}
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
-[Tiling][c531ad74-e792-4805-8375-20c17f1f4636][78b719c9-59c7-4de2-88a6-8a309ba3dd88]
+[Tiling][c531ad74-e792-4805-8375-20c17f1f4636][]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][c531ad74-e792-4805-8375-20c17f1f4636][e5b64ab3-d11b-4814-b176-254930622d8a]
 padding=4
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
 
-[Tiling][d343c7eb-5447-4bd6-9479-8fe1b60ee05f][78b719c9-59c7-4de2-88a6-8a309ba3dd88]
+[Tiling][d343c7eb-5447-4bd6-9479-8fe1b60ee05f][]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][d343c7eb-5447-4bd6-9479-8fe1b60ee05f][e5b64ab3-d11b-4814-b176-254930622d8a]
 padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
-
-[Tiling][d9abd89f-662c-594e-b1d7-c405e4941f34]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.68896484375},{"width":0.31103515625}]}
 
 [Wayland]
 EnablePrimarySelection=false

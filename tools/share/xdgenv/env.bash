@@ -30,14 +30,14 @@ export GOCACHE="$XDG_CACHE_HOME/go-build"
 
 # npm
 if command -v npm >/dev/null; then
-    export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npmrc"
-    npm_config='prefix=${XDG_DATA_HOME}/npm
+	export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npmrc"
+	npm_config='prefix=${XDG_DATA_HOME}/npm
 cache=${XDG_CACHE_HOME}/npm
 init-module=${XDG_CONFIG_HOME}/npm/config/npm-init.js
 logs-dir=${XDG_STATE_HOME}/npm/logs'
-    if [[ ! -f "$NPM_CONFIG_USERCONFIG" ]] || ! grep -q "$npm_config" "$NPM_CONFIG_USERCONFIG"; then
-        echo -e "\n$npm_config\n" >>"$NPM_CONFIG_USERCONFIG"
-    fi
+	if [[ ! -f "$NPM_CONFIG_USERCONFIG" ]] || ! grep -q "prefix=" "$NPM_CONFIG_USERCONFIG"; then
+		echo -e "\n$npm_config\n" | tee -a "$NPM_CONFIG_USERCONFIG"
+	fi
 fi
 
 # nuget

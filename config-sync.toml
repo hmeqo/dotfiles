@@ -24,7 +24,6 @@ depends = { system = ["bash"] }
 tags = ["shell"]
 links = [
     { source = "data/config/fish/config.fish", target = "~/.config/fish/config.fish" },
-    { source = "data/config/fish/functions/_25_keybindings.fish", target = "~/.config/fish/functions/_25_keybindings.fish" },
     { source = "data/config/fish/functions/fish_mode_prompt.fish", target = "~/.config/fish/functions/fish_mode_prompt.fish" },
     { source = "data/config/fish/functions/proxyoff.fish", target = "~/.config/fish/functions/proxyoff.fish" },
     { source = "data/config/fish/functions/proxyon.fish", target = "~/.config/fish/functions/proxyon.fish" },

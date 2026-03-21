@@ -83,9 +83,10 @@ set -gx SDL_VIDEODRIVER wayland,x11
 
 ## --- other ---
 
-if command -sq sccache
-  set -gx RUSTC_WRAPPER "$(which sccache)"
-end
+## Rust
+# if command -sq sccache
+#   set -gx RUSTC_WRAPPER "$(which sccache)"
+# end
 
 ## Theme
 # set -gx GTK_THEME Fluent-round-Dark
@@ -97,3 +98,10 @@ end
 ## ssh
 # set -gx SSH_ASKPASS /usr/bin/ksshaskpass
 # set -gx SSH_ASKPASS_REQUIRE prefer
+
+## Android
+set -gx ANDROID_HOME "$XDG_DATA_HOME/Android/Sdk"
+set -gx ANDROID_NDK_HOME "$ANDROID_HOME/ndk/29.0.14206865"
+set -gx ANDROID_AVD_HOME "$XDG_CONFIG_HOME/.android/avd"
+
+prepend_path "$XDG_DATA_HOME/Android/Sdk/build-tools/36.1.0"

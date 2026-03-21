@@ -19,7 +19,7 @@ setopt HIST_IGNORE_ALL_DUPS
 #
 
 # Set editor default keymap to emacs (`-e`) or vi (`-v`)
-bindkey -e
+bindkey -v
 
 # Prompt for spelling correction of commands.
 #setopt CORRECT
@@ -96,17 +96,12 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 # Download zimfw plugin manager if missing.
 if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
-    if (( ${+commands[curl]} )); then
-        curl -fsSL --create-dirs -o ${ZIM_HOME}/zimfw.zsh \
-            https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
-    else
-        mkdir -p ${ZIM_HOME} && wget -nv -O ${ZIM_HOME}/zimfw.zsh \
-            https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
-    fi
+  curl -fsSL --create-dirs -o ${ZIM_HOME}/zimfw.zsh \
+      https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
 fi
-# Install missing modules, and update ${ZIM_HOME}/init.zsh if missing or outdated.
-if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
-    source ${ZIM_HOME}/zimfw.zsh init -q
+# Install missing modules and update ${ZIM_HOME}/init.zsh if missing or outdated.
+if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZIM_CONFIG_FILE:-${ZDOTDIR:-${HOME}}/.zimrc} ]]; then
+  source ${ZIM_HOME}/zimfw.zsh init
 fi
 # Initialize modules.
 source ${ZIM_HOME}/init.zsh
@@ -130,9 +125,8 @@ unset key
 
 # Lines configured by zsh-newuser-install
 HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh_history"
-HISTSIZE=1000
-SAVEHIST=1000
-bindkey -e
+HISTSIZE=10000
+SAVEHIST=10000
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename "$HOME/.zshrc"
