@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+
+# 自动提权
+if [[ $EUID -ne 0 ]]; then
+  exec sudo "$0" "$@"
+fi
+
+set -e
+
+ACTION=$1
+FROM_PORT=$2
+TO_PORT=$3
+PROTO=${4:-tcp}
+
+if [[ -z "$ACTION" || -z "$FROM_PORT" || -z "$TO_PORT" ]]; then
+  echo "用法: portredirect [a|d] <源端口> <目标端口> [tcp|udp]"
+  exit 1
+fi
+
+add_rule() {
+  local CHAIN=$1
+  if iptables -t nat -C "$CHAIN" -p "$PROTO" --dport "$FROM_PORT" -j REDIRECT --to-ports "$TO_PORT" 2>/dev/null; then
+    echo "[$CHAIN] 已存在: ${FROM_PORT} -> ${TO_PORT}"
+  else
+    iptables -t nat -A "$CHAIN" -p "$PROTO" --dport "$FROM_PORT" -j REDIRECT --to-ports "$TO_PORT"
+    echo "[$CHAIN] 已添加: ${FROM_PORT} -> ${TO_PORT}"
+  fi
+}
+
+del_rule() {
+  local CHAIN=$1
+  if iptables -t nat -C "$CHAIN" -p "$PROTO" --dport "$FROM_PORT" -j REDIRECT --to-ports "$TO_PORT" 2>/dev/null; then
+    iptables -t nat -D "$CHAIN" -p "$PROTO" --dport "$FROM_PORT" -j REDIRECT --to-ports "$TO_PORT"
+    echo "[$CHAIN] 已删除: ${FROM_PORT} -> ${TO_PORT}"
+  else
+    echo "[$CHAIN] 不存在: ${FROM_PORT} -> ${TO_PORT}"
+  fi
+}
+
+case "$ACTION" in
+a)
+  add_rule PREROUTING
+  add_rule OUTPUT
+  ;;
+d)
+  del_rule PREROUTING
+  del_rule OUTPUT
+  ;;
+*)
+  echo "无效操作: $ACTION (使用 a 添加, d 删除)"
+  exit 1
+  ;;
+esac

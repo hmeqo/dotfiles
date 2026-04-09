@@ -69,3 +69,6 @@ set -gx TS3_CONFIG_DIR "$XDG_CONFIG_HOME/ts3client"
 
 # wine
 set -gx WINEPREFIX "$XDG_DATA_HOME/wineprefixes/default"
+
+# Android Studio
+set -gx ANDROID_USER_HOME "$XDG_DATA_HOME/android" 

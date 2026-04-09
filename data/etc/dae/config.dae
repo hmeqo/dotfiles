@@ -43,14 +43,14 @@ dns {
 group {
   proxy {
     filter: subtag(sub)
-    filter: name(keyword: 'HK')
+    filter: name(regex: 'SG|US')
     policy: min_moving_avg
     # policy: fixed(1)
   }
 
-  proxy_sg {
+  proxy_2 {
     filter: subtag(sub)
-    filter: name(keyword: 'SG')
+    filter: name(regex: 'SG|US')
     policy: min_moving_avg
     # policy: fixed(1)
   }
@@ -65,17 +65,20 @@ routing {
   dip(224.0.0.0/3, 'ff00::/8') -> direct
   dip(geoip:private) -> direct
 
-  ## Block AD
+  ## Block
   domain(geosite:category-ads-all) -> block
   ## Disable h3 because it usually consumes too much cpu/mem resources.
   # l4proto(udp) && dport(443) -> block
 
+  ## Direct
+  # dip(161.129.35.0) -> direct
+
   ## Proxy
+  domain(openrouter.ai) -> proxy_2
+  domain(chatgpt.com) -> proxy_2
+  domain(geosite:google) -> proxy_2
   pname(tor, Telegram) -> proxy
   pname(code) -> proxy
-  domain(openrouter.ai) -> proxy_sg
-  domain(chatgpt.com) -> proxy_sg
-  domain(geosite:google) -> proxy_sg
 
   ## Direct
   pname(ssh, adb) -> direct
@@ -94,6 +97,7 @@ routing {
     regex:.steamserver.net$,
     regex:cache.*.steamcontent.com$
   ) -> direct
+
   ## CN
   dip(geoip:cn) -> direct
   domain(geosite:cn) -> direct

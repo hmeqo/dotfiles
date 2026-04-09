@@ -40,6 +40,9 @@ logs-dir=${XDG_STATE_HOME}/npm/logs'
 	fi
 fi
 
+# pm2
+export PM2_HOME="$XDG_DATA_HOME/pm2"
+
 # nuget
 export NUGET_PACKAGES="$XDG_CACHE_HOME/NuGetPackages"
 
@@ -66,3 +69,6 @@ export TS3_CONFIG_DIR="$XDG_CONFIG_HOME/ts3client"
 
 # wine
 export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default
+
+# Android Studio
+export ANDROID_USER_HOME="$XDG_DATA_HOME/android" 

@@ -10,7 +10,7 @@ Rows=2
 BlurDecorations=true
 BlurStrength=3
 NoiseStrength=14
-WindowClasses=konsole\nyakuake\nkitty\nghostty\norg.wezfurlong.wezterm\nneovide\ndolphin\ncode\nvscodeium\nWindsurf\ndev.zed.Zed\nidea\njetbrains-fleet\npot\nlutris\nthunderbird\nTor Browser\nhiddify
+WindowClasses=konsole\nyakuake\nkitty\nghostty\norg.wezfurlong.wezterm\nneovide\ndolphin\ncode\nvscodeium\nWindsurf\ndev.zed.Zed\nidea\njetbrains-fleet\npot\nlutris\nthunderbird\nTor Browser
 
 [Effect-blur]
 BlurStrength=4
@@ -25,11 +25,15 @@ OutRotationEdge=0
 Duration=300
 ExcludedWindowClasses=krunner,yakuake,org.jackhuang.hmcl.Launcher,vlc
 
+[Effect-magnifier]
+Height=300
+Width=300
+
 [Effect-thumbnailaside]
 MaxWidth=400
 
 [Effect-zoom]
-MouseTracking=2
+MouseTracking=1
 
 [IncludeExclude]
 Exclusions=yakuake,bottles
@@ -61,6 +65,7 @@ kwin4_effect_shapecornersEnabled=false
 kwin_effect_lightlyshadersEnabled=false
 kzonesEnabled=true
 lightlyshaders_blurEnabled=true
+magnifierEnabled=true
 minimizeallEnabled=true
 movewindowEnabled=true
 poloniumEnabled=true
@@ -69,6 +74,7 @@ squash2Enabled=false
 synchronizeskipswitcherEnabled=false
 thumbnailasideEnabled=true
 truely-maximizedEnabled=false
+zoomEnabled=false
 
 [PrimaryOutline]
 ActiveOutlineAlpha=82
@@ -126,7 +132,6 @@ ActiveShadowAlpha=123
 InactiveShadowAlpha=123
 
 [TabBox]
-LayoutName=sidebar
 OrderMinimizedMode=1
 
 [Tiling][89779d91-0d75-4cbe-849b-6d0958b5f12c][]
@@ -174,9 +179,7 @@ Scale=1.25
 XwaylandEisNoPromptApps=steam,xembedsniproxy
 
 [org.kde.kdecoration2]
-ButtonsOnLeft=MF
-library=org.kde.breeze
-theme=Breeze
+ButtonsOnLeft=F
 
 [ًRound-Corners]
 InactiveCornerRadius=8

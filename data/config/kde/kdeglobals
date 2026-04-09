@@ -106,10 +106,10 @@ ForegroundVisited=173,101,175
 
 [General]
 BrowserApplication=google-chrome.desktop
-ColorScheme=MateriaDark
 ColorSchemeHash=3b17c5d56f8f372f0b0b9f709c4579c23e51fe6a
 TerminalApplication=kitty
 TerminalService=kitty.desktop
+UseSystemBell=true
 XftAntialias=true
 XftHintStyle=hintnone
 XftSubPixel=none
@@ -119,19 +119,17 @@ menuFont=Maple Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 smallestReadableFont=Maple Mono,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 toolBarFont=Maple Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
-[Icons]
-Theme=breeze
-
 [KDE]
 DefaultDarkLookAndFeel=MateriaDark
-LookAndFeelPackage=MateriaDark
+LookAndFeelPackage=MaterialDark
 ShowDeleteCommand=false
-widgetStyle=Breeze
+contrast=4
+frameContrast=0.2
 
 [KFileDialog Settings]
 Allow Expansion=false
 Automatically select filename extension=false
-Breadcrumb Navigation=true
+Breadcrumb Navigation=false
 Decoration position=0
 Show Full Path=false
 Show Inline Previews=true

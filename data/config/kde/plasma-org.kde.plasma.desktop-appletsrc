@@ -44,7 +44,7 @@ DialogWidth=720
 [Containments][2][Applets][84][Configuration][General]
 groupingAppIdBlacklist=org.kde.plasmashell.desktop
 groupingLauncherUrlBlacklist=applications:org.kde.plasmashell.desktop
-launchers=applications:systemsettings.desktop,applications:org.kde.dolphin.desktop,applications:code.desktop,preferred://browser
+launchers=applications:systemsettings.desktop,applications:org.kde.dolphin.desktop,preferred://browser,applications:code.desktop
 middleClickAction=Close
 showOnlyCurrentDesktop=false
 
@@ -469,6 +469,7 @@ defaultAltTextColors=false
 highlightOpacityFull=false
 spacing=8
 type=0
+wrapOn=false
 
 [Containments][239][Applets][274][Configuration][type2]
 labelSource=5

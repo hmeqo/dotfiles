@@ -210,6 +210,7 @@ links = [
     { source = "data/local/bin/kde-no-global-menu", target = "~/.local/bin/kde-no-global-menu" },
     { source = "data/local/bin/ltr", target = "~/.local/bin/ltr" },
     { source = "data/local/bin/rtl", target = "~/.local/bin/rtl" },
+    { source = "data/local/bin/portredirect", target = "~/.local/bin/portredirect" },
     { source = "data/local/bin/psubview", target = "~/.local/bin/psubview" },
     { source = "data/local/bin/pyfiglet-picker", target = "~/.local/bin/pyfiglet-picker" },
     { source = "data/local/bin/reloadenv", target = "~/.local/bin/reloadenv" },
