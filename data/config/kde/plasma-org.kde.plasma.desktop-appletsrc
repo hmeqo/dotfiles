@@ -76,7 +76,7 @@ DialogWidth=1202
 [Containments][234][General]
 changedPositions={}
 lastResolution=2048x1152
-positions={"0x0":[],"2048x1152":["1","18"]}
+positions={"0x0":[],"1920x1080":["1","17"],"2048x1152":["1","18"]}
 sortMode=-1
 
 [Containments][234][Wallpaper][org.kde.image][General]

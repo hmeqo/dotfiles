@@ -33,7 +33,6 @@ depends = { system = [
 ], other-items = [
     "starship",
 ], fisher = [
-    "patrickF1/fzf.fish",
 ] }
 
 [options.zsh]
