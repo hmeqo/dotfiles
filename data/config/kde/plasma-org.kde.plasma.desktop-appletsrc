@@ -80,7 +80,7 @@ positions={"0x0":[],"1920x1080":["1","17"],"2048x1152":["1","18"]}
 sortMode=-1
 
 [Containments][234][Wallpaper][org.kde.image][General]
-Image=file:///home/hmeqo/.local/opt/dotfiles/data/local/share/wallpapers/stephan-raabe/geometric-abstract.jpg
+Image=file:///home/hmeqo/.local/opt/dotfiles/data/local/share/wallpapers/hmeqo/3d-tech.jpg
 SlidePaths=/home/hmeqo/.local/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments][239]
@@ -350,7 +350,7 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][239][Applets][243][Applets][247][Shortcuts]
-global=
+global=Meta+N
 
 [Containments][239][Applets][243][Applets][248]
 immutability=1
@@ -439,7 +439,7 @@ immutability=1
 plugin=org.kde.netspeedWidget
 
 [Containments][239][Applets][268][Configuration][Advanced]
-interfacesWhitelist=enp0s13f0u1u4u4,enp5s0,wlo1
+interfacesWhitelist=wlo1,enp0s13f0u1u4u4,enp5s0
 interfacesWhitelistEnabled=true
 
 [Containments][239][Applets][268][Configuration][ConfigDialog]
@@ -470,6 +470,9 @@ highlightOpacityFull=false
 spacing=8
 type=0
 wrapOn=false
+
+[Containments][239][Applets][274][Configuration][type1]
+t1radius=2
 
 [Containments][239][Applets][274][Configuration][type2]
 labelSource=5
@@ -504,6 +507,34 @@ activityId=30168601-0752-429f-966e-4a534cc0b9db
 formfactor=0
 immutability=1
 lastScreen=0
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
+[Containments][275]
+activityId=7ab2f3ee-2f98-4111-bb48-b04b1d170fb7
+formfactor=0
+immutability=1
+lastScreen=1
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
+[Containments][275][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][275][Wallpaper][org.kde.image][General]
+Image=file:///home/hmeqo/.local/opt/dotfiles/data/local/share/wallpapers/hmeqo/3d-tech.jpg
+SlidePaths=/home/hmeqo/.local/share/wallpapers/,/usr/share/wallpapers/
+
+[Containments][276]
+ItemGeometries-1366x768=
+ItemGeometriesHorizontal=
+activityId=30168601-0752-429f-966e-4a534cc0b9db
+formfactor=0
+immutability=1
+lastScreen=1
 location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image

@@ -9,5 +9,4 @@ DefaultProfile=Yakuake.profile
 FirstRun=false
 
 [Window]
-Height=64
-KeepOpen=false
+Height=58

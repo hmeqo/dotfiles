@@ -1,7 +1,7 @@
 ---@type LazySpec
 return {
-  {
-    "Comment.nvim",
-    enabled = true,
-  },
+--   {
+--     "Comment.nvim",
+--     enabled = true,
+--   },
 }

@@ -1,19 +1,23 @@
 #!/usr/bin/bash
 
+REPO_OWNER="hmeqo"
+
 install_crates() {
-  cargo build --release
+  # cargo build --release
   cargo install --path crates/* --root './tools' --force -q
 }
 
 replace_userhome_string() {
-  files=$(rg -l '/home/hmeqo' data/{config,local})
+  files=$(rg -l "/home/$REPO_OWNER" data/{config,local})
   if [[ -n "$files" ]]; then
-    echo "$files" | sed 's/.*/"&"/' | xargs sed -i "s#/home/hmeqo#$HOME#g"
+    echo "$files" | sed 's/.*/"&"/' | xargs sed -i "s#/home/$REPO_OWNER#$HOME#g"
   fi
 }
 
 if [[ $1 = "init" ]]; then
-  replace_userhome_string
+  if [ ! "$USER" = "$REPO_OWNER" ]; then
+    replace_userhome_string
+  fi
 
   install_crates
 elif [[ $1 = "tui" ]]; then
