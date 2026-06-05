@@ -3,11 +3,9 @@ set -gx XDG_DATA_HOME "$HOME/.local/share"
 set -gx XDG_STATE_HOME "$HOME/.local/state"
 set -gx XDG_CACHE_HOME "$HOME/.cache"
 
-# Bash
-set -gx HISTFILE "$XDG_DATA_HOME/bash_history"
-
 # GnuPg
-# set -gx GNUPGHOME "$XDG_DATA_HOME/gnupg"
+set -gx GNUPGHOME "$XDG_DATA_HOME/gnupg"
+mkdir -p "$GNUPGHOME"
 
 # python
 set -gx PYTHON_HISTORY "$XDG_DATA_HOME/python_history"
@@ -28,6 +26,25 @@ set -gx GOPATH "$XDG_DATA_HOME/go"
 set -gx GOMODCACHE "$XDG_CACHE_HOME/go/mod"
 set -gx GOCACHE "$XDG_CACHE_HOME/go-build"
 
+# nuget
+set -gx NUGET_PACKAGES "$XDG_CACHE_HOME/NuGetPackages"
+
+# Sqlite
+set -gx SQLITE_HISTORY "$XDG_DATA_HOME/sqlite_history"
+
+# GTK 2
+set -gx GTK2_RC_FILES "$XDG_CONFIG_HOME/gtkrc-2.0"
+
+# CUDA
+if type -q nvidia-smi
+    set -gx CUDA_CACHE_PATH "$XDG_CACHE_HOME/nv"
+end
+
+# wine
+if type -q wine
+    set -gx WINEPREFIX "$XDG_DATA_HOME/wineprefixes/default"
+end
+
 # npm
 if type -q npm
     set -gx NPM_CONFIG_USERCONFIG "$XDG_CONFIG_HOME/npmrc"
@@ -41,34 +58,32 @@ logs-dir=${XDG_STATE_HOME}/npm/logs'
 end
 
 # pm2
-set -gx PM2_HOME "$XDG_DATA_HOME/pm2"
-
-# nuget
-set -gx NUGET_PACKAGES "$XDG_CACHE_HOME/NuGetPackages"
-
-# Sqlite
-set -gx SQLITE_HISTORY "$XDG_DATA_HOME/sqlite_history"
+if type -q pm2
+    set -gx PM2_HOME "$XDG_DATA_HOME/pm2"
+end
 
 # Mariadb
-set -gx MYSQL_HISTFILE "$XDG_DATA_HOME/mariadb_history"
+if type -q mariadb
+    set -gx MYSQL_HISTFILE "$XDG_DATA_HOME/mariadb_history"
+end
 
 # Redis
-set -gx REDISCLI_HISTFILE "$XDG_DATA_HOME/rediscli_history"
-
-# GnuPg
-set -gx GNUPGHOME "$XDG_DATA_HOME/gnupg"
-
-# GTK 2
-set -gx GTK2_RC_FILES "$XDG_CONFIG_HOME/gtkrc-2.0"
-
-# CUDA
-set -gx CUDA_CACHE_PATH "$XDG_CACHE_HOME/nv"
+if type -q redis
+    set -gx REDISCLI_HISTFILE "$XDG_DATA_HOME/rediscli_history"
+end
 
 # TeamSpeak
-set -gx TS3_CONFIG_DIR "$XDG_CONFIG_HOME/ts3client"
-
-# wine
-set -gx WINEPREFIX "$XDG_DATA_HOME/wineprefixes/default"
+if type -q teamspeak3
+    set -gx TS3_CONFIG_DIR "$XDG_CONFIG_HOME/ts3client"
+end
 
 # Android Studio
-set -gx ANDROID_USER_HOME "$XDG_DATA_HOME/android" 
+if type -q audio-studio
+    set -gx ANDROID_USER_HOME "$XDG_DATA_HOME/android"
+end
+
+# Pi Agent
+if type -q pi
+    set -gx PI_CODING_AGENT_DIR "$XDG_CONFIG_HOME/pi"
+    set -gx PI_CODING_AGENT_SESSION_DIR "$XDG_STATE_HOME/pi/sessions"
+end

@@ -4,9 +4,9 @@ end
 
 local function getfontsize()
   if os.getenv "XDG_SESSION_TYPE" == "wayland" or os.getenv "XDG_SESSION_DESKTOP" == "KDE" then
-    return "12"
-  else
     return "10"
+  else
+    return "8"
   end
 end
 

@@ -52,6 +52,7 @@ showOnlyCurrentDesktop=false
 AppletOrder=232;84
 
 [Containments][234]
+ItemGeometries-1707x960=Applet-235:704,400,640,160,0;
 ItemGeometries-1920x1080=Applet-235:704,400,640,160,0;
 ItemGeometries-2048x1152=Applet-235:704,400,640,160,0;
 ItemGeometries-2133x1200=Applet-235:704,400,640,160,0;
@@ -420,7 +421,7 @@ DialogWidth=720
 
 [Containments][239][Applets][243][General]
 extraItems=org.kde.plasma.bluetooth,org.kde.plasma.vault,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.manage-inputmethod,org.kde.plasma.cameraindicator,org.kde.plasma.printmanager,org.kde.plasma.weather,org.kde.plasma.clipboard,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.kscreen
-hiddenItems=tray-id,tao application,73400334,90177550
+hiddenItems=tray-id,tao application,73400334,90177550,trayid2992141,Easy Effects,trayid20581,tray-icon tray app,trayid12443851,trayid32251,trayid33021,trayid7909861,trayid19831,trayid19171,trayid20041,trayid20021,trayid18111,trayid18871361,trayid74571,trayid540801,trayid2373701
 knownItems=org.kde.plasma.bluetooth,org.kde.plasma.vault,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.manage-inputmethod,org.kde.plasma.cameraindicator,org.kde.plasma.printmanager,org.kde.plasma.weather,org.kde.plasma.clipboard,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.kscreen
 
 [Containments][239][Applets][243][Shortcuts]

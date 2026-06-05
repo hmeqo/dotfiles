@@ -21,7 +21,7 @@ end
 ## pnpm
 if command -sq pnpm
     set -q PNPM_HOME || set -gx PNPM_HOME "$XDG_DATA_HOME/pnpm"
-    prepend_path "$PNPM_HOME"
+    prepend_path "$PNPM_HOME/bin"
 end
 
 ## Java

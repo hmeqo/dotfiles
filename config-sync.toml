@@ -28,12 +28,7 @@ links = [
     { source = "data/config/fish/functions/proxyoff.fish", target = "~/.config/fish/functions/proxyoff.fish" },
     { source = "data/config/fish/functions/proxyon.fish", target = "~/.config/fish/functions/proxyon.fish" },
 ]
-depends = { system = [
-    "fish",
-], other-items = [
-    "starship",
-], fisher = [
-] }
+depends = { system = ["fish"], other-items = ["starship"], fisher = [] }
 
 [options.zsh]
 tags = ["shell"]
@@ -53,6 +48,13 @@ links = [
     { source = "data/config/zsh/zshrc", target = "~/.config/zsh/.zshrc" },
 ]
 depends = { system = ["zsh"] }
+
+[options.atuin]
+tags = ["shell"]
+links = [
+    { source = "data/config/atuin/config.toml", target = "~/.config/atuin/config.toml" },
+]
+depends = { system = ["atuin"] }
 
 [options.starship]
 tags = ["shell"]

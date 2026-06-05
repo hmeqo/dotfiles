@@ -111,13 +111,13 @@ TerminalApplication=kitty
 TerminalService=kitty.desktop
 UseSystemBell=true
 XftAntialias=true
-XftHintStyle=hintnone
-XftSubPixel=rgb
-fixed=Maple Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-font=Maple Mono,10,-1,5,400,0,0,0,0,0,0,0,1,0,0,1,,0,0
-menuFont=Maple Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-smallestReadableFont=Maple Mono,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-toolBarFont=Maple Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+XftHintStyle=hintslight
+XftSubPixel=none
+fixed=Maple Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
+font=Maple Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
+menuFont=Maple Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
+smallestReadableFont=Maple Mono,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
+toolBarFont=Maple Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 
 [KDE]
 DefaultDarkLookAndFeel=MateriaDark
@@ -157,7 +157,7 @@ MaximumRemoteSize=0
 [WM]
 activeBackground=39,39,39
 activeBlend=39,39,39
-activeFont=Maple Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+activeFont=Maple Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 activeForeground=223,223,223
 inactiveBackground=30,30,30
 inactiveBlend=30,30,30

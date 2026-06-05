@@ -3,11 +3,9 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-# Bash
-export HISTFILE="$XDG_DATA_HOME/bash_history"
-
-# GnuPG
-# export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+# GnuPg
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+mkdir -p "$GNUPGHOME"
 
 # python
 export PYTHON_HISTORY="$XDG_DATA_HOME/python_history"
@@ -28,6 +26,25 @@ export GOPATH="$XDG_DATA_HOME/go"
 export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
 export GOCACHE="$XDG_CACHE_HOME/go-build"
 
+# nuget
+export NUGET_PACKAGES="$XDG_CACHE_HOME/NuGetPackages"
+
+# Sqlite
+export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
+
+# GTK 2
+export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtkrc-2.0"
+
+# CUDA
+if command -v nvidia-smi >/dev/null; then
+	export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
+fi
+
+# wine
+if command -v wine >/dev/null; then
+	export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default
+fi
+
 # npm
 if command -v npm >/dev/null; then
 	export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npmrc"
@@ -41,34 +58,32 @@ logs-dir=${XDG_STATE_HOME}/npm/logs'
 fi
 
 # pm2
-export PM2_HOME="$XDG_DATA_HOME/pm2"
-
-# nuget
-export NUGET_PACKAGES="$XDG_CACHE_HOME/NuGetPackages"
-
-# Sqlite
-export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
+if command -v pm2 >/dev/null; then
+	export PM2_HOME="$XDG_DATA_HOME/pm2"
+fi
 
 # Mariadb
-export MYSQL_HISTFILE="$XDG_DATA_HOME/mariadb_history"
+if command -v mariadb >/dev/null; then
+	export MYSQL_HISTFILE="$XDG_DATA_HOME/mariadb_history"
+fi
 
 # Redis
-export REDISCLI_HISTFILE="$XDG_DATA_HOME/redis/rediscli_history"
-
-# GnuPg
-export GNUPGHOME="$XDG_DATA_HOME/gnupg"
-
-# GTK 2
-export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtkrc-2.0"
-
-# CUDA
-export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
+if command -v redis >/dev/null; then
+	export REDISCLI_HISTFILE="$XDG_DATA_HOME/redis/rediscli_history"
+fi
 
 # TeamSpeak
-export TS3_CONFIG_DIR="$XDG_CONFIG_HOME/ts3client"
-
-# wine
-export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default
+if command -v teamspeak3 >/dev/null; then
+	export TS3_CONFIG_DIR="$XDG_CONFIG_HOME/ts3client"
+fi
 
 # Android Studio
-export ANDROID_USER_HOME="$XDG_DATA_HOME/android" 
+if command -v audio-studio >/dev/null; then
+	export ANDROID_USER_HOME="$XDG_DATA_HOME/android"
+fi
+
+# Pi Agent
+if command -v pi >/dev/null; then
+	set -gx PI_CODING_AGENT_DIR "$XDG_CONFIG_HOME/pi"
+	set -gx PI_CODING_AGENT_SESSION_DIR "$XDG_STATE_HOME/pi/sessions"
+fi
