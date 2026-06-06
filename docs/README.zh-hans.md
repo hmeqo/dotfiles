@@ -25,7 +25,7 @@ cd ~/.local/opt/dotfiles
 使用 `confsync` 管理链接文件，通过 tui 选择要同步的选项
 
 ```bash
-# 初始化 dotfiles 环境, 需要每次 pull 后运行
+# 需要每次 pull 后运行
 ./sync.sh init
 
 # 运行 confsync tui
@@ -58,7 +58,7 @@ cd ~/.local/opt/dotfiles
 
   被依赖: `konsole` `wazterm` `kitty`
 
-- Maple Mono NF CN 
+- Maple Mono NF CN
 
   被依赖: `vscode`
 
@@ -104,7 +104,6 @@ git submodule update --init local/share/wallpapers/hmeqo
 - conf.d
 
   配置文件, 任何情况都会加载
-
   - login
 
     在登录时加载的文件

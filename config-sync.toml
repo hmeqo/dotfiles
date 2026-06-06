@@ -121,6 +121,7 @@ links = [
     { source = "data/local/share/konsole/Materia Dark (Dolphin).colorscheme", target = "~/.local/share/konsole/Materia Dark (Dolphin).colorscheme" },
     { source = "data/local/share/konsole/Materia Dark (Transparent).colorscheme", target = "~/.local/share/konsole/Materia Dark (Transparent).colorscheme" },
     { source = "data/local/share/konsole/Konsole.profile", target = "~/.local/share/konsole/Konsole.profile" },
+    { source = "data/local/share/konsole/Konsole.keytab", target = "~/.local/share/konsole/Konsole.keytab" },
     { source = "data/local/share/konsole/Dolphin.profile", target = "~/.local/share/konsole/Dolphin.profile" },
     { source = "data/local/share/konsole/Yakuake.profile", target = "~/.local/share/konsole/Yakuake.profile" },
 

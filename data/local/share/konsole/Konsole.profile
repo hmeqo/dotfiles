@@ -9,6 +9,9 @@ Parent=FALLBACK/
 TerminalColumns=120
 TerminalRows=32
 
+[Keyboard]
+KeyBindings=Konsole
+
 [Scrolling]
 HistoryMode=1
 HistorySize=2000

@@ -27,11 +27,11 @@ Use `confsync` to manage dotfiles.
 It will display a tui in the terminal to choose which ones you want to sync.
 
 ```bash
-# run sync that will automatically create python virtual environment, you need run it every time after pull
-./sync init
+# Run it every time after pull
+./sync.sh init
 
-# start `confsync tui`
-./sync tui
+# Start `confsync tui`
+./sync.sh tui
 ```
 
 If you already have a configuration file, don’t worry - it will be safely backed up to `$DOTFILES/backup` before the synchronization process begins.
@@ -89,14 +89,14 @@ Fakehome is a program that allows you to run a program in a fake home directory,
 - Install
 
   ```bash
-  ./sync install-fakehome
+  ./sync.sh install-fakehome
   ```
 
 - Uninstall
 
   ```bash
   # uninstall
-  ./sync uninstall-fakehome
+  ./sync.sh uninstall-fakehome
   ```
 
 ## Configuration
@@ -108,7 +108,6 @@ Fakehome is a program that allows you to run a program in a fake home directory,
 - conf.d
 
   Configuration files.
-
   - login
 
     Load files on login.

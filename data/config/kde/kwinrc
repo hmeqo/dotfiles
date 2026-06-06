@@ -204,6 +204,8 @@ XwaylandEisNoPromptApps=steam,xembedsniproxy
 
 [org.kde.kdecoration2]
 ButtonsOnLeft=F
+library=org.kde.breeze
+theme=Breeze
 
 [ًRound-Corners]
 InactiveCornerRadius=8
