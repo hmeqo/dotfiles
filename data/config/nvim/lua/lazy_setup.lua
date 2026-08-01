@@ -15,7 +15,7 @@ require("lazy").setup({
   },
   { import = "astrodefault.community" },
   { import = "astrodefault.plugins" },
-  { import = "community" },
+  { import = "presets.default" },
   { import = "plugins" },
   pack_util.import_user_pack "community",
   pack_util.import_user_pack "plugins",

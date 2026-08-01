@@ -70,31 +70,39 @@ group {
 
 # See https://github.com/daeuniverse/dae/blob/main/docs/en/configuration/routing.md for full examples.
 routing {
-  ## === Level 1 === (No proxy and block)
+  ## === Level 1 === (No proxy)
 
   pname(NetworkManager, systemd-resolved, dnsmasq) -> direct
-  pname(tailscaled, zerotier-one, easytier-core) -> must_direct
+  pname(tailscaled, zerotier-one, easytier-core) -> direct
   pname(uuplugin) -> must_direct
+
+  # domain(cloudflare-dns.com, dns.google) -> proxy
+  # dip(1.1.1.1, 8.8.8.8, 9.9.9.9) -> proxy
+
+  ## 多播、广播地址
   dip(224.0.0.0/3, 'ff00::/8') -> direct
-  dip(geoip:private, 192.168.122.57) -> direct
+  dip(geoip:private) -> direct
 
   ## Block
   domain(geosite:category-ads-all) -> block
 
   ## Disable h3 because it usually consumes too much cpu/mem resources.
-  #l4proto(udp) && dport(443) -> block
+  l4proto(udp) && dport(443) -> block
 
   ## By glider
   # pname(zen-bin) -> direct
 
   ## === Level 2 === (Ensure that by proxy)
 
-  domain(openrouter.ai) -> proxy_unlimit
-  domain(chatgpt.com) -> proxy_unlimit
-  domain(geosite:google) -> proxy_unlimit
-  domain(regex:rambler.ru$) -> proxy_ru
-  pname(tor, Telegram) -> proxy
-  pname(code) -> proxy
+  domain(
+    router.requesty.ai,
+    openrouter.ai,
+    chatgpt.com,
+    requesty.ai,
+    geosite:google
+  ) -> proxy_unlimit
+  # domain(regex:rambler.ru$) -> proxy_ru
+  pname(code, tor, Telegram) -> proxy
 
   ## === Level 3 === (Direct)
 
@@ -103,12 +111,13 @@ routing {
 
   pname(ssh, adb) -> direct
   ## 目标非常用端口都走直连，避免BT流量和游戏走代理
-  #!dport(21,22,23,53,80,123,143,194,443,465,587,853,993,995,998) -> direct
+  # !dport(21,22,23,53,80,123,143,194,443,465,587,853,993,995,998) -> direct
+  pname(motrix-next) -> direct
   ## ArchLinux
-  #domain(ping.archlinux.org) -> direct
-  #domain(aur.archlinux.org) -> direct
+  # domain(ping.archlinux.org) -> direct
+  # domain(aur.archlinux.org) -> direct
   ## Games
-  #domain(geosite:category-games) -> direct
+  # domain(geosite:category-games) -> direct
   ## Steam
   domain(
     steamserver.net,

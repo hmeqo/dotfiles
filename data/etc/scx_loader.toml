@@ -1,2 +1,11 @@
+# default_sched = "scx_cake"
+# default_mode = "Gaming"
+
+# default_sched = "scx_rustland"
+# default_mode = "LowLatency"
+
 default_sched = "scx_lavd"
-default_mode = "Auto"
+default_mode = "LowLatency"
+
+# default_sched = "scx_cosmos"
+# default_mode = "Auto"
