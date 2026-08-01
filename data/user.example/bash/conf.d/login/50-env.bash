@@ -1,4 +1,4 @@
-## --- path ---
+## === path ===
 
 has_path() {
     [[ ":$PATH:" = *":$1:"* ]]
@@ -44,7 +44,7 @@ if command -v cargo >/dev/null; then
     prepend_path "${CARGO_HOME:-$HOME/.cargo}/bin"
 fi
 
-## --- de ---
+## === desktop ===
 
 export GTK_USE_PORTAL=1
 
@@ -61,4 +61,6 @@ export SDL_IM_MODULE=fcitx
 export INPUT_METHOD=fcitx
 export GLFW_IM_MODULE=ibus
 
-export QT_WAYLAND_TEXT_INPUT_PROTOCOL=zwp_text_input_v1
+# export QT_WAYLAND_TEXT_INPUT_PROTOCOL=zwp_text_input_v1
+
+. "$DOTFILES/tools/share/xdgenv/ext.bash"

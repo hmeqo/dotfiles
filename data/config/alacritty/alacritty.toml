@@ -1,0 +1,88 @@
+[font]
+size = 10
+normal = { family = "Maple Mono NF", style = "Regular" }
+bold = { family = "Maple Mono NF", style = "Bold" }
+italic = { family = "Maple Mono NF", style = "Italic" }
+bold_italic = { family = "Maple Mono NF", style = "Bold Italic" }
+
+[colors.primary]
+foreground = "#dfdfdf"
+background = "#171717"
+
+[colors.cursor]
+text = "#111111"
+cursor = "#cccccc"
+
+[colors.selection]
+text = "#000000"
+background = "#fffacd"
+
+[colors.normal]
+black   = "#000000"
+red     = "#cc0403"
+green   = "#19cb00"
+yellow  = "#cecb00"
+blue    = "#0d73cc"
+magenta = "#cb1ed1"
+cyan    = "#0dcdcd"
+white   = "#dddddd"
+
+[colors.bright]
+black   = "#767676"
+red     = "#f2201f"
+green   = "#23fd00"
+yellow  = "#fffd00"
+blue    = "#1a8fff"
+magenta = "#fd28ff"
+cyan    = "#14ffff"
+white   = "#ffffff"
+
+[window]
+opacity = 0.95
+dimensions = { columns = 120, lines = 34 }
+
+[window.padding]
+x = 2
+y = 2
+
+[selection]
+save_to_clipboard = true
+
+[bell]
+duration = 0
+
+[mouse]
+hide_when_typing = true
+bindings = [
+  { mouse = "Right", action = "PasteSelection" },
+]
+
+[keyboard]
+bindings = [
+  # unset defaults
+  { key = "0", mods = "Control", action = "None" },
+  { key = "=", mods = "Control", action = "None" },
+  { key = "+", mods = "Control", action = "None" },
+  { key = "-", mods = "Control", action = "None" },
+  # font size (use Ctrl+Shift to match kitty/wezterm)
+  { key = "0",         mods = "Control|Shift", action = "ResetFontSize" },
+  { key = ")",         mods = "Control|Shift", action = "ResetFontSize" },
+  { key = "=",         mods = "Control|Shift", action = "IncreaseFontSize" },
+  { key = "+",         mods = "Control|Shift", action = "IncreaseFontSize" },
+  { key = "-",         mods = "Control|Shift", action = "DecreaseFontSize" },
+  { key = "_",         mods = "Control|Shift", action = "DecreaseFontSize" },
+  # paste
+  { key = "V",         mods = "Control|Shift", action = "Paste" },
+  # scroll
+  { key = "PageUp",    mods = "Control|Shift", action = "ScrollPageUp" },
+  { key = "PageDown",  mods = "Control|Shift", action = "ScrollPageDown" },
+  { key = "PageUp",    mods = "Shift",         action = "ScrollHalfPageUp" },
+  { key = "PageDown",  mods = "Shift",         action = "ScrollHalfPageDown" },
+  # search
+  { key = "F",         mods = "Control|Shift", action = "SearchForward" },
+  # send Ctrl+W on Ctrl+Backspace
+  { key = "Backspace", mods = "Control",       chars = "\u0017" },
+  # window
+  { key = "Enter",     mods = "Control|Shift", action = "CreateNewWindow" },
+  { key = "Q",         mods = "Control|Shift", action = "Quit" },
+]

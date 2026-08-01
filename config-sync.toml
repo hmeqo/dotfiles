@@ -75,6 +75,11 @@ tags = ["terminal"]
 links = [{ source = "data/config/wezterm", target = "~/.config/wezterm" }]
 depends = { system = ["wezterm"] }
 
+[options.alacritty]
+tags = ["terminal"]
+links = [{ source = "data/config/alacritty", target = "~/.config/alacritty" }]
+depends = { system = ["alacritty"] }
+
 [options.kitty]
 tags = ["terminal"]
 links = [{ source = "data/config/kitty", target = "~/.config/kitty" }]
@@ -92,6 +97,7 @@ links = [
     { source = "data/config/yazi/keymap.toml", target = "~/.config/yazi/keymap.toml" },
     { source = "data/config/yazi/package.toml", target = "~/.config/yazi/package.toml" },
     { source = "data/config/yazi/yazi.toml", target = "~/.config/yazi/yazi.toml" },
+    { source = "data/config/yazi/theme.toml", target = "~/.config/yazi/theme.toml" },
 ]
 depends = { system = ["yazi"], post-exec = ["ya pack -i"] }
 
@@ -210,6 +216,7 @@ tags = ["scripts"]
 links = [
     { source = "data/local/bin/gameoverlay", target = "~/.local/bin/gameoverlay" },
     { source = "data/local/bin/kde-no-global-menu", target = "~/.local/bin/kde-no-global-menu" },
+    # { source = "data/local/bin/kde-tile-noborder", target = "~/.local/bin/kde-tile-noborder" },
     { source = "data/local/bin/ltr", target = "~/.local/bin/ltr" },
     { source = "data/local/bin/rtl", target = "~/.local/bin/rtl" },
     { source = "data/local/bin/portredirect", target = "~/.local/bin/portredirect" },

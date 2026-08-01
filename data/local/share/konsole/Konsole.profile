@@ -17,4 +17,4 @@ HistoryMode=1
 HistorySize=2000
 
 [Terminal Features]
-UrlHintsModifiers=0
+UrlHintsModifiers=2

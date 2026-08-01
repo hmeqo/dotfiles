@@ -77,6 +77,7 @@ $git_status\
 ($nix_shell$container$git_metrics)\
 $battery\
 $time\
+$cmd_duration\
 \n\
 $shlvl\
 $shell\
@@ -87,7 +88,6 @@ $character\
 """
 
 right_format = """
-$cmd_duration\
 """
 
 [fill]
@@ -151,8 +151,8 @@ style = "white"
 [jobs]
 format = "[$symbol$number]($style) "
 style = "white"
-symbol = "[](blue)"
-# symbol = "[▶](blue)"
+symbol = "[](blue) "
+# symbol = "[▶](blue) "
 
 [localip]
 ssh_only = true

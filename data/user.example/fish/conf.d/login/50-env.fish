@@ -1,4 +1,4 @@
-## --- path ---
+## === path ===
 
 function has_path
     contains $argv[1] $PATH
@@ -14,6 +14,13 @@ end
 
 prepend_path "$HOME/.local/bin"
 
+## Bash
+set -gx HISTFILE "$XDG_DATA_HOME/bash_history"
+
+## bun
+if command -sq bun
+    prepend_path "$XDG_CACHE_HOME/.bun/bin" 
+end
 ## npm
 if command -sq npm && test -n (npm config get prefix)
     prepend_path "$(npm config get prefix)/bin"
@@ -50,7 +57,7 @@ if command -sq cargo
     prepend_path "$CARGO_HOME/bin"
 end
 
-## --- desktop ---
+## === desktop ===
 
 set -gx GTK_USE_PORTAL 1
 
@@ -67,9 +74,9 @@ set -gx SDL_IM_MODULE fcitx
 set -gx INPUT_METHOD fcitx
 set -gx GLFW_IM_MODULE ibus
 
-set -gx QT_WAYLAND_TEXT_INPUT_PROTOCOL zwp_text_input_v1
+# set -gx QT_WAYLAND_TEXT_INPUT_PROTOCOL zwp_text_input_v1
 
-## --- game ---
+## === game ===
 
 ## Enable gpl for AMD GPU
 # set -gx RADV_PERFTEST gpl
@@ -81,7 +88,7 @@ set -gx SDL_VIDEODRIVER wayland,x11
 ## Gamemode
 # set -gx GAMEMODERUNEXEC ""
 
-## --- other ---
+## === other ===
 
 ## Rust
 # if command -sq sccache
@@ -96,8 +103,8 @@ set -gx SDL_VIDEODRIVER wayland,x11
 # set -gx SSLKEYLOGFILE "$HOME/.local/share/sslkeylog.log"
 
 ## ssh
-# set -gx SSH_ASKPASS /usr/bin/ksshaskpass
-# set -gx SSH_ASKPASS_REQUIRE prefer
+set -gx SSH_ASKPASS /usr/bin/ksshaskpass
+set -gx SSH_ASKPASS_REQUIRE prefer
 
 ## Android
 set -gx ANDROID_HOME "$XDG_DATA_HOME/Android/Sdk"
@@ -105,3 +112,5 @@ set -gx ANDROID_NDK_HOME "$ANDROID_HOME/ndk/29.0.14206865"
 set -gx ANDROID_AVD_HOME "$XDG_CONFIG_HOME/.android/avd"
 
 prepend_path "$XDG_DATA_HOME/Android/Sdk/build-tools/36.1.0"
+
+source "$DOTFILES/tools/share/xdgenv/ext.fish"

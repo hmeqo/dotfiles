@@ -1,0 +1,6 @@
+[flavor]
+dark = "flexoki-dark"
+
+[mgr]
+border_symbol = "│"
+border_style = { fg = "#878580" }

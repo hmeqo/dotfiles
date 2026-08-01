@@ -22,7 +22,7 @@ layerrule=2
 Description=Transparent
 opacityactive=95
 opacityactiverule=2
-wmclass=dolphin|code
+wmclass=dolphin
 wmclassmatch=3
 
 [General]

@@ -5,7 +5,7 @@
 # 字体(可以使用 CLI 生成有效值列表:ghostty +list-fonts)
 font-family = "Maple Mono NF"
 # 字体大小
-font-size = 12
+font-size = 10
 # 自动复制选中文本到系统剪切板
 # copy-on-select = clipboard
 # 输入文本时隐藏鼠标
@@ -35,6 +35,14 @@ window-height = 32
 #
 
 keybind = ctrl+backspace=text:\x17
+keybind = ctrl+shift+0=reset_font_size
+keybind = ctrl+shift+==increase_font_size:1
+keybind = ctrl+shift+-=decrease_font_size:1
+
+keybind = ctrl+alt+page_up=move_tab:-1
+keybind = ctrl+alt+page_down=move_tab:1
+keybind = ctrl+page_up=previous_tab
+keybind = ctrl+page_down=next_tab
 
 #
 # Shader

@@ -8,7 +8,7 @@ return {
     { family = "Maple Mono NF",           weight = "Regular", italic = false },
     { family = "FiraCode Nerd Font Mono", weight = "Regular", italic = false },
   },
-  font_size = 12,
+  font_size = 10,
   front_end = "WebGpu",
   webgpu_power_preference = "HighPerformance",
   underline_thickness = "1.5pt",

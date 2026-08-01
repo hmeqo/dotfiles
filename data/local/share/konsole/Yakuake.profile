@@ -8,5 +8,11 @@ Command=$SHELL
 Name=Yakuake
 Parent=FALLBACK/
 
+[Keyboard]
+KeyBindings=Konsole
+
 [Scrolling]
 HistorySize=2000
+
+[Terminal Features]
+UrlHintsModifiers=2

@@ -1,4 +1,4 @@
-local prefix = "<Leader>a"
+local prefix = "<Leader>i"
 
 ---@type LazySpec
 return {
@@ -164,15 +164,9 @@ return {
     "yetone/avante.nvim",
     build = "make",
     opts = {
-      provider = "openrouter",
+      provider = "deepseek",
       auto_suggestions_provider = "autocompletion",
       providers = {
-        autocompletion = {
-          __inherited_from = "openai",
-          endpoint = "https://openrouter.ai/api/v1",
-          api_key_name = "OPENROUTER_API_KEY",
-          model = "minimax/minimax-m2.5",
-        },
         openrouter = {
           __inherited_from = "openai",
           endpoint = "https://openrouter.ai/api/v1",
@@ -184,11 +178,17 @@ return {
           __inherited_from = "openai",
           endpoint = "https://api.deepseek.com",
           api_key_name = "DEEPSEEK_API_KEY",
-          model = "deepseek-coder",
+          model = "deepseek-v4-flash",
+        },
+        autocompletion = {
+          __inherited_from = "openai",
+          endpoint = "https://api.deepseek.com",
+          api_key_name = "DEEPSEEK_API_KEY",
+          model = "deepseek-v4-flash",
         },
       },
       web_search_engine = {
-        provider = "google", -- tavily, serpapi, google, kagi, brave, or searxng
+        provider = "tavily", -- tavily, serpapi, google, kagi, brave, or searxng
         proxy = nil, -- proxy support, e.g., http://127.0.0.1:7890
       },
       behaviour = {

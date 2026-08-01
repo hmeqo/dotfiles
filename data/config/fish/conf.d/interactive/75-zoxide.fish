@@ -1,1 +1,1 @@
-not type -q zoxide || zoxide init fish | source
+not command -sq zoxide || zoxide init fish | source

@@ -1,8 +1,3 @@
-set -gx XDG_CONFIG_HOME "$HOME/.config"
-set -gx XDG_DATA_HOME "$HOME/.local/share"
-set -gx XDG_STATE_HOME "$HOME/.local/state"
-set -gx XDG_CACHE_HOME "$HOME/.cache"
-
 # GnuPg
 set -gx GNUPGHOME "$XDG_DATA_HOME/gnupg"
 mkdir -p "$GNUPGHOME"
@@ -36,17 +31,17 @@ set -gx SQLITE_HISTORY "$XDG_DATA_HOME/sqlite_history"
 set -gx GTK2_RC_FILES "$XDG_CONFIG_HOME/gtkrc-2.0"
 
 # CUDA
-if type -q nvidia-smi
+if command -sq nvidia-smi
     set -gx CUDA_CACHE_PATH "$XDG_CACHE_HOME/nv"
 end
 
 # wine
-if type -q wine
+if command -sq wine
     set -gx WINEPREFIX "$XDG_DATA_HOME/wineprefixes/default"
 end
 
 # npm
-if type -q npm
+if command -sq npm
     set -gx NPM_CONFIG_USERCONFIG "$XDG_CONFIG_HOME/npmrc"
     set -l npm_config 'prefix=${XDG_DATA_HOME}/npm
 cache=${XDG_CACHE_HOME}/npm
@@ -58,32 +53,35 @@ logs-dir=${XDG_STATE_HOME}/npm/logs'
 end
 
 # pm2
-if type -q pm2
+if command -sq pm2
     set -gx PM2_HOME "$XDG_DATA_HOME/pm2"
 end
 
 # Mariadb
-if type -q mariadb
+if command -sq mariadb
     set -gx MYSQL_HISTFILE "$XDG_DATA_HOME/mariadb_history"
 end
 
 # Redis
-if type -q redis
+if command -sq redis
     set -gx REDISCLI_HISTFILE "$XDG_DATA_HOME/rediscli_history"
 end
 
 # TeamSpeak
-if type -q teamspeak3
+if command -sq teamspeak3
     set -gx TS3_CONFIG_DIR "$XDG_CONFIG_HOME/ts3client"
 end
 
 # Android Studio
-if type -q audio-studio
+if command -sq audio-studio
     set -gx ANDROID_USER_HOME "$XDG_DATA_HOME/android"
 end
 
 # Pi Agent
-if type -q pi
+if command -sq omp
+    set -gx PI_CONFIG_DIR ".config/omp"
+    mkdir -p "$PI_CONFIG_DIR/agent"
+else if command -sq pi
     set -gx PI_CODING_AGENT_DIR "$XDG_CONFIG_HOME/pi"
     set -gx PI_CODING_AGENT_SESSION_DIR "$XDG_STATE_HOME/pi/sessions"
 end

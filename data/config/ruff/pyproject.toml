@@ -4,6 +4,12 @@ line-length = 120
 
 [tool.ruff.lint]
 ignore = ["F401", "F403", "F405"]
+# 使用 extend-select 在默认规则（E/F）之上追加你想要的规则
+extend-select = [
+    "BLE", # 开启整个 flake8-blind-except 规则组（包括 BLE001）
+    "SIM", # 开启整个 flake8-simplify 代码简化规则组（包括 SIM108）
+    "B",   # 开启整个 flake8-bugbear 规则组（包括 B007）
+]
 
 [tool.ruff.format]
 quote-style = "double"

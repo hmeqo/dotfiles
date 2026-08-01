@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+qdbus6 org.kde.KWin /component/kwin org.kde.kglobalaccel.Component.invokeShortcut "Window Custom Quick Tile Top"
+qdbus6 org.kde.KWin /component/kwin org.kde.kglobalaccel.Component.invokeShortcut "Window No Border"

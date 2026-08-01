@@ -54,12 +54,24 @@ return {
           desc = "Organize imports",
         },
         ["<C-S-k>"] = { function() vim.cmd.normal "dd" end },
-        ["<A-j>"] = { function() vim.cmd "m +1" end },
-        ["<A-k>"] = { function() vim.cmd "m -2" end },
+        ["<A-Down>"] = { function() vim.cmd "m +1" end },
+        ["<A-Up>"] = { function() vim.cmd "m -2" end },
       }
       local M_V = vim.tbl_extend("keep", {
-        ["<A-j>"] = { function() vim.cmd "m '>+1<CR>" end },
-        ["<A-k>"] = { function() vim.cmd "m '<-2<CR>" end },
+        ["<A-Down>"] = {
+          function()
+            local keys = vim.api.nvim_replace_termcodes(":move '>+1<CR>gv", true, false, true)
+            vim.api.nvim_feedkeys(keys, "n", false)
+          end,
+          desc = "Move lines down",
+        },
+        ["<A-Up>"] = {
+          function()
+            local keys = vim.api.nvim_replace_termcodes(":move '<-2<CR>gv", true, false, true)
+            vim.api.nvim_feedkeys(keys, "n", false)
+          end,
+          desc = "Move lines up",
+        },
       }, M)
 
       opts.mappings.n = vim.tbl_extend("force", opts.mappings.n or {}, M)
