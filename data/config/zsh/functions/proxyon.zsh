@@ -1,4 +1,4 @@
-. "$DOTFILES/data/config/bash/conf.d/interactive/00-proxyon.bash"
+. "$DOTFILES/data/config/bash/functions/proxyon.bash"
 
 # _proxyon() {
 #   local -a tools

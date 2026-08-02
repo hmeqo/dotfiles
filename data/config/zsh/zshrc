@@ -141,12 +141,18 @@ autoload -Uz compinit
 export DOTFILES="${DOTFILES:-$HOME/.local/opt/dotfiles}"
 
 # Define functions and conf.d directories
+functions_dirs=("$DOTFILES/data/config/zsh/functions" "$DOTFILES/data/user/zsh/functions")
 confd_dirs=("${confd_dirs[@]}" "$DOTFILES/data/config/zsh/conf.d" "$DOTFILES/data/user/zsh/conf.d")
 if [[ $- == *i* ]]; then
   confd_dirs=("${confd_dirs[@]}" "$DOTFILES/data/config/zsh/conf.d/interactive" "$DOTFILES/data/user/zsh/conf.d/interactive")
 fi
+# Load the functions
+for file in $("$DOTFILES/tools/bin/collectconf" "${functions_dirs[@]}"); do
+  source "$file"
+done
 # Load the configuration
 for file in $("$DOTFILES/tools/bin/collectconf" "${confd_dirs[@]}"); do
   source "$file"
 done
+unset functions_dirs
 unset confd_dirs

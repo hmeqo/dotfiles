@@ -17,7 +17,7 @@ require("lazy").setup({
   { import = "astrodefault.plugins" },
   { import = "presets.default" },
   { import = "plugins" },
-  pack_util.import_user_pack "community",
+  pack_util.import_user_pack "presets",
   pack_util.import_user_pack "plugins",
 } --[[@as LazySpec]], {
   -- Configure any other `lazy.nvim` configuration options here

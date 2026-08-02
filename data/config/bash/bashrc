@@ -3,17 +3,18 @@
 export DOTFILES="${DOTFILES:-$HOME/.local/opt/dotfiles}"
 
 # Define functions and conf.d directories
-# functions_dirs=("$DOTFILES/data/config/bash/functions" "$DOTFILES/data/user/bash/functions")
-conf_dirs=("${CONFD_LIST[@]}" "$DOTFILES/data/config/bash/conf.d" "$DOTFILES/data/user/bash/conf.d")
+functions_dirs=("$DOTFILES/data/config/bash/functions" "$DOTFILES/data/user/bash/functions")
+confd_dirs=("${confd_dirs[@]}" "$DOTFILES/data/config/bash/conf.d" "$DOTFILES/data/user/bash/conf.d")
 if [[ $- == *i* ]]; then
-  conf_dirs=("${conf_dirs[@]}" "$DOTFILES/data/config/bash/conf.d/interactive" "$DOTFILES/data/user/bash/conf.d/interactive")
+  confd_dirs=("${confd_dirs[@]}" "$DOTFILES/data/config/bash/conf.d/interactive" "$DOTFILES/data/user/bash/conf.d/interactive")
 fi
-# Load the configuration
-# for file in $(echo "${functions_dirs[@]}" | xargs "$DOTFILES/tools/bin/collectconf"); do
-#   source "$file"
-# done
-for file in $("$DOTFILES/tools/bin/collectconf" "${conf_dirs[@]}"); do
+# Load the functions
+for file in $("$DOTFILES/tools/bin/collectconf" "${functions_dirs[@]}"); do
   source "$file"
 done
-# unset functions_dirs
-unset conf_dirs
+# Load the configuration
+for file in $("$DOTFILES/tools/bin/collectconf" "${confd_dirs[@]}"); do
+  source "$file"
+done
+unset functions_dirs
+unset confd_dirs

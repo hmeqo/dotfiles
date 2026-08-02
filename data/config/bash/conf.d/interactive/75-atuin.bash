@@ -1,5 +1,5 @@
 if [[ -x "$(command -v atuin)" ]]; then
   # set +o history
   # unset HISTFILE
-  eval "$(zoxide init atuin --disable-up-arrow)"
+  eval "$(atuin init bash --disable-up-arrow)"
 fi
