@@ -1,0 +1,97 @@
+#!/usr/bin/bash
+# proxyon — print proxy environment assignments for the current shell.
+#
+# Usage:
+#   eval "$(proxyon <type|host:port>)"   # bash/zsh
+#   proxyon <type|host:port> | source    # fish
+#
+# Supported types: tor, glider, clash, clash_verge, clash_verge_rev,
+# clash_rev, v2raya, v2raya_global, nekoray, <host:port>
+#
+# A child process cannot mutate the parent shell's environment, so the
+# env assignments are printed to stdout and evaluated by the caller.
+# The output format is auto-detected from the calling shell via PPID
+# (fish -> `set -gx`, POSIX shells -> `export`); --fish/--posix force it.
+# Informational output goes to stderr to keep stdout safe to eval/source.
+
+set -u
+
+mode=
+case "${1:-}" in
+--fish)
+    mode=fish
+    shift
+    ;;
+--posix)
+    mode=posix
+    shift
+    ;;
+--help | -h)
+    echo "Usage: proxyon <type|host:port>" >&2
+    echo "Supported types: tor, glider, clash, clash_verge, clash_verge_rev, clash_rev, v2raya, v2raya_global, nekoray, <host:port>" >&2
+    exit 0
+    ;;
+esac
+
+if [[ -z "$mode" ]]; then
+    case "$(ps -p "$PPID" -o comm= 2>/dev/null || true)" in
+    fish) mode=fish ;;
+    *) mode=posix ;;
+    esac
+fi
+
+case "${1:-}" in
+"")
+    echo "Usage: proxyon <type|host:port>" >&2
+    echo "Supported types: tor, glider, clash, clash_verge, clash_verge_rev, clash_rev, v2raya, v2raya_global, nekoray, <host:port>" >&2
+    exit 1
+    ;;
+tor)
+    http_url="http://127.0.0.1:9050"
+    socks_url="socks://127.0.0.1:9050"
+    ;;
+glider)
+    http_url="http://127.0.0.1:8443"
+    socks_url="socks://127.0.0.1:8443"
+    ;;
+clash | clash_verge)
+    http_url="http://127.0.0.1:7890"
+    socks_url="socks://127.0.0.1:7891"
+    ;;
+clash_verge_rev | clash_rev)
+    http_url="http://127.0.0.1:7897"
+    socks_url="socks://127.0.0.1:7898"
+    ;;
+v2raya)
+    http_url="http://127.0.0.1:20172"
+    socks_url="socks://127.0.0.1:20170"
+    ;;
+v2raya_global)
+    http_url="http://127.0.0.1:20171"
+    socks_url="socks://127.0.0.1:20170"
+    ;;
+nekoray)
+    http_url="http://127.0.0.1:2080"
+    socks_url="socks://127.0.0.1:2080"
+    ;;
+*)
+    http_url="http://$1"
+    socks_url="socks://$1"
+    ;;
+esac
+
+no_proxy='localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'
+
+if [[ "$mode" == fish ]]; then
+    printf "set -gx HTTP_PROXY '%s'\n" "$http_url"
+    printf "set -gx HTTPS_PROXY '%s'\n" "$http_url"
+    printf "set -gx FTP_PROXY '%s'\n" "$http_url"
+    printf "set -gx SOCKS_PROXY '%s'\n" "$socks_url"
+    printf "set -gx NO_PROXY '%s'\n" "$no_proxy"
+else
+    printf "export HTTP_PROXY='%s'\n" "$http_url"
+    printf "export HTTPS_PROXY='%s'\n" "$http_url"
+    printf "export FTP_PROXY='%s'\n" "$http_url"
+    printf "export SOCKS_PROXY='%s'\n" "$socks_url"
+    printf "export NO_PROXY='%s'\n" "$no_proxy"
+fi

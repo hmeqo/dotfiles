@@ -1,0 +1,46 @@
+#!/usr/bin/bash
+# proxyoff — print proxy environment unset lines for the current shell.
+#
+# Usage:
+#   eval "$(proxyoff)"   # bash/zsh
+#   proxyoff | source    # fish
+#
+# A child process cannot mutate the parent shell's environment, so the
+# unset lines are printed to stdout and evaluated by the caller.
+# The output format is auto-detected from the calling shell via PPID
+# (fish -> `set -e`, POSIX shells -> `unset`); --fish/--posix force it.
+
+set -u
+
+mode=
+case "${1:-}" in
+--fish)
+    mode=fish
+    shift
+    ;;
+--posix)
+    mode=posix
+    shift
+    ;;
+--help | -h)
+    echo "Usage: proxyoff" >&2
+    exit 0
+    ;;
+esac
+
+if [[ -z "$mode" ]]; then
+    case "$(ps -p "$PPID" -o comm= 2>/dev/null || true)" in
+    fish) mode=fish ;;
+    *) mode=posix ;;
+    esac
+fi
+
+vars=(HTTP_PROXY HTTPS_PROXY FTP_PROXY SOCKS_PROXY NO_PROXY)
+
+if [[ "$mode" == fish ]]; then
+    for var in "${vars[@]}"; do
+        printf "set -e %s\n" "$var"
+    done
+else
+    printf "unset %s\n" "${vars[*]}"
+fi

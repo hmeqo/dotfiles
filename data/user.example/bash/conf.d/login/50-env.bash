@@ -17,6 +17,11 @@ prepend_path "$HOME/.local/bin"
 ## Bash
 export HISTFILE="$XDG_DATA_HOME/bash_history"
 
+## mise
+if command -v mise >/dev/null; then
+    prepend_path "$XDG_DATA_HOME/mise/shims"
+fi
+
 ## bun
 if command -v bun >/dev/null; then
     prepend_path "$XDG_CACHE_HOME/.bun/bin"
@@ -110,6 +115,13 @@ elif command -v pi >/dev/null; then
     export PI_CODING_AGENT_SESSION_DIR="$XDG_STATE_HOME/pi/sessions"
 fi
 
+## Codex
+if command -v codex >/dev/null; then
+    export
+    export CODEX_HOME="$HOME/.config/codex"
+    mkdir -p "$CODEX_HOME"
+fi
+
 ## === Software ===
 
 ## nuget
@@ -185,9 +197,3 @@ export SDL_VIDEODRIVER=wayland,x11
 ## ssh
 export SSH_ASKPASS=/usr/bin/ksshaskpass
 export SSH_ASKPASS_REQUIRE=prefer
-
-## Android
-export ANDROID_HOME="$XDG_DATA_HOME/Android/Sdk"
-export ANDROID_NDK_HOME="$ANDROID_HOME/ndk/29.0.14206865"
-export ANDROID_AVD_HOME="$XDG_CONFIG_HOME/.android/avd"
-prepend_path "$XDG_DATA_HOME/Android/Sdk/build-tools/36.1.0"

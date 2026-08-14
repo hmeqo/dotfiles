@@ -370,6 +370,10 @@ plugin=org.kde.plasma.printmanager
 immutability=1
 plugin=org.kde.plasma.weather
 
+[Containments][239][Applets][243][Applets][251][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
 [Containments][239][Applets][243][Applets][252]
 immutability=1
 plugin=org.kde.plasma.clipboard
@@ -422,7 +426,7 @@ DialogWidth=720
 
 [Containments][239][Applets][243][General]
 extraItems=org.kde.plasma.bluetooth,org.kde.plasma.vault,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.manage-inputmethod,org.kde.plasma.cameraindicator,org.kde.plasma.printmanager,org.kde.plasma.weather,org.kde.plasma.clipboard,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.kscreen
-hiddenItems=tray-id,tao application,73400334,90177550,trayid2992141,Easy Effects,trayid20581,tray-icon tray app,trayid12443851,trayid32251,trayid33021,trayid7909861,trayid19831,trayid19171,trayid20041,trayid20021,trayid18111,trayid18871361,trayid74571,trayid540801,trayid2373701,trayid18881,trayid14686641,trayid22983071,trayid31880991,trayid8133281,trayid14545181,trayid20901,trayid20751,trayid20781,trayid19941,trayid58221,trayid4583601,trayid6702981,trayid20181,trayid5551801,trayid25071871,trayid18521,trayid19938471,trayid18561,trayid15620731,trayid18341,trayid16411,trayid17691,trayid17621,trayid19261,trayid1032181,trayid5674611,trayid13314131,trayid14548681,trayid21400251,trayid19591,trayid4678711,trayid17141,trayid3405851,trayid9483841,trayid15295761,trayid17711,trayid17121,trayid17732651,trayid16901
+hiddenItems=tray-id,tao application,73400334,90177550,trayid2992141,Easy Effects,trayid20581,tray-icon tray app,trayid12443851,trayid32251,trayid33021,trayid7909861,trayid19831,trayid19171,trayid20041,trayid20021,trayid18111,trayid18871361,trayid74571,trayid540801,trayid2373701,trayid18881,trayid14686641,trayid22983071,trayid31880991,trayid8133281,trayid14545181,trayid20901,trayid20751,trayid20781,trayid19941,trayid58221,trayid4583601,trayid6702981,trayid20181,trayid5551801,trayid25071871,trayid18521,trayid19938471,trayid18561,trayid15620731,trayid18341,trayid16411,trayid17691,trayid17621,trayid19261,trayid1032181,trayid5674611,trayid13314131,trayid14548681,trayid21400251,trayid19591,trayid4678711,trayid17141,trayid3405851,trayid9483841,trayid15295761,trayid17711,trayid17121,trayid17732651,trayid16901,trayid17171,trayid6476511,trayid5162661,trayid82071
 knownItems=org.kde.plasma.bluetooth,org.kde.plasma.vault,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.manage-inputmethod,org.kde.plasma.cameraindicator,org.kde.plasma.printmanager,org.kde.plasma.weather,org.kde.plasma.clipboard,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.mediacontroller,org.kde.kscreen
 
 [Containments][239][Applets][243][Shortcuts]
@@ -484,8 +488,8 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][239][Applets][282][Configuration]
-popupHeight=451
-popupWidth=810
+popupHeight=457
+popupWidth=816
 
 [Containments][239][Applets][282][Configuration][Appearance]
 autoFontAndSize=false

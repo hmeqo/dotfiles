@@ -128,6 +128,7 @@ LookAndFeelPackage=MaterialDark
 ShowDeleteCommand=false
 contrast=4
 frameContrast=0.2
+widgetStyle=Breeze
 
 [KFileDialog Settings]
 Allow Expansion=false

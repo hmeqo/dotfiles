@@ -333,7 +333,7 @@ _launch=Ctrl+Shift+Esc
 _launch=Meta+Return
 
 [services][net.local.spectacle.desktop]
-_launch=Meta+Alt+Q
+_launch=Meta+Ctrl+Alt+T
 
 [services][org.kde.kinfocenter.desktop]
 _launch=Meta+Shift+I

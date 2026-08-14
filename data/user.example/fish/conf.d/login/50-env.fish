@@ -17,6 +17,11 @@ prepend_path "$HOME/.local/bin"
 ## Bash
 set -gx HISTFILE "$XDG_DATA_HOME/bash_history"
 
+## mise
+if command -sq mise
+    prepend_path "$XDG_DATA_HOME/mise/shims"
+end
+
 ## bun
 if command -sq bun
     prepend_path "$XDG_CACHE_HOME/.bun/bin"
@@ -108,6 +113,12 @@ if command -sq omp
 else if command -sq pi
     set -gx PI_CODING_AGENT_DIR "$XDG_CONFIG_HOME/pi"
     set -gx PI_CODING_AGENT_SESSION_DIR "$XDG_STATE_HOME/pi/sessions"
+end
+
+## Codex
+if command -sq codex
+    set -gx CODEX_HOME "$HOME/.config/codex"
+    mkdir -p "$CODEX_HOME"
 end
 
 ## === Software ===

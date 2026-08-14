@@ -56,6 +56,13 @@ return {
         ["<C-S-k>"] = { function() vim.cmd.normal "dd" end },
         ["<A-Down>"] = { function() vim.cmd "m +1" end },
         ["<A-Up>"] = { function() vim.cmd "m -2" end },
+        ["<A-z>"] = {
+          function()
+            vim.wo.wrap = not vim.wo.wrap
+            vim.notify("wrap " .. (vim.wo.wrap and "on" or "off"), vim.log.levels.INFO)
+          end,
+          desc = "Toggle wrap",
+        },
       }
       local M_V = vim.tbl_extend("keep", {
         ["<A-Down>"] = {
