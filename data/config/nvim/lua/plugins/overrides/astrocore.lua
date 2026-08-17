@@ -26,6 +26,11 @@ return {
 
           -- Alias
           ["gr"] = { function() vim.lsp.buf.references() end, desc = "LSP search references" },
+
+          ["<Leader>tt"] = {
+            function() require("astrocore").toggle_term_cmd { cmd = "btop", direction = "float" } end,
+            desc = "ToggleTerm btop",
+          },
         },
         v = {
           -- ["u"] = "<Nop>",

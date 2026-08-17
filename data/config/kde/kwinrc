@@ -49,7 +49,7 @@ CommandAll2=Move
 
 [Plugins]
 better_blur_dxEnabled=true
-blurEnabled=false
+blurEnabled=true
 cubeEnabled=true
 desktopchangeosdEnabled=false
 forceblurEnabled=true

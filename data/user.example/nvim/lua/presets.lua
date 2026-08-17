@@ -18,7 +18,8 @@ return {
   -- { import = "astrocommunity.pack.java" },
   -- { import = "astrocommunity.pack.kotlin" },
   -- { import = "presets.pack.xml" },
-  { import = "presets.pack.python" },
+  -- { import = "presets.pack.python" },
+  { import = "presets.pack.python-basedpyright" },
   { import = "presets.pack.vue" },
   { import = "presets.pack.typescript" },
 }

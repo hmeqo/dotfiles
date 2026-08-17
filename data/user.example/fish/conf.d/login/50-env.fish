@@ -44,18 +44,6 @@ if command -sq pnpm
     prepend_path "$PNPM_HOME/bin"
 end
 
-## Java
-if test -e /usr/lib/jvm/default-runtime
-    set -gx _JAVA_OPTIONS "-Djava.util.prefs.userRoot=$XDG_DATA_HOME/java -Dlanguageserver.boot.symbolCacheDir=$XDG_CACHE_HOME/sts4/symbolCache"
-    set -gx MAVEN_OPTS "-Dmaven.repo.local=$XDG_DATA_HOME/maven/repository"
-    set -gx GRADLE_USER_HOME "$XDG_DATA_HOME/gradle"
-    set -gx JAVA_HOME /usr/lib/jvm/default-runtime
-end
-## Kotlin
-if test -e /usr/share/kotlin
-    set -gx KOTLIN_HOME /usr/share/kotlin
-end
-
 ## Python
 if command -sq python
     set -gx PYTHON_HISTORY "$XDG_DATA_HOME/python_history"
@@ -82,9 +70,24 @@ if command -sq cargo
 end
 
 ## go
-set -gx GOPATH "$XDG_DATA_HOME/go"
-set -gx GOMODCACHE "$XDG_CACHE_HOME/go/mod"
-set -gx GOCACHE "$XDG_CACHE_HOME/go-build"
+if command -sq go
+    set -gx GOPATH "$XDG_DATA_HOME/go"
+    set -gx GOMODCACHE "$XDG_CACHE_HOME/go/mod"
+    set -gx GOCACHE "$XDG_CACHE_HOME/go-build"
+    prepend_path "$GOPATH/bin"
+end
+
+## Java
+if test -e /usr/lib/jvm/default-runtime
+    set -gx _JAVA_OPTIONS "-Djava.util.prefs.userRoot=$XDG_DATA_HOME/java -Dlanguageserver.boot.symbolCacheDir=$XDG_CACHE_HOME/sts4/symbolCache"
+    set -gx MAVEN_OPTS "-Dmaven.repo.local=$XDG_DATA_HOME/maven/repository"
+    set -gx GRADLE_USER_HOME "$XDG_DATA_HOME/gradle"
+    set -gx JAVA_HOME /usr/lib/jvm/default-runtime
+end
+## Kotlin
+if test -e /usr/share/kotlin
+    set -gx KOTLIN_HOME /usr/share/kotlin
+end
 
 ## Mariadb
 if command -sq mariadb
@@ -106,6 +109,8 @@ if command -sq sqlite3
     set -gx SQLITE_HISTORY "$XDG_DATA_HOME/sqlite_history"
 end
 
+## === Agent ===
+
 ## Pi Agent
 if command -sq omp
     set -gx PI_CONFIG_DIR ".config/omp"
@@ -117,8 +122,13 @@ end
 
 ## Codex
 if command -sq codex
-    set -gx CODEX_HOME "$HOME/.config/codex"
+    set -gx CODEX_HOME "$HOME/.local/share/codex"
     mkdir -p "$CODEX_HOME"
+end
+
+## DSH
+if command -sq dsh
+    set -gx DSH_HOME "$HOME/.local/share/dsh"
 end
 
 ## === Software ===

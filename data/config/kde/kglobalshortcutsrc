@@ -349,8 +349,6 @@ _launch=Search\tAlt+F2\tMeta+Space
 _launch=none
 
 [services][org.kde.spectacle.desktop]
-CurrentMonitorScreenShot=none
-OpenWithoutScreenshot=none
 _launch=Print
 
 [services][org.kde.touchpadshortcuts.desktop]

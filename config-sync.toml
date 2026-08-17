@@ -69,6 +69,13 @@ links = [
 ]
 depends = { system = ["tmux", "tmux-plugin-manager"] }
 
+[options.herdr]
+tags = ["shell"]
+links = [
+    { source = "data/config/herdr/config.toml", target = "~/.config/herdr/config.toml" },
+]
+depends = { system = ["herdr"] }
+
 [options.wezterm]
 tags = ["terminal"]
 links = [{ source = "data/config/wezterm", target = "~/.config/wezterm" }]

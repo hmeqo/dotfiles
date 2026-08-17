@@ -1,6 +1,9 @@
 [flavor]
 dark = "flexoki-dark"
 
+[app]
+overall = { bg = "reset" }
+
 [mgr]
 border_symbol = "│"
-border_style = { fg = "#878580" }
+border_style  = { fg = "#858585" }

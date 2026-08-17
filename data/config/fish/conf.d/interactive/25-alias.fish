@@ -40,6 +40,20 @@ if command -sq tmux
     alias tk 'tmux kill-session -t'
 end
 
+if command -sq zellij
+    alias zj 'zellij attach -c'
+    alias zn zellij
+    alias znn 'zellij -s'
+    alias zl 'zellij ls -s'
+    alias za 'zellij attach'
+    alias zk 'zellij kill-session'
+    alias zka 'zellij kill-all-sessions -y'
+end
+
+if command -sq yazi
+    alias e yazi
+end
+
 if command -sq dust
     alias du 'dust -r -d1'
 else

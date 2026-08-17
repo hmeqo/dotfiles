@@ -44,18 +44,6 @@ if command -v pnpm >/dev/null; then
     prepend_path "$PNPM_HOME/bin"
 fi
 
-## Java
-if [[ -e "/usr/lib/jvm/default-runtime" ]]; then
-    export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=$XDG_DATA_HOME/java -Dlanguageserver.boot.symbolCacheDir=$XDG_CACHE_HOME/sts4/symbolCache"
-    export MAVEN_OPTS="-Dmaven.repo.local=$XDG_DATA_HOME/maven/repository"
-    export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
-    export JAVA_HOME="/usr/lib/jvm/default-runtime"
-fi
-## Kotlin
-if [[ -e "/usr/share/kotlin" ]]; then
-    export KOTLIN_HOME="/usr/share/kotlin"
-fi
-
 ## Python
 if command -v python >/dev/null; then
     export PYTHON_HISTORY="$XDG_DATA_HOME/python_history"
@@ -82,9 +70,24 @@ if command -v cargo >/dev/null; then
 fi
 
 ## go
-export GOPATH="$XDG_DATA_HOME/go"
-export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
-export GOCACHE="$XDG_CACHE_HOME/go-build"
+if command -v go >/dev/null; then
+    export GOPATH="$XDG_DATA_HOME/go"
+    export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
+    export GOCACHE="$XDG_CACHE_HOME/go-build"
+    prepend_path "$GOPATH/bin"
+fi
+
+## Java
+if [[ -e "/usr/lib/jvm/default-runtime" ]]; then
+    export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=$XDG_DATA_HOME/java -Dlanguageserver.boot.symbolCacheDir=$XDG_CACHE_HOME/sts4/symbolCache"
+    export MAVEN_OPTS="-Dmaven.repo.local=$XDG_DATA_HOME/maven/repository"
+    export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
+    export JAVA_HOME="/usr/lib/jvm/default-runtime"
+fi
+## Kotlin
+if [[ -e "/usr/share/kotlin" ]]; then
+    export KOTLIN_HOME="/usr/share/kotlin"
+fi
 
 ## Mariadb
 if command -v mariadb >/dev/null; then
@@ -106,6 +109,8 @@ if command -v sqlite3 >/dev/null; then
     export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
 fi
 
+## === Agent ===
+
 ## Pi Agent
 if command -v omp >/dev/null; then
     export PI_CONFIG_DIR=".config/omp"
@@ -117,9 +122,13 @@ fi
 
 ## Codex
 if command -v codex >/dev/null; then
-    export
-    export CODEX_HOME="$HOME/.config/codex"
+    export CODEX_HOME="$HOME/.local/share/codex"
     mkdir -p "$CODEX_HOME"
+fi
+
+## DSH
+if command -v codex >/dev/null; then
+    export DSH_HOME="$HOME/.local/share/dsh"
 fi
 
 ## === Software ===
