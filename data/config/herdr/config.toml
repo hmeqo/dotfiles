@@ -10,6 +10,9 @@ delivery = "system"
 [ui]
 show_agent_labels_on_pane_borders = true
 
+[experimental]
+kitty_graphics = true
+
 [keys]
 prefix = "ctrl+b"
 focus_pane_left = ["prefix+h", "ctrl+alt+h"]
@@ -19,8 +22,10 @@ focus_pane_right = ["prefix+l", "ctrl+alt+l"]
 previous_tab = ["prefix+p", "ctrl+alt+p"]
 next_tab = ["prefix+n", "ctrl+alt+n"]
 new_tab = ["prefix+c", "ctrl+alt+c"]
-split_vertical = ["prefix+v", "ctrl+alt+."]
-split_horizontal = ["prefix+minus", "ctrl+alt+,"]
+move_tab_previous = "ctrl+alt+comma"
+move_tab_next = "ctrl+alt+period"
+split_vertical = ["prefix+v", "ctrl+alt+|"]
+split_horizontal = ["prefix+minus", "ctrl+alt+backslash"]
 zoom = ["prefix+z", "ctrl+alt+z"]
 previous_workspace = "ctrl+alt+["
 next_workspace = "ctrl+alt+]"

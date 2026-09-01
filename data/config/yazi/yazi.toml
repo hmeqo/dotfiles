@@ -10,3 +10,4 @@ run = "git"
 
 [mgr]
 show_hidden = true
+linemode = "details"

@@ -15,12 +15,7 @@ prepend_path "$HOME/.local/bin"
 ## === Programming ===
 
 ## Bash
-export HISTFILE="$XDG_DATA_HOME/bash_history"
-
-## mise
-if command -v mise >/dev/null; then
-    prepend_path "$XDG_DATA_HOME/mise/shims"
-fi
+export HISTFILE="$XDG_STATE_HOME/bash_history"
 
 ## bun
 if command -v bun >/dev/null; then
@@ -46,7 +41,7 @@ fi
 
 ## Python
 if command -v python >/dev/null; then
-    export PYTHON_HISTORY="$XDG_DATA_HOME/python_history"
+    export PYTHON_HISTORY="$XDG_STATE_HOME/python_history"
     export PYPIRC="$XDG_CONFIG_HOME/pypirc"
 fi
 ## pyenv
@@ -91,12 +86,12 @@ fi
 
 ## Mariadb
 if command -v mariadb >/dev/null; then
-    export MYSQL_HISTFILE="$XDG_DATA_HOME/mariadb_history"
+    export MYSQL_HISTFILE="$XDG_STATE_HOME/mariadb_history"
 fi
 
 ## Redis
 if command -v redis >/dev/null; then
-    export REDISCLI_HISTFILE="$XDG_DATA_HOME/rediscli_history"
+    export REDISCLI_HISTFILE="$XDG_STATE_HOME/rediscli_history"
 fi
 
 ## pm2
@@ -106,7 +101,7 @@ fi
 
 ## Sqlite
 if command -v sqlite3 >/dev/null; then
-    export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
+    export SQLITE_HISTORY="$XDG_STATE_HOME/sqlite_history"
 fi
 
 ## === Agent ===
@@ -114,7 +109,7 @@ fi
 ## Pi Agent
 if command -v omp >/dev/null; then
     export PI_CONFIG_DIR=".config/omp"
-    mkdir -p "$PI_CONFIG_DIR/agent"
+    mkdir -p "$HOME/$PI_CONFIG_DIR/agent"
 elif command -v pi >/dev/null; then
     export PI_CODING_AGENT_DIR="$XDG_CONFIG_HOME/pi"
     export PI_CODING_AGENT_SESSION_DIR="$XDG_STATE_HOME/pi/sessions"
@@ -170,6 +165,7 @@ export GTK_USE_PORTAL=1
 ## Input method
 if [[ "$XDG_SESSION_TYPE" != "wayland" ]]; then
     export GTK_IM_MODULE=fcitx
+    export QT_IM_MODULE=fcitx
 else
     if [[ "$XDG_SESSION_DESKTOP" != "KDE" ]]; then
         export QT_IM_MODULE=fcitx
@@ -201,7 +197,7 @@ export SDL_VIDEODRIVER=wayland,x11
 # export QT_STYLE_OVERRIDE=kvantum
 
 ## SSL
-# export SSLKEYLOGFILE="$HOME/.local/share/sslkeylog.log"
+# export SSLKEYLOGFILE="$HOME/.local/state/sslkeylog.log"
 
 ## ssh
 export SSH_ASKPASS=/usr/bin/ksshaskpass

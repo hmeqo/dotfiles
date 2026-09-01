@@ -39,8 +39,8 @@ keybind = ctrl+shift+0=reset_font_size
 keybind = ctrl+shift+==increase_font_size:1
 keybind = ctrl+shift+-=decrease_font_size:1
 
-keybind = ctrl+alt+page_up=move_tab:-1
-keybind = ctrl+alt+page_down=move_tab:1
+keybind = ctrl+shift+comma=move_tab:-1
+keybind = ctrl+shift+period=move_tab:1
 keybind = ctrl+page_up=previous_tab
 keybind = ctrl+page_down=next_tab
 

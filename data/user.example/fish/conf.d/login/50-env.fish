@@ -15,12 +15,7 @@ prepend_path "$HOME/.local/bin"
 ## === Programming ===
 
 ## Bash
-set -gx HISTFILE "$XDG_DATA_HOME/bash_history"
-
-## mise
-if command -sq mise
-    prepend_path "$XDG_DATA_HOME/mise/shims"
-end
+set -gx HISTFILE "$XDG_STATE_HOME/bash_history"
 
 ## bun
 if command -sq bun
@@ -46,7 +41,7 @@ end
 
 ## Python
 if command -sq python
-    set -gx PYTHON_HISTORY "$XDG_DATA_HOME/python_history"
+    set -gx PYTHON_HISTORY "$XDG_STATE_HOME/python_history"
     set -gx PYPIRC "$XDG_CONFIG_HOME/pypirc"
 end
 ## pyenv
@@ -91,12 +86,12 @@ end
 
 ## Mariadb
 if command -sq mariadb
-    set -gx MYSQL_HISTFILE "$XDG_DATA_HOME/mariadb_history"
+    set -gx MYSQL_HISTFILE "$XDG_STATE_HOME/mariadb_history"
 end
 
 ## Redis
 if command -sq redis
-    set -gx REDISCLI_HISTFILE "$XDG_DATA_HOME/rediscli_history"
+    set -gx REDISCLI_HISTFILE "$XDG_STATE_HOME/rediscli_history"
 end
 
 ## pm2
@@ -106,7 +101,7 @@ end
 
 ## Sqlite
 if command -sq sqlite3
-    set -gx SQLITE_HISTORY "$XDG_DATA_HOME/sqlite_history"
+    set -gx SQLITE_HISTORY "$XDG_STATE_HOME/sqlite_history"
 end
 
 ## === Agent ===
@@ -114,7 +109,7 @@ end
 ## Pi Agent
 if command -sq omp
     set -gx PI_CONFIG_DIR ".config/omp"
-    mkdir -p "$PI_CONFIG_DIR/agent"
+    mkdir -p "$HOME/$PI_CONFIG_DIR/agent"
 else if command -sq pi
     set -gx PI_CODING_AGENT_DIR "$XDG_CONFIG_HOME/pi"
     set -gx PI_CODING_AGENT_SESSION_DIR "$XDG_STATE_HOME/pi/sessions"
@@ -170,6 +165,7 @@ set -gx GTK_USE_PORTAL 1
 ## Input method
 if test "$XDG_SESSION_TYPE" != wayland
     set -gx GTK_IM_MODULE fcitx
+    set -gx QT_IM_MODULE fcitx
 else
     if test "$XDG_SESSION_DESKTOP" != KDE
         set -gx QT_IM_MODULE fcitx
@@ -201,7 +197,7 @@ set -gx SDL_VIDEODRIVER wayland,x11
 # set -gx QT_STYLE_OVERRIDE kvantum
 
 ## SSL
-# set -gx SSLKEYLOGFILE "$HOME/.local/share/sslkeylog.log"
+# set -gx SSLKEYLOGFILE "$HOME/.local/state/sslkeylog.log"
 
 ## ssh
 set -gx SSH_ASKPASS /usr/bin/ksshaskpass

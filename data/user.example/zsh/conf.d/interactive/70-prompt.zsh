@@ -1,1 +1,0 @@
-# prompter=oh-my-posh

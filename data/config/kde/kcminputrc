@@ -20,6 +20,9 @@ Enabled=true
 [Libinput][2][14][ETPS/2 Elantech Touchpad]
 Enabled=true
 
+[Libinput][48879][57005][Mouse passthrough]
+PointerAccelerationProfile=2
+
 [Libinput][6392][3993][USB OPTICAL MOUSE ]
 PointerAcceleration=-0.400
 
@@ -28,6 +31,9 @@ PointerAccelerationProfile=2
 
 [Libinput][7847][100][2.4G Mouse]
 PointerAcceleration=0.000
+PointerAccelerationProfile=2
+
+[Libinput][9011][26214][ydotoold virtual device]
 PointerAccelerationProfile=2
 
 [Mouse]

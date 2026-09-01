@@ -41,7 +41,7 @@ if command -v tmux >/dev/null; then
 fi
 
 if command -v zellij >/dev/null; then
-    alias zj='zellij attach -c'
+    alias zt='zellij attach -c'
     alias zn='zellij'
     alias znn='zellij -s'
     alias zl='zellij ls -s'
@@ -62,10 +62,6 @@ fi
 
 if command -v duf >/dev/null; then
     alias df='duf --only=local,fuse'
-fi
-
-if command -v cyme >/dev/null; then
-    alias lsusb='cyme -l'
 fi
 
 alias color_test='curl https://gist.githubusercontent.com/lilydjwg/fdeaf79e921c2f413f44b6f613f6ad53/raw/94d8b2be62657e96488038b0e547e3009ed87d40/colors.py | python'

@@ -1,5 +1,6 @@
 [1a00bbda-7791-45a0-9382-ba5cf879b9df]
 Description=Settings for yakuake org.kde.yakuake
+Enabled=false
 above=true
 aboverule=3
 wmclass=yakuake org.kde.yakuake
@@ -20,28 +21,15 @@ layerrule=2
 
 [7ae3d98e-b733-4790-a053-7521c6648475]
 Description=Transparent
+Enabled=false
 opacityactive=95
 opacityactiverule=2
 wmclass=dolphin
 wmclassmatch=3
 
 [General]
-count=4
-rules=aea6174f-e136-4519-a4d3-facbed135873,dc9511e9-a106-487e-b67b-5aa559703e08,7ae3d98e-b733-4790-a053-7521c6648475,1a00bbda-7791-45a0-9382-ba5cf879b9df
-
-[aea6174f-e136-4519-a4d3-facbed135873]
-Description=Window settings for rtsub
-above=true
-aboverule=3
-layer=overlay
-layerrule=2
-skipswitcher=true
-skipswitcherrule=3
-title=RTSub
-types=1
-wmclass=python3.13 rtsub
-wmclasscomplete=true
-wmclassmatch=1
+count=3
+rules=dc9511e9-a106-487e-b67b-5aa559703e08,7ae3d98e-b733-4790-a053-7521c6648475,1a00bbda-7791-45a0-9382-ba5cf879b9df
 
 [bdae4665-afcc-4feb-a9cd-4e4d595575f8]
 Description=Window settings for flameshot
@@ -57,10 +45,10 @@ wmclassmatch=1
 
 [dc9511e9-a106-487e-b67b-5aa559703e08]
 Description=Frameless
+Enabled=false
 noborder=true
 noborderrule=3
 title=Tiny RDM
 types=1
-wmclass=pot|tiny-rdm Tiny RDM
 wmclasscomplete=true
 wmclassmatch=3

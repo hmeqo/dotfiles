@@ -27,8 +27,8 @@ return {
     { key = "l", mods = "CTRL|SHIFT", action = wezterm.action.ActivatePaneDirection("Right") },
 
     -- move tab
-    { key = "PageUp",   mods = "CTRL|ALT", action = wezterm.action.MoveTabRelative(-1) },
-    { key = "PageDown", mods = "CTRL|ALT", action = wezterm.action.MoveTabRelative(1) },
+    { key = ",", mods = "CTRL|SHIFT", action = wezterm.action.MoveTabRelative(-1) },
+    { key = ".", mods = "CTRL|SHIFT", action = wezterm.action.MoveTabRelative(1) },
 
     -- tab management
     { key = "t", mods = "CTRL|SHIFT", action = wezterm.action.SpawnTab "CurrentPaneDomain" },

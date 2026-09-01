@@ -15,8 +15,8 @@ hash = "c2021386289a0cbb3e152a052f67c177"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "de53d90"
-hash = "aeb9aa2b11f9dcaed2538b5e8870f693"
+rev = "6f26ae04"
+hash = "ce345e7e8baed03a2561b314fa85e59a"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"

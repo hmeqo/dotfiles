@@ -4,6 +4,27 @@ dark = "flexoki-dark"
 [app]
 overall = { bg = "reset" }
 
-[mgr]
-border_symbol = "│"
-border_style  = { fg = "#858585" }
+
+# flexoki-dark flavor rules, with the default file color lifted from tx-2 (#878580) to tx (#CECDC3)
+[filetype]
+rules = [
+  # Empty files
+  { mime = "inode/empty", fg = "#575653" }, # tx-3
+
+  # Special files
+  { url = "*", is = "orphan", fg = "#575653" }, # tx-3
+  { url = "*/", is = "orphan", fg = "#575653" }, # tx-3
+  { url = "*", is = "link", fg = "#3AA99F" }, # cy
+  { url = "*/", is = "link", fg = "#3AA99F" }, # cy
+  { url = "*", is = "block", fg = "#CECDC3" }, # tx
+  { url = "*", is = "char", fg = "#CECDC3" }, # tx
+  { url = "*", is = "fifo", fg = "#CE5D97" }, # ma
+  { url = "*", is = "sock", fg = "#CE5D97" }, # ma
+  { url = "*", is = "sticky", fg = "#CECDC3" }, # tx
+  { url = "*", is = "dummy", fg = "#575653" }, # tx-3
+
+  # Fallback
+  { url = "*/", fg = "#CECDC3" }, # tx
+  { url = "*", is = "exec", fg = "#879A39" }, # gr
+  { url = "*", fg = "#CECDC3" } # tx (was #878580)
+]
