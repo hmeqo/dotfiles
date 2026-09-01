@@ -26,7 +26,6 @@ links = [
     { source = "data/config/fish/config.fish", target = "~/.config/fish/config.fish" },
     { source = "data/config/fish/functions/fish_mode_prompt.fish", target = "~/.config/fish/functions/fish_mode_prompt.fish" },
     { source = "data/config/fish/functions/ee.fish", target = "~/.config/fish/functions/ee.fish" },
-    { source = "data/config/fish/completions/proxyon.fish", target = "~/.config/fish/completions/proxyon.fish" },
 ]
 depends = { system = ["fish"], other-items = ["starship"], fisher = [] }
 
