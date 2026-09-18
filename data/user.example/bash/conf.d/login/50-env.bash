@@ -48,7 +48,6 @@ fi
 if command -v pyenv >/dev/null; then
     export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
     prepend_path "$PYENV_ROOT/bin"
-    eval "$(pyenv init -)"
 fi
 if command -v mamba >/dev/null || command -v micromamba >/dev/null; then
     prepend_path "$XDG_DATA_HOME/mamba/bin"

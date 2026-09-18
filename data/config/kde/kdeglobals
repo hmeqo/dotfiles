@@ -105,7 +105,7 @@ ForegroundPositive=76,175,80
 ForegroundVisited=173,101,175
 
 [General]
-BrowserApplication=vivaldi-stable.desktop
+BrowserApplication=zen.desktop
 ColorSchemeHash=3b17c5d56f8f372f0b0b9f709c4579c23e51fe6a
 TerminalApplication=kitty
 TerminalService=kitty.desktop

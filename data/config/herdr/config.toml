@@ -7,9 +7,6 @@ auto_switch = false
 [ui.toast]
 delivery = "system"
 
-[ui]
-show_agent_labels_on_pane_borders = true
-
 [experimental]
 kitty_graphics = true
 
@@ -32,6 +29,12 @@ next_workspace = "ctrl+alt+]"
 
 [keys.indexed]
 workspaces = "ctrl+alt"
+
+[[keys.command]]
+key = "prefix+shift+o"
+type = "shell"
+command = "xdg-open \"${HERDR_ACTIVE_PANE_CWD:-.}\""
+description = "open in file manager"
 
 [[keys.command]]
 key = "prefix+ctrl+g"

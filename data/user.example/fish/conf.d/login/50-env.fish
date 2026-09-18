@@ -48,7 +48,6 @@ end
 if command -sq pyenv
     set -gx PYENV_ROOT "$XDG_DATA_HOME/pyenv"
     prepend_path "$PYENV_ROOT/bin"
-    pyenv init - | source
 end
 if command -sq mamba || command -sq micromamba
     prepend_path "$XDG_DATA_HOME/mamba/bin"

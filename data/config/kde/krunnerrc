@@ -3,9 +3,6 @@ FreeFloating=true
 history=
 
 [Plugins]
-baloosearchEnabled=false
-browserhistoryEnabled=false
-browsertabsEnabled=false
 krunner_appstreamEnabled=false
 krunner_bookmarksrunnerEnabled=false
 krunner_charrunnerEnabled=true

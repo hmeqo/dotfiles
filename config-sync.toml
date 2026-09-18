@@ -148,10 +148,10 @@ system = [
     "kwallet-pam",
     "ttf-maple",
     "bibata-cursor-theme",
-    "kwin-effects-forceblur-git",
+    "kwin-effects-better-blur-dx",
 ]
 kwin-effects = ["kwin4_effect_geometry_change"]
-kwin-scripts = ["kzones", "movewindow"]
+kwin-scripts = ["kzones"]
 plasma-desktoptheme = ["Materia Dark KDE"]
 plasma-plasmoids = [
     "com.github.antroids.application-title-bar",
