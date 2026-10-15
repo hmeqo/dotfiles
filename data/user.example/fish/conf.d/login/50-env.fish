@@ -2,15 +2,9 @@ function has_path
     contains $argv[1] $PATH
 end
 
-function append_path
-    has_path $argv[1] || set PATH $PATH $argv[1]
-end
-
-function prepend_path
+function add_path
     has_path $argv[1] || set PATH $argv[1] $PATH
 end
-
-prepend_path "$HOME/.local/bin"
 
 ## === Programming ===
 
@@ -19,7 +13,7 @@ set -gx HISTFILE "$XDG_STATE_HOME/bash_history"
 
 ## bun
 if command -sq bun
-    prepend_path "$XDG_CACHE_HOME/.bun/bin"
+    add_path "$XDG_CACHE_HOME/.bun/bin"
 end
 ## npm
 if command -sq npm
@@ -31,12 +25,12 @@ logs-dir=${XDG_STATE_HOME}/npm/logs'
     if not test -f "$NPM_CONFIG_USERCONFIG" || not grep -q "prefix=" "$NPM_CONFIG_USERCONFIG"
         echo -e "\n$npm_config\n" | tee -a "$NPM_CONFIG_USERCONFIG"
     end
-    prepend_path "$(npm config get prefix)/bin"
+    add_path "$(npm config get prefix)/bin"
 end
 ## pnpm
 if command -sq pnpm
     set -q PNPM_HOME || set -gx PNPM_HOME "$XDG_DATA_HOME/pnpm"
-    prepend_path "$PNPM_HOME/bin"
+    add_path "$PNPM_HOME/bin"
 end
 
 ## Python
@@ -47,17 +41,17 @@ end
 ## pyenv
 if command -sq pyenv
     set -gx PYENV_ROOT "$XDG_DATA_HOME/pyenv"
-    prepend_path "$PYENV_ROOT/bin"
+    add_path "$PYENV_ROOT/bin"
 end
 if command -sq mamba || command -sq micromamba
-    prepend_path "$XDG_DATA_HOME/mamba/bin"
+    add_path "$XDG_DATA_HOME/mamba/bin"
 end
 
 ## Rust
 if command -sq cargo
     set -gx CARGO_HOME "$XDG_DATA_HOME/cargo"
     set -gx RUSTUP_HOME "$XDG_DATA_HOME/rustup"
-    prepend_path "$CARGO_HOME/bin"
+    add_path "$CARGO_HOME/bin"
     # if command -sq sccache
     #   set -gx RUSTC_WRAPPER "$(which sccache)"
     # end
@@ -68,7 +62,7 @@ if command -sq go
     set -gx GOPATH "$XDG_DATA_HOME/go"
     set -gx GOMODCACHE "$XDG_CACHE_HOME/go/mod"
     set -gx GOCACHE "$XDG_CACHE_HOME/go-build"
-    prepend_path "$GOPATH/bin"
+    add_path "$GOPATH/bin"
 end
 
 ## Java
@@ -176,34 +170,3 @@ set -gx INPUT_METHOD fcitx
 set -gx GLFW_IM_MODULE ibus
 
 # set -gx QT_WAYLAND_TEXT_INPUT_PROTOCOL zwp_text_input_v1
-
-## === Game ===
-
-## Enable gpl for AMD GPU
-# set -gx RADV_PERFTEST gpl
-
-## SDL
-set -gx SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS 0
-set -gx SDL_VIDEODRIVER wayland,x11
-
-## Gamemode
-# set -gx GAMEMODERUNEXEC ""
-
-## === Other ===
-
-## Theme
-# set -gx GTK_THEME Fluent-round-Dark
-# set -gx QT_STYLE_OVERRIDE kvantum
-
-## SSL
-# set -gx SSLKEYLOGFILE "$HOME/.local/state/sslkeylog.log"
-
-## ssh
-set -gx SSH_ASKPASS /usr/bin/ksshaskpass
-set -gx SSH_ASKPASS_REQUIRE prefer
-
-## Android
-set -gx ANDROID_HOME "$XDG_DATA_HOME/Android/Sdk"
-set -gx ANDROID_NDK_HOME "$ANDROID_HOME/ndk/29.0.14206865"
-set -gx ANDROID_AVD_HOME "$XDG_CONFIG_HOME/.android/avd"
-prepend_path "$XDG_DATA_HOME/Android/Sdk/build-tools/36.1.0"

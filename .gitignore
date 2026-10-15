@@ -221,3 +221,5 @@ backup
 /tools/.crates*
 
 .python-version
+
+*-ext.*

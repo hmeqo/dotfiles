@@ -10,7 +10,7 @@ DefaultIM=keyboard-us
 # Name
 Name=keyboard-us
 # Layout
-Layout=
+# Layout=
 
 [Groups/1]
 # Group Name
@@ -24,13 +24,13 @@ DefaultIM=rime
 # Name
 Name=keyboard-us
 # Layout
-Layout=
+# Layout=
 
 [Groups/1/Items/1]
 # Name
 Name=rime
 # Layout
-Layout=
+# Layout=
 
 [GroupOrder]
 0=zh-CN

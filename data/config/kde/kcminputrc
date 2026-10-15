@@ -1,3 +1,7 @@
+[Libinput][13869][53512][  Wireless Link-KM]
+PointerAcceleration=0.000
+PointerAccelerationProfile=2
+
 [Libinput][1739][52861][SYN1B8B:00 06CB:CE7D Mouse]
 PointerAcceleration=0.000
 PointerAccelerationProfile=2
@@ -5,7 +9,10 @@ PointerAccelerationProfile=2
 [Libinput][1739][52861][SYN1B8B:00 06CB:CE7D Touchpad]
 DisableEventsOnExternalMouse=false
 DisableWhileTyping=true
-Enabled=true
+Enabled=false
+
+[Libinput][4617][3][libvirtualhid Mouse]
+PointerAccelerationProfile=2
 
 [Libinput][6645][4136][NuPhy Air75 V3 Mouse]
 PointerAccelerationProfile=2

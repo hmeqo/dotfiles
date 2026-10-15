@@ -44,7 +44,7 @@ DialogWidth=720
 [Containments][2][Applets][84][Configuration][General]
 groupingAppIdBlacklist=org.kde.plasmashell.desktop
 groupingLauncherUrlBlacklist=applications:org.kde.plasmashell.desktop
-launchers=applications:systemsettings.desktop,applications:org.kde.dolphin.desktop,preferred://browser,applications:code.desktop
+launchers=applications:systemsettings.desktop,applications:org.kde.dolphin.desktop,preferred://browser,applications:com.microsoft.VSCode.desktop
 middleClickAction=Close
 showOnlyCurrentDesktop=false
 
@@ -55,10 +55,10 @@ AppletOrder=232;84
 ItemGeometries-1707x960=Applet-235:704,400,640,160,0;
 ItemGeometries-1920x1080=Applet-235:704,400,640,160,0;
 ItemGeometries-1969x1108=Applet-235:704,400,640,160,0;
-ItemGeometries-2048x1152=Applet-235:704,352,640,160,0;
+ItemGeometries-2048x1152=Applet-235:704,400,640,160,0;
 ItemGeometries-2133x1200=Applet-235:704,400,640,160,0;
 ItemGeometries-2560x1440=Applet-235:704,400,640,160,0;
-ItemGeometriesHorizontal=Applet-235:704,352,640,160,0;
+ItemGeometriesHorizontal=Applet-235:704,400,640,160,0;
 activityId=7ab2f3ee-2f98-4111-bb48-b04b1d170fb7
 formfactor=0
 immutability=1
@@ -76,13 +76,13 @@ DialogHeight=878
 DialogWidth=1202
 
 [Containments][234][General]
-changedPositions={"desktop:/chrome-opaefnjafkemdihlmdiocmmmmdkhgjfg-Default.desktop":["2048x1152","1","2"],"desktop:/zen.desktop":["2048x1152","4","1"]}
+changedPositions={"desktop:/chrome-opaefnjafkemdihlmdiocmmmmdkhgjfg-Default.desktop":["2048x1152,1969x1108","1","2"],"desktop:/zen.desktop":["2048x1152,1969x1108","4","1"]}
 lastResolution=2048x1152
-positions={"0x0":[],"1920x1080":["1","17"],"2048x1152":["1","18","desktop:/chrome-opaefnjafkemdihlmdiocmmmmdkhgjfg-Default.desktop","1","2","desktop:/zen.desktop","4","1"]}
+positions={"0x0":[],"1920x1080":["1","17"],"1969x1108":["1","18","desktop:/chrome-opaefnjafkemdihlmdiocmmmmdkhgjfg-Default.desktop","1","2","desktop:/zen.desktop","4","1","desktop:/a.htm","0","0"],"2048x1152":["1","18","desktop:/chrome-opaefnjafkemdihlmdiocmmmmdkhgjfg-Default.desktop","1","2","desktop:/a.htm","0","0","desktop:/zen.desktop","4","1"]}
 sortMode=-1
 
 [Containments][234][Wallpaper][org.kde.image][General]
-Image=file:///home/hmeqo/.local/opt/dotfiles/data/local/share/wallpapers/stephan-raabe/forest3-mononoke.png
+Image=file:///home/hmeqo/.local/opt/dotfiles/data/local/share/wallpapers/stephan-raabe/forest1.jpg
 SlidePaths=/home/hmeqo/.local/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments][239]
@@ -348,6 +348,15 @@ activityId=30168601-0752-429f-966e-4a534cc0b9db
 formfactor=0
 immutability=1
 lastScreen=0
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
+[Containments][283]
+activityId=7ab2f3ee-2f98-4111-bb48-b04b1d170fb7
+formfactor=0
+immutability=1
+lastScreen=1
 location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image

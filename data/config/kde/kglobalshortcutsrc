@@ -258,6 +258,21 @@ seekforwardmedia=Media Fast Forward,Media Fast Forward,Media playback seek forwa
 seekforwardmedialong=none,none,Media playback seek forward 30s
 stopmedia=Media Stop,Media Stop,Stop media playback
 
+[open-orpheus]
+151B4C7160D1BC9412A83C52C1526DCB-Ctrl+Alt+D=Ctrl+Alt+D,Ctrl+Alt+D,open-orpheus shortcut: Ctrl+Alt+D
+2F4AA0BDC129961B952BFFFC926B2604-Ctrl+Alt+L=none,Ctrl+Alt+L,open-orpheus shortcut: Ctrl+Alt+L
+58202DB38944B757E2C635075C2B3E2C-Ctrl+Alt+Up=none,Ctrl+Alt+Up,open-orpheus shortcut: Ctrl+Alt+Up
+58F12C90246D56BAEB39B53F81BB23B9-Ctrl+Alt+Down=none,Ctrl+Alt+Down,open-orpheus shortcut: Ctrl+Alt+Down
+60E523EE54C18400F8E8DD7B4B0E0025-MediaPrevTrack=none,Media Previous,open-orpheus shortcut: MediaPrevTrack
+6F846A325279C4D1330E23858BECBC93-Ctrl+Alt+M=none,Ctrl+Alt+M,open-orpheus shortcut: Ctrl+Alt+M
+B739FA214F92E235F530331D57F63D7A-MediaNextTrack=none,Media Next,open-orpheus shortcut: MediaNextTrack
+C5FEFDD5D4703450E75369225E375C30-MediaPlayPause=none,Media Play,open-orpheus shortcut: MediaPlayPause
+ED259DD0B0DDF6486E2339F8701E7DCA-Ctrl+Alt+Right=none,Ctrl+Alt+Right,open-orpheus shortcut: Ctrl+Alt+Right
+F0B6897E65FAEC373FB88C43D4713048-Ctrl+Alt+Left=none,Ctrl+Alt+Left,open-orpheus shortcut: Ctrl+Alt+Left
+F0D969C8C1150A4F238DC92D45464570-Ctrl+Alt+P=none,Ctrl+Alt+P,open-orpheus shortcut: Ctrl+Alt+P
+FD36B5AB96E2BAE7FB6C25FD52B42D68-MediaStop=none,Media Stop,open-orpheus shortcut: MediaStop
+_k_friendly_name=Open Orpheus
+
 [org_kde_powerdevil]
 Decrease Keyboard Brightness=Keyboard Brightness Down,Keyboard Brightness Down,Decrease Keyboard Brightness
 Decrease Screen Brightness=Monitor Brightness Down,Monitor Brightness Down,Decrease Screen Brightness

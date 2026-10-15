@@ -2,15 +2,9 @@ has_path() {
     [[ ":$PATH:" = *":$1:"* ]]
 }
 
-append_path() {
-    has_path "$1" || PATH="$PATH:$1"
-}
-
-prepend_path() {
+add_path() {
     has_path "$1" || PATH="$1:$PATH"
 }
-
-prepend_path "$HOME/.local/bin"
 
 ## === Programming ===
 
@@ -19,7 +13,7 @@ export HISTFILE="$XDG_STATE_HOME/bash_history"
 
 ## bun
 if command -v bun >/dev/null; then
-    prepend_path "$XDG_CACHE_HOME/.bun/bin"
+    add_path "$XDG_CACHE_HOME/.bun/bin"
 fi
 ## npm
 if command -v npm >/dev/null; then
@@ -31,12 +25,12 @@ logs-dir=${XDG_STATE_HOME}/npm/logs'
     if [[ ! -f "$NPM_CONFIG_USERCONFIG" ]] || ! grep -q "prefix=" "$NPM_CONFIG_USERCONFIG"; then
         echo -e "\n$npm_config\n" | tee -a "$NPM_CONFIG_USERCONFIG"
     fi
-    prepend_path "$(npm config get prefix)/bin"
+    add_path "$(npm config get prefix)/bin"
 fi
 ## pnpm
 if command -v pnpm >/dev/null; then
     export PNPM_HOME="${PNPM_HOME:-$XDG_DATA_HOME/pnpm}"
-    prepend_path "$PNPM_HOME/bin"
+    add_path "$PNPM_HOME/bin"
 fi
 
 ## Python
@@ -47,17 +41,17 @@ fi
 ## pyenv
 if command -v pyenv >/dev/null; then
     export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
-    prepend_path "$PYENV_ROOT/bin"
+    add_path "$PYENV_ROOT/bin"
 fi
 if command -v mamba >/dev/null || command -v micromamba >/dev/null; then
-    prepend_path "$XDG_DATA_HOME/mamba/bin"
+    add_path "$XDG_DATA_HOME/mamba/bin"
 fi
 
 ## Rust
 if command -v cargo >/dev/null; then
     export CARGO_HOME="$XDG_DATA_HOME/cargo"
     export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
-    prepend_path "$CARGO_HOME/bin"
+    add_path "$CARGO_HOME/bin"
     # if command -v sccache >/dev/null; then
     #   export RUSTC_WRAPPER="$(which sccache)"
     # fi
@@ -68,7 +62,7 @@ if command -v go >/dev/null; then
     export GOPATH="$XDG_DATA_HOME/go"
     export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
     export GOCACHE="$XDG_CACHE_HOME/go-build"
-    prepend_path "$GOPATH/bin"
+    add_path "$GOPATH/bin"
 fi
 
 ## Java
@@ -176,28 +170,3 @@ export INPUT_METHOD=fcitx
 export GLFW_IM_MODULE=ibus
 
 # export QT_WAYLAND_TEXT_INPUT_PROTOCOL=zwp_text_input_v1
-
-## === Game ===
-
-## Enable gpl for AMD GPU
-# export RADV_PERFTEST=gpl
-
-## SDL
-export SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0
-export SDL_VIDEODRIVER=wayland,x11
-
-## Gamemode
-# export GAMEMODERUNEXEC=""
-
-## === Other ===
-
-## Theme
-# export GTK_THEME=Fluent-round-Dark
-# export QT_STYLE_OVERRIDE=kvantum
-
-## SSL
-# export SSLKEYLOGFILE="$HOME/.local/state/sslkeylog.log"
-
-## ssh
-export SSH_ASKPASS=/usr/bin/ksshaskpass
-export SSH_ASKPASS_REQUIRE=prefer
